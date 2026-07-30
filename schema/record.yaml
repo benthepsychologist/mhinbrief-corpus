@@ -1,0 +1,48 @@
+# ============================================================
+# DRAFT — DO NOT FINALIZE
+# ============================================================
+#
+# Marked DRAFT deliberately. The three §14.1 research artifacts
+# (chat-history-only as of 2026-07-30; Ben exports) include a worked
+# schema in artifact #1 — finalizing v1 before reading them would
+# violate the spec's own do-not-re-derive instruction. This schema
+# must NOT be finalized until those three research artifacts are
+# exported. The engine never interprets record fields directly —
+# only the diff engine's generic field-change semantics touch them.
+#
+# Field list below is seeded from the initiation doc's record sketch
+# (design §7). No types or enums are declared here — §7 doesn't
+# specify them, and inventing any now would be the same kind of
+# premature finalization this banner exists to prevent.
+# ============================================================
+
+record:
+  jurisdiction: # which jurisdiction this record applies to
+  profession_scope: # which profession(s) the record scopes to
+  topic: # the regulatory topic/subject area
+  regulatory_model: # the shape of the regulatory approach in play
+
+  statute_citation: # citation to the governing statute/regulation
+
+  # Compound field — carries an enacted-vs-in-effect distinction
+  # (design §4 references this as a first-class discipline: a
+  # statute can be enacted before it is in effect). Not broken into
+  # a formal sub-schema here — just noted so the distinction isn't
+  # lost before the research artifacts land.
+  status: # enacted vs in-effect status, with associated dates
+
+  enforcement_body: # who enforces this
+  authority_basis: # the legal/authority basis for the obligation
+  penalties: # penalties for non-compliance
+
+  clinician_facing_obligations: # obligations that face the clinician
+  vendor_facing_obligations: # obligations that face the vendor
+
+  consent_required: # whether consent is required
+  documentation_required: # what documentation is required
+
+  source_url: # the source this record was derived from
+  last_verified: # when this record was last verified against source
+
+  confidence: # confidence in this record's accuracy
+  notes: # free-text notes

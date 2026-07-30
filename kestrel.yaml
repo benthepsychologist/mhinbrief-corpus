@@ -1,0 +1,48 @@
+# Working manifest name per design §10 (engine/instance split).
+kind: registry               # a corpus kestrel tends
+name: bh-compliance
+contract_version: 1          # engine refuses a major it doesn't speak
+layout:
+  schema: schema/record.yaml
+  records: records/
+  changelog: changelog/
+  candidates: candidates/    # runner staging area — curation reads this
+  buffer: buffer/            # cache semantics, 30-day, same as kestrel's
+  provenance: provenance/    # per-run fetch manifests, same shape
+cadence:
+  sweep: weekly               # the product rhythm ("cadence IS the product")
+  verify: quarterly           # off-season re-verification pass
+sources:
+  # Extends the proven sources/sources.yaml per-source schema
+  #   (name endpoint auth cadence recall perishability status notes)
+  # with: tier · jurisdiction · method · collector · feed_url ·
+  #        language · health
+  - id: canada-gazette-p2
+    name: Canada Gazette Part II
+    tier: 1
+    jurisdiction: ca-federal
+    method: rss
+    collector: rss
+    feed_url: https://gazette.gc.ca/rss/p2-eng.xml
+    cadence: biweekly
+    perishability: durable
+    status: wired
+    health: {last_probe: 2026-07-30, verdict: live}
+  - id: crpo-news
+    name: CRPO news (Ontario psychotherapists)
+    tier: 2
+    jurisdiction: ca-on
+    method: page-diff        # its RSS is 200-but-empty — demoted
+    endpoint: https://crpo.ca/news/
+    perishability: diffable
+    status: wired
+    health: {last_probe: 2026-07-30, verdict: feed-empty}
+governance:                  # machine-checked by the runner, not habits
+  record_change_requires: [source_url, last_verified]
+  field_diff_emits: changelog
+  yaml: safe-load-or-revert
+  feed_health: auto-demote   # 200-empty / years-stale → page-diff
+  tier3_verify_against: tier1
+outputs:
+  site: ../bh-compliance-site
+  adapter: bh_compliance
