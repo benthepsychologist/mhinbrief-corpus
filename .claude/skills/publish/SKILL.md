@@ -1,4 +1,4 @@
-<!-- kit: registry/publish@2026-07-31.1 — canonical: /workspace/kestrel/library/skills/registry/publish/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
+<!-- kit: registry/publish@2026-07-31.2 — canonical: /workspace/kestrel/library/skills/registry/publish/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
 
 # /publish — STUB, gated on the therapybulletin adapter
 

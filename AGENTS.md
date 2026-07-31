@@ -1,4 +1,4 @@
-<!-- kit: registry/AGENTS@2026-07-31.1 — canonical: /workspace/kestrel/library/agentdocs/registry/AGENTS.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
+<!-- kit: registry/AGENTS@2026-07-31.2 — canonical: /workspace/kestrel/library/agentdocs/registry/AGENTS.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
 
 # AGENTS.md — therapybulletin operating disciplines
 

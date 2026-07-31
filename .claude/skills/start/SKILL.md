@@ -1,16 +1,22 @@
-<!-- kit: common/start@2026-07-31.1 — canonical: /workspace/kestrel/library/skills/common/start/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
+<!-- kit: registry/start@2026-07-31.2 — canonical: /workspace/kestrel/library/skills/registry/start/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
 
 ---
 name: start
-description: Session-bootstrap card — fuses the generic continuation ritual (docs, memory, git log) with kestrel's live pipeline state (digest status, expectations due, flash rail, freshness, push safety). Read-only; run at the start of any session.
+description: Session-bootstrap card for a registry instance — fuses the generic continuation ritual (docs, memory, git log) with the registry pipeline's live state (candidates by status, changelog/record counts, source health, provenance freshness, push safety across three repos). Read-only; run at the start of any session.
 ---
 
-# /start — pick up kestrel where it was left
+# /start — pick up the registry where it was left
 
-Generic `/life:start` (docs + memory + git log) doesn't know kestrel has a
-live pipeline underneath it; `/map` knows the pipeline but says nothing
-about session continuity or repo hygiene. `/start` runs both passes and
-renders one card, in this order:
+This is the registry-kind sibling of `common/start`, not that skill with a
+few lines swapped: an attention instance's session state lives in digests,
+expectations, and a flash rail; a registry instance's lives in
+`candidates/`, `records/`, `changelog/`, and per-source feed health — two
+different pipelines, so two different cards. The kit renderer resolves
+this file in place of `common/start` for any instance whose `kestrel.yaml`
+declares `kind: registry` (family `registry` renders after family
+`common`, same skill name, so it wins — KITS.md §2's selection rule, not a
+special case). It runs both a continuation pass and a pipeline-state pass
+and renders one card, in this order:
 
 1. **Continuation briefing** — read the canonical docs at repo root
    (`CLAUDE.md`, `AGENTS.md`, `STATUS.md`, `README.md`, `ROADMAP.md`; say
@@ -18,81 +24,75 @@ renders one card, in this order:
    project's persistent memory directory (`MEMORY.md` + every file it
    links, in full — standing preferences and prior feedback that won't
    show up in the repo's own docs). Then `git log --oneline` since
-   STATUS.md's own "As of" date (or `-20`, whichever is more informative),
-   `git status --short`, and the tail of `log.md` (kestrel's own
-   session-close ledger, AGENTS.md §Session close — distinct from git's
-   commit-message view: it says what ran, what surfaced, where to pick up,
-   in prose git log doesn't carry). Frame the synthesis around
-   continuation: what changed last, what's still open, what's next — not
-   a raw dump of any of the four reads.
-2. **Digest state** — read `artifacts/digests/daily/`, newest files first,
-   for each lens's frontmatter (`status: building|final`,
-   `coverage: na|pending|done`). Is today's digest curated? Is yesterday
-   finalized? Apply `/daily`'s own finalization rule rather than
-   re-deriving one here: a day only finalizes once its coverage is
-   checkable, ~5h past its close (`/daily` SKILL.md intro + step 1) — a
-   `building`/`pending` digest less than ~5h old is expected, not a gap.
-3. **Expectations due** — read `attention/upcoming.yaml`. Surface every
-   `pending` entry due today or tomorrow, and anything already
-   `passed-silent` (within its 3-day grace or past it) — AGENTS.md
-   discipline 7 calls a silently-passed date **the loud outcome**; report
-   it as a finding, not a footnote. Use the same status vocabulary
-   `/daily` step 2 checks against (`pending → hit | slipped |
-   passed-silent`) rather than inventing a second one — this command only
-   *reads* the ledger, it never flips a status.
-4. **Flash rail** — read `attention/flash.yaml`. Anything active
-   (`expires` in the future)? Per AGENTS.md discipline 10 / `/daily` step
-   4, only `severity: critical` belongs on the rail and normally at most
-   one is active — flag it if two are live (exceptional) or if anything
-   non-critical snuck in.
-5. **Freshness + decay** — thread freshness uses the exact bucketing
-   `/map` already defines (🟢 fresh ≤3d · 🟡 aging ≤10d · 🔴 stale >10d,
-   by `last_seen`) — see that skill's SKILL.md for the read; don't
-   re-derive it here, just apply it and list what's 🔴 today. Then: newest
-   file in `artifacts/digests/weekly/` (or the latest week-scorecard line
-   in `coverage-log.md`) for when `/week` last ran; newest
-   `provenance/publish-*.yaml` timestamp for when `/publish` last ran.
-6. **Push safety** — run `git log @{u}..` in **both** `/workspace/kestrel`
-   and `/workspace/therapybulletin-site`. This is the one check `/map` doesn't
-   do and it's load-bearing: AGENTS.md §Session close documents that
-   `/publish --push` pushes theprojection's deploy hook and **nothing**
-   ever pushes kestrel automatically, so unpushed kestrel commits
-   accumulate silently across sessions (found once at 17 commits deep,
-   inherited across two closed sessions). **A clean `git status` is not
-   evidence of this** — only `git log @{u}..` is. If either repo has
-   unpushed commits, that's the headline flag of the whole card, not a
-   footnote at the bottom.
+   STATUS.md's own "As of" date (or `-20`, whichever is more informative)
+   and `git status --short`. **No `log.md` read here** — the
+   session-close ledger is an attention-kind convention
+   (`AGENTS.md` §Session close on that family); the registry AGENTS.md
+   carries no equivalent, so don't go looking for one. Frame the
+   synthesis around continuation: what changed last, what's still open,
+   what's next — not a raw dump of any of these reads.
+2. **Candidate queue** — read `candidates/*.yaml` and tally by `status`
+   (`staged` / `accepted` / `rejected` / `deferred`). Report the `staged`
+   count as the headline number (that's the queue `/curate` will walk)
+   and name the oldest staged item's date — a staged candidate isn't
+   urgent the way a missed expectation is, but a queue that's been
+   sitting for multiple `/tend` cycles untouched is worth a line.
+3. **Corpus state** — count `records/` (excluding `.gitkeep`) and read
+   the newest few `changelog/*.yaml` entries (append-only, so newest
+   file mtime is newest law-change on record). Zero records is a normal,
+   reportable state pre-population (`README.md` should already say so —
+   flag it if the doc and the directory disagree). The changelog's
+   weekly rollup is the newsletter (`CLAUDE.md`'s framing) — its emptiness
+   or freshness is product state, not housekeeping.
+4. **Source health** — read `kestrel.yaml`'s `sources:` list. For each,
+   report `health.verdict` and how stale `health.last_probe` is. A
+   verdict other than `live` (e.g. `feed-empty`) is only a problem if the
+   manifest hasn't already adapted to it — check whether `method:` for
+   that source is already the demoted value (`page-diff` for a dead
+   feed) per `feed_health: auto-demote` in `governance:`; if the verdict
+   says broken but the method still says `rss`, that's a real gap to
+   flag, not the expected steady state.
+5. **Provenance + snapshot freshness** — newest file in `provenance/`
+   names the last `/tend` or `/verify` run and when; a `verify-*` run
+   note (once `/verify` has run at least once) separately from `collect-*`
+   `/tend` manifests. For any source on `method: page-diff`, the newest
+   `snapshots/*.meta.json` mtime is its last diffed-against baseline —
+   note if it looks older than that source's declared `cadence`.
+6. **Push safety** — run `git log @{u}..` in **all three** repos:
+   `/workspace/therapybulletin-data` (this data repo), `/workspace/kestrel` (the engine —
+   mechanical only, never auto-pushed), and `/workspace/therapybulletin-site` (the site
+   — currently editorial-only per the publish stub, so its own commits
+   are hand-authored, not pipeline output, but still worth the same
+   check). **A clean `git status` is not evidence of this** — only
+   `git log @{u}..` is. Any repo with unpushed commits is the headline
+   flag of the whole card, not a footnote at the bottom.
 7. **Doc drift check** — compare STATUS.md's own "As of" date and its top
    note's claims against the commits since that date (already in hand
    from step 1's git log). Flag anything the top note asserts that the
    newest commits have already overtaken; fix nothing — just name the
-   drift. Not hypothetical: earlier the same day on 2026-07-29, STATUS's
-   top note still said `sev=`/`flash.yaml` were unwired and theprojection
-   was unpushed, when both had already shipped in commits sitting right
-   above it.
-8. **Name the obvious next move** — one plain line, e.g. "07-28 is
-   finalizable, run `/daily`" or "nothing due, good window for the P3
-   judgment tools" — don't leave it for the reader to infer from the
-   briefing above it.
+   drift.
+8. **Name the obvious next move** — one plain line, e.g. "9 candidates
+   staged, nothing curated yet — run `/curate`" or "queue's empty and
+   sources are live, good window for manifest work" — don't leave it for
+   the reader to infer from the briefing above it.
 
 ## Rules
 
-1. **Read-only, always.** `/start` never edits `attention/`, never writes
-   an artifact, never commits, never publishes — same guarantee `/map`
-   states explicitly. It only reads: repo-root docs, the memory directory,
-   git (log/status, both repos), `log.md`, `artifacts/digests/daily/`,
-   `attention/upcoming.yaml`, `attention/flash.yaml`, `attention/
-   threads.yaml` (via `/map`'s freshness read), `artifacts/digests/weekly/`,
-   `coverage-log.md`, and `provenance/publish-*.yaml`.
-2. **Reuse, don't duplicate.** Where `/map` or `/daily` already specifies
-   how to read a file or compute a state (thread freshness buckets, the
-   digest finalization rule, the expectations status vocabulary), point at
-   that command's section instead of writing a second recipe that can
-   drift out of sync with it.
+1. **Read-only, always.** `/start` never edits `candidates/`, `records/`,
+   `changelog/`, or `kestrel.yaml`, never writes an artifact, never
+   commits, never publishes. It only reads: repo-root docs, the memory
+   directory, git (log/status, all three repos), `candidates/*.yaml`,
+   `records/`, `changelog/*.yaml`, `kestrel.yaml`, `provenance/`, and
+   `snapshots/`.
+2. **Reuse, don't duplicate.** Where `/tend`, `/curate`, or `/verify`
+   already specifies how to read a file or compute a state (candidate
+   resolution states, the feed-health demotion rule, what counts as a
+   changelog entry), point at that command's section instead of writing
+   a second recipe that can drift out of sync with it.
 3. Formatting follows the same house style as every other skill card:
    one-line verdict up top, bullets with bold lead terms, a table wherever
-   facts enumerate cleanly (digest status by lens, expectations due),
-   status emojis as anchors, a horizontal rule between the major sections
-   above.
+   facts enumerate cleanly (candidate counts by status, source health by
+   source), status emojis as anchors, a horizontal rule between the major
+   sections above.
 4. If nothing is wrong anywhere in the card, say that plainly — a clean
    `/start` is a real, useful finding, not a step to pad out.
