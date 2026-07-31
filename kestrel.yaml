@@ -115,13 +115,12 @@ sources:
     method: page-diff
     endpoint: https://www.ccpa-accp.ca/blog/
     status: wired
-    verified: false
     latest_important_document:
       title: "GST Exemption Confirmed for CCCs in Unregulated Provinces"
       url: "https://www.ccpa-accp.ca/wp-content/uploads/2025/01/GST-Exemption-ENG.pdf"
       date: "2025-01"
       why_it_matters: "Extended the federal GST/HST psychotherapy exemption to CCPA's own Canadian Certified Counsellor (CCC) designation."
-    notes: "UNVERIFIED BY DIRECT FETCH — ccpa-accp.ca returned HTTP 403 (Cloudflare) to every fetch attempt. Existence/currency corroborated only via third parties (CRA, an NS college, a newswire). Spot-check /blog/ by hand before wiring."
+    notes: "Was flagged UNVERIFIED — plain fetches 403'd (Cloudflare). RESOLVED 2026-07-31: retrieved successfully via tools/fetch-blocked.sh (headless Chromium); https://www.ccpa-accp.ca/blog/ confirmed live and is genuinely CCPA's blog index. Endpoint verified; flag cleared."
   - id: casw-national
     name: Canadian Association of Social Workers (CASW)
     org_type: professional-association

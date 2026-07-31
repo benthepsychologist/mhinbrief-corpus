@@ -42,24 +42,55 @@ source_url_secondary:
   - https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/25-3/application-of-gst-hst-to-psychotherapy-counselling-therapy-services.html
 confidence: high
 notes: >-
-  VERIFICATION SPLIT — read before quoting anything from this record on a page.
-  The statutory text in source_quote was verified verbatim from raw Justice Laws
-  HTML with no summarising tool in the extraction path. The operational detail
-  (the 2024-06-20 royal assent date, "no transition period", the ITC and
-  change-in-use consequences, de-registration, the regulated-province list, and
-  the CCC-equivalency confirmations) comes from CRA GST/HST Memorandum 25-3
-  (published 2026-04-22) and was extracted via a summarising fetch tool, NOT read
-  raw — canada.ca refused direct fetch. Treat those paragraph-level quotes as
-  unconfirmed until spot-checked against the live page; do not publish them as
-  verbatim quotations before that check.
+  VERIFICATION — both sources now read RAW, no summarising tool in either
+  extraction path. The statutory text in source_quote came from raw Justice Laws
+  HTML. CRA GST/HST Memorandum 25-3 initially refused direct fetch (curl returned
+  no response at all) and was first read via a summarising tool; it has since
+  been retrieved raw via headless Chromium and every quoted passage below was
+  spot-checked against that raw text and confirmed accurate. These are safe to
+  publish as verbatim quotations.
+
+  CRA, on the change itself: "On June 20, 2024, Bill C-59 received royal assent.
+  As a result, psychotherapists and counselling therapists were added to the list
+  of health care practitioners whose professional services rendered to
+  individuals are exempt from the GST/HST under section 7 of Part II of
+  Schedule V." And on timing: supplies "rendered before June 20, 2024, are
+  generally taxable" while those "made on or after June 20, 2024, are exempt...
+  There was no transition period for this change." Note CRA's own hedge
+  "generally" on the pre-2024 position — a practitioner may already have been
+  exempt under another provision (social work, nursing).
+
+  ITCs, verbatim: a registrant is "not eligible to claim ITCs on inputs (for
+  example, services, capital property, non-capital property) acquired for the
+  purpose of making exempt supplies of psychotherapy or counselling therapy
+  services."
+
+  CHANGE IN USE, the full mechanism (the part earlier left incomplete): where use
+  of capital personal property falls "from more than 50% in taxable activities to
+  50% or less", a registrant "is deemed under subsection 200(2) to have sold the
+  property immediately before the change in use occurs and... deemed to have
+  collected the GST/HST on the sale of the property equal to the basic tax
+  content of the property at that time", with s. 200(2) also deeming a
+  repurchase.
+
+  DE-REGISTRATION: where all services are exempt the practitioner is "not
+  required to be registered and may close their GST/HST account" — but CRA
+  immediately qualifies this: if only some services are exempt, they "must
+  determine if they are a small supplier" under s. 148.
 
   ELIGIBILITY turns on the s. 1 "practitioner" definition: a person who practises
   the profession and, where the province requires licensing, is licensed there —
   or, where the province does not regulate the profession, "has the
   qualifications equivalent to those necessary to be so licensed or otherwise
-  certified in another province". CRA states it does not itself rule on
-  equivalency and relies on confirmations from associations (per Memorandum 25-3
-  — unverified pending the raw read).
+  certified in another province". CRA "does not provide rulings on whether a
+  person has qualifications equivalent" and states "the onus is on the person to
+  demonstrate that they are a practitioner". It instead lists association
+  confirmations — ACTA, BCACC and CACFT with CRPO, and CCPA with both CRPO and
+  the College of Licensed Counselling Therapists of New Brunswick — with the
+  critical limit, verbatim: "These confirmed equivalencies apply only in
+  unregulated provinces. In regulated provinces, service providers must be
+  registered with the applicable regulatory body to meet the requirements for
+  exemption."
 
   ALSO IN SCOPE, SEPARATE PROVISIONS: psychological services were already exempt
   under s. 7(j), untouched by this amendment — see the sibling record
