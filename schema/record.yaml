@@ -1,48 +1,204 @@
 # ============================================================
-# DRAFT — DO NOT FINALIZE
+# Jurisdiction record schema — v1, FINALIZED 2026-07-31
 # ============================================================
 #
-# Marked DRAFT deliberately. The three §14.1 research artifacts
-# (chat-history-only as of 2026-07-30; Ben exports) include a worked
-# schema in artifact #1 — finalizing v1 before reading them would
-# violate the spec's own do-not-re-derive instruction. This schema
-# must NOT be finalized until those three research artifacts are
-# exported. The engine never interprets record fields directly —
-# only the diff engine's generic field-change semantics touch them.
+# Supersedes the DRAFT stub that stood here until 2026-07-31. That stub
+# carried a "DO NOT FINALIZE" banner whose stated reason was:
 #
-# Field list below is seeded from the initiation doc's record sketch
-# (design §7). No types or enums are declared here — §7 doesn't
-# specify them, and inventing any now would be the same kind of
-# premature finalization this banner exists to prevent.
+#     "The three §14.1 research artifacts (chat-history-only ...) include
+#      a worked schema in artifact #1 ... No types or enums are declared
+#      here — §7 doesn't specify them"
+#
+# That reason was FALSE and the block it created was not real. Traced
+# 2026-07-31 (four independent sweeps: kestrel / pm+cloud-governor / 9
+# other transcript trees / full git history across 6 repos):
+#
+#   - Ben's own worked schema — WITH types and enums — has been committed
+#     since 2026-07-29 in the pm repo, at
+#     pm/streams/research-and-writing/projects/behavioral-health-compliance/
+#       deliverables/initiation-and-plan/bh-compliance-initiation.md  §7
+#     Verified byte-identical to Ben's original paste of it (pm session
+#     transcript, 2026-07-29T19:22Z), so nothing was lost in
+#     transcription. It was never chat-only and was never deleted.
+#   - What IS genuinely chat-only is the three raw deep-research REPORTS
+#     (§4 of that same doc). They hold 60-jurisdiction US detail,
+#     competitive analysis, and market sizing — CONTENT depth. They do
+#     not gate this schema, and §5/§13 of the initiation doc already
+#     distill the Canadian spine and the verification-debt list.
+#   - The lost enums were a three-step telephone game, each step locally
+#     honest: pm §7 (full) -> kestrel ROADMAP/DESIGN.md §7 (flattened to
+#     a bare field-name list) -> this file (inherited the flattened list,
+#     then documented "§7 doesn't specify them" — true of kestrel's §7,
+#     false of pm's). A correction for kestrel's DESIGN.md is filed in
+#     kestrel/INBOX/.
+#
+# Base: pm §7, preserved field-for-field. Every deviation is a deliberate
+# Canada-first adaptation or a mechanical constraint, and each is
+# commented inline with WHY. Nothing here is invented for its own sake —
+# where pm §7 is silent, this file stays silent too.
+#
+# The engine never interprets these fields; only record_diff's generic
+# field-change semantics touch them (kestrel ROADMAP/DESIGN.md §4).
 # ============================================================
 
 record:
-  jurisdiction: # which jurisdiction this record applies to
-  profession_scope: # which profession(s) the record scopes to
-  topic: # the regulatory topic/subject area
-  regulatory_model: # the shape of the regulatory approach in play
 
-  statute_citation: # citation to the governing statute/regulation
+  # --- identity / scoping ---------------------------------------------
 
-  # Compound field — carries an enacted-vs-in-effect distinction
-  # (design §4 references this as a first-class discipline: a
-  # statute can be enacted before it is in effect). Not broken into
-  # a formal sub-schema here — just noted so the distinction isn't
-  # lost before the research artifacts land.
-  status: # enacted vs in-effect status, with associated dates
+  jurisdiction:
+    # pm §7: {country, state_or_province, code}
+    # `code` uses the same vocabulary as kestrel.yaml's sources[].jurisdiction
+    # so records and sources join cleanly: ca-federal, ca-on, ca-qc, ca-ns,
+    # ca-bc, ca-ab, ca-sk, ca-mb, ca-nb, ca-nl, ca-pe, ca-yt, ca-nt, ca-nu.
+    country:            # ca | us  (us reserved for the later phase; Canada-first per initiation §2, LOCKED)
+    state_or_province:  # human-readable name, e.g. "Ontario"; null for federal
+    code:               # e.g. ca-on — MUST match a kestrel.yaml jurisdiction value
 
-  enforcement_body: # who enforces this
-  authority_basis: # the legal/authority basis for the obligation
-  penalties: # penalties for non-compliance
+  profession_scope:
+    # pm §7 enum: [psychologist, counselor, clinical_social_worker, mft, psychotherapist]
+    # Extended, not replaced — pm's values are kept for the US phase, and
+    # `counselling_therapist` is added because that is the actual protected
+    # Canadian title in NS/NB/PEI (verified in the 2026-07-31 source sweep;
+    # "counselor" is the US spelling/title and does not appear on Canadian
+    # regulators' registers).
+    # ALLOWED: psychologist | psychotherapist | counselling_therapist |
+    #          clinical_social_worker | mft | counselor
+    #
+    # Quebec models this differently and a record must not flatten it:
+    # psychotherapy in QC is a RESERVED ACT under Loi 21, not a profession —
+    # psychologists hold it automatically, and members of several other
+    # ordres (OTSTCFQ, OPPQ, OCCOQ, plus some OTs and nurses) may be
+    # authorized to perform it by permit. Where that distinction is
+    # load-bearing, say so in `notes` rather than picking one title.
 
-  clinician_facing_obligations: # obligations that face the clinician
-  vendor_facing_obligations: # obligations that face the vendor
+  topic:
+    # pm §7 enum, unchanged. Matches the site's /topics/ build order.
+    # ALLOWED: licensure | scope | telepractice | privacy | retention |
+    #          insurance | tax | ai | payer
 
-  consent_required: # whether consent is required
-  documentation_required: # what documentation is required
+  regulatory_model:
+    # pm §7 enum, unchanged. `insurer_UR` (insurer utilization review) is a
+    # US-shaped value kept for the later phase; harmless unused in Canada.
+    # ALLOWED: prohibition | disclosure | crisis_response |
+    #          clinician_restriction | insurer_UR | minor_protection | none
 
-  source_url: # the source this record was derived from
-  last_verified: # when this record was last verified against source
+  # --- the legal instrument -------------------------------------------
 
-  confidence: # confidence in this record's accuracy
-  notes: # free-text notes
+  statute_citation:
+    # pm §7: {short_title, bill_number, code_cite, public_act}
+    # `public_act` is a US concept (state Public Act numbering) with no
+    # Canadian analogue — replaced by `regulation_cite`, because in Canada
+    # the operative obligation very often lives in a regulation made under
+    # an act (e.g. an O. Reg. under Ontario's RHPA), not in the act itself.
+    # Dropping that would make a large share of Canadian records uncitable
+    # at the level a reader actually needs.
+    short_title:      # e.g. "Excise Tax Act"
+    bill_number:      # e.g. "C-59"; null where not bill-traceable
+    code_cite:        # e.g. "R.S.C., 1985, c. E-15, Sch. V, Pt. II"
+    regulation_cite:  # e.g. "O. Reg. 107/96"; null if the act itself governs
+
+  status:
+    # pm §7 enum was US legislative process:
+    #   [introduced | passed_chamber | enacted | effective | vetoed | superseded]
+    # Canadianized — this is the registry's ONE first-class discipline
+    # (AGENTS.md #4, DESIGN.md §4), so the vocabulary matters more here
+    # than anywhere else in this file:
+    #   introduced     — tabled / first reading
+    #   passed         — passed the legislature (replaces `passed_chamber`;
+    #                    provincial legislatures are unicameral, so
+    #                    "chamber" mis-describes the Canadian process)
+    #   royal_assent   — ENACTED. The Canadian enactment event.
+    #   in_force       — EFFECTIVE. In force and binding.
+    #   not_proclaimed — assented to but never brought into force. NOT
+    #                    hypothetical: Alberta's Counselling Therapy
+    #                    Profession Act was never proclaimed (initiation
+    #                    §5), and BC's counselling-therapy regulation is
+    #                    assented-but-future-dated (2027-11-29, per the
+    #                    2026-07-31 source sweep). A registry that cannot
+    #                    say "passed, but does not bind you yet" is failing
+    #                    at its single most valuable job.
+    #   died           — died on the order paper / lapsed at prorogation
+    #                    (replaces `vetoed`; Canada has no veto)
+    #   superseded     — replaced by a later instrument
+    #   repealed       — repealed outright
+    #
+    # PUBLICATION NOTE, not a schema rule: method.md commits that
+    # introduced bills are NOT shown on reference pages ("a bill that may
+    # die in committee is noise where you check what the law requires").
+    # The schema still TRACKS them — the changelog/newsletter reports
+    # movement. Filtering is the publish layer's job, not this file's.
+
+  enactment_date:   # date of royal assent. pm §7 keeps this as its own
+                    # field — the DRAFT stub had collapsed it and
+                    # effective_date into `status`, destroying exactly the
+                    # distinction discipline #4 exists to protect.
+  effective_date:   # date in force. NULL when status is not_proclaimed —
+                    # and a null here alongside royal_assent is a
+                    # publishable FINDING, not missing data.
+
+  # --- who enforces, and what it costs --------------------------------
+
+  enforcement_body:  # e.g. "College of Psychologists and Behaviour Analysts of Ontario"
+                     # Where possible use the exact `name` of a wired source
+                     # in kestrel.yaml, so records join to their monitor.
+  authority_basis:
+    # pm §7 enum, unchanged.
+    # ALLOWED: licensure | consumer_protection | insurance | privacy | tax
+  penalties:         # free text; "no published penalty schedule" is a finding
+
+  # --- the actual obligations -----------------------------------------
+
+  clinician_facing_obligations:  # what the practitioner must do
+  vendor_facing_obligations:     # what a tool/platform vendor must do
+  consent_required:              # bool
+  documentation_required:        # bool
+
+  # --- receipts (MECHANICALLY ENFORCED — do not rename) ---------------
+  #
+  # kestrel.yaml governance.record_change_requires: [source_url, last_verified]
+  # and record_diff.governance_check() does a TOP-LEVEL, non-blank lookup on
+  # exactly those two names. Two consequences, both deliberate:
+  #
+  #  1. `source_url` is a PLAIN STRING here, not pm §7's
+  #     `[primary, secondary]` compound. A dict/list satisfies the check
+  #     even when empty inside, which would let an uncited record through
+  #     the one gate that exists to stop that. Secondary sources move to
+  #     their own optional field below, where nothing depends on them.
+  #  2. `last_verified` keeps that exact name, NOT pm §7's
+  #     `last_verified_date` — renaming it would silently disarm the check.
+
+  source_url:              # REQUIRED. The primary source: one URL, the
+                           # document that made this true.
+  last_verified:           # REQUIRED. ISO date last checked against source.
+                           # A verified non-change still moves this (AGENTS.md #5).
+  source_quote:            # verbatim quote from the primary source supporting
+                           # the claim. Not mechanically required, but
+                           # method.md's published promise is "state the rule,
+                           # quote the source verbatim, with link" — a record
+                           # without this cannot render a compliant page.
+                           # Treat as required in practice.
+  source_url_secondary:    # optional list; corroborating only. NEVER the
+                           # citation of record (AGENTS.md #1).
+
+  # --- confidence and caveats -----------------------------------------
+
+  confidence:   # high | medium | low  (pm §7 enum, unchanged)
+                # `low` ships flagged and visible, or does not ship — never
+                # laundered into a confident claim (CLAUDE.md).
+  notes:        # free text. Carries open questions, the QC reserved-act
+                # wrinkle, "no published standard in this jurisdiction"
+                # findings, and any initiation §13 verification-debt flag
+                # that applies to this record.
+
+# ============================================================
+# Still genuinely open (do NOT silently resolve these):
+#   - The three raw research reports remain unexported; they gate CONTENT
+#     depth (US 60-jurisdiction detail, competitive analysis, market
+#     sizing), not this schema. Initiation §14.1 still says read them
+#     before doing US work.
+#   - French: initiation §12 lists QC translation as undecided. Records
+#     citing French-only primaries should quote the French verbatim in
+#     `source_quote` and not silently substitute an English secondary.
+#   - Initiation §13 lists 11 verification-debt items that must not be
+#     published without primary-source confirmation.
+# ============================================================

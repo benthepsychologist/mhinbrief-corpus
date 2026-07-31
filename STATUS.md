@@ -1,7 +1,40 @@
 # STATUS — therapybulletin-data (registry instance)
 
-*Hand-maintained. **As of 2026-07-31** (first STATUS.md for this repo —
-none existed before this note; top note below, no prior dated entries.)*
+*Hand-maintained. **As of 2026-07-31** (first STATUS.md for this repo;
+newest note first.)*
+
+> **2026-07-31 (later) — the schema block was never real; `record.yaml` is
+> finalized v1, and the corpus is unblocked.** `schema/record.yaml` had
+> carried a `DO NOT FINALIZE` banner since scaffolding, on the stated
+> grounds that the worked schema existed only in chat history pending
+> "three §14.1 research artifacts." Four independent sweeps (kestrel's 286
+> transcripts; pm + cloud-governor's 244; nine other transcript trees; and
+> full git history — all refs, deleted files, stashes, reflog, dangling
+> objects — across six repos) established that the schema has been
+> committed in `pm` since 2026-07-29, at
+> `bh-compliance-initiation.md` §7, **with the types and enums the DRAFT
+> claimed did not exist**, and byte-identical to Ben's original paste of
+> it (2026-07-29T19:22Z). The block came from a three-step degradation:
+> pm §7 (full) → kestrel `DESIGN.md` §7 (flattened to bare field names) →
+> this repo's `record.yaml` (inherited the flattened list, then documented
+> "§7 doesn't specify them" — true of kestrel's copy, false of pm's).
+> v1 now restores every enum, splits `enactment_date`/`effective_date`
+> back out of the collapsed `status` field, and Canadianizes the
+> status vocabulary (`royal_assent`, `in_force`, `not_proclaimed`,
+> `died` — Canada has no veto, and "assented but never proclaimed" is a
+> real, publishable state: Alberta's CCTA, BC's 2027 counselling-therapy
+> date). A correction for kestrel's DESIGN.md is filed in `kestrel/INBOX/`.
+> **Genuinely still missing:** the three raw research *reports*. They gate
+> US-phase content depth, not the schema; the initiation doc's §5/§13
+> already carry the Canadian spine and the 11-item verification-debt list.
+>
+> Also this session: full jurisdiction coverage reached (50 sources across
+> all 13 provinces/territories + federal, 26 wired then all flipped live),
+> the interactive jurisdiction map shipped to therapybulletin.org with a
+> logo/palette pass, and one real bug caught and fixed — the map's click
+> panel had never rendered live data, because Hugo's contextual escaper
+> was turning the injected JSON into a string (caught by a jsdom harness
+> firing real click events; grep/curl checks had all passed it).
 
 > **2026-07-31 — first `/start` run surfaced a kit mismatch; fixed at the
 > engine, and this repo's operator now runs it as lead agent for that
