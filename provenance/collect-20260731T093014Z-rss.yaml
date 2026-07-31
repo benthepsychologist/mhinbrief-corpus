@@ -1,0 +1,36 @@
+source_id: rss
+params:
+  feeds:
+  - id: canada-gazette-p2
+    feed_url: https://gazette.gc.ca/rss/p2-eng.xml
+  since: '2026-05-02T09:30:14Z'
+  entries_seen: 228
+fetched_at: '2026-07-31T09:30:14Z'
+items:
+- id: f296176d9cfcb1af
+  url: https://gazette.gc.ca/rp-pr/p2/2026/2026-07-29/html/index-eng.html
+  ts: '2026-07-29T14:00:00Z'
+- id: 5f33dca6dba1fd50
+  url: https://gazette.gc.ca/rp-pr/p2/2026/2026-07-15/html/index-eng.html
+  ts: '2026-07-15T14:00:00Z'
+- id: abad46d4ecbbf3dc
+  url: https://gazette.gc.ca/rp-pr/p2/2026/2026-07-01/html/index-eng.html
+  ts: '2026-07-01T14:00:00Z'
+- id: 1b173761d2e19160
+  url: https://gazette.gc.ca/rp-pr/p2/2026/2026-03-31-c1/index-eng.html
+  ts: '2026-06-19T19:00:00Z'
+- id: 4913bc5a7c08a6de
+  url: https://gazette.gc.ca/rp-pr/p2/2026/2026-06-17/html/index-eng.html
+  ts: '2026-06-17T14:00:00Z'
+- id: a303b1e27581b548
+  url: https://gazette.gc.ca/rp-pr/p2/2026/2026-06-08-x1/html/si-tr29-eng.html
+  ts: '2026-06-08T14:00:00Z'
+- id: 2c185ba480acd4e1
+  url: https://gazette.gc.ca/rp-pr/p2/2026/2026-06-03/html/index-eng.html
+  ts: '2026-06-03T14:00:00Z'
+- id: ed181c87332ef7b6
+  url: https://gazette.gc.ca/rp-pr/p2/2026/2026-05-20/html/index-eng.html
+  ts: '2026-05-20T14:00:00Z'
+- id: c43130d3096e16d2
+  url: https://gazette.gc.ca/rp-pr/p2/2026/2026-05-06/html/index-eng.html
+  ts: '2026-05-06T14:00:00Z'

@@ -1,0 +1,11 @@
+source_id: page_diff
+params:
+  snapshots_dir: /workspace/bh-compliance-data/snapshots
+  since: '2026-05-02T09:30:14Z'
+  sources:
+  - id: crpo-news
+    endpoint: https://crpo.ca/news/
+    verdict: baseline
+    detail: 60 lines, hash=4f084cfc
+fetched_at: '2026-07-31T09:30:16Z'
+items: []

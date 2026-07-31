@@ -8,6 +8,9 @@ layout:
   changelog: changelog/
   candidates: candidates/    # runner staging area — curation reads this
   buffer: buffer/            # cache semantics, 30-day, same as kestrel's
+  snapshots: snapshots/      # page-diff prior-snapshot store (§3.4) — NOT
+                             # buffer semantics: must outlive the sweep
+                             # cadence, never retention-swept
   provenance: provenance/    # per-run fetch manifests, same shape
 cadence:
   sweep: weekly               # the product rhythm ("cadence IS the product")
