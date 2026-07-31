@@ -482,6 +482,291 @@ sources:
       why_it_matters: "Annual report covering PHIA (health-privacy) review activity relevant to clinical record-keeping obligations."
     notes: "LOWER CONFIDENCE on latest-document field — /news is dominated by general FOIPOP items, not PHIA-specific. A more targeted PHIA practice-guidance doc exists dated 2024-01-24 (https://oipc.novascotia.ca/sites/default/files/PHIA/PHIA%20Tools/2024%2001%2024%20Protecting%20Patient%20Information.pdf) and may be more useful — consider swapping. No RSS feed found."
 
+  # ---- proposed additions, 2026-07-31 second source-map pass (8 parallel
+  # research agents, lighter scope than the pilot four: regulatory
+  # colleges/orders prioritized, "latest important document" best-effort
+  # only, not chased hard) — covers every remaining province/territory.
+  # status: proposed, same as the first pass — not wired without Ben's
+  # explicit go-ahead this round. Several entries below hit a Cloudflare
+  # bot-challenge on direct fetch and are corroborated via search/
+  # secondary sources only, not a direct successful fetch — flagged in
+  # each entry's own notes, don't wire those without a human recheck.
+  #
+  # Real "not yet regulated" findings worth keeping in mind even though
+  # they produced no entry: Saskatchewan, Manitoba, and Newfoundland &
+  # Labrador have NO counselling-therapy regulator yet (SK's FACT-SK
+  # application has been pending since 2018); BC's counselling-therapy
+  # regulation doesn't take effect until 2027-11-29; Yukon only began
+  # regulating psychology 2025-02-01 and has no social-work or
+  # counselling-therapy regulator; Nunavut regulates only psychology,
+  # nothing else.
+
+  # -- british columbia --
+  - id: chcpbc
+    name: College of Health and Care Professionals of BC
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-bc
+    language: en
+    website: https://chcpbc.org/
+    method: page-diff
+    endpoint: https://chcpbc.org/news-events/
+    status: proposed
+    notes: "Formed June 2024 from a merger of 7 BC health-profession colleges (incl. the former College of Psychologists of BC); confirmed as psychologists' current statutory regulator under the Health Professions and Occupations Act (in force 2026-04-01). Counselling therapy is slated to come under CHCPBC's authority 2027-11-29 — not yet regulated. No RSS feed found."
+  - id: bccsw
+    name: British Columbia College of Social Workers
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-bc
+    language: en
+    website: https://bccsw.ca/
+    method: page-diff
+    endpoint: https://bccsw.ca/for-the-public/public-notifications/
+    status: proposed
+    notes: "Verified statutory regulator (bylaws, public register, discipline hearings), distinct from any voluntary association. No RSS feed found."
+  - id: bcacc
+    name: BC Association of Clinical Counsellors
+    org_type: professional-association
+    tier: 2
+    jurisdiction: ca-bc
+    language: en
+    website: https://bc-counsellors.org/
+    method: page-diff
+    endpoint: https://bc-counsellors.org/regulation
+    status: proposed
+    notes: "NOT a statutory regulator — voluntary self-regulating association (~9,500 Registered Clinical Counsellors). Dominant body in BC's still-unregulated counselling-therapy space, acknowledged path toward CHCPBC's 2027-11-29 statutory regulation. Feed not checked in depth."
+
+  # -- alberta --
+  - id: ab-college-of-alberta-psychologists
+    name: College of Alberta Psychologists
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-ab
+    language: en
+    website: https://www.cap.ab.ca/
+    method: page-diff
+    endpoint: https://www.cap.ab.ca/resources-regulatory-information/practice-alerts
+    status: proposed
+    notes: "Verified live. Sole regulator of psychology in Alberta. No RSS feed exposed. Also slated to become regulator of counselling therapists, addictions counsellors, and child/youth care counsellors per a March 2024 announcement, but as of ~Sept 2025 still pending funding/legislative steps — not yet in force."
+  - id: ab-alberta-college-of-social-workers
+    name: Alberta College of Social Workers
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-ab
+    language: en
+    website: https://acsw.ab.ca/
+    method: rss
+    feed_url: https://acsw.ab.ca/category/latest-news/feed/
+    status: proposed
+    notes: "Verified live. Single-mandate regulator of social work in Alberta since 2020. RSS feed confirmed working via curl."
+  - id: ab-psychologists-association-of-alberta
+    name: Psychologists' Association of Alberta
+    org_type: professional-association
+    tier: 2
+    jurisdiction: ca-ab
+    language: en
+    website: https://psychologistsassociation.ab.ca/
+    method: page-diff
+    endpoint: https://psychologistsassociation.ab.ca/news
+    status: proposed
+    notes: "Verified live. Voluntary advocacy/referral association, distinct from the regulatory CAP. No RSS found."
+
+  # -- saskatchewan (no counselling-therapy regulator exists — FACT-SK's
+  #    application has been pending with the provincial government since
+  #    2018, no confirmed timeline) --
+  - id: sk-college-of-psychologists
+    name: Saskatchewan College of Psychologists
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-sk
+    language: en
+    website: https://www.skcp.ca/
+    method: page-diff
+    endpoint: "https://www.skcp.ca/?page_id=103"
+    status: proposed
+    notes: "Verified live, confirmed regulatory body for psychology in SK. No RSS feed found (legacy WordPress build, query-param URLs)."
+  - id: sk-association-of-social-workers
+    name: Saskatchewan Association of Social Workers
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-sk
+    language: en
+    website: https://www.sasw.ca/
+    method: page-diff
+    endpoint: https://www.sasw.ca/site/news
+    status: proposed
+    notes: "Despite the 'Association' name, confirmed statutory regulator under the Social Workers Act (mandatory registration since 1995). No RSS feed found; /site/news was empty ('No Records Found') at check time — confirm it populates before relying on it."
+
+  # -- manitoba (no counselling-therapy regulator exists; FACT-MB is
+  #    lobbying for one, no act/college yet) --
+  - id: mb-pam
+    name: Psychological Association of Manitoba (PAM)
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-mb
+    language: en
+    website: https://www.cpmb.ca/
+    method: page-diff
+    endpoint: https://www.cpmb.ca/News_Announcements.php
+    status: proposed
+    notes: "Confirmed statutory regulator under The Psychologists Registration Act (CCSM c P190) despite the 'Association' name. No RSS feed; sparse posting cadence (most recent post at check time: April 2025)."
+  - id: mb-mcsw
+    name: Manitoba College of Social Workers (MCSW)
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-mb
+    language: en
+    website: https://mcsw.ca/
+    method: page-diff
+    endpoint: https://mcsw.ca/news-and-events/news/
+    status: proposed
+    notes: "Confirmed statutory regulator under The Social Work Profession Act, in force since 2015-04-01. No RSS feed; news page active with recent dated posts."
+
+  # -- new brunswick (bilingual — see language field per source; regulates
+  #    counselling therapy, unlike SK/MB/NL) --
+  - id: nb-college-psychologists
+    name: College of Psychologists of New Brunswick
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-nb
+    language: en/fr
+    website: https://cpnb.ca/en/
+    method: rss
+    feed_url: https://cpnb.ca/en/feed/
+    status: proposed
+    notes: "Verified live via fetch; RSS feed confirmed working with dated items."
+  - id: nb-association-social-workers
+    name: "New Brunswick Association of Social Workers (Association des travailleuses et travailleurs sociaux du Nouveau-Brunswick / NBASW-ATSNB)"
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-nb
+    language: en/fr
+    website: https://www.nbasw-atsnb.ca/
+    method: page-diff
+    endpoint: https://www.nbasw-atsnb.ca/news-and-events/news/
+    status: proposed
+    notes: "UNVERIFIED BY DIRECT FETCH — every request (WebFetch and curl with a browser UA) hit a Cloudflare bot-challenge, including the homepage. Existence/mandate confirmed via legislative sources (legnb.ca) as the legislated regulator under the New Brunswick Association of Social Workers Act, not just a voluntary group. Recheck by hand before wiring."
+  - id: nb-college-licensed-counselling-therapists
+    name: College of Licensed Counselling Therapists of New Brunswick
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-nb
+    language: en/fr
+    website: https://cctnb.ca/
+    method: rss
+    feed_url: https://cctnb.ca/feed/
+    status: proposed
+    notes: "Regulator under the Licensed Counselling Therapy Act (SNB 2017, c 35; proclaimed 2017-06-01) — NB does regulate this profession, unlike several other provinces. RSS feed confirmed working at the root /feed/ path — CAUTION: /en/feed/ on this site returns an empty comments feed, not the post feed, use /feed/."
+
+  # -- newfoundland and labrador (no counselling-therapy regulator exists;
+  #    FACT-NL pursuing one under the Health Professions Act) --
+  - id: nl-psychology-board
+    name: Newfoundland and Labrador Psychology Board
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-nl
+    language: en
+    website: https://nlpsychboard.ca/
+    method: rss
+    feed_url: https://nlpsychboard.ca/feed/
+    status: proposed
+    notes: "Verified live. Statutory regulator under the Psychologists Act (2005). WordPress RSS feed confirmed working."
+  - id: nl-college-social-workers
+    name: Newfoundland and Labrador College of Social Workers
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-nl
+    language: en
+    website: https://nlcsw.ca/
+    method: rss
+    feed_url: https://nlcsw.ca/feed/
+    status: proposed
+    notes: "Verified live. Statutory regulator under the Social Workers Act (since 1992); site uses 'NLCSW' throughout though older sources reference 'NLASW' — confirm current name if it ever comes up. WordPress RSS feed confirmed working; /news/ page as a page-diff fallback."
+
+  # -- prince edward island (regulates counselling therapy separately,
+  #    since 2021 — not merged with psychology or social work) --
+  - id: pe-psychologists-registration-board
+    name: Prince Edward Island Psychologists Registration Board
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-pe
+    language: en
+    website: https://www.peipsychology.org/peiprb/
+    method: page-diff
+    endpoint: https://www.peipsychology.org/peiprb/
+    status: proposed
+    notes: "Verified live, operates under the Psychologists Act (2009). No dedicated news page or RSS found; page-diff against the homepage."
+  - id: pe-social-work-registration-board
+    name: Prince Edward Island Social Work Registration Board
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-pe
+    language: en
+    website: https://socialworkpei.ca/
+    method: rss
+    feed_url: https://socialworkpei.ca/feed/
+    status: proposed
+    notes: "Verified live. Mandatory registration body, distinct from the voluntary PEI Association of Social Workers. RSS feed confirmed valid via fetch."
+  - id: pe-college-counselling-therapy
+    name: College of Counselling Therapy of Prince Edward Island
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-pe
+    language: en
+    website: https://www.cctpei.ca/
+    method: page-diff
+    endpoint: https://www.cctpei.ca/current-news
+    status: proposed
+    notes: "Verified live. Counselling therapy separately regulated in PEI under the Regulated Health Professions Act since 2021 — not a combined body with psychology or social work. No RSS feed (confirmed 404, not soft-fail)."
+
+  # -- territories (thin/no infrastructure for several professions — see
+  #    the pass-level note above; entries below cover only what's
+  #    actually regulated, not forced matches to provincial structure) --
+  - id: yt-psychologists
+    name: "Government of Yukon — Psychologist Regulation (Professional Licensing, Health Professions Act)"
+    org_type: government-department
+    tier: 1
+    jurisdiction: ca-yt
+    language: en
+    website: https://yukon.ca/en/doing-business/professional-licensing/learn-about-psychologist-regulations-yukon
+    method: page-diff
+    endpoint: https://yukon.ca/en/doing-business/professional-licensing/learn-about-psychologist-regulations-yukon
+    status: proposed
+    notes: "UNVERIFIED BY DIRECT FETCH — yukon.ca returned a Cloudflare bot-challenge (403) on every attempt this session. Content verified only via search snippets and independent corroboration (CBC News, Law360 Canada). Newly regulated (certificates required as of 2025-02-01), administered directly by the territorial government, no arm's-length college. No counselling-therapist or social-worker regulator exists in Yukon. Recheck by hand before wiring."
+  - id: nt-psychologists
+    name: "Government of Northwest Territories — Psychologist Licence (Professional Licensing Office, Dept. of Health and Social Services)"
+    org_type: government-department
+    tier: 1
+    jurisdiction: ca-nt
+    language: en
+    website: https://www.hss.gov.nt.ca/en/services/psychologist-licence
+    method: page-diff
+    endpoint: https://www.hss.gov.nt.ca/en/services/psychologist-licence
+    status: proposed
+    notes: "Fetched live, confirmed. Regulated since 2022-08-15 under the Health and Social Services Professions Act. No profession-specific RSS found (a territory-wide GNWT newsroom feed exists but isn't licensing-specific)."
+  - id: nt-social-workers
+    name: "Government of Northwest Territories — Social Worker Licence (Professional Licensing Office, Dept. of Health and Social Services)"
+    org_type: government-department
+    tier: 1
+    jurisdiction: ca-nt
+    language: en
+    website: https://www.hss.gov.nt.ca/en/services/social-worker-licence
+    method: page-diff
+    endpoint: https://www.hss.gov.nt.ca/en/services/social-worker-licence
+    status: proposed
+    notes: "Fetched live, confirmed. Regulated under the Social Work Profession Act, same registrar/office as psychologists. No counselling-therapist regulator exists in NWT."
+  - id: nu-psychologists
+    name: "Government of Nunavut — Registrar, Professional Licensing (Dept. of Health; Psychologists Act)"
+    org_type: government-department
+    tier: 1
+    jurisdiction: ca-nu
+    language: en
+    website: https://www.gov.nu.ca/health
+    method: page-diff
+    endpoint: https://www.nunavutlegislation.ca/en/consolidated-law/psychologists-act-consolidation
+    status: proposed
+    notes: "Only regulated profession of the three in Nunavut. No dedicated licensing subpage found on gov.nu.ca — endpoint set to the consolidated Psychologists Act on nunavutlegislation.ca instead (fetched live; text shows 2020/2026 amendment notes — re-check it's the current in-force version before wiring). No regulator exists for social workers or counselling therapists in Nunavut — voluntary ASWNC membership only."
+
 governance:                  # machine-checked by the runner, not habits
   record_change_requires: [source_url, last_verified]
   field_diff_emits: changelog
