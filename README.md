@@ -21,10 +21,12 @@ DRAFT on the stated grounds that the worked schema was chat-history-only,
 pending "§14.1 research artifacts" — that turned out to be false. The
 schema, with full types and enums, has been committed in the `pm` repo
 since 2026-07-29 (`bh-compliance-initiation.md` §7) and was verified
-byte-identical to the original paste that created it. What is genuinely
-still unexported is the three raw deep-research *reports*, which gate
-US-phase content depth, not the schema. See the schema file's own header
-for the full trace.
+byte-identical to the original paste that created it. The §14.1 question is
+now **closed**: Ben confirmed (2026-07-31) that those three reports were run
+on claude.ai's web interface, not in any CLI session, and that they did not
+contain schemas we care about — so nothing schema-shaped is outstanding and
+this hunt should not be re-run. See the schema file's own header for the
+full trace.
 
 Records are not yet populated; population is now unblocked and begins
 with Ontario/Quebec (build order set 2026-07-31: **Ontario → Quebec →

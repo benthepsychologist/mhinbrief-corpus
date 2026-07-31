@@ -24,9 +24,13 @@ newest note first.)*
 > `died` — Canada has no veto, and "assented but never proclaimed" is a
 > real, publishable state: Alberta's CCTA, BC's 2027 counselling-therapy
 > date). A correction for kestrel's DESIGN.md is filed in `kestrel/INBOX/`.
-> **Genuinely still missing:** the three raw research *reports*. They gate
-> US-phase content depth, not the schema; the initiation doc's §5/§13
-> already carry the Canadian spine and the 11-item verification-debt list.
+> **And the §14.1 question is now CLOSED, not merely narrowed** — Ben,
+> same day, after seeing the search: those three reports were run on
+> claude.ai's web interface, not in any CLI session, and **did not contain
+> schemas we care about**. Nothing schema-shaped is outstanding; no future
+> session should re-run this hunt or treat §14.1 as a gate. The initiation
+> doc's §5/§13 already carry the Canadian spine and the 11-item
+> verification-debt list, which is what actually informs content work.
 >
 > Also this session: full jurisdiction coverage reached (50 sources across
 > all 13 provinces/territories + federal, 26 wired then all flipped live),

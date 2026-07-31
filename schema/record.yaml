@@ -191,11 +191,18 @@ record:
                 # that applies to this record.
 
 # ============================================================
-# Still genuinely open (do NOT silently resolve these):
-#   - The three raw research reports remain unexported; they gate CONTENT
-#     depth (US 60-jurisdiction detail, competitive analysis, market
-#     sizing), not this schema. Initiation §14.1 still says read them
-#     before doing US work.
+# The §14.1 artifact question is CLOSED — do not reopen it.
+#
+# Ben, 2026-07-31, after the search above: the three deep-research reports
+# were run on claude.ai (the web interface), not in any CLI session, and
+# **they did not contain schemas we care about**. So there is nothing
+# schema-shaped left to recover, and no reason for any future session to
+# re-run this hunt or treat §14.1 as a gate on this file. THIS schema,
+# derived from pm §7, is the authoritative one. If a future doc still
+# says otherwise, that doc is stale — see kestrel/INBOX/ for the
+# correction filed against DESIGN.md §7/§10.
+#
+# Still genuinely open (unrelated to the above):
 #   - French: initiation §12 lists QC translation as undecided. Records
 #     citing French-only primaries should quote the French verbatim in
 #     `source_quote` and not silently substitute an English secondary.
