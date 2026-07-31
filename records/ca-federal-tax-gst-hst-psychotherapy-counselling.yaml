@@ -1,0 +1,75 @@
+jurisdiction:
+  country: ca
+  state_or_province: null
+  code: ca-federal
+profession_scope:
+  - psychotherapist
+  - counselling_therapist
+topic: tax
+regulatory_model: none          # a tax-status rule, not a conduct restriction
+statute_citation:
+  short_title: Excise Tax Act
+  bill_number: C-59
+  code_cite: "R.S.C., 1985, c. E-15, Sch. V, Pt. II, s. 7(j.1)-(j.2)"
+  regulation_cite: null
+status: in_force
+enactment_date: '2024-06-20'    # royal assent, S.C. 2024, c. 15
+effective_date: '2024-06-20'    # in force on assent; CRA states no transition period
+enforcement_body: Canada Revenue Agency
+authority_basis: tax
+penalties: null                 # no penalty schedule specific to this change
+clinician_facing_obligations: >-
+  Psychotherapy and counselling therapy services rendered to an individual by a
+  "practitioner" of the service are exempt supplies — GST/HST is not charged on
+  them. On becoming exempt, three consequences follow that practitioners
+  routinely miss: input tax credits are no longer claimable on inputs acquired
+  to make these supplies; a change in use of capital property may trigger a
+  deemed sale and repurchase; and a registrant whose supplies are all exempt is
+  not required to be registered and may close the GST/HST account.
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: false
+source_url: https://laws-lois.justice.gc.ca/eng/acts/e-15/page-120.html
+last_verified: '2026-07-31'
+source_quote: >-
+  "7 A supply of any of the following services if the service is rendered to an
+  individual by a practitioner of the service: (a) optometric services; ...
+  (j) psychological services; (j.1) psychotherapy services; (j.2) counselling
+  therapy services; (k) midwifery services; (l) acupuncture services; and
+  (m) naturopathic services." — Excise Tax Act, Schedule V, Part II, s. 7
+  (Justice Laws consolidation, Act current to 2026-06-14)
+source_url_secondary:
+  - https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/25-3/application-of-gst-hst-to-psychotherapy-counselling-therapy-services.html
+confidence: high
+notes: >-
+  VERIFICATION SPLIT — read before quoting anything from this record on a page.
+  The statutory text in source_quote was verified verbatim from raw Justice Laws
+  HTML with no summarising tool in the extraction path. The operational detail
+  (the 2024-06-20 royal assent date, "no transition period", the ITC and
+  change-in-use consequences, de-registration, the regulated-province list, and
+  the CCC-equivalency confirmations) comes from CRA GST/HST Memorandum 25-3
+  (published 2026-04-22) and was extracted via a summarising fetch tool, NOT read
+  raw — canada.ca refused direct fetch. Treat those paragraph-level quotes as
+  unconfirmed until spot-checked against the live page; do not publish them as
+  verbatim quotations before that check.
+
+  ELIGIBILITY turns on the s. 1 "practitioner" definition: a person who practises
+  the profession and, where the province requires licensing, is licensed there —
+  or, where the province does not regulate the profession, "has the
+  qualifications equivalent to those necessary to be so licensed or otherwise
+  certified in another province". CRA states it does not itself rule on
+  equivalency and relies on confirmations from associations (per Memorandum 25-3
+  — unverified pending the raw read).
+
+  ALSO IN SCOPE, SEPARATE PROVISIONS: psychological services were already exempt
+  under s. 7(j), untouched by this amendment — see the sibling record
+  ca-federal-tax-gst-hst-psychology. Social work services are exempt under a
+  different provision again, s. 7.2, and nursing under s. 6 where provincial law
+  permits a nurse to provide psychotherapy in scope. No record exists yet for
+  those two.
+
+  TIME-SENSITIVE: CRA's list of provinces that regulate these professions is
+  stated as at its publication date. BC, Alberta, Manitoba and Saskatchewan are
+  each moving on counselling-therapy/psychotherapy regulation; any such change
+  flips practitioners there from the equivalent-qualifications test to a
+  must-be-licensed test. Re-verify on any provincial regulatory change.

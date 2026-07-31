@@ -1,0 +1,69 @@
+record_id: ca-federal-tax-gst-hst-psychology
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: null
+    code: ca-federal
+  profession_scope:
+  - psychologist
+  topic: tax
+  regulatory_model: none
+  statute_citation:
+    short_title: Excise Tax Act
+    bill_number: null
+    code_cite: R.S.C., 1985, c. E-15, Sch. V, Pt. II, s. 7(j)
+    regulation_cite: null
+  status: in_force
+  enactment_date: null
+  effective_date: null
+  enforcement_body: Canada Revenue Agency
+  authority_basis: tax
+  penalties: null
+  clinician_facing_obligations: Psychological services rendered to an individual by
+    a practitioner of the service are exempt supplies — GST/HST is not charged on
+    them. This exemption is long-standing and was NOT created or altered by the 2024
+    Bill C-59 amendment that added psychotherapy and counselling therapy; psychologists
+    were already exempt before it and are unaffected by it.
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: false
+  source_url: https://laws-lois.justice.gc.ca/eng/acts/e-15/page-120.html
+  last_verified: '2026-07-31'
+  source_quote: '"7 A supply of any of the following services if the service is rendered
+    to an individual by a practitioner of the service: (a) optometric services; ...
+    (i) occupational therapy services; (j) psychological services; (j.1) psychotherapy
+    services; (j.2) counselling therapy services; ..." — Excise Tax Act, Schedule
+    V, Part II, s. 7 (Justice Laws consolidation, Act current to 2026-06-14). Paragraph
+    (j) sits immediately before the two paragraphs added by S.C. 2024, c. 15, and
+    was not amended by it.'
+  source_url_secondary: []
+  confidence: high
+  notes: 'WHY THIS IS A SEPARATE RECORD, not a line in the psychotherapy one: CRA
+    GST/HST Memorandum 25-3 — the guidance everyone reaches for on this topic — does
+    not mention psychology or psychologists anywhere in its text. A page that cites
+    that memorandum for the psychology position would be citing a document that is
+    silent on it. The authority here is the statute itself, s. 7(j), and that is what
+    this record is sourced to.
+
+    The fact of the exemption is high-confidence: the paragraph is present in the
+    current consolidation, verified verbatim from raw Justice Laws HTML with no summarising
+    tool in the path.
+
+    OPEN — enactment_date and effective_date are null on purpose. s. 7(j) predates
+    the 2024 amendment and this pass did not trace when psychological services were
+    first added to Schedule V, Part II. Per AGENTS.md discipline 4 the enacted / in-force
+    distinction is first-class, so guessing a date here would be worse than leaving
+    it empty. A null date beside status: in_force means "in force, start date not
+    yet traced" — not "no date exists". Resolve by walking the Excise Tax Act''s amendment
+    history before any page asserts how long this has been true.
+
+    SIBLING RECORDS: psychotherapy and counselling therapy under s. 7(j.1)-(j.2) are
+    recorded separately at ca-federal-tax-gst-hst-psychotherapy-counselling. Social
+    work (s. 7.2) and nursing (s. 6) are further separate provisions with no record
+    yet.'
+source_url: https://laws-lois.justice.gc.ca/eng/acts/e-15/page-120.html
+observed: '2026-07-31'
+status: in-effect
+kind: record-added
