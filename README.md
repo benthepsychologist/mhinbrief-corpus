@@ -28,9 +28,11 @@ contain schemas we care about — so nothing schema-shaped is outstanding and
 this hunt should not be re-run. See the schema file's own header for the
 full trace.
 
-Records are not yet populated; population is now unblocked and begins
-with Ontario/Quebec (build order set 2026-07-31: **Ontario → Quebec →
-Nova Scotia**). Site content ships only through the `therapybulletin` adapter at
+The corpus is live: **4 records** (the GST/HST exemption routes — s. 7(j)
+psychology, s. 7(j.1)/(j.2) psychotherapy and counselling therapy, s. 7.2
+social work, s. 6 nursing) and their 4 changelog entries, all rendering on
+therapybulletin.org. Build order for jurisdiction work, set 2026-07-31:
+**Ontario → Quebec → Nova Scotia**. Site content ships only through the `therapybulletin` adapter at
 `publish/adapter.py` — **built 2026-07-31**, so `/publish` is no longer a
 stub. It emits the changelog pages, `data/records.yaml`, and the
 jurisdiction map's `data/regulators.yaml`, under the engine's guarantees
