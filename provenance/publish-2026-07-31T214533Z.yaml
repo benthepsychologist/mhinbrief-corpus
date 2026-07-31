@@ -1,0 +1,32 @@
+kind: publish
+adapter: therapybulletin
+published_at: '2026-07-31T21:45:33.128420+00:00'
+records: 4
+changelog_entries: 4
+files_written:
+- content/changelog/2026-07-31-ca-federal-tax-gst-hst-nursing-record-added.md
+- content/changelog/2026-07-31-ca-federal-tax-gst-hst-psychology-record-added.md
+- content/changelog/2026-07-31-ca-federal-tax-gst-hst-psychotherapy-counselling-record-added.md
+- content/changelog/2026-07-31-ca-federal-tax-gst-hst-social-work-record-added.md
+- data/records.yaml
+allowlist:
+- jurisdiction
+- profession_scope
+- topic
+- regulatory_model
+- statute_citation
+- status
+- enactment_date
+- effective_date
+- enforcement_body
+- authority_basis
+- penalties
+- clinician_facing_obligations
+- vendor_facing_obligations
+- consent_required
+- documentation_required
+- source_url
+- source_quote
+- last_verified
+- confidence
+site: /workspace/therapybulletin-site
