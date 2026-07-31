@@ -115,6 +115,7 @@ sources:
     method: page-diff
     endpoint: https://www.ccpa-accp.ca/blog/
     status: proposed
+    verified: false
     latest_important_document:
       title: "GST Exemption Confirmed for CCCs in Unregulated Provinces"
       url: "https://www.ccpa-accp.ca/wp-content/uploads/2025/01/GST-Exemption-ENG.pdf"
@@ -163,6 +164,7 @@ sources:
     method: page-diff
     endpoint: https://mentalhealthcommission.ca/workplace-standard/
     status: proposed
+    verified: false
     latest_important_document:
       title: "National Standard of Canada for Psychological Health and Safety in the Workplace — 2nd edition (in development with CSA Group)"
       date: "unknown — expected 2026, not yet published"
@@ -645,6 +647,7 @@ sources:
     method: page-diff
     endpoint: https://www.nbasw-atsnb.ca/news-and-events/news/
     status: proposed
+    verified: false
     notes: "UNVERIFIED BY DIRECT FETCH — every request (WebFetch and curl with a browser UA) hit a Cloudflare bot-challenge, including the homepage. Existence/mandate confirmed via legislative sources (legnb.ca) as the legislated regulator under the New Brunswick Association of Social Workers Act, not just a voluntary group. Recheck by hand before wiring."
   - id: nb-college-licensed-counselling-therapists
     name: College of Licensed Counselling Therapists of New Brunswick
@@ -732,6 +735,7 @@ sources:
     method: page-diff
     endpoint: https://yukon.ca/en/doing-business/professional-licensing/learn-about-psychologist-regulations-yukon
     status: proposed
+    verified: false
     notes: "UNVERIFIED BY DIRECT FETCH — yukon.ca returned a Cloudflare bot-challenge (403) on every attempt this session. Content verified only via search snippets and independent corroboration (CBC News, Law360 Canada). Newly regulated (certificates required as of 2025-02-01), administered directly by the territorial government, no arm's-length college. No counselling-therapist or social-worker regulator exists in Yukon. Recheck by hand before wiring."
   - id: nt-psychologists
     name: "Government of Northwest Territories — Psychologist Licence (Professional Licensing Office, Dept. of Health and Social Services)"
