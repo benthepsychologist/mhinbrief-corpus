@@ -1,6 +1,6 @@
 # Working manifest name per design §10 (engine/instance split).
 kind: registry               # a corpus kestrel tends
-name: bh-compliance
+name: therapybulletin
 contract_version: 1          # engine refuses a major it doesn't speak
 layout:
   schema: schema/record.yaml
@@ -47,5 +47,5 @@ governance:                  # machine-checked by the runner, not habits
   feed_health: auto-demote   # 200-empty / years-stale → page-diff
   tier3_verify_against: tier1
 outputs:
-  site: ../bh-compliance-site
-  adapter: bh_compliance
+  site: ../therapybulletin-site
+  adapter: therapybulletin
