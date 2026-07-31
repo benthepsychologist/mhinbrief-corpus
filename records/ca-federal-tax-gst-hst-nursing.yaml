@@ -1,0 +1,60 @@
+jurisdiction:
+  country: ca
+  state_or_province: null
+  code: ca-federal
+profession_scope: []            # none of this registry's five professions —
+                                # see notes. Deliberately empty, not guessed.
+topic: tax
+regulatory_model: none
+statute_citation:
+  short_title: Excise Tax Act
+  bill_number: null
+  code_cite: "R.S.C., 1985, c. E-15, Sch. V, Pt. II, s. 6"
+  regulation_cite: null
+status: in_force
+enactment_date: null            # NOT TRACED — see notes.
+effective_date: null            # NOT TRACED — see notes.
+enforcement_body: Canada Revenue Agency
+authority_basis: tax
+penalties: null
+clinician_facing_obligations: >-
+  Nursing services rendered to an individual within a nurse-patient
+  relationship are exempt from GST/HST. This matters to behavioural-health
+  practice because where provincial law permits a nurse to provide
+  psychotherapy within their scope of nursing practice, CRA treats the
+  nursing exemption at s. 6 as the applicable provision rather than the
+  psychotherapy exemption added in 2024 — so the test is the nurse-patient
+  relationship, not the s. 7 practitioner definition.
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: false
+source_url: https://laws-lois.justice.gc.ca/eng/acts/e-15/page-120.html
+last_verified: '2026-07-31'
+source_quote: >-
+  "6 A supply of a nursing service rendered to an individual by a registered
+  nurse, a registered nursing assistant, a licensed or registered practical
+  nurse or a registered psychiatric nurse, if the service is rendered within a
+  nurse-patient relationship." — Excise Tax Act, Schedule V, Part II, s. 6
+  (Justice Laws consolidation, Act current to 2026-06-14)
+source_url_secondary:
+  - https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/25-3/application-of-gst-hst-to-psychotherapy-counselling-therapy-services.html
+confidence: high
+notes: >-
+  SCOPE CALL, FLAGGED FOR THE OPERATOR RATHER THAN DECIDED SILENTLY: nursing
+  is not one of the five professions this registry covers (psychologist,
+  psychotherapist, counselling therapist, clinical social worker, MFT), so
+  profession_scope is deliberately EMPTY rather than stretched to include a
+  profession the registry does not claim to serve. This record exists because
+  it completes the picture of which provision governs psychotherapy delivered
+  by whom — CRA points registered psychiatric nurses providing psychotherapy
+  at s. 6, not s. 7(j.1) — and a reader comparing routes needs it. If the
+  operator would rather the corpus hold only records scoped to the five
+  professions, retire this one; it is the clearest candidate for that.
+
+  Statutory text verified verbatim from raw Justice Laws HTML, no summarising
+  tool in the extraction path.
+
+  OPEN — enactment_date and effective_date null on purpose, same as the
+  psychology and social work records: s. 6 predates the 2024 amendment and its
+  in-force date was not traced this pass. Guessing on the enacted/in-force
+  axis is worse than leaving it empty (AGENTS.md #4).

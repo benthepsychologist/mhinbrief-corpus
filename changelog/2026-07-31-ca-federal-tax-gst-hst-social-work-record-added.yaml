@@ -1,0 +1,84 @@
+record_id: ca-federal-tax-gst-hst-social-work
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: null
+    code: ca-federal
+  profession_scope:
+  - clinical_social_worker
+  topic: tax
+  regulatory_model: none
+  statute_citation:
+    short_title: Excise Tax Act
+    bill_number: null
+    code_cite: R.S.C., 1985, c. E-15, Sch. V, Pt. II, s. 7.2
+    regulation_cite: null
+  status: in_force
+  enactment_date: null
+  effective_date: null
+  enforcement_body: Canada Revenue Agency
+  authority_basis: tax
+  penalties: null
+  clinician_facing_obligations: 'Social work services are exempt from GST/HST, but
+    under a materially narrower test than the psychotherapy and counselling therapy
+    exemptions. Two conditions must both hold: the service is rendered within a professional-client
+    relationship AND is provided for the prevention, assessment or remediation of
+    — or to assist the individual in coping with — a physical, emotional, behavioural
+    or mental disorder or disability. The disorder may be the client''s own or that
+    of a related person the client cares for or supervises otherwise than professionally.
+    Separately, the practitioner must be licensed where the province requires it,
+    or hold equivalent qualifications where it does not. A social work service outside
+    that clinical purpose test is not exempt under this provision.'
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: false
+  source_url: https://laws-lois.justice.gc.ca/eng/acts/e-15/page-120.html
+  last_verified: '2026-07-31'
+  source_quote: '"7.2 A supply of a service rendered in the practice of the profession
+    of social work where (a) the service is rendered to an individual within a professional-client
+    relationship between the particular individual who renders the service and the
+    individual and is provided for the prevention, assessment or remediation of, or
+    to assist the individual in coping with, a physical, emotional, behavioural or
+    mental disorder or disability of the individual or of another individual to whom
+    the individual is related or to whom the individual provides care or supervision
+    otherwise than in a professional capacity; and (b) either (i) if the particular
+    individual is required to be licensed or otherwise certified to practise the profession
+    of social work in the province in which the service is supplied, the particular
+    individual is so licensed or certified, or (ii) if the particular individual is
+    not required to be licensed or otherwise certified to practise that profession
+    in that province, the particular individual has the qualifications equivalent
+    to those..." — Excise Tax Act, Schedule V, Part II, s. 7.2 (Justice Laws consolidation,
+    Act current to 2026-06-14)'
+  source_url_secondary:
+  - https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/25-3/application-of-gst-hst-to-psychotherapy-counselling-therapy-services.html
+  confidence: high
+  notes: 'WHY THIS IS ITS OWN RECORD AND NOT A FOOTNOTE: social work sits at s. 7.2,
+    not in the s. 7 list, and its exemption is conditioned differently. s. 7 exempts
+    a listed service rendered by a practitioner, full stop. s. 7.2 additionally requires
+    a professional-client relationship AND a clinical purpose (disorder/disability).
+    A social worker doing work outside that purpose is in a different position from
+    a psychotherapist doing the equivalent, and collapsing the two would misstate
+    the rule for a whole profession this registry serves.
+
+    RELEVANT TO THE 2024 CHANGE, though this provision was untouched by it: CRA GST/HST
+    Memorandum 25-3 states that where a social worker provides psychotherapy they
+    are practising the profession of social work, so the s. 7.2 exemption may apply
+    rather than the new s. 7(j.1). That means a social worker''s psychotherapy is
+    tested against s. 7.2''s narrower conditions, not s. 7(j.1)''s. Worth stating
+    plainly on any page covering this.
+
+    Statutory text verified verbatim from raw Justice Laws HTML, no summarising tool
+    in the extraction path. The source_quote is truncated at "...equivalent to those"
+    — clause (b)(ii) continues; pull the remainder before quoting the equivalency
+    limb in full on a page.
+
+    OPEN — enactment_date and effective_date are null on purpose. s. 7.2 predates
+    the 2024 amendment and this pass did not trace when it came into force. Per AGENTS.md
+    #4 the enacted / in-force distinction is first-class, so a guessed date here would
+    be worse than an empty one. Same open item as the psychology record.'
+source_url: https://laws-lois.justice.gc.ca/eng/acts/e-15/page-120.html
+observed: '2026-07-31'
+status: in-effect
+kind: record-added
