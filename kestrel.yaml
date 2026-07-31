@@ -779,4 +779,8 @@ governance:                  # machine-checked by the runner, not habits
   tier3_verify_against: tier1
 outputs:
   site: ../therapybulletin-site
-  adapter: therapybulletin
+  # Path relative to this repo's own root (kestrel's tools/publish.py
+  # convention, 2026-07-31 — adapters are instance-owned, not engine code).
+  # Doesn't exist yet — that's the open work item (STATUS.md, kestrel's
+  # STATUS.md), not a bug in this pointer.
+  adapter: publish/adapter.py

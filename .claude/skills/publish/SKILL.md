@@ -1,16 +1,17 @@
-<!-- kit: registry/publish@2026-07-31.2 — canonical: /workspace/kestrel/library/skills/registry/publish/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
+<!-- kit: registry/publish@2026-07-31.3 — canonical: /workspace/kestrel/library/skills/registry/publish/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
 
 # /publish — STUB, gated on the therapybulletin adapter
 
 **This skill is not operational yet, and says so rather than pretending.**
 
 Publishing this registry to /workspace/therapybulletin-site requires a
-`therapybulletin` adapter in the engine's publish core
-(`/workspace/kestrel/tools/publish/adapters/`) — the component that turns
-`records/` + `changelog/` into the site's matrix pages, changelog page,
-and data JSON, under the core's guarantees (secret scan, field
-allowlists, no-empty-wipe). Per kestrel `ROADMAP/DESIGN.md` §6, that
-adapter is designed but **not built**.
+`publish/adapter.py` in **this repo** (`/workspace/therapybulletin-data/publish/`,
+declared via this repo's own `kestrel.yaml` `outputs.adapter` — adapters
+are instance-owned, not engine code, revised 2026-07-31) — the component
+that turns `records/` + `changelog/` into the site's matrix pages,
+changelog page, and data JSON, under `/workspace/kestrel/tools/publish/core.py`'s
+guarantees (secret scan, field allowlists, no-empty-wipe). Per kestrel
+`ROADMAP/DESIGN.md` §6, that adapter is designed but **not built**.
 
 Until it exists:
 
@@ -25,4 +26,5 @@ Until it exists:
   push to the site's main is a production deploy).
 
 If you were asked to publish and reached this stub: report the gate
-plainly and point at the adapter as the next engine work item.
+plainly and point at the adapter (in **this** repo, not kestrel) as the
+next work item.

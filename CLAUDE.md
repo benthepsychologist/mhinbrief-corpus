@@ -1,4 +1,4 @@
-<!-- kit: registry/CLAUDE@2026-07-31.2 — canonical: /workspace/kestrel/library/agentdocs/registry/CLAUDE.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
+<!-- kit: registry/CLAUDE@2026-07-31.3 — canonical: /workspace/kestrel/library/agentdocs/registry/CLAUDE.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
 
 # CLAUDE.md — therapybulletin (registry instance)
 
