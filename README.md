@@ -1,5 +1,9 @@
 # therapybulletin-data
 
+> **Mission.** We're your practical guide to what's happening in the
+> field — keeping you legal, current, and out of trouble. (Adopted
+> 2026-07-31.)
+
 The **Therapy Bulletin** registry: the compliance-obligation records,
 changelog, and instance manifest behind therapybulletin.org. Brand locked
 2026-07-31; the site is live; **this repo stays private** — it holds the
