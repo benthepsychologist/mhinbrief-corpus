@@ -40,6 +40,448 @@ sources:
     perishability: diffable
     status: wired
     health: {last_probe: 2026-07-30, verdict: feed-empty}
+    # re-checked 2026-07-31 (Ontario source-map pass): /feed/ still resolves
+    # 200 but is a genuinely empty RSS shell, zero <item> elements. page-diff
+    # remains correct, no change needed — confirmation, not a new finding.
+
+  # ---- proposed additions, 2026-07-31 source-map pass (4 parallel research
+  # agents: federal, ca-on, ca-qc, ca-ns) — status: proposed is INERT, tend.py
+  # only ever selects status: wired (tools/tend.py L147), so nothing here
+  # gets collected until Ben flips a given entry to wired. Every entry below
+  # was fetch-verified this session except where a note says otherwise —
+  # never treat a note's caveat as resolved just because the entry exists.
+  # cadence/health are intentionally left unset (no probe.py run against
+  # these yet); set them when wiring.
+
+  # -- federal --
+  - id: canada-gazette-p1
+    name: Canada Gazette Part I
+    org_type: government-gazette
+    tier: 1
+    jurisdiction: ca-federal
+    language: en/fr
+    website: https://gazette.gc.ca/accueil-home-eng.html
+    method: rss
+    collector: rss
+    feed_url: https://gazette.gc.ca/rss/p1-eng.xml
+    status: proposed
+    latest_important_document:
+      title: "Canada Gazette – Part I, July 18, 2026, volume 160, number 29"
+      url: "https://gazette.gc.ca/rp-pr/p1/2026/2026-07-18/html/index-eng.html"
+      date: 2026-07-18
+      why_it_matters: "Part I publishes proposed federal regulations for comment before Part II finalizes them — earliest public notice of a change."
+    notes: "Sibling feed to already-wired canada-gazette-p2. Confirmed valid RSS via direct fetch."
+  - id: opc-pipeda
+    name: "Office of the Privacy Commissioner of Canada — PIPEDA investigations & guidance"
+    org_type: privacy-regulator
+    tier: 1
+    jurisdiction: ca-federal
+    language: en/fr
+    website: https://www.priv.gc.ca/en/
+    method: rss
+    collector: rss
+    feed_url: https://www.priv.gc.ca/en/rss/pipeda/
+    status: proposed
+    latest_important_document:
+      title: "WestJet Compliance Letter (PIPEDA investigations into businesses)"
+      url: "https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2026/2026-westjet-cl/"
+      date: 2026-07-14
+      why_it_matters: "Illustrates active OPC enforcement of PIPEDA, the default federal privacy law for health records at private-sector practices without substantially-similar provincial legislation."
+    notes: "Confirmed valid RSS ('investigations into businesses' feed). Broad cross-sector regulator — health relevance will be intermittent by nature, not every item is on-topic."
+  - id: cpa-national
+    name: Canadian Psychological Association (CPA)
+    org_type: professional-association
+    tier: 2
+    jurisdiction: ca-federal
+    language: en/fr
+    website: https://cpa.ca/
+    method: rss
+    collector: rss
+    feed_url: https://cpa.ca/feed/
+    status: proposed
+    latest_important_document:
+      title: "Loan Forgiveness for Psychology Students"
+      url: "https://cpa.ca/loan-forgiveness-for-psychology-students/"
+      date: 2026-03-23
+      why_it_matters: "Confirms psychologists as an eligible occupation under the federal Canada Student Loan Forgiveness Program."
+    notes: "Requested by name. Tier 2 — CPA holds real accreditation authority over Canadian doctoral psychology programs and pre-doctoral internships. Feed confirmed valid."
+  - id: ccpa-national
+    name: "Canadian Counselling and Psychotherapy Association (CCPA / ACCP)"
+    org_type: professional-association
+    tier: 2
+    jurisdiction: ca-federal
+    language: en/fr
+    website: https://www.ccpa-accp.ca/
+    method: page-diff
+    endpoint: https://www.ccpa-accp.ca/blog/
+    status: proposed
+    latest_important_document:
+      title: "GST Exemption Confirmed for CCCs in Unregulated Provinces"
+      url: "https://www.ccpa-accp.ca/wp-content/uploads/2025/01/GST-Exemption-ENG.pdf"
+      date: "2025-01"
+      why_it_matters: "Extended the federal GST/HST psychotherapy exemption to CCPA's own Canadian Certified Counsellor (CCC) designation."
+    notes: "UNVERIFIED BY DIRECT FETCH — ccpa-accp.ca returned HTTP 403 (Cloudflare) to every fetch attempt. Existence/currency corroborated only via third parties (CRA, an NS college, a newswire). Spot-check /blog/ by hand before wiring."
+  - id: casw-national
+    name: Canadian Association of Social Workers (CASW)
+    org_type: professional-association
+    tier: 2
+    jurisdiction: ca-federal
+    language: en/fr
+    website: https://www.casw-acts.ca/en
+    method: page-diff
+    endpoint: https://www.casw-acts.ca/en/news-listing
+    status: proposed
+    latest_important_document:
+      title: "CASW Demands Immediate Repeal of IFHP Changes"
+      url: "https://www.casw-acts.ca/en/casw-demands-immediate-repeal-ifhp-changes"
+      date: 2026-05-01
+      why_it_matters: "National advocacy on federal Interim Federal Health Program changes CASW says conflict with social workers' ethical obligations."
+    notes: "No RSS found. Tier 2 — CASW's Code of Ethics is referenced by several provincial social-work regulators."
+  - id: cra-gst-hst-counselling
+    name: "Canada Revenue Agency — GST/HST Memorandum 25-3, Psychotherapy and Counselling Therapy Services"
+    org_type: other
+    tier: 1
+    jurisdiction: ca-federal
+    language: en/fr
+    website: https://www.canada.ca/en/revenue-agency.html
+    method: page-diff
+    endpoint: "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/25-3/application-of-gst-hst-to-psychotherapy-counselling-therapy-services.html"
+    status: proposed
+    latest_important_document:
+      title: "Application of the GST/HST to Psychotherapy and Counselling Therapy Services (GST/HST Memorandum 25-3)"
+      url: "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/25-3/application-of-gst-hst-to-psychotherapy-counselling-therapy-services.html"
+      date: "2026-04"
+      why_it_matters: "Binding federal tax rule (Bill C-59, royal assent 2024-06-20) on whether psychotherapy/counselling-therapy services must charge GST/HST."
+    notes: "Not in the original brief's examples but fits 'federal body' directly — a binding, currently-in-force federal rule specific to these professions."
+  - id: mhcc-workplace-standard
+    name: "Mental Health Commission of Canada — National Standard for Psychological Health and Safety in the Workplace"
+    org_type: other
+    tier: 3
+    jurisdiction: ca-federal
+    language: en/fr
+    website: https://mentalhealthcommission.ca/workplace-standard/
+    method: page-diff
+    endpoint: https://mentalhealthcommission.ca/workplace-standard/
+    status: proposed
+    latest_important_document:
+      title: "National Standard of Canada for Psychological Health and Safety in the Workplace — 2nd edition (in development with CSA Group)"
+      date: "unknown — expected 2026, not yet published"
+      why_it_matters: "Would update the national reference standard for workplace psychological health and safety, if finalized."
+    notes: "BORDERLINE FIT, operator call — governs employer workplace practices generally, not clinical practice directly. Not verified by direct fetch (search-only). Include only if workplace-standard coverage is wanted."
+
+  # -- ontario --
+  - id: cpbao-news
+    name: College of Psychologists and Behaviour Analysts of Ontario
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-on
+    language: en
+    website: https://cpbao.ca/
+    method: rss
+    collector: rss
+    feed_url: https://cpbao.ca/feed/
+    status: proposed
+    latest_important_document:
+      title: "Jurisprudence and Ethics Examination (JEE) is Changing"
+      url: "https://cpbao.ca/jurisprudence-and-ethics-examination-jee-is-changing/"
+      date: 2026-07-17
+      why_it_matters: "Restructures a mandatory entry-to-practice exam into a 7-module e-learning pathway starting Fall 2026 — a registration-pathway compliance change."
+    notes: "Feed confirmed live but all 10 items dated the same day (2026-07-17, looks like a batch import) — confirm it updates incrementally before trusting cadence. Site 403s to a plain fetch (Cloudflare) but resolves with a browser UA. Formerly College of Psychologists of Ontario."
+  - id: ocswssw-news
+    name: Ontario College of Social Workers and Social Service Workers
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-on
+    language: en
+    website: https://www.ocswssw.org/
+    method: rss
+    collector: rss
+    feed_url: https://www.ocswssw.org/feed/
+    status: proposed
+    latest_important_document:
+      title: "College Update: No Increase to Registration and Renewal Fees for 2027 & Reminder on 2026 CCP Required Resources"
+      url: "https://www.ocswssw.org/2026/06/30/college-update-no-increase-to-registration-and-renewal-fees-for-2027-reminder-on-2026-ccp-required-resources/"
+      date: 2026-06-30
+      why_it_matters: "Touches registrant compliance obligations directly (renewal fees, Continuing Competence Program required resources)."
+    notes: "Feed confirmed live and populated."
+  - id: opa-news-media
+    name: Ontario Psychological Association
+    org_type: professional-association
+    tier: 2
+    jurisdiction: ca-on
+    language: en
+    website: https://www.psych.on.ca/
+    method: page-diff
+    endpoint: https://www.psych.on.ca/About-Us/News-Media
+    status: proposed
+    latest_important_document:
+      title: "Compromising Safety in the Name of Access"
+      url: "https://www.psych.on.ca/About-Us/News-Media/2025/Compromising-Safety-in-the-Name-of-Access"
+      date: "2025"
+      why_it_matters: "OPA's formal advocacy response opposing CPBAO's proposed cuts to psychologist training/accreditation standards."
+    notes: "/feed/ returns 200 but serves the plain homepage, not real RSS — not usable, hence page-diff. Tier 2: OPA is cited by/pushes back on College standards directly."
+  - id: oasw-news
+    name: Ontario Association of Social Workers
+    org_type: professional-association
+    tier: 3
+    jurisdiction: ca-on
+    language: en
+    website: https://www.oasw.org/
+    method: page-diff
+    endpoint: https://oasw.org/Web/About-OASW/News/News.aspx
+    status: proposed
+    latest_important_document:
+      title: "Updates to auto insurance policies"
+      url: "https://www.oasw.org/Web/About-OASW/News/2026-NR/Updates-to-auto-insurance-policies.aspx"
+      date: "2026-07"
+      why_it_matters: "Explains an Ontario auto-insurance accident-benefits change (effective 2026-07-01) relevant to insurer-funded assessment/treatment work."
+    notes: "No RSS feed found. Tier 3 — general association, not cited as a standards-setter the way OPA is."
+  - id: on-rhpa-elaws
+    name: "Regulated Health Professions Act, 1991 (Ontario e-Laws)"
+    org_type: government-gazette
+    tier: 1
+    jurisdiction: ca-on
+    language: en/fr
+    website: https://www.ontario.ca/laws/statute/91r18
+    method: page-diff
+    endpoint: https://www.ontario.ca/laws/statute/91r18
+    status: proposed
+    latest_important_document:
+      title: "Regulated Health Professions Act, 1991, S.O. 1991, c. 18"
+      url: https://www.ontario.ca/laws/statute/91r18
+      date: null
+      why_it_matters: "Umbrella statute establishing every Ontario health-profession college (CPBAO, CRPO, OCSWSSW's SW/SSW regulation) and their disciplinary/scope-of-practice framework."
+    notes: "Page is a JS-rendered SPA — could not scrape a currency/last-amended date via static fetch. Do a manual browser check of the currency date before wiring."
+
+  # -- quebec (ordre professionnel system — distinct in shape from ca-on's
+  #    colleges; most primary sources are French-only, language: fr means
+  #    no English original exists, not just untranslated) --
+  - id: qc-ordre-psychologues
+    name: Ordre des psychologues du Québec (OPQ)
+    org_type: regulatory-order
+    tier: 1
+    jurisdiction: ca-qc
+    language: fr
+    website: https://www.ordrepsy.qc.ca/
+    method: page-diff
+    endpoint: https://www.ordrepsy.qc.ca/avis
+    status: proposed
+    latest_important_document:
+      title: "Avis de limitation permanente et radiation temporaire — Jean-Paul Gilson (06612-92)"
+      url: "https://www.ordrepsy.qc.ca/documents/26707/1144598/Jean-Paul%20Gilson_Avis%20limitation%20permanente%20et%20radiation%20temporaire/2d3067b2-d74b-0ee5-e41c-98058f2fc95e"
+      date: 2026-04-14
+      why_it_matters: "Live disciplinary action (permanent practice restriction) affecting public-facing licensure status."
+    notes: "French-only regulatory content; thin English overview at /web/english. No RSS. /communiques is a workable secondary page-diff target."
+  - id: qc-otstcfq
+    name: "Ordre des travailleurs sociaux et des thérapeutes conjugaux et familiaux du Québec (OTSTCFQ)"
+    org_type: regulatory-order
+    tier: 1
+    jurisdiction: ca-qc
+    language: fr
+    website: https://www.otstcfq.org/
+    method: page-diff
+    endpoint: https://www.otstcfq.org/l-ordre/communications/actualites/
+    status: proposed
+    latest_important_document:
+      title: "Santé Québec : Aucun gestionnaire ne devrait forcer un professionnel à contrevenir à ses obligations"
+      url: "https://www.otstcfq.org/actualites/sante-quebec-aucun-gestionnaire-ne-devrait-forcer-un-professionnel-a-contrevenir-a-ses-obligations/"
+      date: 2026-06-11
+      why_it_matters: "Ordre publicly asserting members' professional-obligation protections against employer pressure within Santé Québec restructuring."
+    notes: "No RSS feed found. Covers two regulated titles (social workers and marriage/family therapists) under one order."
+  - id: qc-occoq
+    name: "Ordre des conseillers et conseillères d'orientation du Québec (OCCOQ)"
+    org_type: regulatory-order
+    tier: 1
+    jurisdiction: ca-qc
+    language: fr
+    website: https://www.orientation.qc.ca/
+    method: rss
+    collector: rss
+    feed_url: https://www.orientation.qc.ca/feed-fr.rss
+    status: proposed
+    latest_important_document:
+      title: "Aide-mémoire déontologique : Pour une utilisation conforme de l'intelligence artificielle"
+      url: "https://www.orientation.qc.ca/actualite/ethique-et-deontologie-aide-memoire/aide-memoire-deontologique-pour-une-utilisation-conforme-de-lintelligence-artificielle"
+      date: 2026-07-16
+      why_it_matters: "New deontological guidance on AI use in orientation/mental-health practice."
+    notes: "In scope because guidance counsellors are one of the ordres eligible for the psychotherapy permit under Quebec's Loi 21. RSS confirmed valid."
+  - id: qc-oppq
+    name: "Ordre des psychoéducateurs et psychoéducatrices du Québec (OPPQ)"
+    org_type: regulatory-order
+    tier: 1
+    jurisdiction: ca-qc
+    language: fr
+    website: https://ordrepsed.qc.ca/
+    method: page-diff
+    endpoint: https://ordrepsed.qc.ca/actualites/
+    status: proposed
+    latest_important_document:
+      title: "Mise à jour du document sur les technologies de l'information"
+      url: "https://ordrepsed.qc.ca/nouveau-mise-a-jour-du-document-sur-les-technologies-de-linformation/"
+      date: 2026-06-09
+      why_it_matters: "Updated professional-practice standard on ICT use, binding on members' obligations."
+    notes: "No RSS feed found. In scope as a Loi 21 psychotherapy-permit-eligible order."
+  - id: qc-office-professions
+    name: Office des professions du Québec
+    org_type: oversight-body
+    tier: 1
+    jurisdiction: ca-qc
+    language: en/fr
+    website: https://www.quebec.ca/gouvernement/ministeres-organismes/office-professions
+    method: page-diff
+    endpoint: https://www.quebec.ca/gouvernement/ministeres-organismes/office-professions
+    status: proposed
+    latest_important_document:
+      title: "Actualité réglementaire | 29 juillet 2026"
+      url: "https://www.quebec.ca/nouvelles/actualites/details/actualite-reglementaire-29-juillet-2026-72104"
+      date: 2026-07-29
+      why_it_matters: "Standing bi-weekly bulletin of draft and newly approved regulations across all Quebec ordres."
+    notes: "Legacy domain opq.gouv.qc.ca no longer resolves — content fully moved under quebec.ca. Practical proxy for Gazette officielle changes."
+  - id: qc-gazette-officielle
+    name: Gazette officielle du Québec
+    org_type: government-gazette
+    tier: 1
+    jurisdiction: ca-qc
+    language: fr
+    website: https://www.publicationsduquebec.gouv.qc.ca/gazette-officielle/
+    method: page-diff
+    endpoint: https://www.publicationsduquebec.gouv.qc.ca/gazette-officielle/
+    status: proposed
+    notes: "UNRESOLVED — could not verify a stable direct link to the latest issue or a specific recent notice; portal is navigation-heavy since print ended April 2024. No latest_important_document — left blank rather than guessed. Needs a dedicated follow-up pass; qc-office-professions' bulletin is the practical substitute meanwhile."
+  - id: qc-cai
+    name: "Commission d'accès à l'information du Québec (CAI)"
+    org_type: oversight-body
+    tier: 2
+    jurisdiction: ca-qc
+    language: fr
+    website: https://www.cai.gouv.qc.ca/
+    method: page-diff
+    endpoint: https://www.cai.gouv.qc.ca/actualites
+    status: proposed
+    latest_important_document:
+      title: "Publication du rapport quinquennal 2026 de la Commission"
+      url: "https://www.cai.gouv.qc.ca/actualites/publication-du-rapport-quinquennal-2026-de-la-commission"
+      date: 2026-06-11
+      why_it_matters: "Commission's five-year report to the National Assembly — sets enforcement-priority direction affecting clinical record-keeping."
+    notes: "No RSS found. Tier 2 — quasi-regulatory oversight of privacy law generally, not mental-health-specific. Also tracks Quebec's health/social-services-specific privacy law (in force since 2024-07-01)."
+  - id: qc-apq
+    name: Association des psychologues du Québec (APQ)
+    org_type: professional-association
+    tier: 3
+    jurisdiction: ca-qc
+    language: fr
+    website: https://apqc.ca/
+    method: page-diff
+    endpoint: https://apqc.ca/notre-travail/actualites/
+    status: proposed
+    latest_important_document:
+      title: "L'APQ se mobilise dans le cadre du projet de loi no 23"
+      url: "https://apqc.ca/lapq-se-mobilise-dans-le-cadre-du-projet-de-loi-no-23/"
+      date: 2026-06-05
+      why_it_matters: "Formal advocacy submission on Bill 23 (reform of the P-38 involuntary-mental-health-care law)."
+    notes: "Distinct from the Ordre des psychologues (regulatory) — voluntary advocacy association. No RSS found."
+
+  # -- nova scotia (highest verification bar in this batch — a real person
+  #    can fact-check this jurisdiction) --
+  - id: ns-regulator-of-psychology
+    name: Nova Scotia Regulator of Psychology (NSRP)
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-ns
+    language: en
+    website: https://www.ns-rp.ca/
+    method: rss
+    collector: rss
+    feed_url: https://www.ns-rp.ca/feed/
+    status: proposed
+    latest_important_document:
+      title: "Notice of Proposed Bylaw Amendment — Bylaw 21.1.3, Currency of Practice Hours"
+      url: "https://www.ns-rp.ca/notice-of-proposed-bylaw-amendment-bylaw-21-1-3-currency-of-practice-hours/"
+      date: 2026-03-31
+      why_it_matters: "Proposes cutting currency-of-practice hour requirements (1500 -> 450 over 3 years) — a direct licensing-obligation change."
+    notes: "NAME CORRECTION: formerly Nova Scotia Board of Examiners in Psychology (NSBEP); renamed/restructured to NSRP under the Regulated Health Professions Act effective 2026-11-24. 'College of Psychologists of Nova Scotia' does not exist as an entity — NSRP is correct. Confirmed live."
+  - id: ns-college-counselling-therapists
+    name: Nova Scotia College of Counselling Therapists (NSCCT)
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-ns
+    language: en
+    website: https://nscct.ca/
+    method: page-diff
+    endpoint: https://nscct.ca/news
+    status: proposed
+    latest_important_document:
+      title: "Results: Quality Assurance Program For Regulator Performance"
+      url: https://nscct.ca/news
+      date: 2026-05-26
+      why_it_matters: "Statutory (RHPA-required) self-performance review of the College as regulator."
+    notes: "Established 2011 under the Counselling Therapists Act — a distinct regulated profession from psychology in NS. No RSS found. Exact article permalink for the May 2026 item wasn't isolated from the fetch — verify before citing. /professional-conduct-notices/ is worth a second page-diff endpoint if disciplinary actions should be tracked separately."
+  - id: ns-college-social-workers
+    name: Nova Scotia College of Social Workers (NSCSW)
+    org_type: regulatory-college
+    tier: 1
+    jurisdiction: ca-ns
+    language: en
+    website: https://nscsw.org/
+    method: rss
+    collector: rss
+    feed_url: https://nscsw.org/feed/
+    status: proposed
+    latest_important_document:
+      title: "Closing the Gap: New Duty-to-Report Standards Under the RHPA"
+      url: https://nscsw.org/rhpa-duty-to-report/
+      date: 2026-06-18
+      why_it_matters: "Proposed new duty-to-report standards (sexual misconduct reporting) under RHPA, open for member feedback until 2026-08-30."
+    notes: "Confirmed current regulator (mandatory college model, RHPA). Legacy domain nsasw.org (former voluntary association) no longer resolves — NSCSW is the sole current body. Feed verified valid RSS 2.0."
+  - id: apns
+    name: Association of Psychologists of Nova Scotia (APNS)
+    org_type: professional-association
+    tier: 3
+    jurisdiction: ca-ns
+    language: en
+    website: https://apns.ca/
+    method: page-diff
+    endpoint: https://apns.ca/publications/
+    status: proposed
+    latest_important_document:
+      title: "Increase in Recommended Rate for Psychological Services"
+      url: "https://apns.ca/increase-in-recommended-rate-for-psychological-services/"
+      date: 2024-05-29
+      why_it_matters: "Sets the association's recommended market fee benchmark ($225/hr, effective Oct 2024), commonly cited by practitioners."
+    notes: "Voluntary association, explicitly separate from NSRP (the regulator). No RSS. Most recent homepage item was a job posting — used the most recent policy-relevant item instead, which is over a year old. LOW CONFIDENCE this rises above general tier-3."
+  - id: ns-royal-gazette-part-ii
+    name: "Nova Scotia Royal Gazette, Part II (Regulations)"
+    org_type: government-gazette
+    tier: 1
+    jurisdiction: ca-ns
+    language: en
+    website: https://novascotia.ca/just/regulations/rg2.htm
+    method: page-diff
+    endpoint: https://novascotia.ca/just/regulations/rg2issues.htm
+    status: proposed
+    latest_important_document:
+      title: "Royal Gazette Part II, Issue No. 15 (2026-07-24)"
+      url: "https://novascotia.ca/just/regulations/rg2/2026/RG2-2026-07-24.pdf"
+      date: 2026-07-24
+      why_it_matters: "Official biweekly publication of all newly filed NS regulations — the authoritative record when any regulation touching these professions changes."
+    notes: "Publishes ALL NS regulations, not profession-specific — broad net. Footer RSS link 404s (no working feed). Registry will need its own keyword pass per issue."
+  - id: ns-oipc-phia
+    name: "Office of the Information and Privacy Commissioner for Nova Scotia (PHIA oversight)"
+    org_type: government-gazette
+    tier: 2
+    jurisdiction: ca-ns
+    language: en
+    website: https://oipc.novascotia.ca/
+    method: page-diff
+    endpoint: https://oipc.novascotia.ca/news
+    status: proposed
+    latest_important_document:
+      title: "2024-2025 Annual Report"
+      url: "https://oipc.novascotia.ca/sites/default/files/2024-2025%20OIPC%20Annual%20Report.pdf"
+      date: "2025-09-24 (approximate)"
+      why_it_matters: "Annual report covering PHIA (health-privacy) review activity relevant to clinical record-keeping obligations."
+    notes: "LOWER CONFIDENCE on latest-document field — /news is dominated by general FOIPOP items, not PHIA-specific. A more targeted PHIA practice-guidance doc exists dated 2024-01-24 (https://oipc.novascotia.ca/sites/default/files/PHIA/PHIA%20Tools/2024%2001%2024%20Protecting%20Patient%20Information.pdf) and may be more useful — consider swapping. No RSS feed found."
+
 governance:                  # machine-checked by the runner, not habits
   record_change_requires: [source_url, last_verified]
   field_diff_emits: changelog
