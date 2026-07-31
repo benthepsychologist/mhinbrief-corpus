@@ -45,3 +45,33 @@ registry-specific ones.
 10. **Provenance discipline.** Every sweep, verify pass, and publish
     leaves a dated manifest in `provenance/`. An artifact without a
     re-fetch manifest is incomplete.
+
+<!-- ---- LOCAL ADDENDUM, not kit-synced — added directly in this repo's
+     rendered AGENTS.md, deliberately, per Ben 2026-07-31. The canonical
+     template above this line still lives at kestrel's
+     library/agentdocs/registry/AGENTS.md.tmpl and still governs;
+     `kit.py sync` will flag this file `dirty` on a future library bump
+     because of this section — that's expected, resolve it with
+     `install --adopt` (pulls this addendum's text back into the
+     canonical template, itself a kestrel-repo write) or `--skip` (keeps
+     this file exactly as-is), never `--discard`, which would silently
+     delete this section. If this rule ever proves generic enough to
+     want in the canonical template for every data instance, that's a
+     kestrel/INBOX/ proposal (see discipline 11 below), not a direct
+     edit — including of the template that defines this very file. -->
+
+11. **Jurisdiction is explicit, not assumed.** This agent/session has
+    direct authority over `therapybulletin-data` and `therapybulletin-site`
+    — commit and push either without asking first, on request or on
+    reasonable judgment. **kestrel is not in that jurisdiction.** Ben,
+    2026-07-31, verbatim in spirit: "put requested changes to kestrel in
+    the kestrel/INBOX/, got it?" Any change kestrel needs — a skill fix,
+    a template bug, a new kit feature — gets written up as an
+    `INBOX/<date>-therapybulletin-data-<slug>.md` entry there (format:
+    global CLAUDE.md's "Handing dev work to another repo" section) and
+    left for kestrel's own resident agent or Ben, not committed directly
+    from here. This reverses the looser reading from earlier the same
+    day (when the `/start` kit-mismatch fix was made directly in
+    kestrel, with Ben's live sign-off at the time) — that was fine in
+    the moment, but the standing rule going forward is INBOX, not direct
+    edits, unless told otherwise again.
