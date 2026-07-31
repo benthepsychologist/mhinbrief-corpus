@@ -64,7 +64,7 @@ sources:
     method: rss
     collector: rss
     feed_url: https://gazette.gc.ca/rss/p1-eng.xml
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Canada Gazette – Part I, July 18, 2026, volume 160, number 29"
       url: "https://gazette.gc.ca/rp-pr/p1/2026/2026-07-18/html/index-eng.html"
@@ -81,7 +81,7 @@ sources:
     method: rss
     collector: rss
     feed_url: https://www.priv.gc.ca/en/rss/pipeda/
-    status: proposed
+    status: wired
     latest_important_document:
       title: "WestJet Compliance Letter (PIPEDA investigations into businesses)"
       url: "https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2026/2026-westjet-cl/"
@@ -98,7 +98,7 @@ sources:
     method: rss
     collector: rss
     feed_url: https://cpa.ca/feed/
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Loan Forgiveness for Psychology Students"
       url: "https://cpa.ca/loan-forgiveness-for-psychology-students/"
@@ -130,7 +130,7 @@ sources:
     website: https://www.casw-acts.ca/en
     method: page-diff
     endpoint: https://www.casw-acts.ca/en/news-listing
-    status: proposed
+    status: wired
     latest_important_document:
       title: "CASW Demands Immediate Repeal of IFHP Changes"
       url: "https://www.casw-acts.ca/en/casw-demands-immediate-repeal-ifhp-changes"
@@ -146,7 +146,7 @@ sources:
     website: https://www.canada.ca/en/revenue-agency.html
     method: page-diff
     endpoint: "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/25-3/application-of-gst-hst-to-psychotherapy-counselling-therapy-services.html"
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Application of the GST/HST to Psychotherapy and Counselling Therapy Services (GST/HST Memorandum 25-3)"
       url: "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/25-3/application-of-gst-hst-to-psychotherapy-counselling-therapy-services.html"
@@ -180,7 +180,7 @@ sources:
     method: rss
     collector: rss
     feed_url: https://cpbao.ca/feed/
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Jurisprudence and Ethics Examination (JEE) is Changing"
       url: "https://cpbao.ca/jurisprudence-and-ethics-examination-jee-is-changing/"
@@ -197,7 +197,7 @@ sources:
     method: rss
     collector: rss
     feed_url: https://www.ocswssw.org/feed/
-    status: proposed
+    status: wired
     latest_important_document:
       title: "College Update: No Increase to Registration and Renewal Fees for 2027 & Reminder on 2026 CCP Required Resources"
       url: "https://www.ocswssw.org/2026/06/30/college-update-no-increase-to-registration-and-renewal-fees-for-2027-reminder-on-2026-ccp-required-resources/"
@@ -213,7 +213,7 @@ sources:
     website: https://www.psych.on.ca/
     method: page-diff
     endpoint: https://www.psych.on.ca/About-Us/News-Media
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Compromising Safety in the Name of Access"
       url: "https://www.psych.on.ca/About-Us/News-Media/2025/Compromising-Safety-in-the-Name-of-Access"
@@ -229,7 +229,7 @@ sources:
     website: https://www.oasw.org/
     method: page-diff
     endpoint: https://oasw.org/Web/About-OASW/News/News.aspx
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Updates to auto insurance policies"
       url: "https://www.oasw.org/Web/About-OASW/News/2026-NR/Updates-to-auto-insurance-policies.aspx"
@@ -245,7 +245,7 @@ sources:
     website: https://www.ontario.ca/laws/statute/91r18
     method: page-diff
     endpoint: https://www.ontario.ca/laws/statute/91r18
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Regulated Health Professions Act, 1991, S.O. 1991, c. 18"
       url: https://www.ontario.ca/laws/statute/91r18
@@ -265,7 +265,7 @@ sources:
     website: https://www.ordrepsy.qc.ca/
     method: page-diff
     endpoint: https://www.ordrepsy.qc.ca/avis
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Avis de limitation permanente et radiation temporaire — Jean-Paul Gilson (06612-92)"
       url: "https://www.ordrepsy.qc.ca/documents/26707/1144598/Jean-Paul%20Gilson_Avis%20limitation%20permanente%20et%20radiation%20temporaire/2d3067b2-d74b-0ee5-e41c-98058f2fc95e"
@@ -281,7 +281,7 @@ sources:
     website: https://www.otstcfq.org/
     method: page-diff
     endpoint: https://www.otstcfq.org/l-ordre/communications/actualites/
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Santé Québec : Aucun gestionnaire ne devrait forcer un professionnel à contrevenir à ses obligations"
       url: "https://www.otstcfq.org/actualites/sante-quebec-aucun-gestionnaire-ne-devrait-forcer-un-professionnel-a-contrevenir-a-ses-obligations/"
@@ -298,7 +298,7 @@ sources:
     method: rss
     collector: rss
     feed_url: https://www.orientation.qc.ca/feed-fr.rss
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Aide-mémoire déontologique : Pour une utilisation conforme de l'intelligence artificielle"
       url: "https://www.orientation.qc.ca/actualite/ethique-et-deontologie-aide-memoire/aide-memoire-deontologique-pour-une-utilisation-conforme-de-lintelligence-artificielle"
@@ -314,7 +314,7 @@ sources:
     website: https://ordrepsed.qc.ca/
     method: page-diff
     endpoint: https://ordrepsed.qc.ca/actualites/
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Mise à jour du document sur les technologies de l'information"
       url: "https://ordrepsed.qc.ca/nouveau-mise-a-jour-du-document-sur-les-technologies-de-linformation/"
@@ -330,7 +330,7 @@ sources:
     website: https://www.quebec.ca/gouvernement/ministeres-organismes/office-professions
     method: page-diff
     endpoint: https://www.quebec.ca/gouvernement/ministeres-organismes/office-professions
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Actualité réglementaire | 29 juillet 2026"
       url: "https://www.quebec.ca/nouvelles/actualites/details/actualite-reglementaire-29-juillet-2026-72104"
@@ -346,7 +346,7 @@ sources:
     website: https://www.publicationsduquebec.gouv.qc.ca/gazette-officielle/
     method: page-diff
     endpoint: https://www.publicationsduquebec.gouv.qc.ca/gazette-officielle/
-    status: proposed
+    status: wired
     notes: "UNRESOLVED — could not verify a stable direct link to the latest issue or a specific recent notice; portal is navigation-heavy since print ended April 2024. No latest_important_document — left blank rather than guessed. Needs a dedicated follow-up pass; qc-office-professions' bulletin is the practical substitute meanwhile."
   - id: qc-cai
     name: "Commission d'accès à l'information du Québec (CAI)"
@@ -357,7 +357,7 @@ sources:
     website: https://www.cai.gouv.qc.ca/
     method: page-diff
     endpoint: https://www.cai.gouv.qc.ca/actualites
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Publication du rapport quinquennal 2026 de la Commission"
       url: "https://www.cai.gouv.qc.ca/actualites/publication-du-rapport-quinquennal-2026-de-la-commission"
@@ -373,7 +373,7 @@ sources:
     website: https://apqc.ca/
     method: page-diff
     endpoint: https://apqc.ca/notre-travail/actualites/
-    status: proposed
+    status: wired
     latest_important_document:
       title: "L'APQ se mobilise dans le cadre du projet de loi no 23"
       url: "https://apqc.ca/lapq-se-mobilise-dans-le-cadre-du-projet-de-loi-no-23/"
@@ -393,7 +393,7 @@ sources:
     method: rss
     collector: rss
     feed_url: https://www.ns-rp.ca/feed/
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Notice of Proposed Bylaw Amendment — Bylaw 21.1.3, Currency of Practice Hours"
       url: "https://www.ns-rp.ca/notice-of-proposed-bylaw-amendment-bylaw-21-1-3-currency-of-practice-hours/"
@@ -409,7 +409,7 @@ sources:
     website: https://nscct.ca/
     method: page-diff
     endpoint: https://nscct.ca/news
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Results: Quality Assurance Program For Regulator Performance"
       url: https://nscct.ca/news
@@ -426,7 +426,7 @@ sources:
     method: rss
     collector: rss
     feed_url: https://nscsw.org/feed/
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Closing the Gap: New Duty-to-Report Standards Under the RHPA"
       url: https://nscsw.org/rhpa-duty-to-report/
@@ -442,7 +442,7 @@ sources:
     website: https://apns.ca/
     method: page-diff
     endpoint: https://apns.ca/publications/
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Increase in Recommended Rate for Psychological Services"
       url: "https://apns.ca/increase-in-recommended-rate-for-psychological-services/"
@@ -458,7 +458,7 @@ sources:
     website: https://novascotia.ca/just/regulations/rg2.htm
     method: page-diff
     endpoint: https://novascotia.ca/just/regulations/rg2issues.htm
-    status: proposed
+    status: wired
     latest_important_document:
       title: "Royal Gazette Part II, Issue No. 15 (2026-07-24)"
       url: "https://novascotia.ca/just/regulations/rg2/2026/RG2-2026-07-24.pdf"
@@ -474,7 +474,7 @@ sources:
     website: https://oipc.novascotia.ca/
     method: page-diff
     endpoint: https://oipc.novascotia.ca/news
-    status: proposed
+    status: wired
     latest_important_document:
       title: "2024-2025 Annual Report"
       url: "https://oipc.novascotia.ca/sites/default/files/2024-2025%20OIPC%20Annual%20Report.pdf"
