@@ -11,13 +11,39 @@
 | **Changelog** | 16 entries, all `record-added`. |
 | **Schema** | `record.yaml` **v1, finalized** 2026-07-31. Not a draft, not gated. |
 | **Publish** | **Operational.** `publish/adapter.py`, this repo. Single content writer into the site. |
-| **Site** | therapybulletin.org live: jurisdiction map, changelog + per-entry pages, `/topics/tax/` cross-provincial matrix. |
+| **Site** | therapybulletin.org live: jurisdiction map, changelog (16 entries + per-entry pages), and 5 topic matrices — tax, retention, privacy, telepractice, insurance. |
 
 **The 3 `verified: false` sources, and why** — `mhcc-workplace-standard`
 (scope call for Ben: workplace standard, not clinical-practice
 regulation) · `nb-association-social-workers` and `yt-psychologists`
 (both behind a full Cloudflare interstitial that `tools/fetch-blocked.sh`
 deliberately does not defeat — an operator must look by hand).
+
+> **2026-08-01 — Ontario landed, and the site's own agentdoc was describing
+> a different site.** 12 Ontario records committed and published (retention,
+> privacy, telepractice, insurance — three each, one per college), taking the
+> corpus to 16 records / 16 changelog entries. Four new topic matrices came
+> nearly free because `layouts/topics/single.html` was built topic-generic
+> rather than tax-specific; 16 rows now render across 5 topic pages.
+>
+> The sources corrected several starting assumptions, and those corrections
+> are the substance: **OCSWSSW does not require liability insurance** (checked
+> against O. Reg. 383/00 itself, not the College's summary — a broker FAQ in
+> circulation claims the opposite); **PHIPA sets no retention period at all**,
+> only secure handling, though s.13(2) can extend retention past the college
+> clock during a live access request — which none of the three colleges'
+> pages mention; **OCSWSSW's "client's location governs" rule is guidance-tier,
+> not a numbered Standard**, unlike CPBAO 16 and CRPO 3.4.5; and the three
+> colleges' retention clocks start on *different events* ("last professional
+> contact" / "last interaction" / "last entry").
+>
+> Also: **therapybulletin-site's `CLAUDE.md` named seven paths that don't
+> exist in it** — `content/threads|entities|map|claim`, `content/about.md`,
+> `content/metric/*`, `assets/css/`. Those are theprojection-site's content
+> model; the `site` agentdoc template appears not to vary by instance kind.
+> It mattered operationally: `content/changelog/*` IS generated and was not
+> on its list, so a session would reasonably have hand-edited it. Rewritten
+> locally; canonical fix filed in `kestrel/INBOX/`.
 
 > **2026-08-01 — doc-honesty sweep.** Corrected three stale claims that
 > all said the same false thing: `/publish` is a stub whose adapter is
