@@ -1,0 +1,52 @@
+jurisdiction:
+  country: ca
+  state_or_province: Ontario
+  code: ca-on
+profession_scope:
+- psychologist
+topic: insurance
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: By-laws of the College of Psychologists of Ontario
+  bill_number: null
+  code_cite: By-law 22 (Professional Liability Insurance), ss. 22.1-22.3, 22.6
+  regulation_cite: null
+status: in_force
+enactment_date: null
+effective_date: '2024-07-01'
+enforcement_body: College of Psychologists and Behaviour Analysts of Ontario
+authority_basis: insurance
+penalties: null
+clinician_facing_obligations: MANDATORY. Registrants holding a certificate authorising autonomous,
+  interim autonomous or supervised practice must hold or be covered by professional liability
+  insurance IN ALL SETTINGS IN WHICH THEY PRACTISE. Minimum coverage $2,000,000. No deductible
+  is permitted. The only exemption is for a registrant who resides outside Ontario AND provides
+  no services within Ontario at any time during the registration year, nor supervises anyone
+  providing services in Ontario.
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: false
+source_url: https://cpbao.ca/wp-content/uploads/College-of-Psychologists-of-Ontario-By-laws-Effective-July-1-2024.pdf
+last_verified: '2026-07-31'
+source_quote: '"22.1 Subject to Section 6, each member of the College registered with a certificate
+  of registration authorizing autonomous practice, interim autonomous practice or supervised
+  practice shall hold, or otherwise be covered by professional liability insurance in all
+  settings in which the member practices. 22.2 The amount of insurance coverage shall be no
+  less than $2,000,000. 22.3 The insurance shall have no deductible." — CPBAO By-laws, By-law
+  22 (revised 2024-03-21, effective 2024-07-01)'
+source_url_secondary:
+- https://cpa.ca/docs/File/Insurance/CPACPAP_FAQs_2025_EN.pdf
+confidence: high
+notes: '$2,000,000 is a SINGLE stated figure — the by-law does not split it into per-occurrence
+  and aggregate the way CRPO''s does. Do not back-fill a split that isn''t in the text. OCCURRENCE
+  vs CLAIMS-MADE: NOT ESTABLISHED. By-law 22 says nothing about policy form; do not assert
+  an occurrence-basis requirement. TERRITORY: no explicit territory clause exists. 22.1''s
+  ''in all settings in which the member practices'', read with 22.6''s exemption (which only
+  exempts those residing outside Ontario AND serving no Ontario clients), implies coverage
+  must follow cross-border practice — but that is an INFERENCE FROM STRUCTURE, not a stated
+  rule, and the by-law never uses ''territory'' or ''worldwide''. WHAT PRACTITIONERS ACTUALLY
+  BUY: the CPA/CPAP-BMS program states its policy ''applies to telepsychology services delivered
+  in Canada and worldwide'', conditioned on working within scope and abiding by professional
+  regulations in BOTH the practitioner''s and the client''s jurisdiction, and is written claims-made-and-reported
+  with a 10-year extended reporting period. That FAQ is a coverage summary, explicitly not
+  the policy wording — quote it as such.'

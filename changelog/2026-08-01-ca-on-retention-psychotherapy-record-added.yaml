@@ -1,0 +1,69 @@
+record_id: ca-on-retention-psychotherapy
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Ontario
+    code: ca-on
+  profession_scope:
+  - psychotherapist
+  topic: retention
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: Professional Practice Standards (CRPO)
+    bill_number: null
+    code_cite: Standard 5.1 (Clinical Records) — Retention
+    regulation_cite: null
+  status: in_force
+  enactment_date: null
+  effective_date: null
+  enforcement_body: College of Registered Psychotherapists of Ontario
+  authority_basis: licensure
+  penalties: null
+  clinician_facing_obligations: Where the registrant is custodian of the clinical
+    record, retain it for at least 10 years from the date of the last interaction
+    with the client, or 10 years from the client's 18th birthday — whichever is later.
+    Registrants who are health information custodians must give the College up-to-date
+    information about who would take custody of records on their death or long-term
+    inability to act, and must maintain records securely for the Standard 5.1 period
+    even after closing a practice, unless transferred to another custodian. Pre-planned
+    closure or relocation generally requires at least 30 days' notice.
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: true
+  source_url: https://crpo.ca/practice-standards/record-keeping-documentation/clinical-records/
+  last_verified: '2026-07-31'
+  source_quote: '"Retention — Where the RP is the custodian of the clinical record,
+    they retain the record for at least 10 years from the date of the last interaction
+    with the client, or for 10 years from the client''s 18th birthday, whichever is
+    later. For example, if a child is age seven at the time of last interaction, the
+    record would be kept until the client''s 28th birthday." — CRPO, Professional
+    Practice Standards, Standard 5.1'
+  source_url_secondary:
+  - https://crpo.ca/practice-standards/business-practices/closing-selling-or-relocating-a-practice/
+  - https://www.ontario.ca/laws/statute/04p03
+  confidence: high
+  notes: 'INSTRUMENT TYPE — do not blur this on a page: the retention period is set
+    by a COLLEGE STANDARD OF PRACTICE (college-enforceable), not by a statute or regulation.
+    PHIPA is the only true statute in the stack here and it is silent on duration.
+    CLOCK START: ''last interaction'' — compare CPBAO (''last professional contact'')
+    and OCSWSSW (''last entry''). OPEN / VERIFICATION DEBT: effective_date is null
+    because the CRPO standard page carries NO visible revision or effective date.
+    The rule text is verbatim-verified; its date is not. Do not assert on a page how
+    long this has been the standard, or that it is current as of any date, without
+    confirming with CRPO directly. PHIPA INTERACTION, and none of the three colleges''
+    own pages mention it: PHIPA sets NO retention period. s. 13(1) requires only that
+    records be "retained, transferred and disposed of in a secure manner", and O.
+    Reg. 329/04 adds no number either — the duration comes entirely from the college
+    standard. But PHIPA s. 13(2) can EXTEND retention past the college clock: where
+    records are subject to a s. 53 access request, the custodian must retain them
+    "for as long as necessary to allow the individual to exhaust any recourse under
+    this Act". A practitioner destroying at the 10-year mark while an access request
+    is live would satisfy the college and breach the Act. Where no HIC successor is
+    named, CRPO points at PHIPA s. 3(12): an estate trustee or administrator becomes
+    responsible until custody passes on.'
+source_url: https://crpo.ca/practice-standards/record-keeping-documentation/clinical-records/
+observed: '2026-08-01'
+status: in-effect
+kind: record-added

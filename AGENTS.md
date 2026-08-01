@@ -38,10 +38,15 @@ registry-specific ones.
    gitignored, 30-day semantics. Candidates, records, changelog,
    snapshots, provenance: committed, always.
 9. **One content writer per site.** /workspace/therapybulletin-site's generated
-   content comes only from the engine's publish core through the
-   `therapybulletin` adapter (once built). Site code (templates, CSS)
-   is the site repo's own; registry data never gets hand-transcribed
-   into it.
+   content comes only from the `therapybulletin` adapter — **built
+   2026-07-31**, living at `publish/adapter.py` in this repo (the kit
+   template still reads "once built"; stale for this instance). It calls
+   the engine's publish core for the guarantees. Site code (templates,
+   CSS, hand-authored editorial pages) is the site repo's own; registry
+   data never gets hand-transcribed into it. A second writer is the
+   failure mode: a temporary bridge script in the site repo once produced
+   the map data and was absorbed into the adapter and deleted the day the
+   adapter landed.
 10. **Provenance discipline.** Every sweep, verify pass, and publish
     leaves a dated manifest in `provenance/`. An artifact without a
     re-fetch manifest is incomplete.

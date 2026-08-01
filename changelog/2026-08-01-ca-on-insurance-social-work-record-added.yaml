@@ -1,0 +1,62 @@
+record_id: ca-on-insurance-social-work
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Ontario
+    code: ca-on
+  profession_scope:
+  - clinical_social_worker
+  topic: insurance
+  regulatory_model: none
+  statute_citation:
+    short_title: Social Work and Social Service Work Act, 1998
+    bill_number: null
+    code_cite: no insurance provision — see notes
+    regulation_cite: O. Reg. 383/00 (Registration)
+  status: in_force
+  enactment_date: null
+  effective_date: null
+  enforcement_body: Ontario College of Social Workers and Social Service Workers
+  authority_basis: insurance
+  penalties: null
+  clinician_facing_obligations: NOT MANDATORY. Professional liability insurance is
+    not a registration requirement for OCSWSSW registrants. The College strongly encourages
+    it but does not require it, and there is no by-law or regulation imposing it.
+    A social worker in Ontario private practice may register and practise without
+    professional liability insurance.
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: false
+  source_url: https://www.ocswssw.org/registrants/private-practice/
+  last_verified: '2026-07-31'
+  source_quote: '"Although not required by the College, registrants are strongly encouraged
+    to obtain professional liability insurance, which can be purchased through a professional
+    association or another insurance carrier." — OCSWSSW, Private Practice page'
+  source_url_secondary:
+  - https://www.ontario.ca/laws/regulation/000383
+  - https://www.ocswssw.org/registration-requirements/
+  confidence: high
+  notes: 'THIS CORRECTS A COMMON BELIEF, and is verified against primary sources rather
+    than the College''s own summary alone: O. Reg. 383/00 (Registration) under the
+    Social Work and Social Service Work Act, 1998 was fetched in full from Ontario
+    e-Laws and contains ZERO substantive mentions of insurance across all 19 sections.
+    The College''s Registration Requirements page likewise omits it. MISINFORMATION
+    IN CIRCULATION, worth stating on a page: a broker marketing FAQ (PROLINK/OASW,
+    2025) asserts that ''the Ontario College of Social Workers and Social Service
+    Workers (OCSWSSW) mandates Professional Liability Insurance to practice''. That
+    is contradicted by the regulator''s own primary sources. A practitioner reading
+    only the insurer''s material would believe insurance is compulsory when it is
+    not. Source wins; the broker material is marketing, not primary. TERRITORY of
+    the program social workers typically use anyway (OASW/PROLINK): ''Canada-wide'',
+    framed around the practitioner travelling while continuing virtual services with
+    THEIR ONTARIO-BASED clients — it does not address delivering services TO clients
+    based outside Ontario at all. That is an absence, not a stated exclusion. Materially
+    narrower than the psychologists'' worldwide telepsychology coverage. OPEN: a search
+    snippet suggested the Code of Ethics encourages coverage for registrants providing
+    supervision; not verbatim-verified, do not cite.'
+source_url: https://www.ocswssw.org/registrants/private-practice/
+observed: '2026-08-01'
+status: in-effect
+kind: record-added

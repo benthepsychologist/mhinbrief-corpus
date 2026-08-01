@@ -1,0 +1,65 @@
+record_id: ca-on-insurance-psychotherapy
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Ontario
+    code: ca-on
+  profession_scope:
+  - psychotherapist
+  topic: insurance
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: By-laws of the College of Registered Psychotherapists and Registered
+      Mental Health Therapists of Ontario
+    bill_number: null
+    code_cite: s. 20.01 (Requirement to Carry Insurance)
+    regulation_cite: null
+  status: in_force
+  enactment_date: null
+  effective_date: '2025-01-01'
+  enforcement_body: College of Registered Psychotherapists of Ontario
+  authority_basis: insurance
+  penalties: null
+  clinician_facing_obligations: 'MANDATORY for all registrants except inactive registrants
+    who have purchased run-off coverage. The policy must carry: at least $1,000,000
+    per occurrence; at least $5,000,000 annual aggregate; NO deductible; run-off coverage
+    for a minimum of two years; an insurer licensed with FSRA Ontario or OSFI Canada;
+    and a sexual abuse therapy and counselling fund endorsement covering persons eligible
+    under s. 85.7(4) of the Code.'
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: false
+  source_url: https://crpo.ca/wp-content/uploads/2025/10/CRPO-By-laws-Amended-Oct125-2026-fees.pdf
+  last_verified: '2026-07-31'
+  source_quote: '"(1) A Registrant, other than an Inactive Registrant who has purchased
+    any run-off coverage contemplated by these by-laws, must carry professional liability
+    insurance with the following characteristics: (i) a minimum of no less than $1,000,000
+    per occurrence; (ii) annual aggregate coverage of no less than $5,000,000; (iii)
+    no deductible; (iv) run-off coverage for a minimum of two (2) years; (v) provided
+    by an insurer licensed with the Financial Services Regulatory Authority of Ontario
+    or the office of the Superintendent of Financial Institutions Canada..." — CRPO
+    By-laws, s. 20.01 (made 2024-12-12, effective 2025-01-01, amended 2025-10-01)'
+  source_url_secondary:
+  - https://www.ccpa-accp.ca/wp-content/uploads/2025/06/BMS_CCPA_CRPO_Brochure_2025_EN.pdf
+  confidence: high
+  notes: 'TERRITORY: the by-laws were searched for ''territory'', ''outside Ontario''
+    and ''worldwide'' — NO territory clause exists anywhere tied to the insurance
+    requirement. WHAT PRACTITIONERS ACTUALLY BUY, and the split most won''t know to
+    look for: the CCPA/BMS program states ''Coverage Territory: Canada; claims brought
+    forward in Canada or US'' but separately ''E-Counselling Territory: Worldwide;
+    claims brought forward and defended in Canada''. So a registrant delivering telehealth
+    to a client physically outside Canada is covered on the SERVICE side, while claims
+    handling stays Canada-anchored. That is a brochure, not policy wording. UNRESOLVED
+    CONFLICT, flagged not resolved: the same brochure lists ''a deductible of no more
+    than $4,000 per occurrence'' as satisfying CRPO requirements, which appears to
+    contradict By-law 20.01(1)(iii)''s flat ''no deductible''. Could be a stale brochure,
+    a broker misreading, or a nuance not visible in the excerpt. Do NOT assert either
+    is wrong on a page without confirming with CCPA/BMS. OCCURRENCE vs CLAIMS-MADE:
+    ''per occurrence'' here describes the LIMIT STRUCTURE, not a required policy form.
+    Not established; do not assert.'
+source_url: https://crpo.ca/wp-content/uploads/2025/10/CRPO-By-laws-Amended-Oct125-2026-fees.pdf
+observed: '2026-08-01'
+status: in-effect
+kind: record-added

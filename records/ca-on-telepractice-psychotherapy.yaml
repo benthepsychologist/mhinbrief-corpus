@@ -1,0 +1,55 @@
+jurisdiction:
+  country: ca
+  state_or_province: Ontario
+  code: ca-on
+profession_scope:
+- psychotherapist
+topic: telepractice
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: Professional Practice Standards (CRPO)
+  bill_number: null
+  code_cite: Standard 3.4 (Electronic Practice)
+  regulation_cite: null
+status: in_force
+enactment_date: null
+effective_date: null
+enforcement_body: College of Registered Psychotherapists of Ontario
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: All professional standards apply equally to electronic, telephonic,
+  in-person or hybrid practice. Obtain informed consent for the use of electronic media; take
+  reasonable steps to ensure the technology is secure, confidential and appropriate to the
+  client; confirm liability insurance covers electronic services BEFORE treating; comply with
+  professional licensing requirements in the jurisdictions where clients are located; keep
+  written/text/email correspondence in the clinical record; and do not rely on computer-generated
+  assessments without exercising professional judgment. There is no requirement to live or
+  work in Ontario to hold CRPO registration.
+vendor_facing_obligations: null
+consent_required: true
+documentation_required: true
+source_url: https://crpo.ca/practice-standards/client-therapist-relationship/electronic-practice/
+last_verified: '2026-07-31'
+source_quote: '"3.4.5 Registrants comply with relevant professional licensing requirements
+  in the jurisdictions where clients are located." — CRPO, Professional Practice Standard
+  3.4 (Electronic Practice), published 2024-09-18, last modified 2026-01-07'
+source_url_secondary:
+- https://crpo.ca/registrant-information/professional-practice-information/cross-border-therapy-tool/
+- https://crpo.ca/wp-content/uploads/2025/01/Cross-Border-Electronic-Practice-Webinar-Q-A-Sept1024.pdf
+confidence: high
+notes: 'THE NON-OBVIOUS ONE: CRPO does NOT require registration for a therapist residing outside
+  Ontario to work with an Ontario client, provided they don''t advertise or promote services
+  in Ontario and Ontario clients aren''t a substantial proportion of their workload — CRPO''s
+  own words. That is materially more permissive than CPBAO, which requires registration for
+  any individual physically in Ontario. CRPO also states no particular percentage of practice
+  must be Ontario-based, and no notification is needed to take clients in other jurisdictions.
+  US CLIENTS — CRPO has the clearest published position of the three colleges: a Sept 2024
+  webinar Q&A addresses PHIPA vs HIPAA and the USA PATRIOT Act directly, framing US-server
+  storage as a documented risk assessment (''will depend on their practice circumstances and
+  an assessment of the costs, risks, benefits, and alternatives''), NOT a prohibition. That
+  Q&A is GUIDANCE, not a standard. The Cross-Border Therapy Tool is likewise a decision-tree
+  advisory, self-disclaimed as not replacing legal advice. effective_date null: the standard
+  page shows published/modified metadata but no approval or effective date. OPEN: CRPO''s
+  Electronic Practice Guideline PDF returned unparseable binary and the Labour Mobility page
+  (''4 provinces'') was seen only via search snippet — neither is verbatim-verified; do not
+  cite either.'

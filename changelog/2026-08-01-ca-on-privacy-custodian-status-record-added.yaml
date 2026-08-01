@@ -1,0 +1,65 @@
+record_id: ca-on-privacy-custodian-status
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Ontario
+    code: ca-on
+  profession_scope:
+  - psychologist
+  - psychotherapist
+  - counselling_therapist
+  - clinical_social_worker
+  topic: privacy
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: Personal Health Information Protection Act, 2004
+    bill_number: null
+    code_cite: S.O. 2004, c. 3, Sched. A, ss. 2, 3(1) para. 1
+    regulation_cite: null
+  status: in_force
+  enactment_date: null
+  effective_date: null
+  enforcement_body: Information and Privacy Commissioner of Ontario
+  authority_basis: privacy
+  penalties: null
+  clinician_facing_obligations: 'An Ontario private-practice behavioural-health clinician
+    is a health information custodian (HIC) under PHIPA, and therefore carries the
+    Act''s full duties — not PIPEDA, which is displaced for activity within Ontario.
+    But the ROUTE into custodian status differs by profession, and the difference
+    matters: psychologists and Registered Psychotherapists qualify under the ''health
+    care practitioner'' definition at s. 2(a), by virtue of being members of a college
+    under the Regulated Health Professions Act, 1991. Clinical social workers qualify
+    under a SEPARATE paragraph, s. 2(c), which exists precisely because OCSWSSW is
+    not an RHPA college. A practitioner using an unregulated title is captured only
+    by the residual clause s. 2(d) — ''any other person whose primary function is
+    to provide health care for payment'' — which turns on facts about their practice
+    rather than a college registry check, and is a materially weaker footing.'
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: false
+  source_url: https://www.ontario.ca/laws/statute/04p03
+  last_verified: '2026-07-31'
+  source_quote: '"''health care practitioner'' means, (a) a person who is a member
+    within the meaning of the Regulated Health Professions Act, 1991 and who provides
+    health care, (b) Repealed, (c) a person who is a member of the Ontario College
+    of Social Workers and Social Service Workers and who provides health care, or
+    (d) any other person whose primary function is to provide health care for payment;"
+    — PHIPA, S.O. 2004, c. 3, Sched. A, s. 2 (e-Laws consolidation, currency date
+    2026-07-28)'
+  source_url_secondary: []
+  confidence: high
+  notes: 'THE DISTINCTION IS THE PRODUCT HERE: all four professions land on HIC status,
+    but by three different statutory routes (s.2(a) RHPA membership / s.2(c) OCSWSSW
+    named separately / s.2(d) residual). Do not flatten this to ''therapists are HICs''.
+    Ontario has no regulated title ''counselling therapist'' — the nearest regulated
+    analogue is CRPO''s Registered Psychotherapist; an unregulated counsellor relies
+    on s.2(d). Every route also passes through the s.2 ''health care'' gate (''diagnose,
+    treat or maintain an individual''s physical or mental condition''), which psychotherapy
+    plainly satisfies. Statute text verified verbatim from Ontario e-Laws via headless
+    browser (the page is JS-rendered and returns only a shell to a plain fetch).'
+source_url: https://www.ontario.ca/laws/statute/04p03
+observed: '2026-08-01'
+status: in-effect
+kind: record-added

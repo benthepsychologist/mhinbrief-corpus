@@ -1,0 +1,66 @@
+record_id: ca-on-privacy-breach-notification
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Ontario
+    code: ca-on
+  profession_scope:
+  - psychologist
+  - psychotherapist
+  - counselling_therapist
+  - clinical_social_worker
+  topic: privacy
+  regulatory_model: disclosure
+  statute_citation:
+    short_title: Personal Health Information Protection Act, 2004
+    bill_number: null
+    code_cite: S.O. 2004, c. 3, Sched. A, s. 12; s. 72 (offences)
+    regulation_cite: O. Reg. 329/04, s. 6.3
+  status: in_force
+  enactment_date: null
+  effective_date: null
+  enforcement_body: Information and Privacy Commissioner of Ontario
+  authority_basis: privacy
+  penalties: 'On conviction: a natural person is liable to a fine of not more than
+    $200,000, imprisonment of not more than 1 year, or both; a non-natural person
+    to a fine of not more than $1,000,000 (s. 72(2)). Most s. 72 offences require
+    WILFUL conduct — ordinary negligence is not an offence, though it can still ground
+    an IPC order. Prosecution requires the Attorney General''s consent (s. 72(5)).'
+  clinician_facing_obligations: 'Two different duties with two different triggers,
+    and the asymmetry is the point. NOTICE TO THE INDIVIDUAL has NO threshold: on
+    any theft, loss, or unauthorised use or disclosure of personal health information,
+    notify the individual at the first reasonable opportunity and state in the notice
+    that they may complain to the Commissioner (s. 12(2)). NOTICE TO THE IPC does
+    have a threshold, set by O. Reg. 329/04 s. 6.3(1): theft is an automatic trigger,
+    while other incidents run through a significance test weighing whether the information
+    is sensitive, the volume involved, how many individuals are affected, and whether
+    more than one custodian or agent was responsible. For a psychotherapy practice
+    the sensitivity limb means even a single-client breach can clear that bar.'
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: true
+  source_url: https://www.ontario.ca/laws/statute/04p03
+  last_verified: '2026-07-31'
+  source_quote: '"(2) ... if personal health information about an individual that
+    is in the custody or control of a health information custodian is stolen or lost
+    or if it is used or disclosed without authority, the health information custodian
+    shall, (a) notify the individual at the first reasonable opportunity of the theft
+    or loss or of the unauthorized use or disclosure; and (b) include in the notice
+    a statement that the individual is entitled to make a complaint to the Commissioner..."
+    — PHIPA, s. 12(2)'
+  source_url_secondary:
+  - https://www.ontario.ca/laws/regulation/040329
+  confidence: high
+  notes: 'EASY TO MISS FOR A SOLO PRACTITIONER: PHIPA s. 17.1 (notice to the practitioner''s
+    own College) is an EMPLOYER duty — it fires when a custodian''s employee or agent
+    is disciplined or resigns over a privacy breach. A true solo practitioner with
+    no employees or agents does not trigger it for their own conduct; it becomes live
+    the moment they hire staff or engage an agent. OPEN: PHIPA s. 65 (damages for
+    breach of privacy) was identified but not pulled verbatim this pass — add before
+    any page discusses civil exposure.'
+source_url: https://www.ontario.ca/laws/statute/04p03
+observed: '2026-08-01'
+status: in-effect
+kind: record-added

@@ -1,7 +1,36 @@
 # STATUS — therapybulletin-data (registry instance)
 
-*Hand-maintained. **As of 2026-07-31** (first STATUS.md for this repo;
-newest note first.)*
+*Hand-maintained. **As of 2026-08-01** (newest note first.)*
+
+**Where things actually stand right now:**
+
+| | |
+| --- | --- |
+| **Sources** | 50, all `wired`, across all 13 provinces/territories + federal. 3 carry `verified: false` (see below). |
+| **Records** | **16 committed** — 4 federal (GST/HST exemption routes) + 12 Ontario (retention, privacy, telepractice, insurance; three each, one per college). |
+| **Changelog** | 16 entries, all `record-added`. |
+| **Schema** | `record.yaml` **v1, finalized** 2026-07-31. Not a draft, not gated. |
+| **Publish** | **Operational.** `publish/adapter.py`, this repo. Single content writer into the site. |
+| **Site** | therapybulletin.org live: jurisdiction map, changelog + per-entry pages, `/topics/tax/` cross-provincial matrix. |
+
+**The 3 `verified: false` sources, and why** — `mhcc-workplace-standard`
+(scope call for Ben: workplace standard, not clinical-practice
+regulation) · `nb-association-social-workers` and `yt-psychologists`
+(both behind a full Cloudflare interstitial that `tools/fetch-blocked.sh`
+deliberately does not defeat — an operator must look by hand).
+
+> **2026-08-01 — doc-honesty sweep.** Corrected three stale claims that
+> all said the same false thing: `/publish` is a stub whose adapter is
+> "not built". It was built and committed 2026-07-31 (`356f6a0`) and has
+> published the live corpus. The worst of the three was
+> `.claude/skills/publish/SKILL.md` itself — a future session invoking
+> `/publish` would have read "this skill is not operational yet" and
+> declined to publish. That is an operational falsehood, not a cosmetic
+> one. All three live in kit-rendered files, so each carries a local
+> override note and a correction is filed in `kestrel/INBOX/` for the
+> canonical templates (discipline 11: kestrel is not this repo's
+> jurisdiction). Also added `tools/fetch-blocked.sh` to the README, which
+> had gone undocumented.
 
 > **2026-07-31 (later) — the schema block was never real; `record.yaml` is
 > finalized v1, and the corpus is unblocked.** `schema/record.yaml` had

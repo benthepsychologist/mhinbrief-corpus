@@ -1,0 +1,69 @@
+record_id: ca-on-telepractice-social-work
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Ontario
+    code: ca-on
+  profession_scope:
+  - clinical_social_worker
+  topic: telepractice
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: Code of Ethics and Standards of Practice, Third Edition (OCSWSSW)
+    bill_number: null
+    code_cite: Principle V, Standard 5.3 (Electronic Practice)
+    regulation_cite: null
+  status: in_force
+  enactment_date: null
+  effective_date: '2023-09-08'
+  enforcement_body: Ontario College of Social Workers and Social Service Workers
+  authority_basis: licensure
+  penalties: null
+  clinician_facing_obligations: Explain the limits of confidentiality — including
+    limits specific to online platforms — before or during the first online meeting,
+    and document that conversation. Ensure collection, use and storage of client information
+    complies with applicable privacy legislation. Ensure client information is stored
+    in a jurisdiction whose privacy laws are consistent with Ontario's or, where applicable,
+    Canada's. Verify client identity where impersonation is possible, establish a
+    discreet signal so a client can convey they are not alone or not safe, and develop
+    a safety plan including emergency contact permission.
+  vendor_facing_obligations: null
+  consent_required: true
+  documentation_required: true
+  source_url: https://www.ocswssw.org/wp-content/uploads/OCSWSSW_Code_of_Ethics_Standards_of_Practice_edition3.pdf
+  last_verified: '2026-07-31'
+  source_quote: '"5.3.1 College registrants using online platforms and providing virtual
+    services shall: explain to clients the limits of confidentiality (including any
+    particular limits associated with online platforms and/or virtual practice) prior
+    to or during the first online meeting and document this conversation; ensure that
+    the collection, use and storage of client information complies with applicable
+    privacy legislation; and ensure that client information is stored in a jurisdiction
+    where the privacy laws are consistent with Ontario laws or, where applicable,
+    Canadian federal laws." — OCSWSSW, Code of Ethics and Standards of Practice, 3rd
+    ed., Standard 5.3.1 (effective 2023-09-08)'
+  source_url_secondary:
+  - https://www.ocswssw.org/registrants/cross-jurisdictional-practice/
+  - https://www.ocswssw.org/electronic-practice/
+  confidence: high
+  notes: 'TIER DISTINCTION THAT MUST NOT BE BLURRED: OCSWSSW''s ''the client''s location
+    governs, not the registrant''s'' rule is real and consistently applied, but it
+    lives on GUIDANCE/FAQ pages — it is NOT a numbered Standard of Practice. The 46-page
+    Standards document was searched for ''jurisdiction'', ''cross-border'' and ''telepractice'';
+    the only jurisdiction-governing rule in it is 5.3.1''s data-storage clause above.
+    CPBAO 16 and CRPO 3.4.5 ARE standard-tier. Do not present all three as equally
+    binding. STRUCTURAL ENFORCEMENT INSTEAD: OCSWSSW runs an ''Electronic Practice''
+    registration class for social workers registered elsewhere in Canada and living
+    outside Ontario. Registrants who live in Ontario must hold general registration
+    — electronic practice is explicitly not an option for them. So the client-location
+    principle is enforced through registration category rather than a practice standard.
+    STRONGEST DATA-RESIDENCY LANGUAGE of the three colleges (5.3.1''s storage-jurisdiction
+    clause) — implicitly disfavours US hosting without banning it. CONFIRMED GAP,
+    checked not merely unfound: no published OCSWSSW position on serving US clients.
+    The Standards document and both relevant guidance pages address inter-provincial
+    practice only.'
+source_url: https://www.ocswssw.org/wp-content/uploads/OCSWSSW_Code_of_Ethics_Standards_of_Practice_edition3.pdf
+observed: '2026-08-01'
+status: in-effect
+kind: record-added

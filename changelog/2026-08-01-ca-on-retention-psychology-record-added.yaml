@@ -1,0 +1,67 @@
+record_id: ca-on-retention-psychology
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Ontario
+    code: ca-on
+  profession_scope:
+  - psychologist
+  topic: retention
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: Standards of Professional Conduct (CPBAO)
+    bill_number: null
+    code_cite: s. 9.4 (Record Storage and Retention)
+    regulation_cite: O. Reg. 195/23 (Professional Misconduct), Psychology and Applied
+      Behaviour Analysis Act, 2021
+  status: in_force
+  enactment_date: null
+  effective_date: '2024-07-01'
+  enforcement_body: College of Psychologists and Behaviour Analysts of Ontario
+  authority_basis: licensure
+  penalties: null
+  clinician_facing_obligations: 'Retain individual client service records for at least
+    10 years after the service recipient turns 18, or after the last professional
+    contact — whichever comes later. Organizational service records: at least 10 years
+    after the organizational client''s last contact. Registrants who are health information
+    custodians must also arrange for the security and maintenance of records in case
+    of expected or unexpected incapacity or death, and inform the College of those
+    arrangements before ceasing to provide services.'
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: true
+  source_url: https://cpbao.ca/members/professional-practice/standards-of-professional-conduct/
+  last_verified: '2026-07-31'
+  source_quote: '"9.4 Record Storage and Retention — Individual Client Service records
+    must be retained for a minimum of 10 years after the service recipient reaches
+    the age of 18 or after the last professional contact, whichever comes later; Unless
+    otherwise required by law, organizational service records must be maintained for
+    at least ten years following the organizational client''s last contact." — CPBAO,
+    Standards of Professional Conduct, s. 9.4 (in force 2024-07-01)'
+  source_url_secondary:
+  - https://www.ontario.ca/laws/statute/04p03
+  confidence: high
+  notes: 'INSTRUMENT TYPE — do not blur this on a page: the retention period is set
+    by a COLLEGE STANDARD OF PRACTICE (college-enforceable), not by a statute or regulation.
+    PHIPA is the only true statute in the stack here and it is silent on duration.
+    Breaching the Standard is professional misconduct under O. Reg. 195/23, which
+    is where the binding force comes from — the number itself is in the Standard.
+    CLOCK START: ''last professional contact''. Compare CRPO (''last interaction'')
+    and OCSWSSW (''last entry'') — the three colleges word the trigger differently
+    and a record should not flatten them into one phrase. PHIPA INTERACTION, and none
+    of the three colleges'' own pages mention it: PHIPA sets NO retention period.
+    s. 13(1) requires only that records be "retained, transferred and disposed of
+    in a secure manner", and O. Reg. 329/04 adds no number either — the duration comes
+    entirely from the college standard. But PHIPA s. 13(2) can EXTEND retention past
+    the college clock: where records are subject to a s. 53 access request, the custodian
+    must retain them "for as long as necessary to allow the individual to exhaust
+    any recourse under this Act". A practitioner destroying at the 10-year mark while
+    an access request is live would satisfy the college and breach the Act. TIME-SENSITIVE:
+    the Standard''s Practical Applications were updated 2026-05-05, very recently
+    — re-verify before any page asserts this is current.'
+source_url: https://cpbao.ca/members/professional-practice/standards-of-professional-conduct/
+observed: '2026-08-01'
+status: in-effect
+kind: record-added

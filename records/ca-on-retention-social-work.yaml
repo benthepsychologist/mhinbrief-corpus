@@ -1,0 +1,58 @@
+jurisdiction:
+  country: ca
+  state_or_province: Ontario
+  code: ca-on
+profession_scope:
+- clinical_social_worker
+topic: retention
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: Code of Ethics and Standards of Practice (OCSWSSW)
+  bill_number: null
+  code_cite: Principle IV, Interpretation 4.2.2
+  regulation_cite: null
+status: in_force
+enactment_date: null
+effective_date: '2023-09-08'
+enforcement_body: Ontario College of Social Workers and Social Service Workers
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: Store and preserve each client record securely for at least
+  10 years from the date of the LAST ENTRY or, if the client was under 18 at that date, at
+  least 10 years from the day they turned (or would have turned) 18. Retain longer where required
+  by law or an employer's policy, and retain longer on reasonable judgment where future access
+  may be needed — the Standard names minors, sexual abuse, and current or future litigation.
+  Dispose only after the period elapses, and in a way that does not compromise confidentiality.
+  On ceasing practice, either keep maintaining the records or transfer them to another registrant
+  or regulated professional who first agrees in writing to comply with Principle IV.
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: true
+source_url: https://www.ocswssw.org/sop/principle-iv-the-social-work-and-social-service-work-record/
+last_verified: '2026-07-31'
+source_quote: '"4.2.2 College registrants shall ensure that each client record is stored and
+  preserved in a secure location for at least ten years from the date of the last entry or,
+  if the client was less than eighteen years of age at the date of the last entry, at least
+  ten years from the day the client became or would have become eighteen." — OCSWSSW, Code
+  of Ethics and Standards of Practice, Principle IV, Interpretation 4.2.2 (effective 2023-09-08)'
+source_url_secondary:
+- https://www.ontario.ca/laws/statute/04p03
+confidence: high
+notes: 'INSTRUMENT TYPE — do not blur this on a page: the retention period is set by a COLLEGE
+  STANDARD OF PRACTICE (college-enforceable), not by a statute or regulation. PHIPA is the
+  only true statute in the stack here and it is silent on duration. Approved by College Council
+  and implemented by bylaw. Current edition effective 2023-09-08, superseding the second edition
+  that stood 2008-07-01 to 2023-09-07. CLOCK START: ''last entry'' — a materially different
+  trigger from CPBAO''s ''last professional contact'' and CRPO''s ''last interaction''; a
+  late administrative entry can move an OCSWSSW clock in a way a last-contact clock would
+  not. GAP relative to the other two colleges: OCSWSSW''s standard does not name death or
+  incapacity specifically — ''cease practice'' (4.2.8-4.2.9) is the operative language and
+  covers it, but there is no death-specific provision the way CPBAO 9.6 and CRPO 6.4.3 have.
+  Stated as a finding, not a defect. PHIPA INTERACTION, and none of the three colleges'' own
+  pages mention it: PHIPA sets NO retention period. s. 13(1) requires only that records be
+  "retained, transferred and disposed of in a secure manner", and O. Reg. 329/04 adds no number
+  either — the duration comes entirely from the college standard. But PHIPA s. 13(2) can EXTEND
+  retention past the college clock: where records are subject to a s. 53 access request, the
+  custodian must retain them "for as long as necessary to allow the individual to exhaust
+  any recourse under this Act". A practitioner destroying at the 10-year mark while an access
+  request is live would satisfy the college and breach the Act.'
