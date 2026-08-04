@@ -1,4 +1,4 @@
-<!-- kit: registry/start@2026-07-31.3 — canonical: /workspace/kestrel/library/skills/registry/start/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
+<!-- kit: registry/start@2026-08-04.1 — canonical: /workspace/kestrel/library/skills/registry/start/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
 
 ---
 name: start

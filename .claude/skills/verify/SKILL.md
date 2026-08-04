@@ -1,4 +1,4 @@
-<!-- kit: registry/verify@2026-07-31.3 — canonical: /workspace/kestrel/library/skills/registry/verify/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
+<!-- kit: registry/verify@2026-08-04.1 — canonical: /workspace/kestrel/library/skills/registry/verify/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
 
 # /verify — the re-verification pass
 

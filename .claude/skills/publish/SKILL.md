@@ -1,20 +1,4 @@
 <!-- kit: registry/publish@2026-07-31.3 — canonical: /workspace/kestrel/library/skills/registry/publish/SKILL.md.tmpl -->
-<!-- ⚠️ LOCAL OVERRIDE, deliberately diverged from the kit template on
-     2026-08-01. The rendered template still describes /publish as a STUB
-     whose adapter is "designed but not built". For THIS instance that is
-     false — publish/adapter.py was built and committed 2026-07-31
-     (commit 356f6a0) and has published the live corpus. Leaving the
-     template text in place would tell a future session that /publish is
-     non-operational and stop it from publishing, which is an operational
-     falsehood, not a cosmetic one — so it is corrected here.
-
-     `kit.py sync` will flag this file DIRTY on the next library bump.
-     Resolve with `install --adopt` (pull this text back into kestrel's
-     canonical template) or `--skip` (keep this file as-is). NEVER
-     `--discard` — that restores the false "not built" claim. A correction
-     for the canonical template is filed in kestrel/INBOX/ per AGENTS.md
-     discipline 11 (kestrel is not this repo's jurisdiction). -->
-
 # /publish — render the corpus to the site, through the adapter
 
 **Operational since 2026-07-31.** The adapter is `publish/adapter.py` in

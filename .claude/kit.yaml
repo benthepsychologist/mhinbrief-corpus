@@ -1,13 +1,13 @@
-library_version: 2026-07-31.3
+library_version: 2026-08-04.1
 kind: registry
-installed_at: '2026-07-31T15:38:11Z'
-engine_commit: 3eb1166
+installed_at: '2026-08-04T13:36:23Z'
+engine_commit: cb580b3
 files:
-  .claude/skills/map/SKILL.md: 989f2a07f484d3b3994889b1cb8d27e73f66d2148b377880703ecc36b95e66d7
-  .claude/skills/curate/SKILL.md: bddfc1efa2a9059dbcbf098343d49b6f55e98007e863649a6d14b36124dfba27
-  .claude/skills/publish/SKILL.md: 4792911269c5563dedfb5de1b837ef0c3ccbf167dd1c34d85a9484cc663edf81
-  .claude/skills/start/SKILL.md: 580277d76b4e9c2fd93e4ab26ccea724cf1adb5f6e6f38cb59d68be6bfe5fe2d
-  .claude/skills/tend/SKILL.md: 1b4526d257924ac5118c908b53c1c5e1a58d4cc9c8100b89a0568526540d9d68
-  .claude/skills/verify/SKILL.md: eeeb6f7f3108be9761c5145e10c6b8ec00a9e28e5b66a49159f352ae9decb53b
-  AGENTS.md: 16ac94a9eda011d9946b37b17dc80522a979fb3455a6fa92b2919554912e8647
-  CLAUDE.md: 7db37949659c85caed84f6f868618937816db183bf32179d1f59b4256314b331
+  .claude/skills/map/SKILL.md: 3462d33a1aa3c0b72107f6c9a0f11e56ac5cbe4c148d3dc8c978cfcbbf3a3534
+  .claude/skills/curate/SKILL.md: 072ac3ace4e085a04d6e10b45083f20a2e6c2e26faefb96437dd16df6d4f6efd
+  .claude/skills/publish/SKILL.md: 15c444647d5dde9bbbc7dd3aa9e9e5fd019f3450947f3f05f647e297e3d8ef65
+  .claude/skills/start/SKILL.md: 2f2527a704f157a17ff7dbfa1e6eee6b0966ef06f283613147b067286d71f613
+  .claude/skills/tend/SKILL.md: b62dad2b9bdfa5a0b2f1a5c9553a2225a7e892c868a2a056ab1b5e9383b4f604
+  .claude/skills/verify/SKILL.md: b55f8cc0d085f8bcd53b472c08ebd807be83b8b4ffd169e578a0b2952a6de60e
+  AGENTS.md: d0ab65ddbfb15cd81e26805649c523bd61e9d9b529e82f79a72c19b491660846
+  CLAUDE.md: b10a55b7a58f9567ce391e983660b4f1b937b316ef2be3f0392148c9a8ec5a22

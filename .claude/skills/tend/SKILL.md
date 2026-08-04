@@ -1,4 +1,4 @@
-<!-- kit: registry/tend@2026-07-31.3 — canonical: /workspace/kestrel/library/skills/registry/tend/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
+<!-- kit: registry/tend@2026-08-04.1 — canonical: /workspace/kestrel/library/skills/registry/tend/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
 
 # /tend — sweep the sources, stage the candidates
 
