@@ -1,0 +1,9 @@
+{
+  "container_matched": true,
+  "content_hash": "38a4571caf10f3f65be733afa75dd24132a07f90",
+  "detected_date": null,
+  "endpoint": "https://www.publicationsduquebec.gouv.qc.ca/gazette-officielle/",
+  "fetched_at": "2026-08-12T09:58:46Z",
+  "line_count": 14,
+  "source_id": "qc-gazette-officielle"
+}

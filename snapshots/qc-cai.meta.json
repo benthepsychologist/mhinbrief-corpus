@@ -1,0 +1,9 @@
+{
+  "container_matched": true,
+  "content_hash": "9233fa1bdebbad9c214bb3549138439632374c8d",
+  "detected_date": null,
+  "endpoint": "https://www.cai.gouv.qc.ca/actualites",
+  "fetched_at": "2026-08-12T09:58:46Z",
+  "line_count": 1218,
+  "source_id": "qc-cai"
+}
