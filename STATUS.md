@@ -1,4 +1,4 @@
-# STATUS — therapybulletin-data (registry instance)
+# STATUS — mhinbrief-corpus (registry instance)
 
 *Hand-maintained. **As of 2026-08-01** (newest note first.)*
 
@@ -11,7 +11,7 @@
 | **Changelog** | 16 entries, all `record-added`. |
 | **Schema** | `record.yaml` **v1, finalized** 2026-07-31. Not a draft, not gated. |
 | **Publish** | **Operational.** `publish/adapter.py`, this repo. Single content writer into the site. |
-| **Site** | therapybulletin.org live: jurisdiction map, changelog (16 entries + per-entry pages), and 5 topic matrices — tax, retention, privacy, telepractice, insurance. |
+| **Site** | mhinbrief.com live: jurisdiction map, changelog (16 entries + per-entry pages), and 5 topic matrices — tax, retention, privacy, telepractice, insurance. |
 
 **The 3 `verified: false` sources, and why** — `mhcc-workplace-standard`
 (scope call for Ben: workplace standard, not clinical-practice
@@ -37,7 +37,7 @@ deliberately does not defeat — an operator must look by hand).
 > colleges' retention clocks start on *different events* ("last professional
 > contact" / "last interaction" / "last entry").
 >
-> Also: **therapybulletin-site's `CLAUDE.md` named seven paths that don't
+> Also: **mhinbrief-site's `CLAUDE.md` named seven paths that don't
 > exist in it** — `content/threads|entities|map|claim`, `content/about.md`,
 > `content/metric/*`, `assets/css/`. Those are theprojection-site's content
 > model; the `site` agentdoc template appears not to vary by instance kind.
@@ -89,7 +89,7 @@ deliberately does not defeat — an operator must look by hand).
 >
 > Also this session: full jurisdiction coverage reached (50 sources across
 > all 13 provinces/territories + federal, 26 wired then all flipped live),
-> the interactive jurisdiction map shipped to therapybulletin.org with a
+> the interactive jurisdiction map shipped to mhinbrief.com with a
 > logo/palette pass, and one real bug caught and fixed — the map's click
 > panel had never rendered live data, because Hugo's contextual escaper
 > was turning the injected JSON into a string (caught by a jsdom harness
@@ -100,7 +100,7 @@ deliberately does not defeat — an operator must look by hand).
 > fix.** The rendered `/start` skill this repo had (kit stamp
 > `common/start@2026-07-31.1`) was written against an attention-kind
 > instance's pipeline (digest status, expectations due, flash rail,
-> thread freshness) — none of which exists here. therapybulletin is
+> thread freshness) — none of which exists here. mhinbrief is
 > `kind: registry`: its live state is `candidates/` by status,
 > `records/`/`changelog/` counts, per-source feed health, and
 > provenance/snapshot freshness, a genuinely different shape. Fixed at

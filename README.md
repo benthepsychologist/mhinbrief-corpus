@@ -1,20 +1,24 @@
-# therapybulletin-data
+# mhinbrief-corpus
 
 > **Mission.** We're your practical guide to what's happening in the
 > field — keeping you legal, current, and out of trouble. (Adopted
 > 2026-07-31.)
 
-The **Therapy Bulletin** registry: the compliance-obligation records,
-changelog, and instance manifest behind therapybulletin.org. Brand locked
-2026-07-31; the site is live; **this repo stays private** — it holds the
-working corpus and is not linked from any live site.
+The **MH in Brief** registry: the compliance-obligation records,
+changelog, and instance manifest behind mhinbrief.com. Originally
+branded "Therapy Bulletin" (locked 2026-07-31); renamed to MH in Brief
+2026-08-12 (decision reconfirmed 2026-08-11 over an "mhinpractice"
+alternative — "in brief" fits a regulatory-digest corpus better than
+anything implying clinical practice guidance). **This repo stays
+private** — it holds the working corpus and is not linked from any live
+site.
 
 It is tended by the kestrel engine via the manifest in `kestrel.yaml`,
 which declares the record schema location, the sweep/verify cadence, and
 the sources this instance watches. Runner invocation:
 
-    KESTREL_INSTANCE=/workspace/therapybulletin-data \
-      python3 /workspace/kestrel/tools/tend.py /workspace/therapybulletin-data
+    KESTREL_INSTANCE=/workspace/mhinbrief-corpus \
+      python3 /workspace/kestrel/tools/tend.py /workspace/mhinbrief-corpus
 
 `schema/record.yaml` was **finalized v1 on 2026-07-31**. It had been marked
 DRAFT on the stated grounds that the worked schema was chat-history-only,
@@ -29,7 +33,7 @@ this hunt should not be re-run. See the schema file's own header for the
 full trace.
 
 The corpus is live: **16 records** and 16 changelog entries, all rendering on
-therapybulletin.org.
+mhinbrief.com.
 
 - **Federal (4)** — the GST/HST exemption routes, which are four separate
   provisions with different tests, not one rule: s. 7(j) psychology,
@@ -41,7 +45,7 @@ therapybulletin.org.
   because the colleges genuinely differ and the differences are the product.
 
 Build order for jurisdiction work, set 2026-07-31: **Ontario → Quebec →
-Nova Scotia**. Site content ships only through the `therapybulletin` adapter at
+Nova Scotia**. Site content ships only through the `mhinbrief` adapter at
 `publish/adapter.py` — **built 2026-07-31**, so `/publish` is no longer a
 stub. It emits the changelog pages, `data/records.yaml`, and the
 jurisdiction map's `data/regulators.yaml`, under the engine's guarantees
@@ -52,7 +56,7 @@ in the same change, so the site again has exactly one content writer.
     python3 publish/adapter.py            # staged — writes, does not push
     python3 publish/adapter.py --push     # commit, push, fire deploy hook
 
-**Pushing the site is not the same as deploying it.** therapybulletin-site
+**Pushing the site is not the same as deploying it.** mhinbrief-site
 builds only on its Cloudflare deploy hook, never on git push. `--push`
 fires the hook; a manual push does not. Verify against served content
 before reporting anything as live.

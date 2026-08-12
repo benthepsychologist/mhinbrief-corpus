@@ -1,33 +1,35 @@
-<!-- kit: registry/CLAUDE@2026-07-31.3 — canonical: /workspace/kestrel/library/agentdocs/registry/CLAUDE.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
+<!-- kit: standing/CLAUDE@2026-08-07.1 — canonical: /workspace/kestrel/library/agentdocs/standing/CLAUDE.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to kestrel's INBOX/, never a direct edit. -->
 
-# CLAUDE.md — therapybulletin (registry instance)
+# CLAUDE.md — mhinbrief (standing instance)
 
-A **compliance-obligation registry** tended by the kestrel engine
-(/workspace/kestrel): records of what the law requires of behavioural-health
-practitioners, each carrying a source and a `last_verified` date, with an
-**append-only changelog** whose weekly rollup is the newsletter. This repo
-is the data; the site (/workspace/therapybulletin-site) is the rendered surface; the
-engine is the machinery. `kestrel.yaml` at this root is the instance
-manifest (`kind: registry`).
+A **standing** instance tended by the kestrel engine (/workspace/kestrel): a
+curated corpus of records, each carrying a source and a verified-as-of
+date, with an **append-only changelog**. This repo is the data; a paired
+site or outward channel is the rendered surface; the engine is the
+machinery. `kestrel.yaml` at this root is the instance manifest
+(`kind: standing`).
 
-**The loop:** `/tend` (sweep sources → stage candidates) → `/curate`
-(candidates → records, operator-confirmed, citation-required) →
-`/verify` (scheduled re-verification) → `/publish` (**operational since
-2026-07-31** — `publish/adapter.py` in this repo; the kit template still
-says "stub until the adapter lands", which is stale for this instance —
-see the local override note in `.claude/skills/publish/SKILL.md`).
-Skills live in `.claude/skills/` — rendered kit copies; canonical
-versions live in the engine's `library/` (edit there, then `/sync-kits`).
+**The loop:** `/tend` (sweep declared sources → stage candidates, if this
+instance declares any) → `/curate` (candidates → records,
+operator-confirmed, citation-required) → `/verify` (scheduled
+re-verification) → `/publish` (**Operational** — `publish/adapter.py` exists in this repo.). Skills live in
+`.claude/skills/` — rendered kit copies; canonical versions live in the
+engine's `library/` (edit there, then `/sync-kits`).
 
-**The posture, non-negotiable (UPL):** this registry states rules with
-receipts; it never gives legal advice. The runner never writes records;
-the agent drafts and the **operator confirms every record change**; no
-change is asserted without `source_url` + `last_verified` (mechanically
-checked, not habitual). When a claim can't be sourced primary, it stays
-a deferred candidate or ships flagged `confidence: low` — never
-laundered.
+**The posture, non-negotiable:** this corpus states what it tracks with
+receipts. The runner never writes records; the agent drafts and the
+**operator confirms every record change**; no change is asserted without
+a source and a verified-as-of date (mechanically checked, not habitual).
+When a claim can't be sourced primary, it stays a deferred candidate or
+ships flagged `confidence: low` — never laundered.
+
+**This file is deliberately thin on domain specifics.** Kestrel doesn't
+know this instance's real subject, voice, or safety rules beyond the
+shared curate/tend/verify/publish mechanics above — those belong in this
+repo's own operating contract (its README/AGENTS.md content, hand-
+authored, never rendered).
 
 **Never:** edit `records/` outside `/curate`'s mechanics · modify an
-existing `changelog/` file (append-only) · hand-write content into the
-site repo (single content writer = the publish core) · let an LLM-edited
-YAML go unvalidated (`yaml.safe_load` or revert).
+existing `changelog/` file (append-only) · hand-write content into an
+outward channel once its adapter exists (single content writer) · let an
+LLM-edited YAML go unvalidated (`yaml.safe_load` or revert).

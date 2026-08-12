@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""publish/adapter.py — the `therapybulletin` publish adapter.
+"""publish/adapter.py — the `mhinbrief` publish adapter.
 
-This is the ONE content writer into /workspace/therapybulletin-site
+This is the ONE content writer into /workspace/mhinbrief-site
 (AGENTS.md discipline 9). Nothing else may hand-write generated registry
 content there. It replaces the stub state that `/publish` documented, and
 it fully absorbs the temporary bridge that was at
-therapybulletin-site/scripts/gen-regulators-data.py — that script existed
+mhinbrief-site/scripts/gen-regulators-data.py — that script existed
 only because this adapter did not, and was DELETED in the same change that
 added this one, so the site again has exactly one writer.
 
@@ -204,7 +204,7 @@ def build_review_data(candidates):
             "note": c.get("note") or "",
         })
     return {
-        "generated_by": "therapybulletin publish adapter (publish/adapter.py)",
+        "generated_by": "mhinbrief publish adapter (publish/adapter.py)",
         "count": len(items),
         "items": items,
     }
@@ -305,7 +305,7 @@ def build_records_data(records):
         code = (rec.get("jurisdiction") or {}).get("code", "unsorted")
         by_jurisdiction.setdefault(code, []).append(pub)
     return {
-        "generated_by": "therapybulletin publish adapter (publish/adapter.py)",
+        "generated_by": "mhinbrief publish adapter (publish/adapter.py)",
         "record_count": len(flat),
         "topic_names": TOPIC_NAMES,
         "jurisdiction_names": JURISDICTION_NAMES,
@@ -321,7 +321,7 @@ TIER_LABEL = {1: "Regulator", 2: "Quasi-regulatory / associations", 3: "Associat
 def build_regulators_data(manifest):
     """The jurisdiction map's data, from kestrel.yaml's `sources`.
 
-    Absorbed from therapybulletin-site/scripts/gen-regulators-data.py, which
+    Absorbed from mhinbrief-site/scripts/gen-regulators-data.py, which
     existed only because this adapter didn't. Keeping both would mean two
     writers into one site — the exact thing discipline 9 forbids — so that
     script is deleted in the same change that adds this."""
@@ -341,14 +341,14 @@ def build_regulators_data(manifest):
     for j in by_j:
         by_j[j].sort(key=lambda e: (e["tier"] or 9, e["name"]))
     return {
-        "generated_by": "therapybulletin publish adapter (publish/adapter.py)",
-        "source_manifest": "therapybulletin-data/kestrel.yaml",
+        "generated_by": "mhinbrief publish adapter (publish/adapter.py)",
+        "source_manifest": "mhinbrief-corpus/kestrel.yaml",
         "jurisdictions": by_j,
     }
 
 
 def main():
-    ap = argparse.ArgumentParser(description="therapybulletin publish adapter")
+    ap = argparse.ArgumentParser(description="mhinbrief publish adapter")
     ap.add_argument("--push", action="store_true",
                     help="commit + push the site repo and fire its deploy hook")
     ap.add_argument("--dry-run", action="store_true",
@@ -432,7 +432,7 @@ def main():
     now = datetime.now(timezone.utc)
     core.write_provenance_manifest(str(INSTANCE_ROOT), {
         "kind": "publish",
-        "adapter": "therapybulletin",
+        "adapter": "mhinbrief",
         "published_at": now.isoformat(),
         "records": len(records),
         "records_curated_total": len(all_records),
@@ -447,17 +447,17 @@ def main():
 
     # --- guarantee 4: push is explicit, never a side effect of building
     if args.push:
-        hook = os.environ.get("THERAPYBULLETIN_DEPLOY_HOOK", "")
+        hook = os.environ.get("MHINBRIEF_DEPLOY_HOOK", "")
         if not hook:
             env_file = site_dir / ".env"
             if env_file.exists():
                 for line in env_file.read_text().splitlines():
-                    if line.startswith("THERAPYBULLETIN_DEPLOY_HOOK="):
+                    if line.startswith("MHINBRIEF_DEPLOY_HOOK="):
                         hook = line.split("=", 1)[1].strip()
         if not hook:
             print("[publish] WARNING: no deploy hook resolved — pushing without "
                   "firing a build. This site does NOT auto-deploy on push "
-                  "(see therapybulletin-site/README.md); the push will land "
+                  "(see mhinbrief-site/README.md); the push will land "
                   "but nothing will go live until a hook fires.")
         core.push_site(str(site_dir), hook,
                        f"publish: {len(records)} records, {len(changelog)} changelog entries")
