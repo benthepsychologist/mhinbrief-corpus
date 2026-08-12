@@ -54,12 +54,22 @@ temporary bridge script that previously produced the map data was deleted
 in the same change, so the site again has exactly one content writer.
 
     python3 publish/adapter.py            # staged — writes, does not push
-    python3 publish/adapter.py --push     # commit, push, fire deploy hook
+    python3 publish/adapter.py --push     # commit + push into mhinbrief-site's git history
 
-**Pushing the site is not the same as deploying it.** mhinbrief-site
-builds only on its Cloudflare deploy hook, never on git push. `--push`
-fires the hook; a manual push does not. Verify against served content
-before reporting anything as live.
+**Pushing the site is not the same as deploying it.** `mhinbrief` is a
+Cloudflare Worker with static assets, deployed by pushing straight to
+Cloudflare (`hugo && wrangler deploy` in `mhinbrief-site`, see that repo's
+CLAUDE.md/README.md), not by anything git-triggered. `--push` here still
+does something real (lands the generated changelog/records/review data in
+`mhinbrief-site`'s git history, under the engine's guarantees) — it just
+doesn't put anything live by itself. **Checked directly (2026-08-12) via
+Cloudflare's deployments API: every recorded deployment of this site,
+back to 2026-07-31 when it first went live, shows `source: wrangler` —
+none show a connected build.** The old docs described a "push → deploy
+hook → Cloudflare build" pipeline; the evidence says that was likely
+never the actual mechanism, and the site has always gone live via a
+manual `wrangler deploy` pass, same as now. Verify against served content
+(`curl -s https://mhinbrief.com/`) before reporting anything as live.
 
 ## Fetching sources that block agents
 

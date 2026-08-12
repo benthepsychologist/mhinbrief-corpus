@@ -350,7 +350,8 @@ def build_regulators_data(manifest):
 def main():
     ap = argparse.ArgumentParser(description="mhinbrief publish adapter")
     ap.add_argument("--push", action="store_true",
-                    help="commit + push the site repo and fire its deploy hook")
+                    help="commit + push the site repo (does NOT deploy mhinbrief.com — "
+                         "that's a separate `wrangler deploy` pass, see mhinbrief-site/README.md)")
     ap.add_argument("--dry-run", action="store_true",
                     help="report what would be written; write nothing")
     args = ap.parse_args()
@@ -454,11 +455,21 @@ def main():
                 for line in env_file.read_text().splitlines():
                     if line.startswith("MHINBRIEF_DEPLOY_HOOK="):
                         hook = line.split("=", 1)[1].strip()
-        if not hook:
-            print("[publish] WARNING: no deploy hook resolved — pushing without "
-                  "firing a build. This site does NOT auto-deploy on push "
-                  "(see mhinbrief-site/README.md); the push will land "
-                  "but nothing will go live until a hook fires.")
+        # NOTE, 2026-08-12: firing this hook is a no-op today. mhinbrief is
+        # a Cloudflare Worker with static assets, deployed by a direct
+        # `wrangler deploy` pass in mhinbrief-site (see that repo's
+        # README/CLAUDE.md) — not by a git-connected build. Checked via
+        # Cloudflare's deployments API: every deployment ever recorded for
+        # this site shows source=wrangler, none show a connected build, so
+        # this was likely never the real mechanism even before the rename.
+        # Kept (rather than removed) so `core.push_site`'s other guarantee
+        # — an explicit, auditable push, never a silent side effect of
+        # building — still holds; only the hook-fire step is now inert.
+        print("[publish] NOTE: this push does not deploy mhinbrief.com. "
+              "That site is a Cloudflare Worker, deployed by running "
+              "`hugo && wrangler deploy` in mhinbrief-site directly — see "
+              "that repo's README.md. This commit lands the generated "
+              "content in its git history but does not go live by itself.")
         core.push_site(str(site_dir), hook,
                        f"publish: {len(records)} records, {len(changelog)} changelog entries")
     else:
