@@ -1,23 +1,93 @@
 # STATUS — mhinbrief-corpus (registry instance)
 
-*Hand-maintained. **As of 2026-08-01** (newest note first.)*
+*Hand-maintained. **As of 2026-08-12** (newest note first.)*
 
 **Where things actually stand right now:**
 
 | | |
 | --- | --- |
 | **Sources** | 50, all `wired`, across all 13 provinces/territories + federal. 3 carry `verified: false` (see below). |
-| **Records** | **16 committed** — 4 federal (GST/HST exemption routes) + 12 Ontario (retention, privacy, telepractice, insurance; three each, one per college). |
+| **Records** | **16 committed** — 4 federal (GST/HST exemption routes) + 12 Ontario (retention, privacy, telepractice, insurance; three each, one per college). Unchanged since 2026-08-01 — QC/NS build-out hasn't started curating yet. |
 | **Changelog** | 16 entries, all `record-added`. |
+| **Candidates** | **72 staged, 0 curated** — the 2026-08-12 `/tend` sweep. A shortlist of ~10 was triaged and a 5-draft/1-defer/4-reject split was agreed with Ben, but none of those record changes have actually been written yet — this is the oldest open task, not finished work. |
 | **Schema** | `record.yaml` **v1, finalized** 2026-07-31. Not a draft, not gated. |
-| **Publish** | **Operational.** `publish/adapter.py`, this repo. Single content writer into the site. |
-| **Site** | mhinbrief.com live: jurisdiction map, changelog (16 entries + per-entry pages), and 5 topic matrices — tax, retention, privacy, telepractice, insurance. |
+| **Publish** | **Operational.** `publish/adapter.py`, this repo. Single content writer into the site — now also emits `data/review.yaml` for the site's review queue (2026-08-12). |
+| **Site render scope** | `publish/adapter.py`'s `RENDER_JURISDICTIONS` guardrail (added 2026-08-12): every wired jurisdiction is curated, but only **ON, QC, NS, and federal** records actually render to the site — "we are not ready to be responsible outside of those lanes" (Ben). Doesn't affect the 16 live records (all ON/federal already) but matters the moment a QC/NS record is curated, and matters a lot once any other jurisdiction's candidates get curated. |
+| **Site** | **mhinbrief.com** (renamed from therapybulletin.org, 2026-08-12) live: jurisdiction map (unfiltered, all 14 jurisdictions — a directory of regulators, not a compliance claim, so the render-scope guardrail above doesn't apply to it), changelog (16 entries + per-entry pages), 5 topic matrices, and a new unlisted **`/review/`** page (Cloudflare Access-gated to `@evidencefirstsolutions.com`, feedback becomes a GitHub issue attributed to the verified login — see 2026-08-12 note below). Deploys via `hugo && wrangler deploy` from `mhinbrief-site`, NOT a deploy hook — see that same note. |
 
 **The 3 `verified: false` sources, and why** — `mhcc-workplace-standard`
 (scope call for Ben: workplace standard, not clinical-practice
 regulation) · `nb-association-social-workers` and `yt-psychologists`
 (both behind a full Cloudflare interstitial that `tools/fetch-blocked.sh`
 deliberately does not defeat — an operator must look by hand).
+
+> **2026-08-12 — renamed therapybulletin → mhinbrief, and the "deploy
+> hook" the old docs described turns out to have likely never been real.**
+> Corpus and site renamed end to end: local dirs (`therapybulletin-data`
+> → `mhinbrief-corpus`, `therapybulletin-site` → `mhinbrief-site`), GitHub
+> repos (Ben, via the web UI — an API rename attempt 403'd, the token
+> lacked the `Administration: write` scope a rename specifically needs),
+> every in-repo reference, and the live domain (`mhinbrief.com`, which
+> turned out to already be an active zone on the Cloudflare account —
+> registration was never actually the blocker it looked like). Decision
+> itself (mhinbrief over a considered "mhinpractice") was confirmed
+> 2026-08-08, reconfirmed 2026-08-11 — closed, not open again. Commits
+> `918a97a` (corpus), `ea30565` (site).
+>
+> Separately, while reconciling the deploy docs: checked Cloudflare's
+> deployments API directly rather than trust the old README/CLAUDE.md
+> claim of a "push → deploy hook → Cloudflare build" pipeline. **Every
+> deployment ever recorded for this site, back to 2026-07-31 when it
+> first went live, shows `source: wrangler`, none show a connected
+> build** — so that pipeline, "Cloudflare Pages" framing included, was
+> likely never the actual mechanism, not something the rename broke. The
+> real, always-true mechanism: `hugo` (build) + `wrangler deploy` (ship),
+> authenticated via a Cloudflare API token, run manually. Docs in both
+> repos corrected to say this; `MHINBRIEF_DEPLOY_HOOK` stays in `.env` as
+> documented legacy, not deleted. Commits `b06e1ba` (corpus), `0914ff3`
+> (site).
+
+> **2026-08-12 — Cloudflare Worker deployed, custom domain bound, and a
+> password-gated `/review/` page shipped for non-technical colleague
+> curation review.** This session obtained its first real Cloudflare API
+> token (scoped: Workers Scripts/KV/Access on the account, Zone/DNS/
+> Workers Routes/SSL on all zones — deliberately no Registrar/Billing/
+> Member-management) and used it to deploy the `mhinbrief` Worker, bind
+> `mhinbrief.com` via Workers Custom Domains (DNS + cert auto-managed by
+> that binding), and stand up Cloudflare Access protecting `/review/` —
+> the old `therapybulletin` Worker/domain were untouched throughout, this
+> was purely additive.
+>
+> The `/review/` page (unlisted — `noindex`, `robots.txt` disallow, not in
+> nav) renders the staged-candidates queue in plain language from a new
+> `data/review.yaml` the adapter now emits, and lets a colleague leave a
+> comment that becomes a GitHub issue in this repo. Identity comes from
+> Cloudflare Access's login (`@evidencefirstsolutions.com`, email OTP),
+> verified server-side in the Worker (`worker/access-jwt.js` checks the
+> signed token against Cloudflare's public keys, the `aud` claim, and
+> expiry) — not a typed name field. A real gap was caught and fixed while
+> verifying this live: Access's path scope only covered `/review` at
+> first, leaving `/api/feedback` reachable unauthenticated; widened to
+> cover both. This EFS-colleague access is a backend/operational detail,
+> not branding — explicitly cleared against this repo's no-EFS-branding
+> rule by Ben, not a conflict. Commits `1d13cd1`…`b06e1ba` (corpus, this
+> whole arc), `c5fc725`+`65a9328` (site).
+
+> **2026-08-12 — the render-jurisdiction filter, and the 2026-08-12
+> `/tend` sweep's 72-candidate queue is still fully uncurated.** Ben's
+> call: this corpus curates every wired jurisdiction, but only ON/QC/NS +
+> federal are cleared to actually render to the site right now — "we are
+> not ready to be responsible outside of those lanes." Implemented as
+> `RENDER_JURISDICTIONS` in `publish/adapter.py` (commit `92950a2`);
+> doesn't touch the jurisdiction map, which stays showing all 14 (a
+> directory of offices/frameworks, not a compliance claim — Ben's
+> explicit distinction). Also this session: `/tend` ran, staged 63 new
+> candidates on top of 9 pre-existing ones (72 total, commit `1d13cd1`),
+> a shortlist of ~10 was read and triaged with a recommended 5-draft/
+> 1-defer/4-reject split, Ben approved it — **and then the rename/
+> Cloudflare work took over and none of those record changes were ever
+> actually written.** This is the oldest real unfinished task in the
+> corpus right now, not the infrastructure work above.
 
 > **2026-08-01 — Ontario landed, and the site's own agentdoc was describing
 > a different site.** 12 Ontario records committed and published (retention,
