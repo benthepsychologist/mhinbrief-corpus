@@ -41,6 +41,16 @@ WHAT IT EMITS
                                 bridge so the site has exactly ONE content
                                 writer (discipline 9) rather than an adapter
                                 plus a leftover script.
+  data/review.yaml              staged candidates/*.yaml (pending curation),
+                                for the unlisted /review/ page — lets a
+                                non-technical colleague see the queue in
+                                plain language instead of reading YAML in
+                                the repo. Ben, 2026-08-12. Written every run,
+                                same as the other data/ outputs — it is NOT
+                                gated behind RENDER_JURISDICTIONS (that
+                                filter is about published CLAIMS; a review
+                                queue asserts nothing, it's just visibility
+                                into what's pending).
 
 Usage:
     python3 publish/adapter.py                # staged: write, do not push
@@ -161,6 +171,43 @@ def load_records():
         if rec:
             out[p.stem] = rec
     return out
+
+
+def load_candidates():
+    """Every candidates/*.yaml with status: staged — the pending curation
+    queue. Deferred/accepted/rejected candidates carry a resolution and are
+    excluded; they're history, not something a reviewer needs to weigh in
+    on. safe-load-or-skip, same discipline as load_records()."""
+    out = []
+    for p in sorted((INSTANCE_ROOT / "candidates").glob("*.yaml")):
+        c = yaml.safe_load(p.read_text())
+        if c and c.get("status") == "staged":
+            c["candidate_id"] = p.stem
+            out.append(c)
+    return out
+
+
+def build_review_data(candidates):
+    """Plain-language queue for the /review/ page — title, source link,
+    quote-or-note, when it was staged. No YAML, no jargon; a colleague
+    should be able to read this without knowing what a 'candidate' is."""
+    items = []
+    for c in candidates:
+        src = c.get("source") or {}
+        items.append({
+            "candidate_id": c.get("candidate_id"),
+            "title": src.get("title") or "(untitled)",
+            "url": src.get("url"),
+            "source_name": (src.get("source_id") or "").split(":", 1)[-1],
+            "published": src.get("ts"),
+            "observed": c.get("observed"),
+            "note": c.get("note") or "",
+        })
+    return {
+        "generated_by": "therapybulletin publish adapter (publish/adapter.py)",
+        "count": len(items),
+        "items": items,
+    }
 
 
 def load_changelog():
@@ -314,6 +361,7 @@ def main():
     records = filter_for_site(all_records)
     excluded = len(all_records) - len(records)
     changelog = load_changelog()
+    candidates = load_candidates()
 
     print(f"[publish] instance : {INSTANCE_ROOT}")
     print(f"[publish] site     : {site_dir}")
@@ -322,12 +370,15 @@ def main():
         print(f"[publish] records site-eligible: {len(records)} "
               f"({excluded} excluded by RENDER_JURISDICTIONS={sorted(RENDER_JURISDICTIONS)})")
     print(f"[publish] changelog: {len(changelog)}")
+    print(f"[publish] review queue: {len(candidates)} staged candidates")
 
     pages = build_changelog_pages(changelog, records)
     data = build_records_data(records)
     data_blob = yaml.safe_dump(data, sort_keys=False, allow_unicode=True, width=100)
     regs = build_regulators_data(manifest)
     regs_blob = yaml.safe_dump(regs, sort_keys=False, allow_unicode=True, width=100)
+    review = build_review_data(candidates)
+    review_blob = yaml.safe_dump(review, sort_keys=False, allow_unicode=True, width=100)
 
     # --- guarantee 1: secret scan, every emitted byte, editorial or not
     hits = []
@@ -335,6 +386,7 @@ def main():
         hits += core.secret_scan(text, path)
     hits += core.secret_scan(data_blob, "data/records.yaml")
     hits += core.secret_scan(regs_blob, "data/regulators.yaml")
+    hits += core.secret_scan(review_blob, "data/review.yaml")
     if hits:
         print("[publish] ABORT — secret scan hit:")
         for h in hits:
@@ -353,6 +405,7 @@ def main():
             print(f"  would write {p}")
         print(f"  would write data/records.yaml ({len(data_blob)} bytes)")
         print(f"  would write data/regulators.yaml ({len(regs_blob)} bytes)")
+        print(f"  would write data/review.yaml ({len(review_blob)} bytes)")
         return 0
 
     # --- write
@@ -369,6 +422,9 @@ def main():
     regs_path = site_dir / "data" / "regulators.yaml"
     regs_path.write_text(regs_blob, encoding="utf-8")
     written.append("data/regulators.yaml")
+    review_path = site_dir / "data" / "review.yaml"
+    review_path.write_text(review_blob, encoding="utf-8")
+    written.append("data/review.yaml")
     for w in written:
         print(f"  wrote {w}")
 
@@ -382,6 +438,7 @@ def main():
         "records_curated_total": len(all_records),
         "records_excluded_by_render_filter": excluded,
         "render_jurisdictions": sorted(RENDER_JURISDICTIONS) if RENDER_JURISDICTIONS else None,
+        "review_queue_count": len(candidates),
         "changelog_entries": len(changelog),
         "files_written": written,
         "allowlist": ALLOWED_RECORD_FIELDS,
