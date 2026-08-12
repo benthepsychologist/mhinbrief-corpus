@@ -10,6 +10,7 @@
 | **Records** | **16 committed** — 4 federal (GST/HST exemption routes) + 12 Ontario (retention, privacy, telepractice, insurance; three each, one per college). Unchanged since 2026-08-01 — QC/NS build-out hasn't started curating yet. |
 | **Changelog** | 16 entries, all `record-added`. |
 | **Candidates** | **72 staged, 0 curated** — the 2026-08-12 `/tend` sweep. A shortlist of ~10 was triaged and a 5-draft/1-defer/4-reject split was agreed with Ben, but none of those record changes have actually been written yet — this is the oldest open task, not finished work. |
+| **Coverage** | `coverage/matrix.yaml` + `coverage/rubric.md` (new, 2026-08-12) — the real definition of "done." **43 cells tracked (ON/QC/NS/federal only), 16 covered, 27 `not_started`, 0 `not_applicable`.** Ontario is the only jurisdiction with real coverage (12/15 — `licensure` is its own gap); QC and NS are 0/10 and 0/13. `/tend` cannot close a `not_started` cell — see the rubric for why and what closing one actually requires. |
 | **Schema** | `record.yaml` **v1, finalized** 2026-07-31. Not a draft, not gated. |
 | **Publish** | **Operational.** `publish/adapter.py`, this repo. Single content writer into the site — now also emits `data/review.yaml` for the site's review queue (2026-08-12). |
 | **Site render scope** | `publish/adapter.py`'s `RENDER_JURISDICTIONS` guardrail (added 2026-08-12): every wired jurisdiction is curated, but only **ON, QC, NS, and federal** records actually render to the site — "we are not ready to be responsible outside of those lanes" (Ben). Doesn't affect the 16 live records (all ON/federal already) but matters the moment a QC/NS record is curated, and matters a lot once any other jurisdiction's candidates get curated. |
@@ -20,6 +21,35 @@
 regulation) · `nb-association-social-workers` and `yt-psychologists`
 (both behind a full Cloudflare interstitial that `tools/fetch-blocked.sh`
 deliberately does not defeat — an operator must look by hand).
+
+> **2026-08-12 — coverage/matrix.yaml + coverage/rubric.md: "acceptable
+> coverage" stops being a vague build-order line and becomes a real
+> tracked scoreboard.** Ben, questioning the candidates-queue work
+> directly: "isn't it still news feed thinking?" — correctly. `/tend`'s
+> weekly sweep surfaces whatever changed on a watched page with zero
+> judgment about relevance; it can maintain a cell that's already
+> `covered` but cannot discover one that isn't. Building QC/NS coverage
+> needs a deliberate research pass, not a feed. That distinction is now
+> a real artifact: `coverage/rubric.md` defines what "covered" requires
+> (primary source, verbatim quote, dated, confidence level honestly
+> assigned) and the per-topic granularity rules (most topics are
+> profession-specific — confirmed by real cases: OCSWSSW doesn't require
+> liability insurance where CPBAO/CRPO do, the three ON colleges'
+> retention clocks start on three differently-worded triggers — but
+> `privacy` is jurisdiction-wide, one law covering every profession).
+> `coverage/matrix.yaml` is the scoreboard: 43 cells across the four
+> in-play lanes, 16 covered (exactly the 16 live records, verified by
+> script), 27 `not_started`, honestly.
+>
+> Two real gaps surfaced while building this, not resolved here:
+> Quebec's `qc-occoq`/`qc-oppq` sources (conseillers d'orientation,
+> psychoéducateurs) don't map onto the record schema's `profession_scope`
+> enum — flagged, not enumerated as cells yet. And this session's NS
+> `/tend` finds (new duty-to-report standards, a new Code of Ethics) are
+> professional-conduct/discipline material that doesn't fit any of the
+> five core topics (licensure/telepractice/privacy/retention/insurance)
+> — a topic-taxonomy gap, not a research gap, noted on the relevant cell
+> rather than force-fit.
 
 > **2026-08-12 — renamed therapybulletin → mhinbrief, and the "deploy
 > hook" the old docs described turns out to have likely never been real.**

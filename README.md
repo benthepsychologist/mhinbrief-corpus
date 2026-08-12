@@ -54,8 +54,17 @@ mhinbrief.com.
   liability insurance, three each: one per college (CPBAO, CRPO, OCSWSSW),
   because the colleges genuinely differ and the differences are the product.
 
-Build order for jurisdiction work, set 2026-07-31: **Ontario → Quebec →
-Nova Scotia**. As of 2026-08-12, curation isn't limited to those three —
+**What "done" means is tracked, not vague.** `coverage/matrix.yaml` is
+the actual scoreboard — 43 cells across ON/QC/NS/federal (jurisdiction ×
+profession × topic, with the granularity rules and per-cell criteria
+defined in `coverage/rubric.md`), 16 covered today, 27 `not_started`.
+`/tend`'s weekly sweep is a maintenance signal for cells already
+`covered` — it cannot discover a `not_started` cell; closing one is a
+deliberate research pass against the rubric, not something to wait for a
+feed to surface. Build order for jurisdiction work, set 2026-07-31:
+**Ontario → Quebec → Nova Scotia** — Ontario's the only one with real
+coverage so far (12/15 cells; `licensure` is the gap even there). As of
+2026-08-12, curation isn't limited to those three —
 every wired jurisdiction can be curated into `records/` — but
 `publish/adapter.py`'s `RENDER_JURISDICTIONS` guardrail means only
 ON/QC/NS + federal records actually reach the site; see STATUS.md for
