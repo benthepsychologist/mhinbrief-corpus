@@ -88,6 +88,36 @@ TOPIC_NAMES = {
     "retention": "Records retention", "insurance": "Liability insurance",
     "tax": "GST/HST", "ai": "AI in practice", "payer": "Payers",
 }
+# --- interim rendering guardrail (Ben, 2026-08-12) --------------------
+# The corpus curates records for every jurisdiction kestrel.yaml wires
+# (currently all 14), but Ben's call: "we are not ready to be responsible
+# outside of those lanes" — ON/QC/NS (+federal, since federal obligations
+# apply regardless of province and aren't an "unready lane" the way a
+# province is) are the only jurisdictions that render to the site right
+# now. Everything else is still fully curated — recorded in records/,
+# diffed into changelog/ — just excluded at this one point, by design, so
+# the corpus doesn't lose the work while the site doesn't publish claims
+# for jurisdictions not yet verified to that standard. The interactive
+# jurisdiction map (build_regulators_data) is NOT filtered — Ben's call,
+# same date: it links to official regulator sites and asserts no
+# compliance claim, so it stays showing all wired jurisdictions.
+#
+# To lift the filter once a jurisdiction is ready: add its code here (or
+# set RENDER_JURISDICTIONS = None to publish everything curated).
+RENDER_JURISDICTIONS = {"ca-on", "ca-qc", "ca-ns", "ca-federal"}
+
+
+def filter_for_site(records):
+    """Apply RENDER_JURISDICTIONS. Curated-but-not-cleared jurisdictions
+    stay in records/ untouched — this only trims what publish() emits."""
+    if RENDER_JURISDICTIONS is None:
+        return records
+    return {
+        rid: rec for rid, rec in records.items()
+        if (rec.get("jurisdiction") or {}).get("code") in RENDER_JURISDICTIONS
+    }
+
+
 PROFESSION_NAMES = {
     "psychologist": "psychology",
     "psychotherapist": "psychotherapy",
@@ -159,7 +189,11 @@ def build_changelog_pages(changelog, records):
     pages = {}
     for stem, e in changelog:
         rid = e.get("record_id", "")
-        rec = records.get(rid, {})
+        rec = records.get(rid)
+        if rec is None:
+            # record doesn't exist, or was filtered out by
+            # RENDER_JURISDICTIONS — either way, nothing to render.
+            continue
         juris = (rec.get("jurisdiction") or {}).get("code", "")
         topic = rec.get("topic", "")
         kind = e.get("kind", "")
@@ -276,12 +310,17 @@ def main():
 
     manifest = load_manifest()
     site_dir = (INSTANCE_ROOT / manifest["outputs"]["site"]).resolve()
-    records = load_records()
+    all_records = load_records()
+    records = filter_for_site(all_records)
+    excluded = len(all_records) - len(records)
     changelog = load_changelog()
 
     print(f"[publish] instance : {INSTANCE_ROOT}")
     print(f"[publish] site     : {site_dir}")
-    print(f"[publish] records  : {len(records)}")
+    print(f"[publish] records curated: {len(all_records)}")
+    if RENDER_JURISDICTIONS is not None:
+        print(f"[publish] records site-eligible: {len(records)} "
+              f"({excluded} excluded by RENDER_JURISDICTIONS={sorted(RENDER_JURISDICTIONS)})")
     print(f"[publish] changelog: {len(changelog)}")
 
     pages = build_changelog_pages(changelog, records)
@@ -340,6 +379,9 @@ def main():
         "adapter": "therapybulletin",
         "published_at": now.isoformat(),
         "records": len(records),
+        "records_curated_total": len(all_records),
+        "records_excluded_by_render_filter": excluded,
+        "render_jurisdictions": sorted(RENDER_JURISDICTIONS) if RENDER_JURISDICTIONS else None,
         "changelog_entries": len(changelog),
         "files_written": written,
         "allowlist": ALLOWED_RECORD_FIELDS,
