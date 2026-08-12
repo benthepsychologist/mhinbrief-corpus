@@ -9,9 +9,19 @@ changelog, and instance manifest behind mhinbrief.com. Originally
 branded "Therapy Bulletin" (locked 2026-07-31); renamed to MH in Brief
 2026-08-12 (decision reconfirmed 2026-08-11 over an "mhinpractice"
 alternative — "in brief" fits a regulatory-digest corpus better than
-anything implying clinical practice guidance). **This repo stays
-private** — it holds the working corpus and is not linked from any live
-site.
+anything implying clinical practice guidance).
+
+**This repo is public** (Ben, 2026-08-12, confirming what was already
+true on GitHub — no visibility change made). The corpus content is
+sourced government/regulatory citations, not sensitive data, and the
+working-corpus material (candidates, provenance, curation notes) carries
+nothing that needs hiding either. This repo previously carried a "stays
+private" claim inherited unchanged from its original pre-launch
+scaffolding note ("private and dark... build dark until brand placement
+resolves") — that was a launch-sequencing placeholder, never a
+considered privacy decision, and GitHub itself was public the entire
+time regardless of what this file said. Same pattern, same public-by-
+default stance, as `theprojection-corpus`/`theprojection-site`.
 
 It is tended by the kestrel engine via the manifest in `kestrel.yaml`,
 which declares the record schema location, the sweep/verify cadence, and
