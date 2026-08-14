@@ -1,4 +1,4 @@
-<!-- kit: standing/tend@2026-08-07.1 — canonical: /workspace/kestrel/library/skills/standing/tend/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to kestrel's INBOX/, never a direct edit. -->
+<!-- kit: standing/tend@2026-08-14.13 — canonical: /workspace/kestrel/library/skills/standing/tend/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # /tend — sweep declared sources, stage the candidates
 
@@ -17,7 +17,7 @@ candidate into a record, regardless of how it arrived.
 
 ## Run
 
-    python3 /workspace/kestrel/tools/tend.py /workspace/mhinbrief-corpus
+    kestrel tend /workspace/mhinbrief-corpus
 
 `--dry-run` first if you want the source-selection plan without fetches.
 `--source <id>` scopes to one source.

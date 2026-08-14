@@ -1,4 +1,4 @@
-<!-- kit: standing/AGENTS@2026-08-07.1 — canonical: /workspace/kestrel/library/agentdocs/standing/AGENTS.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to kestrel's INBOX/, never a direct edit. -->
+<!-- kit: standing/AGENTS@2026-08-14.13 — canonical: /workspace/kestrel/library/agentdocs/standing/AGENTS.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # AGENTS.md — mhinbrief operating disciplines
 
@@ -8,6 +8,21 @@ add the ones every **standing**-kind instance shares. This file is
 deliberately silent on this instance's own subject, voice, or safety
 rules — those belong in this repo's own hand-authored contract content,
 layered alongside this file, never generated here.
+
+**⚠️ Read `OPERATING.md` beside this file FIRST — it is the shared
+contract.** What you own vs. what the engine owns (with the mechanical
+test), the local-extension protocol, jurisdiction and how to file an
+engine brief, why `dirty` is not an error, YAML safety, and the
+session-close and push discipline all live there, identical in every repo
+the engine tends. **What follows is only what is specific to this kind**
+— it deliberately does not repeat any of it.
+
+**The loop, in order:** `/tend` (sweep declared sources, stage candidates)
+→ `/curate` (operator confirms; a candidate becomes a record) → `/verify`
+(re-check what is already recorded) → `/publish`. `/start` orients before
+any of it. The ordering is the contract — a record that reaches `/publish`
+without having passed `/curate` has skipped the human gate this kind
+exists to enforce.
 
 1. **Citation or nothing.** Every record field change carries a source
    and a verified-as-of date. `record_diff.governance_check` enforces
@@ -43,19 +58,33 @@ layered alongside this file, never generated here.
 9. **Provenance discipline.** Every sweep, verify pass, and publish
    leaves a dated manifest in `provenance/`. An artifact without a
    re-fetch manifest is incomplete.
-10. **`yaml.safe_load` or revert.** Every YAML this session or the engine
-    touches.
-11. **Jurisdiction is explicit, not assumed.** This agent/session has
-    direct authority over mhinbrief (and its site sibling, if
-    one is declared) — commit and push either without asking first, on
-    request or on reasonable judgment. **kestrel is not in that
-    jurisdiction.** Any change kestrel needs — a skill fix, a template
-    bug, a new kit feature — gets written up as an
-    `INBOX/<date>-mhinbrief-<slug>.md` entry there (format: the
-    global CLAUDE.md's "Handing dev work to another repo" section) and
-    left for kestrel's own resident agent or Ben, never committed
-    directly from here.
-12. **Kit edits go to the library, not here.** This file and this
-    instance's skills are rendered kit artifacts — canonical templates
-    live in kestrel's `library/`; a wanted change is the discipline 11
-    brief above, not a direct edit.
+
+## Your publish surface
+
+**Your publish adapter is yours, not the engine's.** (**Operational** — `publish/adapter.py` exists in this repo.)
+
+The engine's publish core is generic orchestration — the run loop, the
+secret scan, the git push, the guarantees. **What pages exist, what data
+ships, and any step you add to the publish flow live in this repo's own
+adapter file.** This is the specific thing a session once got wrong,
+telling the operator a feature needed an engine change when the whole
+change was a method here.
+
+**Your site, if you have one, is YOURS — including its docs.** If this
+instance declares a site (`/workspace/mhinbrief-site`), that repo is your publish surface, and you are its only
+content writer. Two things follow, pulling opposite ways:
+
+- ✅ **You own it.** The engine manages nothing there — no rendered docs,
+  no hashes, no drift reporting. Its `AGENTS.md`, `README.md`, layouts,
+  CSS and deploy config belong to whoever works in it, usually you.
+- ⛔ **Its generated content is not hand-editable, by you or anyone.**
+  Whatever your adapter writes is overwritten wholesale on the next
+  publish. A fix belongs **here** — in the records, or in the adapter that
+  renders them — never in the site.
+
+**Why the engine stopped managing sites** (2026-08-14): a site has no
+agent of its own. Pushing a doc into one from the engine produced a single
+file that either duplicated what the site already said or froze and went
+stale — one carried a wrong path for ten days while the site's own README
+stayed accurate. This contract is the replacement, and it lives on this
+side because you are the one who writes there.

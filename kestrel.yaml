@@ -16,6 +16,15 @@ layout:
 cadence:
   sweep: weekly               # the product rhythm ("cadence IS the product")
   verify: quarterly           # off-season re-verification pass
+  # Machine schedule (kestrel FLEET.md §4.3), added 2026-08-14. Distinct
+  # from `sweep:`/`verify:` above, which state the PRODUCT rhythm — this
+  # states what actually runs unattended, and when. `/tend` is this kind's
+  # sweep skill; there is no `/daily` here (that is the attention kind's).
+  timezone: America/Toronto
+  runs:
+    - skill: tend
+      at: ["09:00"]           # -> 13:00 UTC while EDT; 14:00 UTC under EST
+      unattended: true
 sources:
   # Extends the proven sources/sources.yaml per-source schema
   #   (name endpoint auth cadence recall perishability status notes)

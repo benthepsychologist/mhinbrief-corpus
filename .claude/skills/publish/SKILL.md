@@ -1,57 +1,56 @@
-<!-- kit: registry/publish@2026-07-31.3 — canonical: /workspace/kestrel/library/skills/registry/publish/SKILL.md.tmpl -->
-# /publish — render the corpus to the site, through the adapter
+<!-- kit: standing/publish@2026-08-14.13 — canonical: /workspace/kestrel/library/skills/standing/publish/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
-**Operational since 2026-07-31.** The adapter is `publish/adapter.py` in
-**this** repo (instance-owned, declared by `kestrel.yaml`'s
-`outputs.adapter`), and it is the **single content writer** into
-/workspace/therapybulletin-site (AGENTS.md discipline 9).
+# /publish — send this corpus out through its adapter(s)
+
+**Operational** — `publish/adapter.py` exists in this repo. The adapter is instance-owned, declared by this repo's
+own `kestrel.yaml` `outputs.adapter` — once it exists, it is the **single
+writer** into each channel it targets (AGENTS.md discipline 9, the same
+invariant every kestrel-tended instance shares). An instance may have
+more than one outward channel (a site, a newsletter, whatever this
+instance's real outlets are) — that fan-out is this instance's own
+adapter's design, not kestrel's; the engine's publish core gives the same
+guarantees regardless of how many destinations one run touches.
 
 ## Run
 
     python3 publish/adapter.py             # staged: writes, does NOT push
     python3 publish/adapter.py --dry-run   # report only, writes nothing
-    python3 publish/adapter.py --push      # commit, push, fire the deploy hook
+    python3 publish/adapter.py --push      # commit, push, fire whatever this
+                                            # instance's deploy path actually is
 
-Default is staged. Review the diff in the site repo, then re-run with
-`--push`. **Every push to the site's main is a production deploy.**
-
-## What it emits
-
-- `content/changelog/<stem>.md` — one page per changelog entry. The
-  weekly rollup of these IS the newsletter.
-- `data/records.yaml` — allowlisted record fields, grouped by topic and
-  by jurisdiction, for the matrix/hub templates.
-- `data/regulators.yaml` — the jurisdiction map's per-province regulator
-  list, built from `kestrel.yaml`'s `sources`.
+Default is staged. Review the diff, then re-run with `--push`. What
+"push" means is this instance's own adapter's business — a git push to a
+sibling site repo, an API call, whatever the real channel needs.
 
 ## Guarantees it preserves
 
-It imports `/workspace/kestrel/tools/publish/core.py` for `secret_scan()`
-(every emitted byte), `apply_allowlist()`, `write_provenance_manifest()`
-and `push_site()`. It deliberately does NOT use `core.run()` or
-`core.referenced_only()` — those are attention-kind shaped (threads,
-board, payload) and a registry has no such objects; the orchestration is
-registry-shaped but keeps the same guarantees in the same order.
+It imports `/workspace/kestrel/kestrel/publish/core.py` for `secret_scan()`
+(every emitted byte), `apply_allowlist()`, `write_provenance_manifest()`,
+and (for any git-backed channel) `push_site()`. This skill does not
+prescribe `core.run()` or `core.referenced_only()` — those assume
+attention's specific payload shape (threads/board); a standing instance's
+own records/changelog orchestration goes through the same core for the
+same guarantees, in the same order, every time, whatever its own shape is.
 
-**The allowlist is load-bearing, not ceremony:** `notes` is excluded
-because it carries internal curation commentary (operator scope calls,
-"retire candidate", verification-split warnings). Verify after any
-publish that none of that leaked into the built site.
+**The allowlist is load-bearing, not ceremony.** Internal curation
+commentary (operator scope calls, "retire candidate", verification-split
+warnings, anything not meant to ship) belongs on the exclude side of the
+allowlist, checked after every publish.
 
-## Still true from the original stub
+## Still true from every kind's version of this skill
 
-- Do NOT hand-write "generated-looking" registry content into the site
-  repo. The adapter is the only writer; a second one is exactly the drift
-  discipline 9 exists to prevent. (A temporary bridge script once existed
-  for the map data — it was absorbed into the adapter and deleted.)
-- Site code (templates, CSS, hand-authored editorial pages like
-  `method.md`) is the site repo's own and is edited directly. The
-  invariant governs *generated* registry exports, not site chrome.
+- Do NOT hand-write "generated-looking" content into an outward channel
+  once an adapter exists for it. The adapter is the only writer; a second
+  one is exactly the drift discipline 9 exists to prevent.
+- Hand-authored, channel-native material (a site's own template chrome,
+  an editorial page that isn't generated from this corpus) is that
+  channel's own and is edited there directly — this invariant governs
+  *generated* exports from this corpus, not everything in the
+  destination.
 
 ## Close
 
-Report: records and changelog entries published, files written, the
-provenance receipt path, and — if `--push` — the commit range and whether
-the deploy hook actually fired. **A clean `git push` is not evidence the
-site updated**: this site does not auto-deploy on push (see
-therapybulletin-site/README.md). Verify against served content.
+Report: what was published, to which channel(s), files written, the
+provenance receipt path, and — if `--push` — confirmation the channel
+actually updated. **A clean write is not evidence a channel updated** —
+verify against what the channel actually serves.

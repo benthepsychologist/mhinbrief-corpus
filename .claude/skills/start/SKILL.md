@@ -1,22 +1,23 @@
-<!-- kit: registry/start@2026-08-04.1 — canonical: /workspace/kestrel/library/skills/registry/start/SKILL.md.tmpl — edit the canonical copy and run /sync-kits, not this file. -->
+<!-- kit: standing/start@2026-08-14.13 — canonical: /workspace/kestrel/library/skills/standing/start/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 ---
 name: start
-description: Session-bootstrap card for a registry instance — fuses the generic continuation ritual (docs, memory, git log) with the registry pipeline's live state (candidates by status, changelog/record counts, source health, provenance freshness, push safety across three repos). Read-only; run at the start of any session.
+description: Session-bootstrap card for a standing-kind instance — fuses the generic continuation ritual (docs, memory, git log) with this instance's own pipeline state (candidates by status, changelog/record counts, source health if this instance runs /tend, provenance freshness, push safety).
 ---
 
-# /start — pick up the registry where it was left
+# /start — pick up this corpus where it was left
 
-This is the registry-kind sibling of `common/start`, not that skill with a
-few lines swapped: an attention instance's session state lives in digests,
-expectations, and a flash rail; a registry instance's lives in
-`candidates/`, `records/`, `changelog/`, and per-source feed health — two
-different pipelines, so two different cards. The kit renderer resolves
-this file in place of `common/start` for any instance whose `kestrel.yaml`
-declares `kind: registry` (family `registry` renders after family
-`common`, same skill name, so it wins — KITS.md §2's selection rule, not a
-special case). It runs both a continuation pass and a pipeline-state pass
-and renders one card, in this order:
+This is the standing-kind sibling of `attention/start`, not one generic skill with
+a few lines swapped: an attention instance's session state lives in
+digests, expectations, and a flash rail; a standing instance's lives in
+`candidates/`, `records/`, `changelog/`, and (if this instance declares
+`sources:`) per-source feed health — two different pipelines, so two
+different cards. The kit renderer resolves this file in place of
+this file for any instance whose `kestrel.yaml` declares
+`kind: standing` (family `standing` renders after family `common`, same
+skill name, so it wins — KITS.md §2's selection rule, not a special
+case). It runs both a continuation pass and a pipeline-state pass and
+renders one card, in this order:
 
 1. **Continuation briefing** — read the canonical docs at repo root
    (`CLAUDE.md`, `AGENTS.md`, `STATUS.md`, `README.md`, `ROADMAP.md`; say
@@ -26,26 +27,27 @@ and renders one card, in this order:
    show up in the repo's own docs). Then `git log --oneline` since
    STATUS.md's own "As of" date (or `-20`, whichever is more informative)
    and `git status --short`. **No `log.md` read here** — the
-   session-close ledger is an attention-kind convention
-   (`AGENTS.md` §Session close on that family); the registry AGENTS.md
-   carries no equivalent, so don't go looking for one. Frame the
+   session-close ledger is an attention-kind convention; a standing
+   instance's `AGENTS.md` carries no equivalent unless this instance's
+   own docs add one, so don't go looking for one by default. Frame the
    synthesis around continuation: what changed last, what's still open,
    what's next — not a raw dump of any of these reads.
-2. **Candidate queue** — read `candidates/*.yaml` and tally by `status`
-   (`staged` / `accepted` / `rejected` / `deferred`). Report the `staged`
+2. **Candidate queue** — read `candidates/*.yaml` (if this instance uses
+   that convention — some standing instances get candidates from
+   elsewhere, e.g. an `INBOX/` review queue; adapt this step to wherever
+   this instance's own pending-item store actually is) and tally by
+   status (staged / accepted / rejected / deferred). Report the pending
    count as the headline number (that's the queue `/curate` will walk)
-   and name the oldest staged item's date — a staged candidate isn't
-   urgent the way a missed expectation is, but a queue that's been
-   sitting for multiple `/tend` cycles untouched is worth a line.
+   and name the oldest pending item's date — not urgent the way a missed
+   expectation is, but a queue that's sat untouched across multiple
+   sweeps is worth a line.
 3. **Corpus state** — count `records/` (excluding `.gitkeep`) and read
-   the newest few `changelog/*.yaml` entries (append-only, so newest
-   file mtime is newest law-change on record). Zero records is a normal,
+   the newest few `changelog/*.yaml` entries (append-only, so newest file
+   mtime is the newest change on record). Zero records is a normal,
    reportable state pre-population (`README.md` should already say so —
-   flag it if the doc and the directory disagree). The changelog's
-   weekly rollup is the newsletter (`CLAUDE.md`'s framing) — its emptiness
-   or freshness is product state, not housekeeping.
-4. **Source health** — read `kestrel.yaml`'s `sources:` list. For each,
-   report `health.verdict` and how stale `health.last_probe` is. A
+   flag it if the doc and the directory disagree).
+4. **Source health** (only if `kestrel.yaml` declares `sources:`) — for
+   each, report `health.verdict` and how stale `health.last_probe` is. A
    verdict other than `live` (e.g. `feed-empty`) is only a problem if the
    manifest hasn't already adapted to it — check whether `method:` for
    that source is already the demoted value (`page-diff` for a dead
@@ -53,17 +55,17 @@ and renders one card, in this order:
    says broken but the method still says `rss`, that's a real gap to
    flag, not the expected steady state.
 5. **Provenance + snapshot freshness** — newest file in `provenance/`
-   names the last `/tend` or `/verify` run and when; a `verify-*` run
-   note (once `/verify` has run at least once) separately from `collect-*`
-   `/tend` manifests. For any source on `method: page-diff`, the newest
-   `snapshots/*.meta.json` mtime is its last diffed-against baseline —
-   note if it looks older than that source's declared `cadence`.
-6. **Push safety** — run `git log @{u}..` in **all three** repos:
-   `/workspace/therapybulletin-data` (this data repo), `/workspace/kestrel` (the engine —
-   mechanical only, never auto-pushed), and `/workspace/therapybulletin-site` (the site
-   — currently editorial-only per the publish stub, so its own commits
-   are hand-authored, not pipeline output, but still worth the same
-   check). **A clean `git status` is not evidence of this** — only
+   names the last `/tend` or `/verify` run and when (if this instance
+   runs either); a `verify-*` run note (once `/verify` has run at least
+   once) separately from `collect-*`/`/tend` manifests. For any source on
+   `method: page-diff`, the newest `snapshots/*.meta.json` mtime is its
+   last diffed-against baseline — note if it looks older than that
+   source's declared `cadence`.
+6. **Push safety** — run `git log @{u}..` in this instance's repo, the
+   engine (`/workspace/kestrel` — mechanical only, never auto-pushed), and
+   its site sibling if this instance has one declared (check
+   `kestrel.yaml`'s `outputs.site` — not every standing instance has a
+   site yet). **A clean `git status` is not evidence of this** — only
    `git log @{u}..` is. Any repo with unpushed commits is the headline
    flag of the whole card, not a footnote at the bottom.
 7. **Doc drift check** — compare STATUS.md's own "As of" date and its top
@@ -73,17 +75,14 @@ and renders one card, in this order:
    drift.
 8. **Name the obvious next move** — one plain line, e.g. "9 candidates
    staged, nothing curated yet — run `/curate`" or "queue's empty and
-   sources are live, good window for manifest work" — don't leave it for
+   sources are live, good window for other work" — don't leave it for
    the reader to infer from the briefing above it.
 
 ## Rules
 
 1. **Read-only, always.** `/start` never edits `candidates/`, `records/`,
    `changelog/`, or `kestrel.yaml`, never writes an artifact, never
-   commits, never publishes. It only reads: repo-root docs, the memory
-   directory, git (log/status, all three repos), `candidates/*.yaml`,
-   `records/`, `changelog/*.yaml`, `kestrel.yaml`, `provenance/`, and
-   `snapshots/`.
+   commits, never publishes. It only reads.
 2. **Reuse, don't duplicate.** Where `/tend`, `/curate`, or `/verify`
    already specifies how to read a file or compute a state (candidate
    resolution states, the feed-health demotion rule, what counts as a
