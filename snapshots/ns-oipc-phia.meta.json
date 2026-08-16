@@ -1,9 +1,9 @@
 {
   "container_matched": true,
-  "content_hash": "13cb193aa49c9157aad19b7a91ec3b7e3126eebb",
+  "content_hash": "005402b9b69d0d2b5e4b683e5b0505682910cb16",
   "detected_date": null,
   "endpoint": "https://oipc.novascotia.ca/news",
-  "fetched_at": "2026-08-12T09:58:46Z",
+  "fetched_at": "2026-08-16T13:00:44Z",
   "line_count": 643,
   "source_id": "ns-oipc-phia"
 }

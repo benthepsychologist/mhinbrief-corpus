@@ -1,9 +1,9 @@
 {
   "container_matched": true,
-  "content_hash": "dbcaa691b7faeac9a94410dea1312c8e2db01139",
+  "content_hash": "b4af7ab033d3222ee0384ff5e4706f011c7c98f8",
   "detected_date": null,
   "endpoint": "https://www.cap.ab.ca/resources-regulatory-information/practice-alerts",
-  "fetched_at": "2026-08-12T09:58:46Z",
-  "line_count": 126,
+  "fetched_at": "2026-08-16T13:00:44Z",
+  "line_count": 127,
   "source_id": "ab-college-of-alberta-psychologists"
 }

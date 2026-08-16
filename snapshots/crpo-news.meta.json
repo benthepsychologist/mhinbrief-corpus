@@ -1,9 +1,9 @@
 {
   "container_matched": true,
-  "content_hash": "4f084cfc5f936239a14d17b5599f92c313227114",
+  "content_hash": "3fcbeaab395dac1ec01cadccb85d676a799131b2",
   "detected_date": null,
   "endpoint": "https://crpo.ca/news/",
-  "fetched_at": "2026-08-12T09:58:46Z",
+  "fetched_at": "2026-08-16T13:00:44Z",
   "line_count": 60,
   "source_id": "crpo-news"
 }

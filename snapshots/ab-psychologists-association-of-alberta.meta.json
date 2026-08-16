@@ -1,9 +1,9 @@
 {
   "container_matched": true,
-  "content_hash": "c3cc98744d47b468ce2c76377d59cca01d97aa5c",
+  "content_hash": "043f125f0f6365e08de9b0df5d4aa41adfba4d06",
   "detected_date": null,
   "endpoint": "https://psychologistsassociation.ab.ca/news",
-  "fetched_at": "2026-08-12T09:58:46Z",
-  "line_count": 217,
+  "fetched_at": "2026-08-16T13:00:44Z",
+  "line_count": 215,
   "source_id": "ab-psychologists-association-of-alberta"
 }
