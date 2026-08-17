@@ -18,47 +18,95 @@ effective_date: null
 enforcement_body: Ordre des psychologues du Québec
 authority_basis: licensure
 penalties: null
-clinician_facing_obligations: 'Quebec has no telepractice-specific REGULATION for psychologists.
-  The OPQ publishes lignes directrices and points de repère, and is explicit that it does not impose
-  particular tools or forms — ''l''Ordre ne prescrit, ne recommande, ni n''impose l''usage d''un
-  formulaire préconçu''. The binding obligations are the ordinary ones — the Code de déontologie,
-  the record-keeping regulation, competence — which apply whatever the medium. On INTERJURISDICTIONAL
-  practice the OPQ does state operative positions: a psychologist serving a client located outside
-  Quebec must check whether the regulator in the client''s jurisdiction requires a permit or legal
-  authorisation there; and a person who is PHYSICALLY IN QUEBEC offering services to Quebec clients
-  must register with the OPQ, while the OPQ accepts that psychologists located outside Quebec may
-  offer online services to Quebec clientele. No data-hosting, platform, or server-location requirement
-  is specified.'
+clinician_facing_obligations: 'Quebec sets no telepractice-specific REGULATION for psychologists.
+  The OPQ publishes guidance — lignes directrices, points de repère, and a scenario FAQ — and is
+  explicit that it does not impose particular tools or forms. The binding obligations are the ordinary
+  ones: the Code de déontologie, the record-keeping regulation, and competence, which apply whatever
+  the medium. ON INTERJURISDICTIONAL PRACTICE the OPQ''s guidance takes the form of ANSWERS TO SPECIFIC
+  POSED SCENARIOS, and must be read as such rather than as a general jurisdictional doctrine. Three
+  of those scenarios matter: (1) A Quebec psychologist practising from outside Quebec (e.g. six months
+  in the United States, or travelling with a sports team) must remain entered on the OPQ roll as
+  a regular member, must check whether the regulator in the jurisdiction WHERE THEY THEMSELVES ARE
+  requires a permit or legal authorisation, must maintain the liability coverage required by the
+  Ordre while informing the client that the Ordre''s coverage is valid only for claims within Canada,
+  and must tell the client the Ordre can still receive and handle a complaint about services delivered
+  remotely. (2) Asked about a psychologist or psychotherapist REGISTERED IN ONTARIO who will be in
+  Montreal for a few months and wants to keep seeing their ONTARIO clients, the OPQ answers that
+  to offer services to clients in Quebec OR remotely to clients outside Quebec, a person who is physically
+  in Quebec must register with the OPQ or obtain a special authorisation to practise. Physical presence
+  in Quebec therefore triggers the OPQ requirement even where every client is elsewhere. (3) Asked
+  whether a psychologist or psychotherapist registered in BRITISH COLUMBIA may serve a person living
+  in Montreal, the OPQ answers that a psychologist or psychotherapist located outside Quebec may
+  offer online services to clients situated in Quebec. It RECOMMENDS — not requires — that such a
+  person be legally authorised to practise the profession in their own jurisdiction; it states they
+  must carry professional liability insurance; and it requires that clients be advised that any disciplinary
+  proceeding must be brought before the regulatory body in the jurisdiction where the professional
+  is located. CRITICAL LIMIT ON ALL OF THE ABOVE: this guidance addresses OPQ REGISTRATION. It does
+  not displace the Code des professions, art. 187.1, under which PSYCHOTHERAPY IS A RESERVED ACT
+  in Quebec — reserved to physicians, psychologists, and permit-holders who are members of seven
+  named ordres. A person outside Quebec who is not within that class does not acquire the right to
+  perform psychotherapy with a Quebec client by reading an FAQ about registration, and the OPQ is
+  itself the body that prosecutes illegal practice of psychotherapy (art. 187.4.3). No data-hosting,
+  platform, or server-location requirement is specified anywhere in this guidance.'
 vendor_facing_obligations: null
 consent_required: true
 documentation_required: true
-source_url: https://www.ordrepsy.qc.ca/telepratique
+source_url: https://www.ordrepsy.qc.ca/telepratique-distance-detenteurs
 last_verified: '2026-08-17'
-source_quote: '"Vous devez vérifier si vous avez l''obligation d''obtenir un permis ou une autorisation
-  légale d''exercer auprès de l''organisme de réglementation [...] dans la juridiction où se trouve
-  ce client." ... "Afin d''offrir des services à des clients du Québec [...] une personne qui est
-  physiquement au Québec doit s''inscrire auprès de l''Ordre des psychologues du Québec." ... "l''Ordre
-  ne prescrit, ne recommande, ni n''impose l''usage d''un formulaire préconçu." — Ordre des psychologues
-  du Québec, Télépratique'
+source_quote: 'Q: « Je suis psychologue ou psychothérapeute en Ontario et je serai à Montréal pour
+  quelques mois. Je voudrais continuer à voir mes clients de l''Ontario. » R: « Afin d''offrir des
+  services à des clients du Québec ou à distance à des clients à l''extérieur du Québec, une personne
+  qui est physiquement au Québec doit s''inscrire auprès de l''Ordre des psychologues du Québec ou
+  obtenir une autorisation spéciale d''exercer. » Q: « Je suis psychologue ou psychothérapeute en
+  Colombie-Britannique et je souhaite offrir mes services à une personne qui habite à Montréal. »
+  R: « Un psychologue ou un psychothérapeute situé à l''extérieur du territoire québécois peut offrir
+  des services en ligne à des clients qui se trouvent au Québec. Nous recommandons que la personne
+  située à l''extérieur du Québec, qui offre des services en ligne à la population québécoise, soit
+  légalement autorisée à exercer la profession de psychologue ou de psychothérapeute dans sa juridiction.
+  Cette personne doit également être assurée pour la responsabilité professionnelle. Il est également
+  requis d''aviser la clientèle que toute poursuite disciplinaire devra être portée devant l''organisme
+  réglementaire dans la juridiction où se trouve le professionnel, le cas échéant. » — Ordre des
+  psychologues du Québec, Télépratique ou pratique à distance (FAQ)'
 source_url_secondary:
 - https://www.ordrepsy.qc.ca/telepratique-bonnes-pratiques-detenteurs
 - https://www.ordrepsy.qc.ca/balises-tele-evaluation-membres
 confidence: medium
-notes: 'regulatory_model IS ''none'' FOR THE SAME REASON AS NOVA SCOTIA PSYCHOLOGY: the telepractice-specific
-  material is guidance, and nothing in it restricts the clinician by its own force. Two of the four
-  jurisdictions now covered leave psychology telepractice to guidance rather than rule. That is itself
-  a publishable finding about the Canadian landscape, not a gap in the research. CONFIDENCE MEDIUM:
-  the OPQ''s telepractice material is spread across several pages and is revised without visible
-  version dates, and the quotes here come from the Ordre''s web guidance rather than an instrument
-  with a citation. The claim ''there is no binding telepractice regulation in Quebec'' rests on not
-  having found one in the C-26 regulation series, which is weaker evidence than reading a provision
-  that says so. Re-check before publishing the negative as definitive. THE JURISDICTIONAL TEST IS
-  LOCATION-OF-THE-PROFESSIONAL, AND IT NOW MAKES A THIRD INCOMPATIBLE CANADIAN ANSWER. The OPQ hinges
-  registration on the professional being physically in Quebec, while accepting out-of-province psychologists
-  serving Quebec clients online. NSCCT says practice occurs where the therapist is REGISTERED. NSCSW
-  requires compliance with the law where the client RESIDES. Three regulators, three tests, one country
-  — this belongs on any cross-border page as the headline, and no single rule should be stated as
-  ''the Canadian position''. NOTE THE TENSION INSIDE THE OPQ''S OWN POSITION: it tells outbound psychologists
-  to check the client''s jurisdiction for a permit requirement, while telling inbound out-of-province
-  psychologists they need not register in Quebec. Those two stances are hard to hold together and
-  the asymmetry should be described, not resolved, on a public page.'
+notes: 'CORRECTED 2026-08-17, SAME DAY, AFTER THE OPERATOR CHALLENGED THE ORIGINAL READING. Keep
+  this paragraph: it is the reason the record says what it now says. WHAT THE FIRST VERSION GOT WRONG.
+  It asserted that the OPQ applies a ''location-of-the-professional'' JURISDICTIONAL TEST, presented
+  that as one of ''three incompatible Canadian answers'', and built a cross-provincial comparison
+  on it. That was an over-reading of a SCENARIO FAQ. The two sentences relied on are ANSWERS TO TWO
+  SPECIFIC POSED QUESTIONS — an Ontario registrant temporarily in Montreal, and a BC registrant wanting
+  to see a Montreal resident — not statements of doctrine. The first version also quoted the Montreal
+  answer with an ellipsis that silently dropped two material clauses: ''ou à distance à des clients
+  à l''extérieur du Québec'' (the rule also covers serving clients OUTSIDE Quebec) and ''ou obtenir
+  une autorisation spéciale d''exercer'' (registration is not the only route). It also failed to
+  record that home-jurisdiction licensure is RECOMMENDED, not required, in the BC answer. The full
+  text of both Q&A pairs is now quoted verbatim above. THE OPERATOR''S OBJECTION, AND WHAT SURVIVES
+  IT. The objection was that the original reading created an absurd hole — Quebec regulating by professional
+  location and Ontario by client location would leave anyone anywhere free to treat Quebec clients.
+  That reductio is sound against the original framing. It does not defeat the underlying sentence,
+  which is real: the OPQ does say a psychologist or psychotherapist located outside Quebec MAY offer
+  online services to clients in Quebec. Two things close the apparent hole, and both belong on any
+  page built from this record. First, the FAQ''s subject throughout is a REGULATED TITLE-HOLDER —
+  the questions are posed by an Ontario and a BC ''psychologue ou psychothérapeute'', and the answer''s
+  subject is ''un psychologue ou un psychothérapeute situé à l''extérieur du territoire québécois''.
+  It is not addressed to the general public. Second and decisively, this is web GUIDANCE ABOUT REGISTRATION
+  and cannot repeal a statute: Code des professions art. 187.1 reserves the ACT of psychotherapy,
+  and art. 187.4.3 makes the OPQ itself the prosecutor of illegal practice. The registration guidance
+  and the reserved act answer different questions, and where they appear to conflict the statute
+  governs. THE OPERATOR''S PROPOSED EXPLANATION WAS PARTLY RIGHT AND IS WORTH RECORDING PRECISELY.
+  The suggestion was that the guidance concerns continuity of care for a client or clinician temporarily
+  in Quebec. That is exactly right for the ''physically in Quebec'' answer — the question is literally
+  an Ontario registrant in Montreal for a few months wanting to CONTINUE seeing existing Ontario
+  clients, and the answer is STRICTER than the original record implied, because it captures a person
+  whose entire caseload is outside Quebec. It is NOT right for the BC answer, which concerns a fresh
+  service to a Quebec resident and involves no continuity and no temporary presence. Neither answer
+  sits in the pandemic-era material, which is a separate section of the same site. STATUS OF THE
+  INSTRUMENT, UNCHANGED AND STILL THE MAIN CAVEAT: this is undated web guidance, not a regulation,
+  which is why confidence stays medium and regulatory_model stays ''none''. The claim that Quebec
+  has no binding telepractice regulation for psychologists still rests on not having FOUND one in
+  the C-26 series rather than on a provision saying so. DO NOT REBUILD THE ''THREE INCOMPATIBLE TESTS''
+  COMPARISON on this record. Cross-border positions here differ in FORM as well as content — a college
+  policy (NSCCT), enforceable standards (NSCSW, OTSTCFQ) and a scenario FAQ (OPQ) are not the same
+  kind of thing and should not be tabulated as if they were competing statements of one doctrine.'
