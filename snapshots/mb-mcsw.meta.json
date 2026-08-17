@@ -1,9 +1,9 @@
 {
   "container_matched": true,
-  "content_hash": "11502accb3973efeebccb18413cbb7483734ef4f",
+  "content_hash": "59abdad58d61a159dfc2ae84081970fa0c96ff96",
   "detected_date": null,
   "endpoint": "https://mcsw.ca/news-and-events/news/",
-  "fetched_at": "2026-08-16T13:00:44Z",
+  "fetched_at": "2026-08-17T13:01:13Z",
   "line_count": 97,
   "source_id": "mb-mcsw"
 }

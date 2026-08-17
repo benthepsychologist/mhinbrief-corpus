@@ -1,0 +1,153 @@
+source_id: page_diff
+params:
+  snapshots_dir: /workspace/mhinbrief-corpus/snapshots
+  since: '2026-05-19T13:00:36Z'
+  sources:
+  - id: crpo-news
+    endpoint: https://crpo.ca/news/
+    verdict: unchanged
+    detail: hash=3fcbeaab
+  - id: ccpa-national
+    endpoint: https://www.ccpa-accp.ca/blog/
+    verdict: unchanged
+    detail: hash=6c5471fa
+  - id: casw-national
+    endpoint: https://www.casw-acts.ca/en/news-listing
+    verdict: unchanged
+    detail: hash=85f2203d
+  - id: cra-gst-hst-counselling
+    endpoint: https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/25-3/application-of-gst-hst-to-psychotherapy-counselling-therapy-services.html
+    verdict: failed
+    detail: The read operation timed out
+  - id: mhcc-workplace-standard
+    endpoint: https://mentalhealthcommission.ca/workplace-standard/
+    verdict: unchanged
+    detail: hash=7ad370c5
+  - id: opa-news-media
+    endpoint: https://www.psych.on.ca/About-Us/News-Media
+    verdict: unchanged
+    detail: hash=d0666ea7
+  - id: oasw-news
+    endpoint: https://oasw.org/Web/About-OASW/News/News.aspx
+    verdict: unchanged
+    detail: hash=7dfb2fb1
+  - id: on-rhpa-elaws
+    endpoint: https://www.ontario.ca/laws/statute/91r18
+    verdict: unchanged
+    detail: hash=8c2fdb2b
+  - id: qc-ordre-psychologues
+    endpoint: https://www.ordrepsy.qc.ca/avis
+    verdict: unchanged
+    detail: hash=6650eeb1
+  - id: qc-otstcfq
+    endpoint: https://www.otstcfq.org/l-ordre/communications/actualites/
+    verdict: unchanged
+    detail: hash=a305a0e6
+  - id: qc-oppq
+    endpoint: https://ordrepsed.qc.ca/actualites/
+    verdict: unchanged
+    detail: hash=cd723b19
+  - id: qc-office-professions
+    endpoint: https://www.quebec.ca/gouvernement/ministeres-organismes/office-professions
+    verdict: unchanged
+    detail: hash=f9f7d0f0
+  - id: qc-gazette-officielle
+    endpoint: https://www.publicationsduquebec.gouv.qc.ca/gazette-officielle/
+    verdict: unchanged
+    detail: hash=38a4571c
+  - id: qc-cai
+    endpoint: https://www.cai.gouv.qc.ca/actualites
+    verdict: unchanged
+    detail: hash=4883187b
+  - id: qc-apq
+    endpoint: https://apqc.ca/notre-travail/actualites/
+    verdict: unchanged
+    detail: hash=edc35133
+  - id: ns-college-counselling-therapists
+    endpoint: https://nscct.ca/news
+    verdict: unchanged
+    detail: hash=f4a8fc69
+  - id: apns
+    endpoint: https://apns.ca/publications/
+    verdict: unchanged
+    detail: hash=4e27aa35
+  - id: ns-royal-gazette-part-ii
+    endpoint: https://novascotia.ca/just/regulations/rg2issues.htm
+    verdict: unchanged
+    detail: hash=10a39fdb
+  - id: ns-oipc-phia
+    endpoint: https://oipc.novascotia.ca/news
+    verdict: changed
+    detail: +2/-2 lines
+  - id: chcpbc
+    endpoint: https://chcpbc.org/news-events/
+    verdict: unchanged
+    detail: hash=c688fb88
+  - id: bccsw
+    endpoint: https://bccsw.ca/for-the-public/public-notifications/
+    verdict: unchanged
+    detail: hash=acdf266c
+  - id: bcacc
+    endpoint: https://bc-counsellors.org/regulation
+    verdict: failed
+    detail: 'HTTP Error 404: Not Found'
+  - id: ab-college-of-alberta-psychologists
+    endpoint: https://www.cap.ab.ca/resources-regulatory-information/practice-alerts
+    verdict: unchanged
+    detail: hash=b4af7ab0
+  - id: ab-psychologists-association-of-alberta
+    endpoint: https://psychologistsassociation.ab.ca/news
+    verdict: unchanged
+    detail: hash=043f125f
+  - id: sk-college-of-psychologists
+    endpoint: https://www.skcp.ca/?page_id=103
+    verdict: failed
+    detail: '<urlopen error [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:992)>'
+  - id: sk-association-of-social-workers
+    endpoint: https://www.sasw.ca/site/news
+    verdict: unchanged
+    detail: hash=463c2b66
+  - id: mb-pam
+    endpoint: https://www.cpmb.ca/News_Announcements.php
+    verdict: unchanged
+    detail: hash=1a1c2c0b
+  - id: mb-mcsw
+    endpoint: https://mcsw.ca/news-and-events/news/
+    verdict: changed
+    detail: +1/-1 lines
+  - id: nb-association-social-workers
+    endpoint: https://www.nbasw-atsnb.ca/news-and-events/news/
+    verdict: failed
+    detail: 'HTTP Error 403: Forbidden'
+  - id: pe-psychologists-registration-board
+    endpoint: https://www.peipsychology.org/peiprb/
+    verdict: unchanged
+    detail: hash=774ebea5
+  - id: pe-college-counselling-therapy
+    endpoint: https://www.cctpei.ca/current-news
+    verdict: unchanged
+    detail: hash=673fa92f
+  - id: yt-psychologists
+    endpoint: https://yukon.ca/en/doing-business/professional-licensing/learn-about-psychologist-regulations-yukon
+    verdict: failed
+    detail: 'HTTP Error 403: Forbidden'
+  - id: nt-psychologists
+    endpoint: https://www.hss.gov.nt.ca/en/services/psychologist-licence
+    verdict: unchanged
+    detail: hash=8612cfb0
+  - id: nt-social-workers
+    endpoint: https://www.hss.gov.nt.ca/en/services/social-worker-licence
+    verdict: unchanged
+    detail: hash=f7dc3ae0
+  - id: nu-psychologists
+    endpoint: https://www.nunavutlegislation.ca/en/consolidated-law/psychologists-act-consolidation
+    verdict: failed
+    detail: 'HTTP Error 403: Forbidden'
+fetched_at: '2026-08-17T13:01:13Z'
+items:
+- id: 03a9c88b5d41d7bc
+  url: https://oipc.novascotia.ca/news
+  ts: '2026-08-17T13:01:13Z'
+- id: a2c73463c0af68a5
+  url: https://mcsw.ca/news-and-events/news/
+  ts: '2026-08-17T13:01:13Z'
