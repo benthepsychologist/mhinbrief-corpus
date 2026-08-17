@@ -1,0 +1,83 @@
+jurisdiction:
+  country: ca
+  state_or_province: Ontario
+  code: ca-on
+profession_scope:
+- psychologist
+topic: licensure
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: Psychology and Applied Behaviour Analysis Act, 2021
+  bill_number: null
+  code_cite: S.O. 2021, c. 27, Sched. 4
+  regulation_cite: O. Reg. 193/23 (Registration), ss. 1, 3, 5, 16; last amendment O. Reg. 225/24
+status: in_force
+enactment_date: null
+effective_date: '2024-07-01'
+enforcement_body: College of Psychologists and Behaviour Analysts of Ontario
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: 'Hold a certificate of registration from the College of Psychologists
+  and Behaviour Analysts of Ontario (CPBAO). The regulation prescribes TWELVE classes (s. 1), built
+  from three registrant types — psychologist, psychological associate, behaviour analyst — each crossed
+  with a practice authorization (autonomous, interim autonomous, supervised; behaviour analysts have
+  autonomous and supervised only), plus Academic, Inactive, Retired and a temporary emergency class.
+  PSYCHOLOGIST, AUTONOMOUS PRACTICE (s. 5(1)) — non-exemptible requirements: a DOCTORAL degree from
+  a psychology programme accredited by the Canadian Psychological Association (or one a Registration
+  Committee panel considers equivalent, or a substantially similar programme outside Canada/the USA);
+  a minimum of 1,500 hours of postdoctoral supervised practice performed while holding a supervised-practice
+  certificate; the Examination for Professional Practice in Psychology (EPPP) administered by ASPPB
+  or an approved alternative; an oral examination; the Jurisprudence and Ethics Examination; and
+  any further training a panel considers necessary for competence in the intended area of practice.
+  PSYCHOLOGICAL ASSOCIATE, AUTONOMOUS PRACTICE (s. 16(1)) — a MASTER''S degree in psychology from
+  a qualifying institution, where the programme required at least 576 hours of undergraduate psychology
+  instruction for admission (including at least 36 hours in each of psychological assessment, psychological
+  intervention, professional ethics and standards, research design/methodology/statistics, and the
+  biological and social bases of behaviour); then at least 6,000 HOURS of practice over at least
+  FOUR YEARS post-degree under the supervision of an autonomous-practice psychologist or psychological
+  associate; plus at least 1,500 hours performed while holding a psychological-associate supervised-practice
+  certificate; plus the EPPP, the oral examination, and the Jurisprudence and Ethics Examination.'
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: true
+source_url: https://www.ontario.ca/laws/regulation/230193
+last_verified: '2026-08-17'
+source_quote: '"5. (1) Subject to subsections (2) to (6), to qualify for a certificate of registration
+  for a psychologist authorizing autonomous practice, an applicant must comply with the following
+  non-exemptible registration requirements: 1. The applicant must have obtained a doctoral degree,
+  i. from a psychology program that is accredited by the Canadian Psychological Association or by
+  another accrediting body that has been approved by Council for that purpose [...] 2. The applicant
+  must have completed a minimum of 1,500 hours of postdoctoral supervised practice [...]" / "16.
+  (1) [...] 1. The applicant must have obtained a master''s degree from a psychology program [...]
+  2. Following the awarding of the degree described in paragraph 1, the applicant must have performed
+  at least 6,000 hours of practice of the profession over at least four years [...]" — O. Reg. 193/23
+  (Registration), Psychology and Applied Behaviour Analysis Act, 2021 (consolidation period July
+  1, 2024; e-Laws currency date August 12, 2026)'
+source_url_secondary:
+- https://cpbao.ca/applicants/
+confidence: high
+notes: 'THE SINGLE MOST USEFUL CROSS-JURISDICTION FACT IN THIS CORPUS SITS HERE: THE SAME MASTER''S-LEVEL
+  CLINICIAN HAS THREE DIFFERENT STATUSES IN THREE PROVINCES. In Ontario they are a PSYCHOLOGICAL
+  ASSOCIATE — a distinct regulated title, not a psychologist. In Nova Scotia they can register as
+  a PSYCHOLOGIST outright (NSRP''s baseline admits a master''s with four years of supervised experience).
+  In Quebec they are NOT ELIGIBLE at all, because the permit has required a doctorate since 2006.
+  A page that says ''psychologist'' without naming the province is describing three different qualifications.
+  AND THE ONTARIO MASTER''S ROUTE IS THE HEAVIEST OF THE THREE ON EXPERIENCE, not the lightest: 6,000
+  hours over four years post-degree PLUS 1,500 supervised-practice hours, against the doctoral route''s
+  1,500 postdoctoral hours. The lower degree is offset by roughly five times the supervised experience.
+  Do not describe the associate class as a ''lesser'' or ''easier'' route. BOTH ROUTES SIT THE SAME
+  EXAMS — EPPP, oral, and Jurisprudence and Ethics. The difference is degree and hours, not assessment.
+  BEHAVIOUR ANALYSTS ARE NOW IN THE SAME COLLEGE, and that is recent and easy to miss: the Psychology
+  and Applied Behaviour Analysis Act, 2021 replaced the old Psychology Act, 1991 and the College''s
+  name changed accordingly. Any source still saying ''College of Psychologists of Ontario'' predates
+  that. This corpus does not track behaviour analysts as a profession — they are not in the record
+  schema''s profession_scope enum — so they are mentioned here as context and are NOT enumerated
+  as matrix cells. ''AUTONOMOUS'' vs ''SUPERVISED'' vs ''INTERIM AUTONOMOUS'' IS A PRACTICE AUTHORIZATION,
+  NOT A SENIORITY LABEL. It travels with the certificate and determines whether the member may practise
+  without supervision at all. Ontario is the only jurisdiction covered so far that builds its class
+  list as a matrix of registrant type x authorization; Quebec uses permit categories, Nova Scotia
+  uses practising/conditional licences. SOURCE RETRIEVAL NOTE, worth keeping for whoever verifies
+  this next: Ontario e-Laws is a React SPA that returns an identical ~54KB shell to any plain fetch,
+  its own /laws/docs/ path returns S3 AccessDenied, and CanLII 403s. This text was read by rendering
+  the page with local headless chromium (--dump-dom). Budget for that rather than assuming a fetch
+  will work.'

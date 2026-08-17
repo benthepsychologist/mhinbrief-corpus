@@ -1,0 +1,83 @@
+jurisdiction:
+  country: ca
+  state_or_province: Ontario
+  code: ca-on
+profession_scope:
+- clinical_social_worker
+topic: licensure
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: Social Work and Social Service Work Act, 1998
+  bill_number: null
+  code_cite: S.O. 1998, c. 31, s. 18(1)
+  regulation_cite: O. Reg. 383/00 (Registration), ss. 1, 5(2), 7, 9; last amendment O. Reg. 382/25
+status: in_force
+enactment_date: null
+effective_date: '2025-12-17'
+enforcement_body: Ontario College of Social Workers and Social Service Workers
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: 'Hold a certificate of registration from the Ontario College of Social
+  Workers and Social Service Workers (OCSWSSW). Three classes are prescribed for social work — General,
+  Inactive, Retired — and three separately for SOCIAL SERVICE WORK, which is a distinct regulated
+  profession under the same college (s. 1). GENERAL CERTIFICATE, SOCIAL WORK (s. 7(1)) — the applicant
+  must produce documentation satisfactory to the Registrar showing either: a degree in social work
+  from a programme accredited by the Canadian Association for Social Work Education (CASWE), or a
+  Canadian programme Council has approved as equivalent; or a degree from a social work or equivalent
+  programme offered OUTSIDE Canada that Council has approved as equivalent to a CASWE-accredited
+  programme; or a COMBINATION of academic qualifications and experience performing the role of a
+  social worker that the Registrar determines is substantially equivalent to the qualifications required
+  for a CASWE-accredited degree. The applicant must also have passed any social work examinations
+  set or approved by Council. ALL CLASSES (s. 5(2)) additionally require: disclosure — at application
+  and at issuance — of every finding of professional misconduct, incompetence or incapacity and every
+  current such proceeding, in any jurisdiction and including findings by non-statutory professional
+  bodies; disclosure of every finding of guilt for a criminal offence, an offence under the Controlled
+  Drugs and Substances Act or the Food and Drugs Act, or any other offence relevant to suitability
+  to practise; past and present conduct affording reasonable grounds to believe the applicant has
+  no physical or mental condition affecting safe practice, will practise with decency, integrity
+  and honesty and in accordance with the law, and has sufficient knowledge, skill and judgment; reasonable
+  fluency in speaking and writing English or French; and Canadian citizenship, permanent residence,
+  or authorization under the Immigration and Refugee Protection Act to practise. A General certificate
+  holder must, whenever the College requires, provide evidence satisfactory to the College of continuing
+  competence to practise (s. 9).'
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: true
+source_url: https://www.ontario.ca/laws/regulation/000383
+last_verified: '2026-08-17'
+source_quote: '"7. (1) In addition to the requirements set out in sections 4 and 5, the following
+  are registration requirements for a general certificate of registration for social work to be issued
+  under subsection 18 (1) of the Act: 1. The applicant must produce documentation satisfactory to
+  the Registrar that shows that the applicant, i. has obtained a degree in social work from a social
+  work program accredited by the Canadian Association for Social Work Education [...] iii. has a
+  combination of academic qualifications and experience performing the role of a social worker that
+  the Registrar determines is substantially equivalent to the qualifications required for a degree
+  in social work from a social work program accredited by the Canadian Association for Social Work
+  Education." — O. Reg. 383/00 (Registration), Social Work and Social Service Work Act, 1998 (consolidation
+  period December 17, 2025; e-Laws currency date August 12, 2026)'
+source_url_secondary:
+- https://www.ocswssw.org/members/registration-requirements/
+confidence: high
+notes: 'THE SUBSTANTIAL-EQUIVALENCY ROUTE AT s. 7(1)1(iii) IS THE MOST PERMISSIVE ENTRY PATH TO ANY
+  PROFESSION IN THIS CORPUS and should not be summarised away. Ontario admits a COMBINATION of academic
+  qualifications and experience that the Registrar judges substantially equivalent to an accredited
+  social work degree — meaning a person without a social work degree at all can hold a General certificate.
+  Nova Scotia has no equivalent: NSCSW requires a CASWE-accredited BSW or MSW plus 2,500 practice
+  hours. Quebec has no equivalent either: the permit opens only on a named diploma listed in RLRQ
+  c. C-26, r. 2. ONTARIO REGULATES A SECOND, DIPLOMA-LEVEL PROFESSION UNDER THE SAME COLLEGE — SOCIAL
+  SERVICE WORK (RSSW), with its own three classes and its own requirements at s. 8. Nothing like
+  it exists in Nova Scotia or Quebec. This corpus does not track it as a profession (it has no value
+  in the schema''s profession_scope enum) so it is noted here rather than enumerated as matrix cells
+  — but a page describing ''who is regulated in Ontario'' that omits RSSWs is incomplete. NO SEPARATE
+  CLINICAL TIER IN ONTARIO, and this is a three-way structural divergence worth a table of its own.
+  Ontario: one General certificate, no clinical class — the ''clinical'' qualifier is a practice
+  descriptor, not a registration category. Nova Scotia: a distinct CLINICAL SPECIALIST registration
+  is REQUIRED before providing clinical social work in private practice. Quebec: no clinical tier
+  either, but psychotherapy is separately gated by the Loi 21 permit from a different ordre. The
+  corpus''s own profession_scope value ''clinical_social_worker'' therefore maps onto a real registration
+  class in only ONE of the three provinces. THE DISCLOSURE DUTY AT s. 5(2) IS CONTINUING ACROSS THE
+  APPLICATION WINDOW — required both when the application is made AND when the certificate is issued,
+  so a finding or proceeding arising in between must be volunteered. It also reaches findings by
+  professional associations and other self-regulatory bodies, not only statutory colleges, and criminal
+  findings in any jurisdiction. SOURCE RETRIEVAL NOTE: e-Laws is a React SPA rendered here with headless
+  chromium; see ca-on-licensure-psychology''s note.'

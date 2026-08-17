@@ -12,15 +12,15 @@
 
 generated: 2026-08-12
 scope_note: >
-  45 cells tracked, 41 covered as of 2026-08-17. Nova Scotia (15/15) and Quebec
-  (10/10) were both completed that day against primary sources; NS's privacy cell
-  was split into three subtopics matching Ontario's shape, moving the total from
-  43 to 45. Ontario 12/15, federal 4/5. The 4 remaining not_started are Ontario
-  licensure (3 professions) and federal privacy. Every covered cell has a
-  record_id and every record has a cell. 0 marked not_applicable — that
-  determination itself requires research, so not_started stays the honest default
-  until someone has actually checked. Five covered cells carry confidence: medium
-  with the specific open question named on each; they are covered, not finished.
+  45 cells tracked, 44 covered as of 2026-08-17 — every in-play cell except
+  federal privacy. Nova Scotia (15/15), Quebec (10/10) and Ontario (15/15) were
+  all completed that day against primary sources; NS's privacy cell was split
+  into three subtopics matching Ontario, moving the total from 43 to 45. Every
+  covered cell has a record_id and every record has a cell. 0 marked
+  not_applicable — that determination itself requires research, so not_started
+  stays the honest default until someone has actually checked. Five covered
+  cells carry confidence: medium with the specific open question named on each;
+  they are covered, not finished.
 
 cells:
 
@@ -86,12 +86,20 @@ cells:
     profession: psychologist
     topic: licensure
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-on-licensure-psychology
+    confidence: high
     authoritative_sources: [cpbao-news, on-rhpa-elaws]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      O. Reg. 193/23 (Registration) under the Psychology and Applied Behaviour
+      Analysis Act, 2021 — 12 classes, built as registrant type x practice
+      authorization. THE KEY CROSS-JURISDICTION FACT LIVES HERE: the same
+      master's-level clinician is a PSYCHOLOGICAL ASSOCIATE in ON, a
+      PSYCHOLOGIST in NS, and NOT ELIGIBLE in QC. The ON master's route is
+      also the heaviest on experience (6,000 hrs over 4 years + 1,500
+      supervised) — not a lesser route. Behaviour analysts now share the
+      college; not tracked as a profession here (no enum value).
   - jurisdiction: ca-on
     profession: psychologist
     topic: telepractice
@@ -126,12 +134,21 @@ cells:
     profession: psychotherapist
     topic: licensure
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-on-licensure-psychotherapy
+    confidence: high
     authoritative_sources: [crpo-news, on-rhpa-elaws]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      O. Reg. 67/15 (Registration) under the Psychotherapy Act, 2007. Entry
+      bar is HOURS not degree: 450 direct patient contact + 100 clinical
+      supervision, with four alternative education routes. s. 6(3) makes 'safe
+      and effective use of self' a citable condition of programme approval —
+      unique in the corpus. ON is the only jurisdiction with a regulated
+      'psychotherapist' title; NS uses counselling therapist, QC uses a
+      reserved act + permit. Not translations of each other. NB: O. Reg.
+      317/12 under the same Act is PROFESSIONAL MISCONDUCT, an easy
+      mis-citation.
   - jurisdiction: ca-on
     profession: psychotherapist
     topic: telepractice
@@ -166,12 +183,21 @@ cells:
     profession: clinical_social_worker
     topic: licensure
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-on-licensure-social-work
+    confidence: high
     authoritative_sources: [ocswssw-news, on-rhpa-elaws]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      O. Reg. 383/00 (Registration) under the Social Work and Social Service
+      Work Act, 1998. s. 7(1)1(iii)'s substantial-equivalency route is the
+      most permissive entry path in the corpus — a combination of
+      qualifications and experience, no social work degree required; NS and QC
+      have no equivalent. ON has NO clinical registration tier (NS requires
+      Clinical Specialist for private clinical practice), so the corpus's
+      'clinical_social_worker' scope value maps to a real class in only one of
+      three provinces. ON also regulates diploma-level SOCIAL SERVICE WORKERS
+      under the same college — not enum-representable, not celled, but real.
   - jurisdiction: ca-on
     profession: clinical_social_worker
     topic: telepractice

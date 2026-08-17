@@ -1,0 +1,85 @@
+record_id: ca-on-licensure-psychotherapy
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Ontario
+    code: ca-on
+  profession_scope:
+  - psychotherapist
+  topic: licensure
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: Psychotherapy Act, 2007
+    bill_number: null
+    code_cite: S.O. 2007, c. 10, Sched. R
+    regulation_cite: O. Reg. 67/15 (Registration), ss. 2, 6; last amendment O. Reg. 63/25
+  status: in_force
+  enactment_date: null
+  effective_date: '2025-05-16'
+  enforcement_body: College of Registered Psychotherapists of Ontario
+  authority_basis: licensure
+  penalties: null
+  clinician_facing_obligations: 'Hold a certificate of registration from the College of Registered
+    Psychotherapists of Ontario (CRPO). Five classes are prescribed (s. 2): Registered Psychotherapist,
+    Qualifying, Temporary, Inactive, and Emergency. Only a member holding the Registered Psychotherapist
+    certificate may use the title ''Registered Psychotherapist'' or the abbreviation ''RP''; a Qualifying
+    member may use only ''Registered Psychotherapist (Qualifying)'' / ''RP (Qualifying)'' (or the
+    French ''Psychothérapeute autorisé (stagiaire)'' / ''PA (stagiaire)'') — abbreviating ''(Qualifying)''
+    to ''(Q)'' is not acceptable. REGISTERED PSYCHOTHERAPIST (s. 6(1)) — non-exemptible requirements:
+    successful completion of a psychotherapy programme approved by the Registration Committee, OR
+    a master''s degree in an approved programme, OR a programme the Committee considers substantially
+    equivalent, OR other education and training that together evidences substantially equivalent
+    completion; the registration examinations; clinical experience in psychotherapy including AT
+    LEAST 450 HOURS OF DIRECT PATIENT CONTACT and AT LEAST 100 HOURS OF CLINICAL SUPERVISION relating
+    to those contact hours; and the jurisprudence course, completed no earlier than TWO YEARS before
+    the application. CURRENCY (s. 6(2)): where the education or clinical-experience requirements
+    were not completed within the one-year period immediately before applying, the applicant must
+    additionally have completed at least 750 currency hours in the preceding three years, or upgrading
+    activities approved by a Registration Committee panel. No programme may be approved unless one
+    of its CORE COMPONENTS is designed to develop competency in the safe and effective use of self
+    in a psychotherapeutic relationship (s. 6(3)).'
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: true
+  source_url: https://www.ontario.ca/laws/regulation/150067
+  last_verified: '2026-08-17'
+  source_quote: '"6. (1) Subject to section 7 and subsection 13 (2), the following are non-exemptible
+    registration requirements for a Registered Psychotherapist certificate of registration: [...]
+    3. The applicant must have successfully completed clinical experience in psychotherapy that includes
+    at least 450 hours of direct patient contact and at least 100 hours of clinical supervision where
+    that clinical supervision relates to those hours of direct patient contact." ... "(3) No program
+    may be approved under paragraph 1 of subsection (1) unless one of the core components of the
+    program is designed to develop competency in the safe and effective use of self in a psychotherapeutic
+    relationship." — O. Reg. 67/15 (Registration), Psychotherapy Act, 2007 (consolidation period
+    May 16, 2025; e-Laws currency date August 12, 2026)'
+  source_url_secondary:
+  - https://www.crpo.ca/registration/
+  confidence: high
+  notes: '''SAFE AND EFFECTIVE USE OF SELF'' IS A REAL, CITABLE REGULATORY REQUIREMENT IN ONTARIO
+    — not a training-school slogan. s. 6(3) makes it a condition of programme APPROVAL, so it reaches
+    every route into the profession. Nothing comparable appears in any other jurisdiction covered
+    by this corpus, and it is the kind of detail worth quoting rather than paraphrasing. ONTARIO
+    IS THE ONLY JURISDICTION HERE WITH A REGULATED ''PSYCHOTHERAPIST'' TITLE, and the three provinces
+    answer ''who may do talk therapy'' with three structurally different instruments. Ontario: a
+    distinct PROFESSION with its own Act and college (CRPO). Nova Scotia: a different profession
+    under a different name — COUNSELLING THERAPIST, its own Act and college (NSCCT), with title protection
+    rather than practice protection. Quebec: not a profession at all but a RESERVED ACT under Loi
+    21, with a permit issued by the psychologists'' ordre to members of seven other ordres. These
+    are not translations of each other and an RP, an RCT and a Quebec psychotherapist-permit holder
+    are not interchangeable. THE ENTRY BAR IS SPECIFIED IN HOURS OF CLIENT CONTACT, NOT DEGREE LEVEL
+    — and that is unusual. A master''s degree is only one of four alternative education routes under
+    s. 6(1)1; the hard floor everyone must clear is 450 direct-contact hours plus 100 hours of related
+    clinical supervision. Compare CPBAO, where the degree is the gate and the hours follow from it.
+    THE TWO-YEAR JURISPRUDENCE WINDOW AND THE 750-HOUR CURRENCY RULE ARE BOTH EASY TO TRIP OVER for
+    a returning or slow-moving applicant; they are conditions on the application itself, not on practice.
+    GRANDPARENTING IS CLOSED — CRPO''s own registration page records that the grandparenting route
+    ended 2017-03-31. Any guidance still describing it is stale. SOURCE RETRIEVAL NOTE: e-Laws is
+    a React SPA rendered here with headless chromium; see ca-on-licensure-psychology''s note. Also
+    note that O. Reg. 317/12 under the same Act is PROFESSIONAL MISCONDUCT, not registration — an
+    easy mis-citation.'
+source_url: https://www.ontario.ca/laws/regulation/150067
+observed: '2026-08-17'
+status: in-effect
+kind: record-added
