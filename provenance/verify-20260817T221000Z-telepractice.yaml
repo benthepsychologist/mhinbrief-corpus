@@ -1,0 +1,40 @@
+kind: verify
+run: telepractice re-verification, operator-requested
+verified_at: '2026-08-17T22:10:00Z'
+scope: all telepractice records (8), each source_quote checked verbatim against source text
+method: Every quote fragment located in the source; the text BETWEEN consecutive fragments printed
+  and read, because that elided material is what went wrong on ca-qc-telepractice-psychology — each
+  fragment there was accurate and the gap changed the meaning. Sources re-retrieved directly (PDF
+  via pdftotext, e-Laws SPA via headless chromium) rather than via summarising fetch.
+records_checked: 8
+records_confirmed_unchanged: 7
+records_corrected: 1
+corrected:
+- ca-qc-telepractice-psychology
+quote_fidelity:
+  verbatim_exact:
+  - ca-ns-telepractice-psychology
+  - ca-ns-telepractice-counselling-therapy
+  - ca-ns-telepractice-social-work
+  - ca-qc-telepractice-social-work
+  - ca-on-telepractice-psychotherapy
+  verbatim_with_editorial_join:
+    ca-on-telepractice-psychology: heading joined to its body paragraph with an em dash; wording
+      exact
+    ca-on-telepractice-social-work: three source bullets joined with semicolons; wording exact
+  defective:
+    ca-qc-telepractice-psychology: ellipsis dropped two material clauses — corrected same day
+elided_material_assessed: neutral background in every surviving record; nothing that qualifies or
+  reverses a claim
+notes_amended:
+- ca-ns-telepractice-counselling-therapy
+- ca-on-telepractice-psychology
+findings:
+- CPBAO Standard 17.1 REQUIRES adherence to ACPRO's Model Standards for Telepsychology; NSRP adopted
+  the SAME document as an advisory with no force. One document, two binding statuses.
+- CRPO states verbatim that it does not require practitioners residing in another jurisdiction to
+  register in order to work with an Ontario client. So the permissive inbound stance is a real documented
+  Canadian pattern, not an artifact of the OPQ misreading — though CRPO attaches conditions (no advertising
+  in Ontario, Ontario clients not a substantial share) that the OPQ FAQ does not state.
+- 'CPBAO is the strict counterpart: registration required for anyone serving a person physically
+  in Ontario, sourced to the College''s time-limited-registration page, not to the Standards.'

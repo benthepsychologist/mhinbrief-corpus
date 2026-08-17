@@ -10,46 +10,52 @@ statute_citation:
   short_title: Standards of Professional Conduct (CPBAO)
   bill_number: null
   code_cite: Standard 16 (Cross-Jurisdictional Practice); Standard 17 (Use of Technology)
-  regulation_cite: O. Reg. 195/23 (Professional Misconduct), Psychology and Applied Behaviour
-    Analysis Act, 2021
+  regulation_cite: O. Reg. 195/23 (Professional Misconduct), Psychology and Applied Behaviour Analysis
+    Act, 2021
 status: in_force
 enactment_date: null
 effective_date: '2024-07-01'
 enforcement_body: College of Psychologists and Behaviour Analysts of Ontario
 authority_basis: licensure
 penalties: null
-clinician_facing_obligations: 'Anyone providing psychological services to a person PHYSICALLY
-  IN ONTARIO must be CPBAO-registered — telepsychology included, regardless of where the practitioner
+clinician_facing_obligations: 'Anyone providing psychological services to a person PHYSICALLY IN
+  ONTARIO must be CPBAO-registered — telepsychology included, regardless of where the practitioner
   sits. Practising outside Ontario: the registrant must be legally authorised in that jurisdiction,
-  must comply with Ontario''s requirements while practising elsewhere, must tell recipients
-  the College can address complaints and give College contact information on request, and
-  must carry liability insurance covering that service. Where two jurisdictions conflict,
-  comply with whichever obligation gives the client greater protection. Cloud services must
-  be hosted where security features are consistent with Ontario privacy law, and client identity
-  must be verified where visual verification isn''t possible.'
+  must comply with Ontario''s requirements while practising elsewhere, must tell recipients the College
+  can address complaints and give College contact information on request, and must carry liability
+  insurance covering that service. Where two jurisdictions conflict, comply with whichever obligation
+  gives the client greater protection. Cloud services must be hosted where security features are
+  consistent with Ontario privacy law, and client identity must be verified where visual verification
+  isn''t possible.'
 vendor_facing_obligations: null
 consent_required: false
 documentation_required: false
 source_url: https://cpbao.ca/members/professional-practice/standards-of-professional-conduct/
-last_verified: '2026-07-31'
-source_quote: '"16.2 Adherence to Local Jurisprudence — Registrants must be familiar with
-  and adhere to the local jurisprudence and standards for practice in the jurisdiction in
-  which the service is being delivered. Where a conflict exists between the requirements of
-  two jurisdictions, the registrant must comply with the obligations affording greater client
-  protection." — CPBAO, Standards of Professional Conduct, Standard 16.2 (in force 2024-07-01)'
+last_verified: '2026-08-17'
+source_quote: '"16.2 Adherence to Local Jurisprudence — Registrants must be familiar with and adhere
+  to the local jurisprudence and standards for practice in the jurisdiction in which the service
+  is being delivered. Where a conflict exists between the requirements of two jurisdictions, the
+  registrant must comply with the obligations affording greater client protection." — CPBAO, Standards
+  of Professional Conduct, Standard 16.2 (in force 2024-07-01)'
 source_url_secondary:
 - https://cpbao.ca/applicants/how-to-apply/time-limited-registration-for-practitioners-from-other-jurisdictions/
 confidence: high
-notes: 'STRICTEST OF THE THREE COLLEGES on inbound practice: registration is required for
-  ANY client physically in Ontario, no de-minimis exception. Contrast CRPO, which does not
-  require registration for an out-of-province therapist serving Ontario clients if they don''t
-  advertise here and Ontario clients aren''t a substantial share of caseload — a real divergence
-  between two Ontario colleges that a reader could easily get wrong. MOBILITY: CPBAO signs
-  ACPRO''s Cross-Jurisdictional Limited Telepsychology MOU — time-limited registration (up
-  to 12 months, reduced fee) for psychologists licensed elsewhere in Canada, but ONLY within
-  7 named clinical contexts; anything else needs full registration. NUANCE WORTH STATING:
-  Standard 17.1 requires adherence to ACPRO''s Model Standards for Telepsychology, but that
-  document self-describes as ''An Advisory for Psychological Practice'' and said it was NOT
-  incorporated into the Standards. The 2024 cross-reference converts originally advisory content
-  into mandatory adherence. NO published CPBAO position on US clients specifically — Standard
-  16.2''s general framework would apply.'
+notes: 'STRICTEST OF THE THREE COLLEGES on inbound practice: registration is required for ANY client
+  physically in Ontario, no de-minimis exception. Contrast CRPO, which does not require registration
+  for an out-of-province therapist serving Ontario clients if they don''t advertise here and Ontario
+  clients aren''t a substantial share of caseload — a real divergence between two Ontario colleges
+  that a reader could easily get wrong. MOBILITY: CPBAO signs ACPRO''s Cross-Jurisdictional Limited
+  Telepsychology MOU — time-limited registration (up to 12 months, reduced fee) for psychologists
+  licensed elsewhere in Canada, but ONLY within 7 named clinical contexts; anything else needs full
+  registration. NUANCE WORTH STATING: Standard 17.1 requires adherence to ACPRO''s Model Standards
+  for Telepsychology, but that document self-describes as ''An Advisory for Psychological Practice''
+  and said it was NOT incorporated into the Standards. The 2024 cross-reference converts originally
+  advisory content into mandatory adherence. NO published CPBAO position on US clients specifically
+  — Standard 16.2''s general framework would apply. SOURCE-SPLIT, recorded 2026-08-17 so a future
+  verifier does not hunt in the wrong document: the inbound rule (''anyone serving a person physically
+  in Ontario must be CPBAO-registered'') is NOT in the Standards of Professional Conduct at source_url
+  — Standard 16 addresses OUTBOUND practice only. It is verbatim on the secondary URL, the College''s
+  time-limited-registration page: "In order to be permitted to provide psychological services to
+  any individual who is physically in Ontario, the practitioner must be registered to practice psychology
+  with the College of Psychologists and Behaviour Analysts of Ontario, even when the service is delivered
+  via telepsychology." Verified there directly.'
