@@ -1,0 +1,60 @@
+jurisdiction:
+  country: ca
+  state_or_province: Nova Scotia
+  code: ca-ns
+profession_scope:
+- psychologist
+topic: telepractice
+regulatory_model: none
+statute_citation:
+  short_title: Model Standards for Telepsychology Service (ACPRO), adopted by NSRP as a Practice
+    Advisory
+  bill_number: null
+  code_cite: adopted 2013-04-05; ACPRO model adopted 2011-06-04
+  regulation_cite: null
+status: in_force
+enactment_date: null
+effective_date: '2013-04-05'
+enforcement_body: Nova Scotia Regulator of Psychology
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: There is NO binding, telepractice-specific standard for Nova Scotia
+  psychologists. NSRP adopted ACPRO's Model Standards for Telepsychology Service as an ADVISORY only,
+  expressly not incorporated into its Standards of Practice. As advice, registrants are directed
+  to be licensed and in good standing in their home jurisdiction; to ensure they are legally entitled
+  to deliver services outside it; to tell clients which regulator to complain to; to be familiar
+  with the jurisprudence and standards where the service is received and follow the HIGHER standard
+  where they conflict; to carry liability insurance covering out-of-jurisdiction service; to be competent
+  in the technology; to use coded client identification where live visual verification is not possible;
+  and to plan with clients for technology failure. NSRP's separate 'Use of Technology by Psychologists'
+  guidance (revised June 2026, adding AI guidance and RHPA alignment) is likewise guidance, and states
+  that it applies existing standards rather than creating new ones. The generally binding Standards
+  of Practice — competence, consent, records, confidentiality — apply regardless of the medium of
+  delivery, and that is where enforceable obligation actually sits.
+vendor_facing_obligations: null
+consent_required: true
+documentation_required: true
+source_url: https://www.ns-rp.ca/downloads/Model_Standards_Telepsychology.pdf
+last_verified: '2026-08-17'
+source_quote: '"As an Advisory these are not incorporated into NSRP''s Standards of Practice, but
+  are provided as advice to Registrants regarding important issues to be carefully considered in
+  offering telepsychology services." ... "As ACPRO Model Standards, they have no force unless and
+  until they are adopted by the individual Canadian regulatory College or Board. At this time, NSRP
+  has chosen to adopt the ACPRO Model Standards as advice to Registrants. These may be incorporated
+  into the Standards of Practice in the future." — NSRP, Model Standards for Telepsychology Service
+  (Advisory for Psychological Practice)'
+source_url_secondary:
+- https://www.ns-rp.ca/downloads/use_of_technology_by_psychologists.pdf
+confidence: high
+notes: 'THIS IS A NEGATIVE FINDING AND IT IS THE POINT OF THE RECORD. Nova Scotia psychology has
+  no enforceable telepractice standard — the document that looks like one says twice, in its own
+  words, that it has no force. A page that lists these as ''Nova Scotia''s telepsychology requirements''
+  would be materially misleading. regulatory_model is therefore ''none'' rather than ''clinician_restriction'':
+  nothing here restricts the clinician by its own force. CONTRAST WITHIN NOVA SCOTIA: the other two
+  professions DO have binding instruments. NSCCT has an enforceable Interjurisdictional Telecounselling
+  policy (with a hard Canadian-server requirement); NSCSW has enforceable standards at Guiding Principle
+  6.5 of a Code effective 2026-02-01. Psychology is the outlier, not the template. WATCH THIS CELL:
+  NSRP itself says the Model Standards ''may be incorporated into the Standards of Practice in the
+  future'', and the technology guidance was revised as recently as June 2026 for RHPA alignment.
+  A future incorporation would flip this record from advisory to binding — that is exactly the kind
+  of change /tend''s watch on ns-rp.ca exists to catch.'

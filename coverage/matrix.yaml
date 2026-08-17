@@ -12,12 +12,17 @@
 
 generated: 2026-08-12
 scope_note: >
-  43 cells tracked, 16 covered (matches the 16 live records exactly —
-  every covered cell here has a record_id, every record has a cell).
-  27 not_started. 0 marked not_applicable yet — that determination
-  itself requires research (e.g. confirming a profession genuinely isn't
-  regulated somewhere), so "not_started" is the honest default until
-  someone's actually checked.
+  45 cells tracked, 31 covered. Nova Scotia completed 2026-08-17: all 13 of its
+  cells researched against primary sources, and its single privacy cell split
+  into three subtopic cells (breach-notification, custodian-status,
+  data-residency) matching Ontario's shape — so NS now holds 15 cells and the
+  total moved from 43 to 45. Ontario 12/15, federal 4/5, Nova Scotia 15/15,
+  Quebec 0/10. Every covered cell has a record_id and every record has a cell.
+  14 not_started, all Quebec plus federal privacy and Ontario licensure. 0
+  marked not_applicable — that determination itself requires research, so
+  not_started stays the honest default until someone has actually checked.
+  Three NS cells carry confidence: medium with the specific open question named
+  on each; they are covered, not finished.
 
 cells:
 
@@ -350,138 +355,215 @@ cells:
     profession: psychologist
     topic: licensure
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-ns-licensure-psychology
+    confidence: high
     authoritative_sources: [ns-regulator-of-psychology]
-    last_reviewed: null
-    notes: ""
-  - jurisdiction: ca-ns
-    profession: psychologist
-    topic: telepractice
-    granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
-    authoritative_sources: [ns-regulator-of-psychology]
-    last_reviewed: null
-    notes: ""
-  - jurisdiction: ca-ns
-    profession: psychologist
-    topic: retention
-    granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
-    authoritative_sources: [ns-regulator-of-psychology]
-    last_reviewed: null
-    notes: ""
-  - jurisdiction: ca-ns
-    profession: psychologist
-    topic: insurance
-    granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
-    authoritative_sources: [ns-regulator-of-psychology]
-    last_reviewed: null
-    notes: ""
-  - jurisdiction: ca-ns
-    profession: counselling_therapist
-    topic: licensure
-    granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
-    authoritative_sources: [ns-college-counselling-therapists]
-    last_reviewed: null
-    notes: ""
-  - jurisdiction: ca-ns
-    profession: counselling_therapist
-    topic: telepractice
-    granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
-    authoritative_sources: [ns-college-counselling-therapists]
-    last_reviewed: null
-    notes: ""
-  - jurisdiction: ca-ns
-    profession: counselling_therapist
-    topic: retention
-    granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
-    authoritative_sources: [ns-college-counselling-therapists]
-    last_reviewed: null
-    notes: ""
-  - jurisdiction: ca-ns
-    profession: counselling_therapist
-    topic: insurance
-    granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
-    authoritative_sources: [ns-college-counselling-therapists]
-    last_reviewed: null
-    notes: ""
-  - jurisdiction: ca-ns
-    profession: clinical_social_worker
-    topic: licensure
-    granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
-    authoritative_sources: [ns-college-social-workers]
-    last_reviewed: null
+    last_reviewed: 2026-08-17
     notes: >
-      researching lead, unresolved: 2026-08-12 /tend surfaced "Closing
-      the Gap: New Duty-to-Report Standards Under the RHPA" (proposed,
-      public comment open until 2026-08-30, not yet in force) and a
-      "new Code of Ethics" effective Feb 2026 with a candidate grace
-      period to 2026-08-22. Neither cleanly fits this topic list — both
-      are professional-conduct/discipline obligations, not
-      licensure/telepractice/retention/insurance. Flagging as an open
-      topic-taxonomy gap (see rubric.md) rather than force-fitting.
-      Candidate files still sit unresolved in candidates/.
+      Psychology Regulations, N.S. Reg. 252/2025, in force 2025-11-24 under
+      the RHPA. Regulator renamed NSBEP -> NSRP in the same transition.
+  - jurisdiction: ca-ns
+    profession: psychologist
+    topic: telepractice
+    granularity: profession
+    status: covered
+    record_id: ca-ns-telepractice-psychology
+    confidence: high
+    authoritative_sources: [ns-regulator-of-psychology]
+    last_reviewed: 2026-08-17
+    notes: >
+      NEGATIVE FINDING, deliberately recorded as covered: NS psychology has NO
+      binding telepractice standard. The ACPRO Model Standards are adopted as
+      an Advisory only and say so in their own text. NSRP states they may be
+      incorporated into the Standards of Practice in future — watch this cell.
+  - jurisdiction: ca-ns
+    profession: psychologist
+    topic: retention
+    granularity: profession
+    status: covered
+    record_id: ca-ns-retention-psychology
+    confidence: high
+    authoritative_sources: [ns-regulator-of-psychology]
+    last_reviewed: 2026-08-17
+    notes: >
+      10 years / 'last client contact', from NSRP Standards of Professional
+      Conduct s. 7.4 — a college Standard, not the regulation, which is
+      silent. The Standards date from 2007 and pre-date the RHPA transition;
+      re-verify before asserting they are current under the new statute.
+  - jurisdiction: ca-ns
+    profession: psychologist
+    topic: insurance
+    granularity: profession
+    status: covered
+    record_id: ca-ns-insurance-psychology
+    confidence: high
+    authoritative_sources: [ns-regulator-of-psychology]
+    last_reviewed: 2026-08-17
+    notes: >
+      $1,000,000 per occurrence. Duty is in the regulation (s. 11(1)(a)(iii));
+      the AMOUNT is only in Board policy and can change without amendment —
+      re-verify against the policy PDF, not the regulation.
+  - jurisdiction: ca-ns
+    profession: counselling_therapist
+    topic: licensure
+    granularity: profession
+    status: covered
+    record_id: ca-ns-licensure-counselling-therapy
+    confidence: high
+    authoritative_sources: [ns-college-counselling-therapists]
+    last_reviewed: 2026-08-17
+    notes: >
+      Counselling Therapists Regulations, N.S. Reg. 287/2011, ss. 5-8. Title
+      protection rather than practice protection — do not render as 'only RCTs
+      may provide therapy in NS'.
+  - jurisdiction: ca-ns
+    profession: counselling_therapist
+    topic: telepractice
+    granularity: profession
+    status: covered
+    record_id: ca-ns-telepractice-counselling-therapy
+    confidence: high
+    authoritative_sources: [ns-college-counselling-therapists]
+    last_reviewed: 2026-08-17
+    notes: >
+      Binding College policy. NSCCT holds that practice occurs where the
+      THERAPIST is registered — the opposite of NSCSW s. 6.5.3 and of the CCPA
+      Standards NSCCT itself adopts. That conflict is real and is flagged in
+      both records rather than resolved. Also the only Canadian-server mandate
+      located anywhere in NS.
+  - jurisdiction: ca-ns
+    profession: counselling_therapist
+    topic: retention
+    granularity: profession
+    status: covered
+    record_id: ca-ns-retention-counselling-therapy
+    confidence: medium
+    authoritative_sources: [ns-college-counselling-therapists]
+    last_reviewed: 2026-08-17
+    notes: >
+      7 years / 'last date of service'. MEDIUM because the binding force is
+      unconfirmed: NSCCT adopts the CCPA's documents (a national voluntary
+      association's) and no adopting bylaw or regulation provision was
+      located. One question to the NSCCT practice advisor closes this. Beware
+      N.S. Reg. 287/2011 s. 42's 5-year rule — that governs disciplinary
+      evidence, NOT client records.
+  - jurisdiction: ca-ns
+    profession: counselling_therapist
+    topic: insurance
+    granularity: profession
+    status: covered
+    record_id: ca-ns-insurance-counselling-therapy
+    confidence: high
+    authoritative_sources: [ns-college-counselling-therapists]
+    last_reviewed: 2026-08-17
+    notes: >
+      $2M per claim / $5M aggregate, no deductible, binding on all licensed
+      registrants including those on leave, and employer-provided coverage is
+      expressly insufficient. The heaviest insurance obligation in the corpus.
+  - jurisdiction: ca-ns
+    profession: clinical_social_worker
+    topic: licensure
+    granularity: profession
+    status: covered
+    record_id: ca-ns-licensure-social-work
+    confidence: medium
+    authoritative_sources: [ns-college-social-workers]
+    last_reviewed: 2026-08-17
+    notes: >
+      Covered as of 2026-08-17, but see the record's own notes: confidence is
+      medium because Social Workers Act s. 22 and the Social Worker
+      Regulations s. 8 were not read directly — the 2500-hour figure comes
+      from NSCSW's applicant page. STILL OPEN, unchanged: the 2026-08-12 /tend
+      finds (proposed duty-to-report standards under the RHPA, and the Code of
+      Ethics effective 2026-02-01) are professional-conduct material that fits
+      none of the five core topics. That taxonomy gap is not closed by this
+      record. Note also that NS social work is still under the Social Workers
+      Act; its RHPA migration is under way but incomplete, unlike psychology
+      which completed 2025-11-24.
   - jurisdiction: ca-ns
     profession: clinical_social_worker
     topic: telepractice
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-ns-telepractice-social-work
+    confidence: high
     authoritative_sources: [ns-college-social-workers]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      Binding: NSCSW Code Guiding Principle 6.5, ss. 6.5.1-6.5.11, effective
+      2026-02-01. Cumulative jurisdictional test (regulated + practising +
+      where the service user resides) — conflicts with NSCCT's position.
   - jurisdiction: ca-ns
     profession: clinical_social_worker
     topic: retention
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-ns-retention-social-work
+    confidence: high
     authoritative_sources: [ns-college-social-workers]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      7 years / 'last entry' — same trigger wording as OCSWSSW in Ontario, and
+      three years shorter than NS psychology in the same province.
   - jurisdiction: ca-ns
     profession: clinical_social_worker
     topic: insurance
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-ns-insurance-social-work
+    confidence: high
     authoritative_sources: [ns-college-social-workers]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      'Adequate' insurance, NO dollar figure, and on its face private practice
+      only. The absence of an amount is the finding — no page may attribute a
+      figure to NSCSW.
   - jurisdiction: ca-ns
     profession: null
     topic: privacy
+    subtopic: breach-notification
     granularity: jurisdiction-wide
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-ns-privacy-breach-notification
+    confidence: high
     authoritative_sources: [ns-oipc-phia]
-    last_reviewed: null
-    notes: "PHIA — Nova Scotia's health-privacy statute. Sub-topic split (breach/custodian/residency, matching ON's shape) TBD on research, don't assume it mirrors PHIPA exactly."
+    last_reviewed: 2026-08-17
+    notes: >
+      PHIA ss. 69-70. The s. 70(2) inversion is the load-bearing fact:
+      deciding NOT to notify the individual triggers a mandatory report to the
+      Review Officer instead. Never publish s. 69 without s. 70.
+  - jurisdiction: ca-ns
+    profession: null
+    topic: privacy
+    subtopic: custodian-status
+    granularity: jurisdiction-wide
+    status: covered
+    record_id: ca-ns-privacy-custodian-status
+    confidence: medium
+    authoritative_sources: [ns-oipc-phia]
+    last_reviewed: 2026-08-17
+    notes: >
+      PHIA ss. 3, 6, 67, 68. MEDIUM on a real open question, not a reading
+      gap: s. 3(1)(w) requires registration under an Act 'specific to his or
+      her profession', which the 2025-11-24 move of psychology onto the
+      umbrella RHPA arguably disturbs. Resolve by checking for consequential
+      PHIA amendments or a prescribed class. The s. 6(2) agent/custodian split
+      (employed = agent, private practice = custodian) is the practically
+      important part.
+  - jurisdiction: ca-ns
+    profession: null
+    topic: privacy
+    subtopic: data-residency
+    granularity: jurisdiction-wide
+    status: covered
+    record_id: ca-ns-privacy-data-residency
+    confidence: high
+    authoritative_sources: [ns-oipc-phia]
+    last_reviewed: 2026-08-17
+    notes: >
+      NEGATIVE FINDING, verified by direct read of BOTH the Act and N.S. Reg.
+      217/2012 s. 10: Nova Scotia has NO data-residency requirement. Do not
+      re-open as unknown. s. 44 is a DISCLOSURE rule and must not be rendered
+      as residency. The only Canadian-server rule in NS is NSCCT's college
+      policy, binding counselling therapists only — diverges from Ontario.

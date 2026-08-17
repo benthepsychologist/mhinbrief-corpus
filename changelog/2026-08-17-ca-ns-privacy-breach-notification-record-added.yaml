@@ -1,0 +1,70 @@
+record_id: ca-ns-privacy-breach-notification
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Nova Scotia
+    code: ca-ns
+  profession_scope:
+  - psychologist
+  - counselling_therapist
+  - clinical_social_worker
+  topic: privacy
+  regulatory_model: disclosure
+  statute_citation:
+    short_title: Personal Health Information Act (Nova Scotia)
+    bill_number: null
+    code_cite: S.N.S. 2010, c. 41, ss. 69-70 (reporting of a privacy breach)
+    regulation_cite: Personal Health Information Regulations, N.S. Reg. 217/2012, as amended to N.S.
+      Reg. 63/2026 (effective 2026-03-03)
+  status: in_force
+  enactment_date: null
+  effective_date: '2013-06-01'
+  enforcement_body: Office of the Information and Privacy Commissioner for Nova Scotia (Review Officer)
+  authority_basis: privacy
+  penalties: null
+  clinician_facing_obligations: 'A custodian must notify the affected individual at the first reasonable
+    opportunity where it believes on a reasonable basis BOTH that the information was stolen, lost,
+    or subject to unauthorized access, use, disclosure, copying or modification, AND that as a result
+    there is potential for harm or embarrassment to the individual (s. 69). Where the custodian instead
+    determines that a breach is unlikely to have occurred, or that there is no potential for harm
+    or embarrassment, it may decide not to notify the individual — but it MUST then notify the Review
+    Officer (the Information and Privacy Commissioner) as soon as possible (s. 70). There is no threshold
+    below which a custodian may simply record nothing and tell no one: either the individual is notified,
+    or the regulator is.'
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: true
+  source_url: https://nslegislature.ca/sites/default/files/legc/statutes/personal%20health%20information.pdf
+  last_verified: '2026-08-17'
+  source_quote: '"69 Subject to the exceptions and additional requirements, if any, that are prescribed,
+    a custodian that has custody or control of personal health information about an individual shall
+    notify the individual at the first reasonable opportunity if the custodian believes on a reasonable
+    basis that (a) the information is stolen, lost or subject to unauthorized access, use, disclosure,
+    copying or modification; and (b) as a result, there is potential for harm or embarrassment to
+    the individual." ... "70(2) Where a custodian makes the decision not to notify an individual
+    pursuant to this Section, the custodian shall notify the Review Officer as soon as possible."
+    — Personal Health Information Act, S.N.S. 2010, c. 41 (consolidation to April 1, 2026)'
+  source_url_secondary:
+  - https://oipc.novascotia.ca/
+  - https://novascotia.ca/dhw/phia/custodians.asp
+  confidence: high
+  notes: 'THE s. 70(2) INVERSION IS THE MOST COUNTERINTUITIVE DUTY IN NOVA SCOTIA HEALTH PRIVACY
+    AND THE ONE MOST LIKELY TO BE BREACHED WITHOUT ANYONE NOTICING. Deciding that a breach does NOT
+    warrant telling the client does not close the file — it opens a mandatory report to the Review
+    Officer instead. A custodian who quietly concludes ''no harm, no notice'' and files nothing has
+    satisfied s. 69 and BREACHED s. 70(2). Any page describing NS breach obligations that omits this
+    is worse than incomplete; it will lead a careful reader to the wrong action. State both branches
+    together, always. THRESHOLD WORDING: ''potential for harm OR EMBARRASSMENT''. ''Embarrassment''
+    is undefined in the Act and is a lower, more subjective bar than the risk-of-significant-harm
+    test used in some other Canadian regimes. Do not paraphrase it as ''significant harm''. ''FIRST
+    REASONABLE OPPORTUNITY'' is the timing standard — PHIA sets no fixed number of days, and the
+    OIPC''s guidance (Key Steps to Responding to Privacy Breaches) is the practical reference, not
+    a deadline in the statute. COMPARE ONTARIO (ca-on-privacy-breach-notification): PHIPA''s structure
+    differs, and the ''decide not to notify -> tell the regulator'' inversion is a Nova Scotia feature.
+    Do not carry a PHIPA summary across the provincial line.'
+source_url: https://nslegislature.ca/sites/default/files/legc/statutes/personal%20health%20information.pdf
+observed: '2026-08-17'
+status: in-effect
+kind: record-added

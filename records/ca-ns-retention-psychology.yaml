@@ -1,0 +1,59 @@
+jurisdiction:
+  country: ca
+  state_or_province: Nova Scotia
+  code: ca-ns
+profession_scope:
+- psychologist
+topic: retention
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: Standards of Professional Conduct (NSRP)
+  bill_number: null
+  code_cite: s. 7.4 (record retention)
+  regulation_cite: Regulated Health Professions Act, S.N.S. 2021, c. 8; Psychology Regulations, N.S.
+    Reg. 252/2025
+status: in_force
+enactment_date: null
+effective_date: '2007-02-19'
+enforcement_body: Nova Scotia Regulator of Psychology
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: Retain both individual and corporate client records for at least 10
+  years following the last client contact. Where the client was under 18 at the time of last contact,
+  retain the individual client record for 10 years following the client's 18th birthday. Billing
+  records are retained on the same basis (s. 7.5). In private practice, a registrant who plans to
+  or ceases to provide services must take responsibility for maintenance and security of records
+  or arrange for another registrant to do so, and must inform NSRP of those arrangements at the earliest
+  reasonable opportunity; advance arrangements should also be made for incapacity or death (s. 7.7).
+  In an employment setting, the registrant must make reasonable efforts to ensure a policy exists
+  covering records on their departure (s. 7.8).
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: true
+source_url: https://www.ns-rp.ca/downloads/Binder_Standards_Legislation_Guidelines.pdf
+last_verified: '2026-08-17'
+source_quote: '"7.4 Unless otherwise required by law a registrant shall retain both individual and
+  corporate client records for at least ten years following the last client contact. If an individual
+  client was less than eighteen years of age at the time of last contact, the individual client record
+  shall be retained for ten years following the date of the client''s eighteenth birthday. In the
+  case of ongoing service to a corporate client, information more than ten years old may be destroyed
+  if it is not relevant to current services." — NSRP Standards of Professional Conduct, s. 7.4'
+source_url_secondary:
+- https://novascotia.ca/just/REGULATIONS/regs/rhppsychology.htm
+confidence: high
+notes: 'INSTRUMENT TYPE — do not blur this: the 10-year period is set by a COLLEGE STANDARD OF PRACTICE,
+  not by statute or regulation. The Psychology Regulations (N.S. Reg. 252/2025) contain NO record-keeping
+  or retention provision at all, and PHIA sets no period either (see ca-ns-privacy-phia) — it requires
+  only that a custodian HAVE a written retention schedule. The number comes entirely from the Standard.
+  CLOCK START: ''last client contact''. This is a FOURTH distinct trigger wording in this corpus
+  — compare CPBAO ''last professional contact'', CRPO ''last interaction'', OCSWSSW ''last entry'',
+  and NS social work''s own ''last entry''. Do not flatten these into one phrase on any page; the
+  difference decides real destruction dates. WITHIN NOVA SCOTIA THE THREE PROFESSIONS DIVERGE: psychology
+  10 years / last client contact; counselling therapy 7 years / last date of service; social work
+  7 years / last entry. A page that says ''Nova Scotia requires X years'' without naming the profession
+  is wrong for two of the three. AGE OF THE INSTRUMENT — FLAG FOR RE-VERIFICATION: the Standards
+  of Professional Conduct carry an effective date of 19 February 2007 and sit in a binder compiled
+  around 2010. They therefore PRE-DATE by roughly 18 years the RHPA transition (2025-11-24) that
+  now governs the profession. NSRP has not visibly reissued them against the new statute. This is
+  not a reason to doubt the 10-year number, but it is a reason to re-check before any page asserts
+  the Standards are current under the RHPA.'

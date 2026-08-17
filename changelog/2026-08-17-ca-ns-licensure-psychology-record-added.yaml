@@ -1,0 +1,57 @@
+record_id: ca-ns-licensure-psychology
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Nova Scotia
+    code: ca-ns
+  profession_scope:
+  - psychologist
+  topic: licensure
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: Psychology Regulations (Nova Scotia)
+    bill_number: null
+    code_cite: N.S. Reg. 252/2025, ss. 8-10 (O.I.C. 2025-337)
+    regulation_cite: made under the Regulated Health Professions Act, S.N.S. 2021, c. 8
+  status: in_force
+  enactment_date: null
+  effective_date: '2025-11-24'
+  enforcement_body: Nova Scotia Regulator of Psychology
+  authority_basis: licensure
+  penalties: null
+  clinician_facing_obligations: 'Hold a licence from the Nova Scotia Regulator of Psychology (NSRP)
+    to practise psychology. Practising licence categories are set by s. 8 (psychologist practising
+    licence, plus any further category established in the bylaws); conditional licences by s. 9 (candidate
+    psychologist conditional licence, psychologist conditional licence, plus bylaw categories). Registration
+    criteria under s. 10(2)(a) require graduation from an approved master''s, PhD or PsyD programme,
+    passing the required examinations, English-language proficiency, Canadian citizenship or legal
+    entitlement to work in Canada, and the capacity, competence and character to practise safely
+    and ethically. Supervised-experience baseline per NSRP: two years post-doctoral, or four years
+    at the master''s level.'
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: true
+  source_url: https://novascotia.ca/just/REGULATIONS/regs/rhppsychology.htm
+  last_verified: '2026-08-17'
+  source_quote: '"8 The categories of practising licence are (a) psychologist practising licence;
+    (b) any other category of practising licence established in the bylaws." / "10(2)(a) ... capacity,
+    competence and character to safely and ethically engage in the practice of the profession." —
+    Psychology Regulations, N.S. Reg. 252/2025 (O.I.C. 2025-337), in force 2025-11-24'
+  source_url_secondary:
+  - https://www.ns-rp.ca/
+  confidence: high
+  notes: 'STRUCTURAL CHANGE, RECENT AND EASY TO MISS: as of 2025-11-24 psychology in Nova Scotia
+    is regulated under the Regulated Health Professions Act (RHPA), and the regulator''s name changed
+    from the Nova Scotia Board of Examiners in Psychology (NSBEP) to the Nova Scotia Regulator of
+    Psychology (NSRP). Any source, directory, or insurer document still saying NSBEP is pre-November-2025.
+    The regulator''s own site still serves pages under /about-nsbep/ paths and its contact email
+    is still nsbep@nsbep.org, so the old name persisting on a page is NOT evidence the change didn''t
+    happen. INSTRUMENT TYPE: this is a REGULATION made under a statute — binding, not a college guideline.
+    Contrast the retention and telepractice records for this same profession, where the regulation
+    is silent and the obligation lives in a college Standard or a mere advisory.'
+source_url: https://novascotia.ca/just/REGULATIONS/regs/rhppsychology.htm
+observed: '2026-08-17'
+status: in-effect
+kind: record-added

@@ -1,0 +1,75 @@
+jurisdiction:
+  country: ca
+  state_or_province: Nova Scotia
+  code: ca-ns
+profession_scope:
+- psychologist
+- counselling_therapist
+- clinical_social_worker
+topic: privacy
+regulatory_model: none
+statute_citation:
+  short_title: Personal Health Information Act (Nova Scotia)
+  bill_number: null
+  code_cite: S.N.S. 2010, c. 41, ss. 44, 65 (and the absence of any residency provision)
+  regulation_cite: Personal Health Information Regulations, N.S. Reg. 217/2012, as amended to N.S.
+    Reg. 63/2026 (effective 2026-03-03), s. 10 (prescribed electronic-system safeguards)
+status: in_force
+enactment_date: null
+effective_date: '2013-06-01'
+enforcement_body: Office of the Information and Privacy Commissioner for Nova Scotia (Review Officer)
+authority_basis: privacy
+penalties: null
+clinician_facing_obligations: 'Nova Scotia imposes NO data-residency requirement on personal health
+  information by statute or regulation. Neither PHIA nor the Personal Health Information Regulations
+  require that personal health information be stored, hosted, or processed within Nova Scotia or
+  within Canada. What the law does require instead is: (a) security safeguards — a custodian maintaining
+  an electronic information system must implement the prescribed safeguards (PHIA s. 65), which the
+  regulations set out as protection of network infrastructure including physical and wireless networks
+  to ensure secure access, protection of hardware and supporting operating systems, and protection
+  of the system''s software including user authentication (Regulations s. 10(1)); and (b) control
+  over DISCLOSURE across borders — a custodian may disclose personal health information to a person
+  outside the Province only on one of the grounds in s. 44, including the individual''s consent.
+  One profession-specific exception overrides this at the college level: NSCCT requires its registrants''
+  telecounselling platforms to be PIPEDA-compliant AND hosted on servers holding data exclusively
+  within Canadian jurisdiction. That binds counselling therapists only, not psychologists or social
+  workers.'
+vendor_facing_obligations: No provincial residency obligation applies to vendors handling Nova Scotia
+  personal health information. Vendors serving NSCCT-registered counselling therapists for telecounselling
+  must host data on servers within Canada and be PIPEDA-compliant, per that College's policy.
+consent_required: true
+documentation_required: false
+source_url: https://novascotia.ca/just/regulations/regs/phipershealth.htm
+last_verified: '2026-08-17'
+source_quote: '"10(1) The following safeguards are prescribed for an electronic information system
+  maintained by the custodian: (a) protection of network infrastructure, including physical and wireless
+  networks, to ensure secure access; (b) protection of hardware and its supporting operating systems
+  to ensure that the system functions consistently and only those authorized to access the system
+  have access; (c) protection of the system''s software, including the way it authenticates a user''s
+  identity before allowing access." — Personal Health Information Regulations, N.S. Reg. 217/2012,
+  s. 10(1). [No provision of the Act or the Regulations addresses storage, hosting or transfer of
+  personal health information outside Nova Scotia or outside Canada.]'
+source_url_secondary:
+- https://nslegislature.ca/sites/default/files/legc/statutes/personal%20health%20information.pdf
+- https://nscct.ca/wp-content/uploads/2023/11/Interjurisdictional-Telecounselling-Canada.pdf
+confidence: high
+notes: 'THIS RECORD EXISTS TO STATE AN ABSENCE, AND THE ABSENCE IS THE FINDING. It is recorded at
+  confidence: high because it was verified by direct reading of BOTH instruments, not inferred: the
+  full text of PHIA was searched for residency, cross-border storage and server-location language
+  (the only hits are s. 44, a DISCLOSURE rule, and one reference to another jurisdiction''s prescription-monitoring
+  programme), and the Personal Health Information Regulations were read at s. 10, the provision PHIA
+  s. 65 delegates electronic-system safeguards to — which prescribes three technical safeguards and
+  says nothing about location. A future session should not re-open this as an unknown. regulatory_model
+  is ''none'' because no provincial instrument restricts where the data may sit. DISCLOSURE IS NOT
+  RESIDENCY — do not let s. 44 be rendered as a residency rule. s. 44 governs whether a custodian
+  may DISCLOSE information to someone outside the province (consent, statutory permission, prescription-monitoring,
+  inter-governmental health-system administration). Hosting your own records on a server in Virginia
+  is not a disclosure to a person outside the province, and s. 44 does not reach it. THE ONE REAL
+  CANADIAN-SERVER RULE IN NOVA SCOTIA IS A COLLEGE POLICY, NOT A LAW, AND IT BINDS ONE PROFESSION.
+  NSCCT''s Interjurisdictional Telecounselling policy requires PIPEDA-compliant platforms with servers
+  in Canada. The practical consequence is worth stating plainly on any page: in Nova Scotia, a counselling
+  therapist using a US-hosted video or records platform is offside their College even though the
+  province''s privacy statute is silent, while a psychologist or social worker doing exactly the
+  same thing is not breaching any located NS requirement. Do not generalise NSCCT''s rule across
+  the province. DIVERGES FROM ONTARIO (ca-on-privacy-data-residency), which does have a residency-relevant
+  provision. A national page must not present a single Canadian answer here.'

@@ -1,0 +1,54 @@
+jurisdiction:
+  country: ca
+  state_or_province: Nova Scotia
+  code: ca-ns
+profession_scope:
+- counselling_therapist
+topic: licensure
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: Counselling Therapists Regulations (Nova Scotia)
+  bill_number: null
+  code_cite: N.S. Reg. 287/2011, ss. 5-8 (O.I.C. 2011-368)
+  regulation_cite: made under the Counselling Therapists Act, S.N.S. 2008, c. 6
+status: in_force
+enactment_date: null
+effective_date: '2011-10-11'
+enforcement_body: Nova Scotia College of Counselling Therapists
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: 'Hold a licence from the Nova Scotia College of Counselling Therapists
+  (NSCCT) to use the protected titles ''Counselling Therapist'', ''Registered Counselling Therapist''
+  / ''RCT'', or ''Registered Counselling Therapist - Candidate'' / ''RCT-C'', or to describe services
+  as ''counselling therapy''. Licence categories under s. 5: active-practising; active-practising
+  with conditions or restrictions; active-practising candidate; temporary; temporary with conditions
+  or restrictions. Registration criteria (s. 6(2)) include a recognised counselling-therapy education
+  programme, any registration examinations approved by the Board, no outstanding complaints in previous
+  jurisdictions, English-language proficiency, an ethics course, workshop or exam, and a supervised
+  practicum or internship with a minimum of 120 direct-contact practice hours. Entry to active-practising
+  (s. 7(2)) additionally requires at least two years of supervised experience, and s. 8 sets that
+  at a minimum of 2,000 hours including 50 direct-contact hours with a supervisor.'
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: true
+source_url: https://novascotia.ca/just/regulations/regs/ctcounsther.htm
+last_verified: '2026-08-17'
+source_quote: '"5 The categories of licence are (a) active-practising; (b) active-practising with
+  conditions or restrictions; (c) active-practising candidate; (d) temporary; (e) temporary with
+  conditions or restrictions." / "7(2) ... the member has completed at least 2 years of supervised
+  experience in the practice of counselling therapy" — Counselling Therapists Regulations, N.S. Reg.
+  287/2011'
+source_url_secondary:
+- https://nscct.ca/standards-documents/
+confidence: high
+notes: 'TITLE PROTECTION, NOT PRACTICE PROTECTION, IS WHAT THIS SECURES — the enforceable hook in
+  NSCCT''s own materials is on the protected titles and on describing services as ''counselling therapy''.
+  Do not render this as ''only RCTs may provide therapy in Nova Scotia''. NOVA SCOTIA IS ONE OF THE
+  MINORITY OF PROVINCES THAT REGULATES THIS PROFESSION AT ALL — established 2011 under the Counselling
+  Therapists Act. Per this corpus''s earlier source sweep, SK, MB and NL have no counselling-therapy
+  regulator, and BC''s does not take effect until 2027-11-29. That contrast is worth surfacing on
+  any national comparison page. THE REGULATION IS OLD RELATIVE TO THE COLLEGE''S LIVE POLICY SUITE:
+  N.S. Reg. 287/2011 dates from 2011, while NSCCT''s registration and practice policies are revised
+  continually (several carry 2025 and 2026 dates). Where the two could diverge — most importantly
+  the insurance amount — the policy governs the operative number and the regulation only delegates
+  it. See ca-ns-insurance-counselling-therapy.'

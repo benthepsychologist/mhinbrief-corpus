@@ -1,0 +1,60 @@
+jurisdiction:
+  country: ca
+  state_or_province: Nova Scotia
+  code: ca-ns
+profession_scope:
+- clinical_social_worker
+topic: licensure
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: Social Workers Act (Nova Scotia)
+  bill_number: null
+  code_cite: S.N.S. 1993, c. 12, s. 22 (registration); private practice defined at s. 2(j)
+  regulation_cite: Social Worker Regulations made under the Social Workers Act, s. 8 (updated November
+    2021)
+status: in_force
+enactment_date: null
+effective_date: null
+enforcement_body: Nova Scotia College of Social Workers
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: Register with the Nova Scotia College of Social Workers (NSCSW). Registered
+  Social Worker (RSW) requires a CASWE-accredited BSW or MSW plus 2,500 hours of post-graduation
+  practice experience within the scope of practice. Applicants without those hours are placed on
+  the Social Worker Candidate registry and must complete all or part of the Candidacy Mentorship
+  Programme based on prior experience. Providing CLINICAL social work services in a private setting
+  requires an additional level of registration — Registered Social Worker-Clinical Specialist — applied
+  for through the Board of Examiners, and members in private practice must provide evidence of that
+  status.
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: true
+source_url: https://nscsw.org/applicants/
+last_verified: '2026-08-17'
+source_quote: '"5.5.2 securing registration with the College as a Clinical Specialist when they are
+  providing clinical social work services in a private setting and providing evidence of their status"
+  [footnote: "In Nova Scotia, providing clinical services in a private practice requires an additional
+  level of registration."] — NSCSW Code of Ethics and Standards of Practice, s. 5.5.2, effective
+  2026-02-01'
+source_url_secondary:
+- https://nscsw.org/wp-content/uploads/2025/09/NSCSW-Code-of-Ethics-and-Standards-of-Practice-August-2025.pdf
+confidence: medium
+notes: 'CONFIDENCE IS MEDIUM BECAUSE THE PRIMARY STATUTE WAS NOT READ DIRECTLY IN THIS PASS. The
+  2,500-hour figure and the RSW/Candidate split come from NSCSW''s own applicant-facing page, which
+  is the College summarising its own rules — primary-adjacent, not primary. The Clinical Specialist
+  requirement IS quoted from a primary instrument (the Code of Ethics and Standards of Practice,
+  s. 5.5.2 and its footnote 23). To reach confidence: high, read Social Workers Act s. 22 and Social
+  Worker Regulations s. 8 directly and re-quote. This is the weakest of the thirteen Nova Scotia
+  drafts and should not be published ahead of the others. STATUTORY BASIS DIFFERS FROM THE OTHER
+  TWO NS PROFESSIONS — this matters and is easy to get wrong right now: social work in Nova Scotia
+  is STILL governed by the Social Workers Act, with a migration to the Regulated Health Professions
+  Act (RHPA) publicly under way but NOT complete. The Code of Ethics and Standards of Practice effective
+  2026-02-01 still cites the Social Workers Act throughout. Psychology, by contrast, COMPLETED its
+  RHPA transition on 2025-11-24. Do not describe Nova Scotia as having moved mental-health professions
+  to the RHPA as a block — one has, one has not, and counselling therapy sits under its own separate
+  Counselling Therapists Act. THE CLINICAL-SPECIALIST GATE IS THE PRACTICALLY IMPORTANT PART for
+  this corpus''s audience: an RSW alone cannot hold out as providing clinical social work in private
+  practice. OPEN, RELATED, NOT RESOLVED HERE: NSCSW''s proposed duty-to-report standards under the
+  RHPA (public comment closed 2026-08-30) are professional-conduct material that fits none of this
+  corpus''s five core topics. That taxonomy gap is already flagged on this cell in coverage/matrix.yaml
+  and remains open.'

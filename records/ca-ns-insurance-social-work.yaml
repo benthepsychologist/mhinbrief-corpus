@@ -1,0 +1,51 @@
+jurisdiction:
+  country: ca
+  state_or_province: Nova Scotia
+  code: ca-ns
+profession_scope:
+- clinical_social_worker
+topic: insurance
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: NSCSW Code of Ethics and Standards of Practice
+  bill_number: null
+  code_cite: s. 5.5.1 (Guiding Principle 5.5 — social workers in private practice)
+  regulation_cite: Social Workers Act, S.N.S. 1993, c. 12
+status: in_force
+enactment_date: null
+effective_date: '2026-02-01'
+enforcement_body: Nova Scotia College of Social Workers
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: Social workers IN PRIVATE PRACTICE must secure adequate malpractice,
+  defamation, and liability insurance, and maintain registration with the Nova Scotia College of
+  Social Workers. No minimum dollar amount is specified. Those providing clinical social work services
+  in a private setting must also hold Clinical Specialist registration and provide evidence of that
+  status (s. 5.5.2).
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: false
+source_url: https://nscsw.org/wp-content/uploads/2025/09/NSCSW-Code-of-Ethics-and-Standards-of-Practice-August-2025.pdf
+last_verified: '2026-08-17'
+source_quote: '"5.5.1 securing adequate malpractice, defamation, and liability insurance and maintaining
+  registration with the Nova Scotia College of Social Workers" — NSCSW Code of Ethics and Standards
+  of Practice, s. 5.5.1, under Guiding Principle 5.5 ''Social workers in private practice act with
+  integrity in all business practices'' (effective 2026-02-01)'
+source_url_secondary:
+- https://nscsw.org/standards/
+confidence: high
+notes: 'TWO LIMITS MAKE THIS THE WEAKEST INSURANCE REQUIREMENT OF THE THREE NOVA SCOTIA PROFESSIONS,
+  and both are load-bearing. First, SCOPE: s. 5.5.1 sits under Guiding Principle 5.5, which is expressly
+  about ''social workers in private practice''. On its face it does not reach employed social workers
+  at all — unlike NS psychology (all registrants) and NS counselling therapy (all licensed registrants
+  including those on leave). Second, AMOUNT: the standard says ''adequate'' and stops. There is no
+  figure, no aggregate, no deductible rule, and no proof-of-coverage or renewal-verification requirement
+  of the kind NSCCT and NSRP both impose. Compare NSRP''s $1,000,000 per occurrence and NSCCT''s
+  $2,000,000 per claim / $5,000,000 aggregate with no deductible. ''DEFAMATION'' INSURANCE IS AN
+  UNUSUAL NAMED INCLUSION — it appears in neither of the other two professions'' requirements and
+  is worth calling out, since not every standard malpractice policy includes it. DO NOT STATE OR
+  IMPLY A DOLLAR FIGURE FOR NS SOCIAL WORK. The absence of one is the finding. If a page needs a
+  number, it must attribute it to an insurer or association product, never to the College. WORTH
+  CHECKING BEFORE PUBLICATION: whether a bylaw, registration policy, or renewal form sets an amount
+  that the Code does not. This pass found none, but absence of a figure in the Code is not proof
+  none exists elsewhere in NSCSW''s instruments.'

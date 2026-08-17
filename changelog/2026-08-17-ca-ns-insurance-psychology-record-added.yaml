@@ -1,0 +1,65 @@
+record_id: ca-ns-insurance-psychology
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Nova Scotia
+    code: ca-ns
+  profession_scope:
+  - psychologist
+  topic: insurance
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: Psychology Regulations (Nova Scotia)
+    bill_number: null
+    code_cite: N.S. Reg. 252/2025, s. 11(1)(a)(iii)
+    regulation_cite: made under the Regulated Health Professions Act, S.N.S. 2021, c. 8
+  status: in_force
+  enactment_date: null
+  effective_date: '2025-11-24'
+  enforcement_body: Nova Scotia Regulator of Psychology
+  authority_basis: licensure
+  penalties: null
+  clinician_facing_obligations: 'Hold professional liability insurance (or other malpractice coverage
+    or liability protection) in the form and amount set by the Board. The minimum amount set by the
+    Board is $1,000,000 per occurrence. Applies to holders of a Practising Licence AND a Candidate
+    Psychologist Conditional Licence. Proof of coverage must be provided within 30 days of the licence
+    being granted, and maintaining coverage is a condition of annual renewal. Employer-provided coverage
+    does not automatically satisfy this — NSRP''s position is that institutional coverage may not
+    cover all acts of an employee and that psychologists employed by health institutions, school
+    boards and universities still require personal coverage. One standing exemption exists: Correctional
+    Service Canada employees practising only within CSC, under a monitored annual-declaration arrangement
+    between NSRP and CSC. Other federal employees must submit proof of their own coverage. Retired,
+    relocated or career-changed registrants are advised to maintain coverage or obtain extended-reporting
+    (''tail'') coverage, because policies are typically written on a claims-made basis.'
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: true
+  source_url: https://www.ns-rp.ca/downloads/Insurance.pdf
+  last_verified: '2026-08-17'
+  source_quote: '"Under the Regulated Health Professions Act and the Psychology Regulations (s. 11(1)(a)(iii)),
+    an applicant for a licence must have professional liability insurance or another form of malpractice
+    coverage or liability protection in the form and amount set by the Board. This applies to holders
+    of a Practising Licence and a Candidate Psychologist Conditional Licence. The minimum amount
+    set by the Board is $1,000,000 per occurrence." — NSRP, Professional Liability Insurance Required
+    of All NSRP Registrants'
+  source_url_secondary:
+  - https://novascotia.ca/just/REGULATIONS/regs/rhppsychology.htm
+  confidence: high
+  notes: 'TWO-LAYER INSTRUMENT: the DUTY is in a regulation (N.S. Reg. 252/2025 s. 11(1)(a)(iii)),
+    but the AMOUNT is not — the regulation says only ''in the form and amount set by the Board''.
+    The $1,000,000 figure comes from NSRP''s own regulatory policy and can therefore change without
+    any regulatory amendment. Re-verify the figure against the policy document, not the regulation,
+    on every pass. CONTRAST WITHIN NOVA SCOTIA — this is the sharpest divergence found in the province:
+    psychology requires $1M per occurrence of every registrant; counselling therapy requires $2M
+    per claim / $5M aggregate with no deductible AND expressly refuses employer-provided coverage;
+    social work requires only ''adequate'' insurance with no stated amount and only for those in
+    private practice. A Nova Scotia clinician moving between these professions faces materially different
+    obligations. THE CSC EXEMPTION IS NARROW: it evaporates the moment the psychologist practises
+    at all outside CSC, for any length of time. The document is explicit that CSC must collect a
+    signed, witnessed annual declaration to that effect.'
+source_url: https://www.ns-rp.ca/downloads/Insurance.pdf
+observed: '2026-08-17'
+status: in-effect
+kind: record-added

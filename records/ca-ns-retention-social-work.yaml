@@ -1,0 +1,56 @@
+jurisdiction:
+  country: ca
+  state_or_province: Nova Scotia
+  code: ca-ns
+profession_scope:
+- clinical_social_worker
+topic: retention
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: NSCSW Code of Ethics and Standards of Practice
+  bill_number: null
+  code_cite: s. 6.2.15 (record storage and preservation); see also ss. 6.2.11-6.2.14
+  regulation_cite: Social Workers Act, S.N.S. 1993, c. 12
+status: in_force
+enactment_date: null
+effective_date: '2026-02-01'
+enforcement_body: Nova Scotia College of Social Workers
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: 'Ensure each service user record is stored and preserved in a secure
+  location for at least 7 years from the date of the LAST ENTRY. Where the service user was under
+  18 at the date of the last entry, retain for at least 7 years from the day they became or would
+  have become 18. Longer periods may be required by law or by employer or self-employed-member policy,
+  and such policies should be developed with a view to the potential future need for the record.
+  Separately: store records securely and prevent unauthorised access (s. 6.2.11); transfer or dispose
+  of records in a way that protects confidentiality and complies with applicable legislation (s.
+  6.2.12); take reasonable precautions to protect confidential information on termination of practice,
+  incapacity, or death (s. 6.2.13); and comply with retention, storage, preservation and security
+  requirements in applicable privacy and other legislation, including a thorough understanding of
+  an employing organisation''s policies (s. 6.2.14).'
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: true
+source_url: https://nscsw.org/wp-content/uploads/2025/09/NSCSW-Code-of-Ethics-and-Standards-of-Practice-August-2025.pdf
+last_verified: '2026-08-17'
+source_quote: '"6.2.15 ensuring that each service user record is stored and preserved in a secure
+  location for at least seven years from the date of the last entry or, if the service user was less
+  than eighteen years of age at the date of the last entry, at least seven years from the day the
+  service user became or would have become eighteen. Different periods of storage time may be required
+  by law." — NSCSW Code of Ethics and Standards of Practice, s. 6.2.15 (effective 2026-02-01)'
+source_url_secondary:
+- https://nscsw.org/standards/
+confidence: high
+notes: 'CLOCK START: ''last entry'' — the same trigger wording OCSWSSW uses in Ontario, and DIFFERENT
+  from both other Nova Scotia professions (psychology ''last client contact'', counselling therapy
+  ''last date of service''). ''Last entry'' is the most clinician-controllable of the three: a late
+  note written months after the final session moves the destruction date, where ''last contact''
+  and ''last date of service'' do not. PERIOD DIFFERS FROM NS PSYCHOLOGY BY THREE YEARS — 7 here,
+  10 there — in the same province, for clinicians who often work side by side in the same setting.
+  INSTRUMENT TYPE: college Standard of Practice, made under the Social Workers Act, NOT the RHPA
+  (see ca-ns-licensure-social-work — social work''s RHPA migration is not complete). PHIA sets no
+  period of its own; it requires only a written retention schedule (see ca-ns-privacy-phia), so this
+  7-year figure is the operative number for NS social workers. RECENTLY EFFECTIVE — VERIFY BEFORE
+  RELYING: this Code came into effect 2026-02-01, roughly six months before this record was written,
+  replacing the prior version. Anything published about NS social work retention before February
+  2026 may cite superseded numbering or a different period.'

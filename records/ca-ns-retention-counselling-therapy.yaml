@@ -1,0 +1,61 @@
+jurisdiction:
+  country: ca
+  state_or_province: Nova Scotia
+  code: ca-ns
+profession_scope:
+- counselling_therapist
+topic: retention
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: CCPA Standards of Practice (6th ed.), adopted by NSCCT
+  bill_number: null
+  code_cite: Standards of Practice, Records section (record security and preservation)
+  regulation_cite: Counselling Therapists Act, S.N.S. 2008, c. 6; Counselling Therapists Regulations,
+    N.S. Reg. 287/2011
+status: in_force
+enactment_date: null
+effective_date: null
+enforcement_body: Nova Scotia College of Counselling Therapists
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: Ensure the security and preservation of client records for which the
+  counsellor/therapist has maintenance responsibility, and the records of those they supervise, for
+  the period stipulated by law in the jurisdiction and by employer protocol, whichever is LONGEST.
+  CCPA's own standard is 7 years after the last date of service provided, and 7 years after the age
+  of majority for children, where the legal and employment stipulations are shorter. Arrange for
+  secure preservation and disposition of records on retirement, death, or other departure; in private
+  practice records may be transferred to another counsellor/therapist with clients notified, or clients
+  may take possession. Never destroy records or notes after receiving a subpoena or having reason
+  to expect one — this may be treated as obstruction of justice or contempt of court.
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: true
+source_url: https://nscct.ca/wp-content/uploads/2023/08/CCPA-Standards-of-Practice-ENG-Sept-29-Web-file.pdf
+last_verified: '2026-08-17'
+source_quote: '"Counsellors/therapists shall ensure the security and preservation of client records
+  for which they have maintenance responsibility, and the records of those they supervise, for a
+  period stipulated by law in their jurisdiction and by protocol of their employer, whichever is
+  longest. CCPA''s standard of practice is to retain records for a period of seven years after the
+  last date of service provided, and for seven years after the age of majority for children when
+  the stipulation in law and by employment protocol is shorter than this length of time." — CCPA,
+  Standards of Practice (6th ed.)'
+source_url_secondary:
+- https://novascotia.ca/just/regulations/regs/ctcounsther.htm
+confidence: medium
+notes: 'CONFIDENCE IS MEDIUM AND THE REASON IS STRUCTURAL, NOT EVIDENTIARY. The quote is verbatim
+  from a primary document read directly. What is less than certain is its BINDING FORCE in Nova Scotia:
+  NSCCT does not author its own standards of practice or code of ethics — it adopts the CCPA (Canadian
+  Counselling and Psychotherapy Association) documents, a national VOLUNTARY ASSOCIATION''s instruments,
+  and lists them on its Standards Documents page. The Counselling Therapists Regulations do not themselves
+  incorporate them by reference in any provision found in this pass. Before publishing this as a
+  hard Nova Scotia requirement, confirm the adopting instrument — a bylaw, a Board resolution, or
+  a regulation provision naming the CCPA documents. That is a specific, answerable question for the
+  NSCCT practice advisor and is the single thing standing between this record and confidence: high.
+  A REAL TRAP IN THE REGULATION, WORTH STATING SO NOBODY REPEATS IT: N.S. Reg. 287/2011 s. 42 does
+  contain a 5-year preservation rule — but it governs EVIDENCE BEFORE THE PROFESSIONAL CONDUCT COMMITTEE,
+  not client records. It would be an easy and serious misreading to publish ''Nova Scotia counselling
+  therapists must keep records 5 years'' on the strength of it. The client-record period is 7 years,
+  and it comes from the CCPA Standards. CLOCK START: ''last date of service provided'' — a third
+  distinct wording alongside NS psychology''s ''last client contact'' and NS social work''s ''last
+  entry''. THE ''WHICHEVER IS LONGEST'' RULE IS THE OPERATIVE ONE for anyone employed: where PHIA,
+  an employer''s schedule, or another enactment demands longer, that longer period governs.'

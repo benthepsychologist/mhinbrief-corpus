@@ -1,0 +1,72 @@
+record_id: ca-ns-telepractice-social-work
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Nova Scotia
+    code: ca-ns
+  profession_scope:
+  - clinical_social_worker
+  topic: telepractice
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: NSCSW Code of Ethics and Standards of Practice
+    bill_number: null
+    code_cite: Guiding Principle 6.5, ss. 6.5.1-6.5.11 (electronic social work services); see also
+      s. 5.5.5
+    regulation_cite: Social Workers Act, S.N.S. 1993, c. 12
+  status: in_force
+  enactment_date: null
+  effective_date: '2026-02-01'
+  enforcement_body: Nova Scotia College of Social Workers
+  authority_basis: licensure
+  penalties: null
+  clinician_facing_obligations: 'When delivering electronic social work services, social workers
+    must: confirm service users can access and use the technology, understand its purpose and operation,
+    have their needs met and their identity protected (6.5.1); use safeguards such as password protection,
+    encryption and secure firewalls when sharing confidential information digitally or on storage
+    devices (6.5.2); follow applicable legislation in the province where they are regulated, where
+    they practise, AND where the service user resides (6.5.3); be aware of inter-jurisdictional issues
+    and act to preserve privacy and confidentiality (6.5.4); obtain informed consent before using
+    search engines or social media to gather information about service users, except in exceptional
+    circumstances to protect those at risk (6.5.5); make reasonable efforts to verify identity and
+    contact information and represent themselves accurately (6.5.6); and be competent in the technologies
+    used, applying face-to-face supervision standards to supervision delivered by technological means
+    (6.5.7). Service users must be informed: to be alone in a private area and refrain from cellular
+    phone use during the encounter (6.5.8); that telephone, video, text and electronic messaging
+    provide limited security (6.5.9); of the risks of sharing confidential information over the internet,
+    social media, text and videoconferencing (6.5.10); and that they may not disclose or post electronic
+    communications from the encounter (6.5.11).'
+  vendor_facing_obligations: null
+  consent_required: true
+  documentation_required: true
+  source_url: https://nscsw.org/wp-content/uploads/2025/09/NSCSW-Code-of-Ethics-and-Standards-of-Practice-August-2025.pdf
+  last_verified: '2026-08-17'
+  source_quote: '"Guiding Principle 6.5: Social workers preserve privacy and confidentiality in the
+    provision of electronic social work services." ... "6.5.3 following applicable legislation governing
+    the provision of electronic social work services in the province or territory where they are
+    regulated, or practise, and where the service user resides" — NSCSW Code of Ethics and Standards
+    of Practice (effective 2026-02-01)'
+  source_url_secondary:
+  - https://nscsw.org/applicants/telepractice/
+  confidence: high
+  notes: 'THIS IS A BINDING STANDARD, and that distinguishes it sharply from NS psychology, where
+    the equivalent document is an advisory with no force (see ca-ns-telepractice-psychology). Within
+    one province, a social worker delivering virtual care has enumerated enforceable obligations
+    while a psychologist doing the identical work has only advice. THE JURISDICTIONAL TEST HERE CONFLICTS
+    WITH NSCCT''S — worth surfacing on any comparison page. NSCSW s. 6.5.3 requires compliance with
+    the law where the social worker is regulated, where they practise, AND where the service user
+    resides — a cumulative, client-inclusive test. NSCCT''s Interjurisdictional Telecounselling policy
+    takes the opposite position, that practice occurs where the therapist is registered. Two Nova
+    Scotia regulators, two incompatible answers to the same cross-border question. NO DATA-RESIDENCY
+    REQUIREMENT HERE, unlike NSCCT, which mandates PIPEDA compliance and Canadian-hosted servers.
+    NSCSW requires safeguards (encryption, passwords, firewalls) but does not say where data may
+    live. PHIA does not fill that gap either. 6.5.8 IS UNUSUALLY PRESCRIPTIVE about client-side conduct
+    — telling service users to be alone in a private area and not use their phone during a session
+    is a documented informing duty, not merely good practice. RECENTLY EFFECTIVE: 2026-02-01. Verify
+    numbering against the current PDF before citing section numbers on a page.'
+source_url: https://nscsw.org/wp-content/uploads/2025/09/NSCSW-Code-of-Ethics-and-Standards-of-Practice-August-2025.pdf
+observed: '2026-08-17'
+status: in-effect
+kind: record-added
