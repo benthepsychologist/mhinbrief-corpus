@@ -14,7 +14,7 @@ kestrel.yaml's `outputs.adapter: publish/adapter.py` is a path relative to
 THIS instance root (convention set kestrel-side, 2026-07-31: adapters are
 instance code). The engine keeps the guarantees; the instance keeps the
 shape of its own corpus. Concretely, this module imports and uses
-kestrel's tools/publish/core.py for:
+kestrel's kestrel/publish/core.py for:
 
     secret_scan()               every emitted byte passes it
     apply_allowlist()           field gate on records crossing the boundary
@@ -66,9 +66,15 @@ from pathlib import Path
 import yaml
 
 INSTANCE_ROOT = Path(__file__).resolve().parent.parent
-ENGINE_TOOLS = Path("/workspace/kestrel/tools")
-sys.path.insert(0, str(ENGINE_TOOLS))
-from publish import core  # noqa: E402  (path set above, deliberately)
+# The engine's publish core moved from tools/publish/core.py into a proper
+# package (kestrel/publish/) during the 2026-08 restructure; tools/publish.py
+# is now a deprecated shim that re-exports only main(), so the old
+# `from publish import core` resolves to that shim and raises ImportError.
+# Import from the package instead. Found 2026-08-17, the first publish run
+# after the restructure — nothing in this repo changed, the engine moved.
+ENGINE_ROOT = Path("/workspace/kestrel")
+sys.path.insert(0, str(ENGINE_ROOT))
+from kestrel.publish import core  # noqa: E402  (path set above, deliberately)
 
 # Fields allowed to cross into the site. `notes` is EXCLUDED on purpose:
 # it carries internal curation commentary — operator scope calls, "retire
