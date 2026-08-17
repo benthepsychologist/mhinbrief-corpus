@@ -1,0 +1,64 @@
+record_id: ca-qc-insurance-psychology
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Québec
+    code: ca-qc
+  profession_scope:
+  - psychologist
+  topic: insurance
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: Règlement sur l'assurance de la responsabilité professionnelle des membres de l'Ordre
+      des psychologues du Québec
+    bill_number: null
+    code_cite: 'montants: 1 000 000 $ par sinistre / 3 000 000 $ par période de garantie'
+    regulation_cite: made under the Code des professions, RLRQ c. C-26
+  status: in_force
+  enactment_date: null
+  effective_date: null
+  enforcement_body: Ordre des psychologues du Québec
+  authority_basis: licensure
+  penalties: null
+  clinician_facing_obligations: Psychologists, and holders of a psychotherapist permit who are not
+    admissible to another professional order, must adhere to the collective professional liability
+    insurance contract concluded by the Ordre. The minimum guarantee is $1,000,000 per claim (par
+    sinistre) and $3,000,000 per guarantee period (par période de garantie); coverage may be increased
+    optionally to $2,000,000 per claim and $4,000,000 per period. The obligation does NOT apply where
+    the psychologist or psychotherapist-permit holder holds insurance through their employer and
+    furnishes proof of it.
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: true
+  source_url: https://www.ordrepsy.qc.ca/-/assurance-responsabilite-professionnelle-les-obligations-des-professionnels
+  last_verified: '2026-08-17'
+  source_quote: '"1 000 000 $ par sinistre et 3 000 000 $ par période de garantie" ... l''obligation
+    ne s''applique pas "lorsque le psychologue ou le détenteur de permis de psychothérapeute détient
+    une assurance via son employeur et qu''il en fournit la preuve." — Ordre des psychologues du
+    Québec, Assurance responsabilité professionnelle : les obligations des professionnels'
+  source_url_secondary:
+  - https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-26
+  confidence: medium
+  notes: 'CONFIDENCE IS MEDIUM BECAUSE THE REGULATION ITSELF WAS NOT READ DIRECTLY. The amounts and
+    the employer exemption are quoted verbatim from the OPQ''s own explanatory page — the regulator
+    summarising its own regulation, which is primary-adjacent, not primary. The Règlement sur l''assurance
+    de la responsabilité professionnelle des membres de l''Ordre des psychologues du Québec was not
+    located on LégisQuébec in this pass under a confirmed RLRQ number. TO REACH HIGH: find the regulation''s
+    RLRQ citation (it sits in the C-26 series) and quote the minimum-guarantee article directly,
+    as was done for social work at ca-qc-insurance-social-work (RLRQ c. C-26, r. 283, a. 4). THE
+    QUEBEC MODEL IS STRUCTURALLY DIFFERENT AND SHOULD NOT BE DESCRIBED AS ''BUY INSURANCE'': the
+    obligation is to ADHERE TO THE ORDRE''S COLLECTIVE CONTRACT, not to source cover on the open
+    market. The same design appears at OTSTCFQ. Compare Nova Scotia, where each registrant buys their
+    own policy and NSCCT expressly refuses employer-provided cover. THE EMPLOYER EXEMPTION IS THE
+    SHARPEST CONTRAST IN THE CORPUS ON THIS TOPIC. Quebec psychology exempts the employed clinician
+    who proves employer cover. Nova Scotia counselling therapy does the exact opposite — employer
+    policies are declared insufficient, full stop, and even registrants on leave must carry personal
+    cover. Two provinces, opposite answers to the identical question. THE $1M/$3M FLOOR ALSO COVERS
+    PSYCHOTHERAPIST-PERMIT HOLDERS WHO BELONG TO NO OTHER ORDRE — a population created by Loi 21''s
+    transitional provisions; see ca-qc-scope-psychotherapy-permit-loi-21.'
+source_url: https://www.ordrepsy.qc.ca/-/assurance-responsabilite-professionnelle-les-obligations-des-professionnels
+observed: '2026-08-17'
+status: in-effect
+kind: record-added

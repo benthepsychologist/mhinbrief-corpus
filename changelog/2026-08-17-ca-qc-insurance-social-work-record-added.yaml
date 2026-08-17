@@ -1,0 +1,74 @@
+record_id: ca-qc-insurance-social-work
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Québec
+    code: ca-qc
+  profession_scope:
+  - clinical_social_worker
+  topic: insurance
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: Règlement sur l'assurance de la responsabilité professionnelle des membres de l'Ordre
+      professionnel des travailleurs sociaux et des thérapeutes conjugaux et familiaux du Québec
+    bill_number: null
+    code_cite: RLRQ c. C-26, r. 283, a. 1 (adhésion obligatoire); a. 4(1°) (montants minimaux); a.
+      3 (exemptions)
+    regulation_cite: made under the Code des professions, RLRQ c. C-26
+  status: in_force
+  enactment_date: null
+  effective_date: '2000-04-01'
+  enforcement_body: Ordre des travailleurs sociaux et des thérapeutes conjugaux et familiaux du Québec
+  authority_basis: licensure
+  penalties: null
+  clinician_facing_obligations: Every social worker practising full-time, part-time OR OCCASIONALLY
+    must adhere to the collective professional liability insurance contract concluded by the Ordre
+    (a. 1). The collective contract must provide a minimum guarantee of at least $500,000 per claim
+    and $1,000,000 for all claims arising in the guarantee period for which a claim is presented
+    (a. 4(1°)); the contract must also cover claims presented against the insured's heirs after the
+    guarantee period in which they die, pay third-party damages up to the guarantee amount, and take
+    up the insured's defence and pay legal costs and interest in addition to the insured amount (a.
+    4(2°)-(4°)). In practice the Ordre's collective contract provides higher limits than the regulatory
+    floor — currently up to $2,000,000 per claim and $2,000,000 for all claims per insurance period.
+    Exemptions exist for social workers in the exclusive service of certain employers, subject to
+    filing with the Ordre's secretary a certificate by which the employer stands as guarantor and
+    answers financially for the member's faults or negligence, with a guarantee meeting the minimum
+    stipulations of a. 4.
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: true
+  source_url: https://www.legisquebec.gouv.qc.ca/fr/document/rc/C-26,%20r.%20283
+  last_verified: '2026-08-17'
+  source_quote: '"1. Tout travailleur social qui exerce sa profession à temps plein, à temps partiel
+    ou occasionnellement doit adhérer au contrat du régime collectif d''assurance de la responsabilité
+    professionnelle conclu par l''Ordre professionnel des travailleurs sociaux et des thérapeutes
+    conjugaux et familiaux du Québec [...]" ... "4. Le contrat d''assurance établissant un régime
+    collectif d''assurance de la responsabilité professionnelle souscrit par l''Ordre doit prévoir
+    les conditions minimales suivantes: 1° un montant de garantie d''au moins 500 000 $ par sinistre
+    et de 1 000 000 $ pour l''ensemble des sinistres qui surviennent au cours de la période de garantie
+    et pour lesquels une réclamation est présentée" — RLRQ c. C-26, r. 283, aa. 1 et 4 (à jour au
+    1er avril 2026)'
+  source_url_secondary:
+  - https://www.otstcfq.org/membres/pratiques-professionnelles/pratique-autonome/assurance-de-la-responsabilite-professionnelle-obligatoire/
+  confidence: high
+  notes: 'READ THE REGULATORY FLOOR AND THE ACTUAL CONTRACT AS TWO DIFFERENT NUMBERS AND NEVER CONFLATE
+    THEM. a. 4(1°) sets what the Ordre''s collective contract must AT MINIMUM provide — $500,000
+    / $1,000,000. What members actually hold is whatever the current collective contract provides,
+    presently around $2,000,000 / $2,000,000. A page quoting only the regulation understates real
+    coverage; a page quoting only the brochure states a figure with no regulatory anchor that can
+    change at the next renewal. State both, labelled. ''OCCASIONNELLEMENT'' IS LOAD-BEARING: the
+    duty catches occasional practice, so a Quebec social worker doing a handful of private files
+    alongside salaried employment is inside the obligation unless an exemption applies. THE EXEMPTION
+    ROUTE IS THE OPPOSITE SHAPE FROM NOVA SCOTIA''S: Quebec allows an exemption where the employer
+    formally stands as guarantor via a certificate filed with the Ordre — employer cover is recognised,
+    but only through a documented undertaking meeting the a. 4 minimums. NSCCT in Nova Scotia refuses
+    employer cover outright. NSCSW requires only ''adequate'' insurance with no amount at all and
+    only for private practice. Three provinces'' social-work insurance rules that share almost nothing
+    structurally. THE AGGREGATE IS ONLY DOUBLE THE PER-CLAIM FLOOR ($500k/$1M), a thin band by comparison
+    with NSCCT''s $2M/$5M — worth noting for anyone assessing adequacy rather than compliance.'
+source_url: https://www.legisquebec.gouv.qc.ca/fr/document/rc/C-26,%20r.%20283
+observed: '2026-08-17'
+status: in-effect
+kind: record-added

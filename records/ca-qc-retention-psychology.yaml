@@ -1,0 +1,68 @@
+jurisdiction:
+  country: ca
+  state_or_province: Québec
+  code: ca-qc
+profession_scope:
+- psychologist
+topic: retention
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: Règlement sur la tenue des dossiers et des cabinets de consultation des psychologues
+  bill_number: null
+  code_cite: RLRQ c. C-26, r. 221, a. 8 (conservation); a. 9 (destruction); a. 12 (établissements)
+  regulation_cite: made under the Code des professions, RLRQ c. C-26, a. 91
+status: in_force
+enactment_date: null
+effective_date: '2012-09-01'
+enforcement_body: Ordre des psychologues du Québec
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: Keep a file for each client at the place of practice, and keep each
+  file for AT LEAST 5 YEARS from the date of the last professional service provided (a. 8). Files
+  may be kept electronically provided confidentiality is assured (a. 2). Files must be stored in
+  furniture not freely accessible to the public and kept locked (a. 7). After the retention period
+  a file may be destroyed provided confidentiality of its contents is assured (a. 9). Where a client
+  asks that a copy of the file or information in it be sent to a THIRD PARTY, the psychologist may
+  transmit it only 15 DAYS after the client signs the consent, and the client may revoke consent
+  within that window — though in urgent cases the client may waive the 15-day delay (a. 10). A note
+  of any such transmission, signed and dated by the client, goes in the file. A psychologist practising
+  in a public health or social services établissement is treated as holding the institution's user
+  file, and articles 8 to 10 do NOT apply to them (a. 12). The psychologist must display in the waiting
+  room a copy of the Code de déontologie, this regulation, and (where fees are charged to clients)
+  the conciliation and arbitration regulation, each marked with the Ordre's address (a. 18). Where
+  the work environment obstructs compliance, the psychologist must inform the employer in writing
+  and notify the Ordre (a. 21).
+vendor_facing_obligations: null
+consent_required: true
+documentation_required: true
+source_url: https://www.legisquebec.gouv.qc.ca/fr/document/rc/C-26,%20r.%20221
+last_verified: '2026-08-17'
+source_quote: '"8. Le psychologue doit conserver chaque dossier pendant au moins 5 ans à compter
+  de la date du dernier service professionnel dispensé." — Règlement sur la tenue des dossiers et
+  des cabinets de consultation des psychologues, RLRQ c. C-26, r. 221, a. 8 (à jour au 1er avril
+  2026; ce document a valeur officielle)'
+source_url_secondary:
+- https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-26
+confidence: high
+notes: 'FIVE YEARS IS THE SHORTEST RETENTION FLOOR IN THIS CORPUS AND IT IS HALF OF ONTARIO''S AND
+  NOVA SCOTIA''S FOR THE SAME PROFESSION. Ontario (CPBAO) and Nova Scotia (NSRP) both set 10 years
+  for psychologists; Nova Scotia''s other two professions sit at 7. Quebec sets 5. A national page
+  that states a single Canadian retention period would be wrong everywhere, and wrong by a factor
+  of two for a Quebec psychologist. CLOCK START: ''la date du dernier service professionnel dispensé''
+  — the date of the last professional service PROVIDED. This is an act-based trigger like Nova Scotia
+  counselling therapy''s ''last date of service'', and unlike the entry-based trigger OCSWSSW and
+  NSCSW use (''last entry''), which a late-written note can move. NO SPECIAL RULE FOR MINORS — and
+  this is a real divergence worth stating plainly. Ontario and both Nova Scotia professions extend
+  retention for clients who were minors (typically to some years past the 18th birthday). RLRQ c.
+  C-26, r. 221 contains no equivalent: the 5-year clock runs from the last service regardless of
+  the client''s age. Do not import the age-of-majority extension into Quebec by analogy. INSTRUMENT
+  TYPE — THE OPPOSITE SHAPE FROM THE COMMON-LAW PROVINCES: this period is set by a GOVERNMENT REGULATION
+  made under the Code des professions, not by a college-authored standard of practice. That is why
+  Quebec''s psychologists and social workers share the same 5-year rule while Ontario''s and Nova
+  Scotia''s professions diverge from each other. THE INSTITUTIONAL CARVE-OUT AT a. 12 IS LARGE AND
+  EASY TO MISS: a psychologist employed in a public établissement is outside articles 8 to 10 entirely
+  — retention, destruction and the 15-day third-party transmission rule are the institution''s regime,
+  not theirs. The 5-year rule is effectively a PRIVATE-PRACTICE rule. THE 15-DAY COOLING-OFF PERIOD
+  AT a. 10 HAS NO ANALOGUE ELSEWHERE IN THIS CORPUS and is operationally significant: a Quebec psychologist
+  who forwards a file to a lawyer or insurer the day consent is signed has breached the regulation,
+  urgency aside.'

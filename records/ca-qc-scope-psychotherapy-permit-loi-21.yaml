@@ -1,0 +1,100 @@
+jurisdiction:
+  country: ca
+  state_or_province: Québec
+  code: ca-qc
+profession_scope:
+- psychologist
+- clinical_social_worker
+topic: scope
+regulatory_model: prohibition
+statute_citation:
+  short_title: Code des professions — chapitre VI.1, Permis de psychothérapeute (Loi 21)
+  bill_number: Projet de loi 21 (2009, c. 28)
+  code_cite: RLRQ c. C-26, aa. 187.1-187.4.3, 187.5-187.5.2
+  regulation_cite: Règlement sur le permis de psychothérapeute
+status: in_force
+enactment_date: null
+effective_date: '2012-06-21'
+enforcement_body: Ordre des psychologues du Québec
+authority_basis: licensure
+penalties: Penal prosecution for illegal practice of psychotherapy or usurpation of the title of
+  psychothérapeute, instituted by the Ordre des psychologues du Québec on a resolution of its board
+  or executive committee (a. 187.4.3).
+clinician_facing_obligations: 'PSYCHOTHERAPY IN QUEBEC IS A RESERVED ACTIVITY, NOT A PROFESSION.
+  Apart from physicians and psychologists — who hold it by virtue of their own permits — no one may
+  practise psychotherapy, use the title psychothérapeute, or any title or abbreviation suggesting
+  they are one, unless they are a member of one of seven named ordres AND hold the psychotherapist
+  permit: conseillers et conseillères d''orientation, criminologues, ergothérapeutes, infirmières
+  et infirmiers, psychoéducateurs et psychoéducatrices, sexologues, and travailleurs sociaux et thérapeutes
+  conjugaux et familiaux (a. 187.1). Psychotherapy is defined in the statute as a psychological treatment
+  for a mental disorder, behavioural disturbance or other problem causing psychological suffering
+  or distress, aimed at significant change in the client''s cognitive, emotional or behavioural functioning,
+  interpersonal system, personality or health — going beyond help in coping with everyday difficulties
+  or a relationship of advice or support (a. 187.1 al. 2). The Office des professions establishes
+  by regulation a list of interventions that resemble but do not constitute psychotherapy (a. 187.1
+  al. 3). Anyone practising psychotherapy must, beyond the laws and regulations governing them: establish
+  a structured interactional process with the client; conduct a rigorous initial assessment; apply
+  therapeutic modalities based on communication; and rely on scientifically recognised theoretical
+  models and validated intervention methods that respect human dignity (a. 187.2). The permit is
+  applied for from the board of the Ordre des psychologues du Québec, with annual fees set by that
+  board (a. 187.3). The Office des professions determines by regulation the conditions for using
+  the title, the standards for issuing the permit, and the continuing-education framework (a. 187.3.1).
+  A permit may be suspended or revoked by the OPQ board if the holder ceases to be a member of a
+  professional order, fails to pay the annual fees, or fails to respect the title conditions or issuing
+  standards (a. 187.4.1), and must be suspended or revoked where the holder''s own order or the Tribunal
+  des professions has suspended or completely limited their right to practise psychotherapy (a. 187.4.2).
+  Professional inspection or investigation of a permit holder by their own order must include an
+  expert who is a member of the OPQ (a. 187.4).'
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: false
+source_url: https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-26
+last_verified: '2026-08-17'
+source_quote: '"187.1. À l''exception du médecin et du psychologue, nul ne peut exercer la psychothérapie,
+  ni utiliser le titre de psychothérapeute ni un titre ou une abréviation pouvant laisser croire
+  qu''il l''est, s''il n''est membre de l''Ordre professionnel des conseillers et conseillères d''orientation
+  du Québec, de l''Ordre professionnel des criminologues du Québec, de l''Ordre professionnel des
+  ergothérapeutes du Québec, de l''Ordre professionnel des infirmières et infirmiers du Québec, de
+  l''Ordre professionnel des psychoéducateurs et psychoéducatrices du Québec, de l''Ordre professionnel
+  des sexologues du Québec ou de l''Ordre professionnel des travailleurs sociaux et des thérapeutes
+  conjugaux et familiaux du Québec et s''il n''est titulaire du permis de psychothérapeute. La psychothérapie
+  est un traitement psychologique pour un trouble mental, pour des perturbations comportementales
+  ou pour tout autre problème entraînant une souffrance ou une détresse psychologique qui a pour
+  but de favoriser chez le client des changements significatifs dans son fonctionnement cognitif,
+  émotionnel ou comportemental, dans son système interpersonnel, dans sa personnalité ou dans son
+  état de santé. Ce traitement va au-delà d''une aide visant à faire face aux difficultés courantes
+  ou d''un rapport de conseils ou de soutien." — Code des professions, RLRQ c. C-26, a. 187.1 (à
+  jour au 1er avril 2026)'
+source_url_secondary:
+- https://www.publicationsduquebec.gouv.qc.ca/fileadmin/Fichiers_client/lois_et_reglements/LoisAnnuelles/fr/2009/2009C28F.PDF
+- https://www.otstcfq.org/public/nos-professions/le-projet-de-loi-21/
+confidence: high
+notes: 'THIS CELL EXISTS BECAUSE QUEBEC DOES NOT FIT THE PROFESSION-BY-TOPIC GRID, AND FORCING IT
+  IN WOULD MISREPRESENT THE LAW. Everywhere else in this corpus, ''who may do therapy'' is answered
+  by naming a profession and its college. In Quebec the answer is an ACT reserved across professions:
+  two professions hold it automatically, members of seven others may be authorised individually by
+  permit, and the permit is issued and policed by an ordre (the OPQ) that is not their own. coverage/rubric.md
+  anticipated this and gave it a sui-generis row rather than a profession cell. THE SEVEN-ORDRE LIST
+  INCLUDES CRIMINOLOGUES AND SEXOLOGUES, which earlier project notes did not record — those notes
+  named OTSTCFQ, OPPQ, OCCOQ, occupational therapists and nurses. The statutory list read directly
+  is: conseillers d''orientation, criminologues, ergothérapeutes, infirmières et infirmiers, psychoéducateurs,
+  sexologues, travailleurs sociaux et thérapeutes conjugaux et familiaux. Use the statute, not the
+  summaries. PROFESSION_SCOPE IS A KNOWN COMPROMISE ON THIS RECORD. It is set to the two professions
+  this corpus tracks in Quebec, but the reserved act reaches five further ordres whose titles have
+  no value in the schema''s enum (criminologue, sexologue, ergothérapeute, infirmière, psychoéducateur).
+  Per schema/record.yaml''s own instruction, the distinction is stated here rather than resolved
+  by picking a wrong title. The related enum question for OCCOQ and OPPQ flagged in coverage/rubric.md
+  remains open and is not closed by this record. THE DEFINITION IS THE OPERATIVE TEST AND IT IS NARROWER
+  THAN ''TALK THERAPY''. Treatment must target a mental disorder, behavioural disturbance or problem
+  causing psychological suffering, and aim at SIGNIFICANT CHANGE — the statute expressly excludes
+  help with everyday difficulties and relationships of advice or support. The Office des professions
+  maintains a regulated list of near-neighbour interventions that are NOT psychotherapy. Anyone reasoning
+  about whether a given Quebec service needs the permit should be pointed at that list, not at the
+  bare word ''therapy''. a. 187.2 IS A RARE THING: STATUTORY PRACTICE STANDARDS. Four requirements
+  — structured interactional process, rigorous initial assessment, communication-based modalities,
+  scientifically recognised models and validated methods — sit in the Code des professions itself
+  and bind physicians and psychologists too, not only permit holders. No other jurisdiction in this
+  corpus legislates method at this level. ENFORCEMENT IS CROSS-ORDRE AND UNUSUAL: a permit holder''s
+  own order must add an OPQ member as expert to any inspection or investigation (a. 187.4), the OPQ
+  must mirror suspensions imposed by the holder''s own order or the Tribunal des professions (a.
+  187.4.2), and the OPQ alone prosecutes illegal practice (a. 187.4.3).'

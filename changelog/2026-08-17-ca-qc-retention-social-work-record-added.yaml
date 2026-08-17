@@ -1,0 +1,61 @@
+record_id: ca-qc-retention-social-work
+field: null
+old: null
+new:
+  jurisdiction:
+    country: ca
+    state_or_province: Québec
+    code: ca-qc
+  profession_scope:
+  - clinical_social_worker
+  topic: retention
+  regulatory_model: clinician_restriction
+  statute_citation:
+    short_title: Règlement sur la tenue des dossiers et des cabinets de consultation des membres
+      de l'Ordre professionnel des travailleurs sociaux et des thérapeutes conjugaux et familiaux
+      du Québec
+    bill_number: null
+    code_cite: RLRQ c. C-26, r. 297, a. 6
+    regulation_cite: made under the Code des professions, RLRQ c. C-26, a. 91
+  status: in_force
+  enactment_date: null
+  effective_date: null
+  enforcement_body: Ordre des travailleurs sociaux et des thérapeutes conjugaux et familiaux du Québec
+  authority_basis: licensure
+  penalties: null
+  clinician_facing_obligations: Keep a file for each client and keep each file for AT LEAST 5 YEARS
+    from the date of the last professional service rendered. On expiry of that period the file may
+    be eliminated, provided the confidentiality of the information it contains is assured.
+  vendor_facing_obligations: null
+  consent_required: false
+  documentation_required: true
+  source_url: https://www.legisquebec.gouv.qc.ca/fr/document/rc/C-26,%20r.%20297
+  last_verified: '2026-08-17'
+  source_quote: '"6. Le travailleur social doit conserver chaque dossier au moins 5 ans à compter
+    de la date du dernier service professionnel rendu. À l''expiration de ce délai, il peut procéder
+    à l''élimination d''un dossier en s''assurant de la confidentialité des renseignements qui y
+    sont contenus." — Règlement sur la tenue des dossiers et des cabinets de consultation des membres
+    de l''Ordre professionnel des travailleurs sociaux et des thérapeutes conjugaux et familiaux
+    du Québec, RLRQ c. C-26, r. 297, a. 6 (à jour au 1er avril 2026)'
+  source_url_secondary:
+  - https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-26
+  confidence: high
+  notes: 'QUEBEC IS UNIFORM WHERE ONTARIO AND NOVA SCOTIA ARE NOT, AND THAT UNIFORMITY IS THE FINDING.
+    Quebec psychologists (RLRQ c. C-26, r. 221, a. 8) and Quebec social workers (here) are both at
+    5 years from the last professional service. In Ontario the three colleges diverge on both period
+    and trigger wording; in Nova Scotia the three professions sit at 10, 7 and 7 years with three
+    different triggers. The reason is structural: Quebec''s retention rules are GOVERNMENT REGULATIONS
+    made under one framework statute, drafted to a common template, whereas Ontario''s and Nova Scotia''s
+    are authored separately by each college. A page can safely say ''Quebec: 5 years'' without naming
+    the profession — and cannot safely say that about any other jurisdiction covered so far. CLOCK
+    START: ''la date du dernier service professionnel rendu'' — last professional service RENDERED,
+    against the psychologists'' regulation''s ''dispensé'' (provided). The difference is stylistic
+    rather than substantive, but quote each regulation''s own word rather than harmonising them.
+    NO MINORS EXTENSION, same as Quebec psychology and unlike Ontario and Nova Scotia. SHORTER AND
+    SIMPLER THAN THE PSYCHOLOGISTS'' REGULATION: r. 297 a. 6 carries no equivalent of r. 221''s 15-day
+    third-party transmission delay or its établissement carve-out. Do not assume the psychology wrinkles
+    apply to social work.'
+source_url: https://www.legisquebec.gouv.qc.ca/fr/document/rc/C-26,%20r.%20297
+observed: '2026-08-17'
+status: in-effect
+kind: record-added

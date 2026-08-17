@@ -1,0 +1,74 @@
+jurisdiction:
+  country: ca
+  state_or_province: Québec
+  code: ca-qc
+profession_scope:
+- clinical_social_worker
+topic: telepractice
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: OTSTCFQ — Normes de télépratique pour les travailleurs sociaux et les thérapeutes
+    conjugaux et familiaux
+  bill_number: null
+  code_cite: Normes, section 3 (protection de la vie privée et confidentialité), aa. 3.01-3.10
+  regulation_cite: Code de déontologie, RLRQ c. C-26, r. 286.1 (applies regardless of medium)
+status: in_force
+enactment_date: null
+effective_date: null
+enforcement_body: Ordre des travailleurs sociaux et des thérapeutes conjugaux et familiaux du Québec
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: 'Members providing electronic services must: inform clients of the
+  risks of disclosing confidential information over the internet, social media, texting and videoconferencing
+  sites, and of the possible consequences (3.01); use adequate protective measures INCLUDING ENCRYPTION
+  when communicating confidential information by digital or electronic technology, and protect archived
+  client information with adequate measures including secure firewalls, encryption software and passwords
+  (3.02); comply with the laws and regulations on secure use of digital and electronic technologies
+  BOTH in their own administrative jurisdiction AND in the one where the client is located (3.03);
+  obtain client consent before using electronic search engines to gather information about them,
+  except in emergencies to protect the client or third parties (3.04); prepare a confidentiality
+  agreement summarising the exceptions to confidentiality and note the client''s consent and acknowledgement
+  in the file (3.05); inform clients they may not disclose or publish the professional''s electronic
+  communications without proper consent (3.06), and that the professional cannot guarantee all participants
+  in a family, couple or group will respect those agreements (3.07); protect the confidentiality
+  of all information obtained or archived electronically except where disclosure is necessary to
+  protect against serious, foreseeable and imminent danger or to comply with law or court order (3.08);
+  warn clients that third-party texting or messaging services may offer only limited security, and
+  promptly indicate secure ways to make contact (3.09); and take measures including encryption to
+  protect confidential digital communications, and develop and publish policies and procedures for
+  promptly notifying a client of any breach of confidentiality (3.10).'
+vendor_facing_obligations: null
+consent_required: true
+documentation_required: true
+source_url: https://www.otstcfq.org/wp-content/uploads/2017/06/normes_de_telepratique_pour_les_travailleurs_sociaux_et_les_therapeutes_conjugaux_et_familiaux.pdf
+last_verified: '2026-08-17'
+source_quote: '"Ces normes décrivent les obligations auxquelles sont tenus de se conformer les membres
+  de l''Ordre [...] Ces normes ne sont pas des dispositions légales en tant que telles, mais elles
+  ont néanmoins un caractère exécutoire, car elles définissent les responsabilités professionnelles
+  et servent de cadre de référence à la formation continue, à l''inspection professionnelle et aux
+  fins disciplinaires" ... "3.02. Avoir recours à des mesures de protection adéquates, dont le cryptage,
+  lors de la communication de renseignements confidentiels au moyen des technologies numériques et
+  électroniques." — OTSTCFQ, Normes de télépratique pour les travailleurs sociaux et les thérapeutes
+  conjugaux et familiaux'
+source_url_secondary:
+- https://www.otstcfq.org/documentation/enonce-de-position-sur-la-telepratique-transfrontaliere/
+confidence: high
+notes: 'A THIRD INSTRUMENT CATEGORY, AND THE DOCUMENT NAMES IT ITSELF: ''ces normes ne sont pas des
+  dispositions légales en tant que telles, mais elles ont néanmoins un caractère exécutoire''. Not
+  law, but disciplinarily enforceable — they feed professional inspection and discipline. This sits
+  between Quebec psychology''s non-binding lignes directrices and a true regulation, and a page must
+  not collapse the three. The corpus now holds four distinct telepractice instrument types across
+  two provinces: a pure advisory with no force (NS psychology), web guidance (QC psychology), disciplinarily-enforceable
+  norms (QC social work), and binding college standards or policy (NS social work, NS counselling
+  therapy). ENCRYPTION IS AN EXPRESS, NAMED REQUIREMENT HERE (3.02, 3.10) — the only jurisdiction
+  in the corpus so far to name it in terms rather than requiring generic ''reasonable safeguards''.
+  NSCSW''s Nova Scotia equivalent lists encryption among examples; Quebec makes it the stated measure.
+  3.03 IS A CLIENT-LOCATION TEST and lands OTSTCFQ alongside NSCSW and against the OPQ and NSCCT:
+  comply with the rules where the client is, not only where you are. Note that this puts Quebec''s
+  two ordres on opposite sides of the cross-border question from each other — the OPQ hinges on the
+  professional''s physical location. Within one province. 3.10''s BREACH-NOTIFICATION DUTY IS PROFESSIONAL
+  AND SEPARATE FROM LAW 25''s STATUTORY ONE. A Quebec social worker in private practice faces both:
+  the Ordre''s requirement to have published procedures for promptly notifying the client, and Law
+  25''s obligation to notify the Commission d''accès à l''information and affected persons where
+  there is a risk of serious injury (see ca-qc-privacy-law25). They are not the same trigger and
+  satisfying one does not satisfy the other.'

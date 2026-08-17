@@ -1,0 +1,57 @@
+jurisdiction:
+  country: ca
+  state_or_province: Québec
+  code: ca-qc
+profession_scope:
+- psychologist
+topic: licensure
+regulatory_model: clinician_restriction
+statute_citation:
+  short_title: Code des professions / Règlement sur les diplômes délivrés par les établissements
+    d'enseignement désignés
+  bill_number: null
+  code_cite: RLRQ c. C-26 (Code des professions)
+  regulation_cite: RLRQ c. C-26, r. 2, a. 1.24
+status: in_force
+enactment_date: null
+effective_date: null
+enforcement_body: Ordre des psychologues du Québec
+authority_basis: licensure
+penalties: null
+clinician_facing_obligations: Hold a permit from the Ordre des psychologues du Québec (OPQ) and be
+  entered on its roll (tableau) to use the reserved title of psychologist. The permit opens on a
+  DOCTORATE in psychology — Ph.D. (recherche et intervention) or D.Psy. — from a designated Quebec
+  university, listed exhaustively at s. 1.24 of the diploma regulation. Quebec has required a doctorate
+  for the psychologist permit since 2006; a master's degree no longer opens the permit. Candidates
+  holding a diploma from outside Quebec proceed by equivalence through the OPQ's admissions process.
+  Practice is also subject to the Code des professions, the Code de déontologie des psychologues
+  (RLRQ c. C-26, r. 212), and the record-keeping regulation (RLRQ c. C-26, r. 221).
+vendor_facing_obligations: null
+consent_required: false
+documentation_required: true
+source_url: https://www.legisquebec.gouv.qc.ca/fr/document/rc/C-26,%20r.%202
+last_verified: '2026-08-17'
+source_quote: '"1.24. Donnent ouverture au permis délivré par l''Ordre des psychologues du Québec,
+  les diplômes suivants décernés par les établissements d''enseignement suivants: 1° Doctorat en
+  psychologie, recherche et intervention (Ph.D.) ou Doctorat en psychologie (D.Psy.) de l''Université
+  de Montréal; [...]" — Règlement sur les diplômes délivrés par les établissements d''enseignement
+  désignés qui donnent droit aux permis et aux certificats de spécialistes des ordres professionnels,
+  RLRQ c. C-26, r. 2, a. 1.24 (à jour au 1er avril 2026)'
+source_url_secondary:
+- https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-26
+- https://www.ordrepsy.qc.ca/obtenir-permis
+confidence: high
+notes: 'QUEBEC IS THE ONLY JURISDICTION IN THIS CORPUS WHERE THE PSYCHOLOGIST PERMIT REQUIRES A DOCTORATE
+  OUTRIGHT. Ontario (CPBAO) and Nova Scotia (NSRP) both admit master''s-level routes — NSRP''s own
+  baseline is a master''s degree with four years of supervised experience. A master''s-prepared psychologist
+  registered in ON or NS does not meet Quebec''s entry standard, which matters for anyone reasoning
+  about labour mobility or cross-border telepractice into Quebec. THE STRUCTURE IS DIFFERENT FROM
+  THE COMMON-LAW PROVINCES AND SHOULD NOT BE DESCRIBED IN THEIR VOCABULARY: Quebec regulates through
+  the Code des professions, a single framework statute governing all 46 ordres, with the operative
+  rules in GOVERNMENT REGULATIONS made under it rather than in college-authored standards. There
+  is no ''college standard of practice'' layer of the kind that carries the retention and insurance
+  numbers in Ontario and Nova Scotia. That is why Quebec''s rules are uniform across professions
+  where the other provinces'' diverge — see ca-qc-retention-psychology. THE DIPLOMA LIST IS EXHAUSTIVE
+  AND NAMED university by university; it is amended by regulation when a programme is added, so a
+  new Quebec doctorate does not automatically open the permit. Re-verify the list before asserting
+  any specific programme qualifies.'

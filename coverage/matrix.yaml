@@ -12,17 +12,15 @@
 
 generated: 2026-08-12
 scope_note: >
-  45 cells tracked, 31 covered. Nova Scotia completed 2026-08-17: all 13 of its
-  cells researched against primary sources, and its single privacy cell split
-  into three subtopic cells (breach-notification, custodian-status,
-  data-residency) matching Ontario's shape — so NS now holds 15 cells and the
-  total moved from 43 to 45. Ontario 12/15, federal 4/5, Nova Scotia 15/15,
-  Quebec 0/10. Every covered cell has a record_id and every record has a cell.
-  14 not_started, all Quebec plus federal privacy and Ontario licensure. 0
-  marked not_applicable — that determination itself requires research, so
-  not_started stays the honest default until someone has actually checked.
-  Three NS cells carry confidence: medium with the specific open question named
-  on each; they are covered, not finished.
+  45 cells tracked, 41 covered as of 2026-08-17. Nova Scotia (15/15) and Quebec
+  (10/10) were both completed that day against primary sources; NS's privacy cell
+  was split into three subtopics matching Ontario's shape, moving the total from
+  43 to 45. Ontario 12/15, federal 4/5. The 4 remaining not_started are Ontario
+  licensure (3 professions) and federal privacy. Every covered cell has a
+  record_id and every record has a cell. 0 marked not_applicable — that
+  determination itself requires research, so not_started stays the honest default
+  until someone has actually checked. Five covered cells carry confidence: medium
+  with the specific open question named on each; they are covered, not finished.
 
 cells:
 
@@ -245,109 +243,160 @@ cells:
     profession: psychologist
     topic: licensure
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-qc-licensure-psychology
+    confidence: high
     authoritative_sources: [qc-ordre-psychologues, qc-office-professions]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      RLRQ c. C-26, r. 2, a. 1.24 — DOCTORATE required (Ph.D. or D.Psy.),
+      since 2006. The only jurisdiction in the corpus where the psychologist
+      permit requires a doctorate outright; ON and NS both admit master's
+      routes.
   - jurisdiction: ca-qc
     profession: psychologist
     topic: telepractice
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-qc-telepractice-psychology
+    confidence: medium
     authoritative_sources: [qc-ordre-psychologues]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      OPQ guidance, NOT a binding norm — second jurisdiction after NS where
+      psychology telepractice is left to guidance. MEDIUM: the negative rests
+      on not having found a regulation in the C-26 series rather than on a
+      provision saying so, and the OPQ pages carry no version dates.
+      Jurisdictional test is location-of-the-professional — a third
+      incompatible Canadian answer.
   - jurisdiction: ca-qc
     profession: psychologist
     topic: retention
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-qc-retention-psychology
+    confidence: high
     authoritative_sources: [qc-ordre-psychologues]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      RLRQ c. C-26, r. 221, a. 8 — 5 years from last professional service.
+      SHORTEST in the corpus, half of ON/NS psychology. No minors extension,
+      unlike ON and NS. a. 12 exempts établissement practice entirely, so this
+      is effectively a private-practice rule.
   - jurisdiction: ca-qc
     profession: psychologist
     topic: insurance
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-qc-insurance-psychology
+    confidence: medium
     authoritative_sources: [qc-ordre-psychologues]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      $1M per sinistre / $3M per période, via mandatory adherence to the
+      Ordre's COLLECTIVE contract. Employer insurance exempts, on proof — the
+      exact opposite of NSCCT. MEDIUM: quoted from OPQ's explanatory page; the
+      regulation itself was not located on LégisQuébec under a confirmed RLRQ
+      number. Closing that is the one task.
   - jurisdiction: ca-qc
     profession: clinical_social_worker
     topic: licensure
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-qc-licensure-social-work
+    confidence: high
     authoritative_sources: [qc-otstcfq, qc-office-professions]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      RLRQ c. C-26, r. 2, a. 1.15 — baccalauréat en travail social/service
+      social (or maîtrise). No separate clinical registration tier, unlike
+      NSCSW's Clinical Specialist; Quebec's extra gate is the Loi 21
+      psychotherapist permit, which is a different instrument from a different
+      ordre.
   - jurisdiction: ca-qc
     profession: clinical_social_worker
     topic: telepractice
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-qc-telepractice-social-work
+    confidence: high
     authoritative_sources: [qc-otstcfq]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      OTSTCFQ Normes de télépratique, aa. 3.01-3.10. A THIRD instrument
+      category, self-described: 'ne sont pas des dispositions légales [...]
+      mais elles ont néanmoins un caractère exécutoire'. Names ENCRYPTION
+      expressly. a. 3.03 is a client-location test — putting Quebec's two
+      ordres on opposite sides of the cross-border question from each other.
   - jurisdiction: ca-qc
     profession: clinical_social_worker
     topic: retention
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-qc-retention-social-work
+    confidence: high
     authoritative_sources: [qc-otstcfq]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      RLRQ c. C-26, r. 297, a. 6 — 5 years from last professional service
+      rendered. Same as Quebec psychology: Quebec is UNIFORM across
+      professions where ON and NS diverge, because the rules are government
+      regulations under one framework statute rather than college-authored
+      standards.
   - jurisdiction: ca-qc
     profession: clinical_social_worker
     topic: insurance
     granularity: profession
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-qc-insurance-social-work
+    confidence: high
     authoritative_sources: [qc-otstcfq]
-    last_reviewed: null
-    notes: ""
+    last_reviewed: 2026-08-17
+    notes: >
+      RLRQ c. C-26, r. 283 — mandatory adherence to the Ordre's collective
+      contract, catching even OCCASIONAL practice. Regulatory floor a. 4(1°)
+      is $500k/$1M; the actual contract currently provides ~$2M/$2M. Keep
+      floor and contract as two labelled numbers. Employer exemption runs
+      through a filed guarantor certificate.
   - jurisdiction: ca-qc
     profession: null
     topic: privacy
     granularity: jurisdiction-wide
-    status: not_started
-    record_id: null
-    confidence: null
+    status: covered
+    record_id: ca-qc-privacy-law25
+    confidence: high
     authoritative_sources: [qc-cai]
-    last_reviewed: null
-    notes: "Quebec's Law 25 (formerly Bill 64) — distinct regime from PHIPA/PHIA, don't assume the ON/NS shape carries over."
+    last_reviewed: 2026-08-17
+    notes: >
+      P-39.1 as amended by Loi 25. a. 17 is the closest thing to a
+      data-residency rule in the corpus — an ASSESSMENT duty before sending or
+      entrusting data outside Québec, not a ban, and it expressly covers
+      merely KEEPING data outside. Sharp contrast with NS, which has nothing.
+      Breach trigger is 'préjudice sérieux' + incident register (a. 3.8); no
+      NS-style duty to report a decision not to notify. Penalties an order of
+      magnitude above anything else here, and they reach natural persons.
+      Applies to PRIVATE PRACTICE only — public-network employment falls under
+      the public-sector regime, which this record does not cover.
   - jurisdiction: ca-qc
     profession: null
     topic: scope
     subtopic: psychotherapy-permit-loi-21
-    granularity: sui-generis
-    status: not_started
-    record_id: null
-    confidence: null
+    granularity: jurisdiction-wide
+    status: covered
+    record_id: ca-qc-scope-psychotherapy-permit-loi-21
+    confidence: high
     authoritative_sources: [qc-office-professions, qc-gazette-officielle]
-    last_reviewed: null
+    last_reviewed: 2026-08-17
     notes: >
-      Psychotherapy is a RESERVED ACT under Loi 21, not a profession —
-      psychologists hold it automatically; members of OTSTCFQ, OPPQ,
-      OCCOQ, some OTs and nurses may be authorized by permit. Do not
-      fold this into either profession's own "scope" cell; it's
-      cross-cutting by design. See rubric.md for why this doesn't fit
-      the standard grid.
+      Code des professions aa. 187.1-187.4.3. Psychotherapy is a RESERVED ACT,
+      not a profession: physicians and psychologists hold it automatically,
+      members of SEVEN other ordres may be permitted individually, and the
+      permit is issued and policed by the OPQ rather than their own ordre. The
+      statutory list read directly includes CRIMINOLOGUES and SEXOLOGUES,
+      which earlier project notes omitted. a. 187.2 legislates practice method
+      itself — rare. profession_scope is a known compromise: five of the seven
+      ordres have no value in the schema enum, stated in the record rather
+      than resolved. The OCCOQ/OPPQ enum question in rubric.md stays OPEN.
 
   # ---- Nova Scotia — psychologist (NSRP), counselling_therapist
   #      (NSCCT), clinical_social_worker (NSCSW). ----
