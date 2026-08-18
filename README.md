@@ -27,8 +27,26 @@ It is tended by the kestrel engine via the manifest in `kestrel.yaml`,
 which declares the record schema location, the sweep/verify cadence, and
 the sources this instance watches. Runner invocation:
 
+    kestrel tend --instance /workspace/mhinbrief-corpus
+
+The engine restructured its tooling into a package in August 2026. The older
+form still works —
+
     KESTREL_INSTANCE=/workspace/mhinbrief-corpus \
       python3 /workspace/kestrel/tools/tend.py /workspace/mhinbrief-corpus
+
+— but `tools/tend.py` is now a **deprecated shim** kept alive only through the
+engine's transition window, and it will be removed. The same restructure broke
+this repo's `publish/adapter.py`, which imported the engine's publish core from
+its old path; fixed 2026-08-17 (the core's API was unchanged — only its location
+moved). If an engine import suddenly fails, check whether the module moved
+before assuming anything here is at fault.
+
+**The sweep also runs unattended.** `kestrel.yaml` declares a machine schedule
+(`cadence.runs`) and a cron line calls `.agents/run.sh tend` daily at 09:00
+America/Toronto. Run logs and receipts land in `.agents/runs/` (gitignored,
+pruned to the last 60). Note the declared *product* cadence is weekly while the
+machine schedule fires daily — that is deliberate, not drift.
 
 `schema/record.yaml` was **finalized v1 on 2026-07-31**. It had been marked
 DRAFT on the stated grounds that the worked schema was chat-history-only,
@@ -42,29 +60,43 @@ contain schemas we care about — so nothing schema-shaped is outstanding and
 this hunt should not be re-run. See the schema file's own header for the
 full trace.
 
-The corpus is live: **16 records** and 16 changelog entries, all rendering on
+The corpus is live: **45 records** and 47 changelog entries, all rendering on
 mhinbrief.com.
 
-- **Federal (4)** — the GST/HST exemption routes, which are four separate
+- **Federal (5)** — the four GST/HST exemption routes, which are separate
   provisions with different tests, not one rule: s. 7(j) psychology,
   s. 7(j.1)/(j.2) psychotherapy and counselling therapy, s. 7.2 social work
   (narrower — also requires a professional-client relationship and a clinical
-  purpose), s. 6 nursing.
-- **Ontario (12)** — records retention, privacy/PHIPA, telepractice, and
-  liability insurance, three each: one per college (CPBAO, CRPO, OCSWSSW),
-  because the colleges genuinely differ and the differences are the product.
+  purpose), s. 6 nursing. Plus **PIPEDA**: a "substantially similar" provincial
+  law exempts a clinician only for what occurs *within* the province, so
+  cross-border work sits under both regimes.
+- **Ontario (15)** — retention, privacy/PHIPA, telepractice, insurance and
+  licensure, three each: one per college (CPBAO, CRPO, OCSWSSW), because the
+  colleges genuinely differ and the differences are the product. Privacy splits
+  by sub-question (breach / custodian status / data residency) rather than by
+  profession, since one statute covers them all.
+- **Nova Scotia (15)** — same five topics, one each for NSRP (psychology),
+  NSCCT (counselling therapy) and NSCSW (social work). The three professions
+  sit under three different statutes and disagree with each other on retention
+  (10/7/7 years, three differently-worded triggers) and on insurance.
+- **Quebec (10)** — psychology and social work across four topics, plus Law 25
+  privacy and a sui-generis record for the **Loi 21 psychotherapy permit**:
+  psychotherapy in Quebec is a reserved *act*, not a profession, so it does not
+  fit the profession-by-topic grid and is not forced into it.
 
 **What "done" means is tracked, not vague.** `coverage/matrix.yaml` is
-the actual scoreboard — 43 cells across ON/QC/NS/federal (jurisdiction ×
+the actual scoreboard — 45 cells across ON/QC/NS/federal (jurisdiction ×
 profession × topic, with the granularity rules and per-cell criteria
-defined in `coverage/rubric.md`), 16 covered today, 27 `not_started`.
+defined in `coverage/rubric.md`), **all 45 covered as of 2026-08-18**.
+Coverage is a floor, not an end state: five cells are `covered` at
+`confidence: medium`, each naming its own open question in the record's
+notes, and `/verify` re-checks what is already there.
 `/tend`'s weekly sweep is a maintenance signal for cells already
 `covered` — it cannot discover a `not_started` cell; closing one is a
 deliberate research pass against the rubric, not something to wait for a
-feed to surface. Build order for jurisdiction work, set 2026-07-31:
-**Ontario → Quebec → Nova Scotia** — Ontario's the only one with real
-coverage so far (12/15 cells; `licensure` is the gap even there). As of
-2026-08-12, curation isn't limited to those three —
+feed to surface. The build order set 2026-07-31 (**Ontario → Quebec →
+Nova Scotia**) is **complete** — all four in-play lanes were closed
+2026-08-17/18. Curation isn't limited to those lanes —
 every wired jurisdiction can be curated into `records/` — but
 `publish/adapter.py`'s `RENDER_JURISDICTIONS` guardrail means only
 ON/QC/NS + federal records actually reach the site; see STATUS.md for
@@ -118,6 +150,13 @@ returns readable page text:
     tools/fetch-blocked.sh <url>              # readable text
     tools/fetch-blocked.sh <url> --dom        # raw DOM
     tools/fetch-blocked.sh <url> -o out.txt   # to a file
+
+**Use it rather than re-deriving a headless-browser invocation.** Confirmed
+2026-08-18 against Ontario e-Laws regulation pages, which return an identical
+~54KB JavaScript shell to any plain fetch (and whose own `/laws/docs/` path
+returns S3 `AccessDenied`, while CanLII 403s). A session re-solved that from
+scratch with raw `chromium --dump-dom` before noticing this script already
+existed and worked.
 
 It is **not** an evasion tool and has a documented, tested limit: a full
 Cloudflare "Just a moment..." interstitial defeats it (verified against

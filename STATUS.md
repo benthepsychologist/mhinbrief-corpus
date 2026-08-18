@@ -1,26 +1,79 @@
 # STATUS — mhinbrief-corpus (registry instance)
 
-*Hand-maintained. **As of 2026-08-12** (newest note first.)*
+*Hand-maintained. **As of 2026-08-18** (newest note first.)*
 
 **Where things actually stand right now:**
 
 | | |
 | --- | --- |
 | **Sources** | 50, all `wired`, across all 13 provinces/territories + federal. 3 carry `verified: false` (see below). |
-| **Records** | **16 committed** — 4 federal (GST/HST exemption routes) + 12 Ontario (retention, privacy, telepractice, insurance; three each, one per college). Unchanged since 2026-08-01 — QC/NS build-out hasn't started curating yet. |
-| **Changelog** | 16 entries, all `record-added`. |
-| **Candidates** | **72 staged, 0 curated** — the 2026-08-12 `/tend` sweep. A shortlist of ~10 was triaged and a 5-draft/1-defer/4-reject split was agreed with Ben, but none of those record changes have actually been written yet — this is the oldest open task, not finished work. |
-| **Coverage** | `coverage/matrix.yaml` + `coverage/rubric.md` (new, 2026-08-12) — the real definition of "done." **43 cells tracked (ON/QC/NS/federal only), 16 covered, 27 `not_started`, 0 `not_applicable`.** Ontario is the only jurisdiction with real coverage (12/15 — `licensure` is its own gap); QC and NS are 0/10 and 0/13. `/tend` cannot close a `not_started` cell — see the rubric for why and what closing one actually requires. |
+| **Records** | **45 committed** — 15 Ontario, 15 Nova Scotia, 10 Quebec, 5 federal. NS and QC were built 2026-08-17, Ontario licensure and federal privacy (PIPEDA) closed immediately after. Every in-play cell now has a record. |
+| **Changelog** | 47 entries — 45 `record-added` plus 2 `record-corrected` (the 2026-08-17 Quebec telepractice correction, rendered as an old→new delta rather than absorbed silently). |
+| **Candidates** | **86 staged, 0 curated** — still the oldest open item, and note that none of the 45 records came from this queue: coverage was built by directed research against the rubric, which is the point the rubric exists to make. ⚠️ Two sources (`mb-mcsw`, `ns-oipc-phia`) stage a candidate on **every** daily sweep with a 1–2 line diff, so the queue grows ~2/day from what looks like page churn rather than news. Worth triaging or demoting before the count stops meaning anything. |
+| **Coverage** | `coverage/matrix.yaml` + `coverage/rubric.md` — the real definition of "done." **45 cells tracked (ON/QC/NS/federal only), all 45 covered, 0 `not_started`, 0 `not_applicable`.** The count moved 43→45 when NS's privacy cell was split into three subtopics to match Ontario's shape. **Coverage is a floor, not an end state** — 5 cells are covered at `confidence: medium`, each naming its own open question in the record's notes. `/tend` still cannot close a cell; directed research does. |
 | **Schema** | `record.yaml` **v1, finalized** 2026-07-31. Not a draft, not gated. |
-| **Publish** | **Operational.** `publish/adapter.py`, this repo. Single content writer into the site — now also emits `data/review.yaml` for the site's review queue (2026-08-12). |
-| **Site render scope** | `publish/adapter.py`'s `RENDER_JURISDICTIONS` guardrail (added 2026-08-12): every wired jurisdiction is curated, but only **ON, QC, NS, and federal** records actually render to the site — "we are not ready to be responsible outside of those lanes" (Ben). Doesn't affect the 16 live records (all ON/federal already) but matters the moment a QC/NS record is curated, and matters a lot once any other jurisdiction's candidates get curated. |
-| **Site** | **mhinbrief.com** (renamed from therapybulletin.org, 2026-08-12) live: jurisdiction map (unfiltered, all 14 jurisdictions — a directory of regulators, not a compliance claim, so the render-scope guardrail above doesn't apply to it), changelog (16 entries + per-entry pages), 5 topic matrices, and a new unlisted **`/review/`** page (Cloudflare Access-gated to `@evidencefirstsolutions.com`, feedback becomes a GitHub issue attributed to the verified login — see 2026-08-12 note below). Deploys via `hugo && wrangler deploy` from `mhinbrief-site`, NOT a deploy hook — see that same note. |
+| **Cadence** | **Running unattended.** A cron line calls `.agents/run.sh tend` daily at 09:00 America/Toronto (`cadence.runs` in `kestrel.yaml`); logs and receipts in `.agents/runs/`, gitignored and pruned to 60. Declared *product* cadence stays weekly — the daily machine schedule is deliberate. ⚠️ The crontab was generated against the EDT offset and **America/Toronto changes offset 2026-11-01** — regenerate then or the runs fire an hour off. |
+| **Verify** | `/verify` has now run **once** (2026-08-17, telepractice records, operator-requested after a correction). Receipt: `provenance/verify-20260817T221000Z-telepractice.yaml`. Declared cadence is quarterly. |
+| **Publish** | **Operational.** `publish/adapter.py`, this repo. Single content writer into the site; also emits `data/review.yaml` for the review queue. Its engine import broke 2026-08-17 when kestrel moved its publish core out of `tools/publish/core.py` into a package — fixed here, API unchanged, only the path moved. |
+| **Site render scope** | `publish/adapter.py`'s `RENDER_JURISDICTIONS` guardrail (added 2026-08-12): every wired jurisdiction is curated, but only **ON, QC, NS, and federal** records actually render to the site — "we are not ready to be responsible outside of those lanes" (Ben). All 45 current records are in-lane, so 0 are excluded today; the filter matters the moment any other jurisdiction's candidates get curated. |
+| **Site** | **mhinbrief.com** (renamed from therapybulletin.org, 2026-08-12) live: jurisdiction map (unfiltered, all 14 jurisdictions — a directory of regulators, not a compliance claim, so the render-scope guardrail above doesn't apply to it), changelog (47 entries + per-entry pages), **6 topic matrices** — a `/topics/licensure/` page was added 2026-08-17 because 8 verified licensure records were reaching the site data and rendering nowhere — and an unlisted **`/review/`** page (Cloudflare Access-gated to `@evidencefirstsolutions.com`, feedback becomes a GitHub issue attributed to the verified login — see 2026-08-12 note below). Deploys via `hugo && wrangler deploy` from `mhinbrief-site`, NOT a deploy hook — see that same note. |
 
 **The 3 `verified: false` sources, and why** — `mhcc-workplace-standard`
 (scope call for Ben: workplace standard, not clinical-practice
 regulation) · `nb-association-social-workers` and `yt-psychologists`
 (both behind a full Cloudflare interstitial that `tools/fetch-blocked.sh`
 deliberately does not defeat — an operator must look by hand).
+
+> **2026-08-17/18 — full coverage of the four in-play lanes: 16 records → 45,
+> and the matrix goes 45/45.** Nova Scotia (15 cells) and Quebec (10) were
+> researched against primary sources and built in one pass, then Ontario
+> licensure (3) and federal privacy (1) closed the rest. NS's privacy cell was
+> split into three subtopics (breach-notification / custodian-status /
+> data-residency) to match Ontario's shape, which is why the tracked total moved
+> 43 → 45.
+>
+> The content finding that shapes every page built on this: **naming a
+> jurisdiction without naming the profession is usually wrong.** Nova Scotia's
+> three professions sit under three different statutes with retention at 10/7/7
+> years on three differently-worded clock triggers, and insurance ranging from
+> $1M (psychology) to $2M-per-claim/$5M-aggregate with employer cover expressly
+> refused (counselling therapy) to "adequate", no figure, private practice only
+> (social work). Quebec is the opposite — uniform at 5 years for both
+> professions, because its rules are government regulations under one framework
+> statute rather than college-authored standards. And the same master's-level
+> clinician is a *psychological associate* in Ontario, a *psychologist* in Nova
+> Scotia, and *not eligible* in Quebec.
+>
+> Quebec doesn't fit the profession-by-topic grid and isn't forced to:
+> psychotherapy there is a **reserved act** under Loi 21, held automatically by
+> physicians and psychologists and available by permit to members of seven other
+> ordres — a permit issued and policed by the psychologists' ordre, not their
+> own. Read directly, that statutory list includes *criminologues* and
+> *sexologues*, which earlier project notes had omitted.
+>
+> **A correction, kept visible rather than absorbed.** The first Quebec
+> telepractice record claimed the OPQ applies a "location-of-the-professional
+> jurisdictional test" and built a three-province comparison on it. Ben
+> challenged it as implausible — it would have left anyone anywhere free to
+> treat Quebec clients — and he was right about the framing. The source is a
+> scenario FAQ about *registration*, not a doctrine, and the quote had been
+> truncated by an ellipsis that dropped two material clauses. Root cause: that
+> record was built on a summarising fetch rather than on text actually read.
+> Corrected the same day, with two `record-corrected` changelog entries showing
+> the delta, and the reserved-act limit (Code des professions a. 187.1) now
+> stated — which is what actually closes the apparent gap.
+>
+> That prompted a full **`/verify` pass over all 8 telepractice records**, the
+> first verify run this instance has ever done. Method was built around the
+> failure: locate every quote fragment in source *and read the elided material
+> between fragments*. Seven held. Two Ontario quotes join a heading to its body
+> or three bullets with semicolons — wording exact, a strict matcher fails, a
+> reader is not misled. Receipt in `provenance/`.
+>
+> Also landed: a `/topics/licensure/` page (8 verified records were reaching
+> the site and rendering nowhere), a fix to `publish/adapter.py` after the
+> engine moved its publish core into a package, and the first three unattended
+> `/tend` runs under the new cron cadence.
 
 > **2026-08-12 — coverage/matrix.yaml + coverage/rubric.md: "acceptable
 > coverage" stops being a vague build-order line and becomes a real
