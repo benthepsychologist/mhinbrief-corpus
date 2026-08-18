@@ -17,13 +17,40 @@
 | **Verify** | `/verify` has now run **once** (2026-08-17, telepractice records, operator-requested after a correction). Receipt: `provenance/verify-20260817T221000Z-telepractice.yaml`. Declared cadence is quarterly. |
 | **Publish** | **Operational.** `publish/adapter.py`, this repo. Single content writer into the site; also emits `data/review.yaml` for the review queue. Its engine import broke 2026-08-17 when kestrel moved its publish core out of `tools/publish/core.py` into a package — fixed here, API unchanged, only the path moved. |
 | **Site render scope** | `publish/adapter.py`'s `RENDER_JURISDICTIONS` guardrail (added 2026-08-12): every wired jurisdiction is curated, but only **ON, QC, NS, and federal** records actually render to the site — "we are not ready to be responsible outside of those lanes" (Ben). All 45 current records are in-lane, so 0 are excluded today; the filter matters the moment any other jurisdiction's candidates get curated. |
-| **Site** | **mhinbrief.com** (renamed from therapybulletin.org, 2026-08-12) live: jurisdiction map (unfiltered, all 14 jurisdictions — a directory of regulators, not a compliance claim, so the render-scope guardrail above doesn't apply to it), changelog (47 entries + per-entry pages), **6 topic matrices** — a `/topics/licensure/` page was added 2026-08-17 because 8 verified licensure records were reaching the site data and rendering nowhere — and an unlisted **`/review/`** page (Cloudflare Access-gated to `@evidencefirstsolutions.com`, feedback becomes a GitHub issue attributed to the verified login — see 2026-08-12 note below). Deploys via `hugo && wrangler deploy` from `mhinbrief-site`, NOT a deploy hook — see that same note. |
+| **Site** | **mhinbrief.com** (renamed from therapybulletin.org, 2026-08-12) live: jurisdiction map (unfiltered, all 14 jurisdictions — a directory of regulators, not a compliance claim, so the render-scope guardrail above doesn't apply to it), changelog (47 entries + per-entry pages), **6 topic matrices** — a `/topics/licensure/` page was added 2026-08-17 because 8 verified licensure records were reaching the site data and rendering nowhere — and an unlisted **`/review/`** page (Cloudflare Access-gated — `ben@mensiomentalhealth.com` **plus** `@evidencefirstsolutions.com`, feedback becomes a GitHub issue attributed to the verified login — see 2026-08-12 note below and the 2026-08-18 access note above). Deploys via `hugo && wrangler deploy` from `mhinbrief-site`, NOT a deploy hook — see that same note. |
 
 **The 3 `verified: false` sources, and why** — `mhcc-workplace-standard`
 (scope call for Ben: workplace standard, not clinical-practice
 regulation) · `nb-association-social-workers` and `yt-psychologists`
 (both behind a full Cloudflare interstitial that `tools/fetch-blocked.sh`
 deliberately does not defeat — an operator must look by hand).
+
+> **2026-08-18 — the operator was locked out of his own review page, and the
+> login only offers one route.** Ben tried `/review/` and could not get in: the
+> Access policy allowed `@evidencefirstsolutions.com` and nothing else, so
+> `ben@mensiomentalhealth.com` was never on the list. That is an error from the
+> 2026-08-12 build — the design was "EFS colleagues review the queue" and nobody
+> added the operator. **Fixed:** the policy now allows his address explicitly
+> alongside the EFS domain. Access matches on the email an identity carries, not
+> on how it was proved, so either login route satisfies it.
+>
+> ⛔ **Still open, and it affects colleagues rather than Ben.** The app has
+> `auto_redirect_to_identity: true` with **zero identity providers configured**,
+> which forces every visitor down a single login path — the Cloudflare-account
+> prompt. Ben has said that route is his preference *for himself*. His
+> colleagues almost certainly have no Cloudflare account on this org, so as
+> configured they may have no way in at all. Setting the flag to `false` shows
+> the login picker instead, which serves both: Ben picks the account route,
+> colleagues get the email one-time PIN. **The change was attempted and blocked
+> by the permission classifier** (an account-settings write) and is waiting on
+> Ben to approve it or flip it in the dashboard.
+>
+> Also corrected: the token's documented scope was wrong in project memory — it
+> **can** now read Access identity providers, which is how the empty list was
+> found. One-time PIN is a Cloudflare built-in and does not appear in that list,
+> so its availability is probable but unconfirmed. **Nobody has ever
+> successfully logged in to this page**, so no part of the colleague path has
+> been exercised end to end. Treat it as unproven until a colleague gets in.
 
 > **2026-08-18 — the verification pivot: claims get checked one statement at a
 > time, and the review page finally has something a clinician can answer.** Ben

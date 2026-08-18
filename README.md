@@ -131,8 +131,10 @@ manual `wrangler deploy` pass, same as now. Verify against served content
 `mhinbrief.com/review/` (unlisted — not in site nav, `noindex`, not
 meant to be discovered, just not treated as secret) renders every staged
 `candidates/*.yaml` in plain language, so a colleague can review what
-`/tend` found without reading YAML. It's gated by Cloudflare Access
-(`@evidencefirstsolutions.com`, one-time-PIN login) covering both
+`/tend` found without reading YAML — and, since 2026-08-18, the
+statement-by-statement claim verification described above. It's gated by
+Cloudflare Access, allowing `ben@mensiomentalhealth.com` and any
+`@evidencefirstsolutions.com` address, covering both
 `/review` and `/api/feedback`; a comment left there becomes a GitHub
 issue in this repo, attributed to the verified login email — see
 `mhinbrief-site/worker/access-jwt.js` and STATUS.md's 2026-08-12 entry
