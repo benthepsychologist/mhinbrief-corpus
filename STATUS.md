@@ -11,6 +11,7 @@
 | **Changelog** | 47 entries — 45 `record-added` plus 2 `record-corrected` (the 2026-08-17 Quebec telepractice correction, rendered as an old→new delta rather than absorbed silently). |
 | **Candidates** | **86 staged, 0 curated** — still the oldest open item, and note that none of the 45 records came from this queue: coverage was built by directed research against the rubric, which is the point the rubric exists to make. ⚠️ Two sources (`mb-mcsw`, `ns-oipc-phia`) stage a candidate on **every** daily sweep with a 1–2 line diff, so the queue grows ~2/day from what looks like page churn rather than news. Worth triaging or demoting before the count stops meaning anything. |
 | **Coverage** | `coverage/matrix.yaml` + `coverage/rubric.md` — the real definition of "done." **45 cells tracked (ON/QC/NS/federal only), all 45 covered, 0 `not_started`, 0 `not_applicable`.** The count moved 43→45 when NS's privacy cell was split into three subtopics to match Ontario's shape. **Coverage is a floor, not an end state** — 5 cells are covered at `confidence: medium`, each naming its own open question in the record's notes. `/tend` still cannot close a cell; directed research does. |
+| **Claims** | **1 cell verified statement-by-statement** — `verification/ca-on-retention-psychology.stamp.jsonl`, 3 statements, 6 gaps. Method is pm's `claim-verification-method-spec` v0.2 (STAMP). ⚠️ **3 of 3 statements are unsigned** — signoff is a person's act and nothing here is signed until Ben signs it. |
 | **Schema** | `record.yaml` **v1, finalized** 2026-07-31. Not a draft, not gated. |
 | **Cadence** | **Running unattended.** A cron line calls `.agents/run.sh tend` daily at 09:00 America/Toronto (`cadence.runs` in `kestrel.yaml`); logs and receipts in `.agents/runs/`, gitignored and pruned to 60. Declared *product* cadence stays weekly — the daily machine schedule is deliberate. ⚠️ The crontab was generated against the EDT offset and **America/Toronto changes offset 2026-11-01** — regenerate then or the runs fire an hour off. |
 | **Verify** | `/verify` has now run **once** (2026-08-17, telepractice records, operator-requested after a correction). Receipt: `provenance/verify-20260817T221000Z-telepractice.yaml`. Declared cadence is quarterly. |
@@ -23,6 +24,63 @@
 regulation) · `nb-association-social-workers` and `yt-psychologists`
 (both behind a full Cloudflare interstitial that `tools/fetch-blocked.sh`
 deliberately does not defeat — an operator must look by hand).
+
+> **2026-08-18 — the verification pivot: claims get checked one statement at a
+> time, and the review page finally has something a clinician can answer.** Ben
+> put two things to the session. First, that the `/tend` candidate queue is
+> answering a question nobody is asking — *"we aren't a news feed at this time...
+> we've got this growing list, for what?"* Second, what he actually needs:
+> *"have we nailed file retention for social workers in Ontario? here are our
+> claims and sources. verify each, verify overall."* He pointed at pm's existing
+> method rather than letting one be invented here.
+>
+> **Adopted: STAMP** (`pm/streams/research-and-writing/projects/`
+> `claim-verified-authorship/deliverables/claim-verification-method-spec`, v0.2).
+> Its core move is that the **statement**, not the record, is the unit of
+> verification, and that two checks run and are reported **separately and never
+> merged**: a mechanical check (does the quote appear verbatim — deterministic,
+> no model) and a semantic check (does that quote support the statement as made
+> — a judgment, actor named). Then a **signoff by a named person**.
+>
+> That separation is not academic here. **The Quebec telepractice error the day
+> before was exactly a mechanical pass with a semantic failure** — every
+> fragment verbatim, and the quote still did not support the claim. This repo's
+> `confidence: high|medium|low` is precisely the single combined badge STAMP
+> §6.3 prohibits, and it cannot express that state at all. Whether `confidence`
+> should be retired from the schema is an open question for the engine, since
+> `record.yaml` is engine-shaped.
+>
+> **Worked example on `ca-on-retention-psychology`** — Ben's own college, and a
+> cell that has read `confidence: high` since 2026-07-31 without re-examination.
+> All three quotes passed the mechanical check. One did not survive the semantic
+> check: our record drops the Standard's opening qualifier *"Unless otherwise
+> required by law"* and omits the rest of the same bullet, which lets content
+> older than ten years be destroyed for a long-running organizational client
+> where it is not relevant to current services. **As written the record is
+> stricter than the Standard.** A second statement is fully supported but
+> mis-cited — the record's `statute_citation` says s. 9.4 and the obligation is
+> at s. 9.6. Six further **gaps** were found: things the Standard says that the
+> record asserts nothing about, including the non-HIC counterpart duty at
+> 9.5(h), which covers most employed registrants.
+>
+> **The review page was rebuilt around this.** It had been showing only the raw
+> candidate queue — 86 machine-surfaced page diffs and gazette issue numbers,
+> every `note` field empty, and **zero feedback ever submitted**, which is what
+> an unusable page looks like rather than an adoption problem. Records were
+> structurally invisible to it, so Kathryn could not see one of the 15 Nova
+> Scotia records she was brought in to fact-check. `publish/adapter.py` now
+> emits `data/claims.yaml` and `/review/` renders each statement with its quote,
+> its exact location, both check verdicts as separate rows, and its signoff
+> state shown as an absence when absent. The feedback path needed no worker
+> change — claim refs reuse the existing `candidate_id` field.
+>
+> **Also landed: a local `/wrap`.** Ben asked for one like theprojection's;
+> theirs is kit-rendered `attention/wrap` and the engine library has **no
+> `standing/wrap`**. Written as a local extension under OPERATING.md §2, and a
+> brief filed at `kestrel-ops/INBOX/` asking the engine to render one, because
+> §2's own test — *"would another repo want this unchanged"* — says a standing
+> wrap is library-shaped. The local file is banner-marked for deletion when a
+> rendered one lands.
 
 > **2026-08-17/18 — full coverage of the four in-play lanes: 16 records → 45,
 > and the matrix goes 45/45.** Nova Scotia (15 cells) and Quebec (10) were
