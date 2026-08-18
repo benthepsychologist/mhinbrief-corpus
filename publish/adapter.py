@@ -52,12 +52,28 @@ WHAT IT EMITS
                                 queue asserts nothing, it's just visibility
                                 into what's pending).
 
+  data/claims.yaml              STAMP-shaped claim verification from
+                                verification/*.stamp.jsonl — one block per
+                                verified cell, each STATEMENT carrying its own
+                                quote, location, mechanical-check verdict,
+                                semantic-check verdict, and signoff state.
+                                Per pm's claim-verification-method-spec v0.2
+                                §6.3 the two check verdicts are carried through
+                                SEPARATELY and must never be combined into a
+                                single score or badge — a quote can exist
+                                exactly and still fail to support the statement
+                                built on it. Also carries `gaps`: things the
+                                source says that the record asserts nothing
+                                about. Like data/review.yaml this is NOT gated
+                                behind RENDER_JURISDICTIONS.
+
 Usage:
     python3 publish/adapter.py                # staged: write, do not push
     python3 publish/adapter.py --push         # write, commit, push, deploy
     python3 publish/adapter.py --dry-run      # report only, write nothing
 """
 import argparse
+import json
 import os
 import sys
 from datetime import datetime, timezone
@@ -214,6 +230,95 @@ def build_review_data(candidates):
         "count": len(items),
         "items": items,
     }
+
+
+def load_stamped_claims():
+    """Every verification/*.stamp.jsonl — STAMP-shaped claim verification.
+
+    Follows pm's claim-verification-method-spec v0.2: the STATEMENT is the unit,
+    and the mechanical check (does the quote appear verbatim) and the semantic
+    check (does the quote support the statement as made) are recorded SEPARATELY
+    and must never be combined into a single score or badge (spec 6.3). This
+    loader therefore carries both verdicts through untouched, and carries the
+    absence of a signoff through as an absence — a statement no person has
+    signed is shown as unsigned, not silently treated as fine.
+    """
+    out = []
+    vdir = INSTANCE_ROOT / "verification"
+    if not vdir.is_dir():
+        return out
+    for p in sorted(vdir.glob("*.stamp.jsonl")):
+        lines = []
+        for raw in p.read_text(encoding="utf-8").splitlines():
+            raw = raw.strip()
+            if not raw:
+                continue
+            try:
+                lines.append(json.loads(raw))
+            except json.JSONDecodeError:
+                continue  # safe-load-or-skip, same discipline as load_records()
+        if lines:
+            out.append(lines)
+    return out
+
+
+def build_claims_data(docs):
+    """Plain-language claim-verification view for the /review/ page.
+
+    One block per verified cell: each statement with its quote, where that quote
+    lives, what the mechanical check found, what the semantic check judged, and
+    whether a person has signed it off. Gaps — things the source says that the
+    record asserts nothing about — ship too, because a reviewer noticing an
+    omission is as useful as one catching an error.
+    """
+    blocks = []
+    for lines in docs:
+        doc = next((l for l in lines if l.get("type") == "document"), None)
+        if not doc:
+            continue
+        srcs = {l["id"]: l for l in lines if l.get("type") == "source"}
+        stamps = {}
+        for l in lines:
+            if l.get("type") == "stamp":
+                stamps.setdefault(l["statement"], []).append(l)
+        statements = []
+        for l in lines:
+            if l.get("type") != "statement":
+                continue
+            ev = (l.get("evidence") or [{}])[0]
+            st = stamps.get(l["id"], [])
+            m = next((s for s in st if s.get("check") == "m-check"), None)
+            sem = next((s for s in st if s.get("check") == "s-check"), None)
+            sign = next((s for s in st if s.get("check") == "signoff"), None)
+            src = srcs.get(ev.get("source_ref"), {})
+            statements.append({
+                "id": l["id"],
+                "claim_ref": f"claim:{doc['id']}:{l['id']}",
+                "text": l.get("text"),
+                "statement_type": l.get("statement_type"),
+                "location": ev.get("location"),
+                "quote": ev.get("quote"),
+                "context": ev.get("context"),
+                "source_identity": src.get("identity"),
+                "source_url": src.get("url"),
+                "m_check": (m or {}).get("verdict", "not-run"),
+                "m_reason": (m or {}).get("reason", ""),
+                "s_check": (sem or {}).get("verdict", "not-run"),
+                "s_reason": (sem or {}).get("reason", ""),
+                "signed_off_by": (sign or {}).get("actor"),
+                "signed_off_when": (sign or {}).get("when"),
+            })
+        gaps = [{"id": l["id"], "claim_ref": f"claim:{doc['id']}:{l['id']}",
+                 "location": l.get("location"), "text": l.get("text"), "note": l.get("note", "")}
+                for l in lines if l.get("type") == "gap"]
+        blocks.append({
+            "id": doc["id"], "title": doc.get("title"), "cell": doc.get("cell"),
+            "method": doc.get("method"), "checked": doc.get("created"),
+            "statements": statements, "gaps": gaps,
+            "unsigned_count": sum(1 for s in statements if not s["signed_off_by"]),
+        })
+    return {"generated_by": "mhinbrief publish adapter (publish/adapter.py)",
+            "count": len(blocks), "blocks": blocks}
 
 
 def load_changelog():
@@ -386,6 +491,8 @@ def main():
     regs_blob = yaml.safe_dump(regs, sort_keys=False, allow_unicode=True, width=100)
     review = build_review_data(candidates)
     review_blob = yaml.safe_dump(review, sort_keys=False, allow_unicode=True, width=100)
+    claims = build_claims_data(load_stamped_claims())
+    claims_blob = yaml.safe_dump(claims, sort_keys=False, allow_unicode=True, width=100)
 
     # --- guarantee 1: secret scan, every emitted byte, editorial or not
     hits = []
@@ -394,6 +501,7 @@ def main():
     hits += core.secret_scan(data_blob, "data/records.yaml")
     hits += core.secret_scan(regs_blob, "data/regulators.yaml")
     hits += core.secret_scan(review_blob, "data/review.yaml")
+    hits += core.secret_scan(claims_blob, "data/claims.yaml")
     if hits:
         print("[publish] ABORT — secret scan hit:")
         for h in hits:
@@ -413,6 +521,7 @@ def main():
         print(f"  would write data/records.yaml ({len(data_blob)} bytes)")
         print(f"  would write data/regulators.yaml ({len(regs_blob)} bytes)")
         print(f"  would write data/review.yaml ({len(review_blob)} bytes)")
+        print(f"  would write data/claims.yaml ({len(claims_blob)} bytes)")
         return 0
 
     # --- write
@@ -432,6 +541,9 @@ def main():
     review_path = site_dir / "data" / "review.yaml"
     review_path.write_text(review_blob, encoding="utf-8")
     written.append("data/review.yaml")
+    claims_path = site_dir / "data" / "claims.yaml"
+    claims_path.write_text(claims_blob, encoding="utf-8")
+    written.append("data/claims.yaml")
     for w in written:
         print(f"  wrote {w}")
 
