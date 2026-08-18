@@ -1,0 +1,3 @@
+This directory is this repo's inbound queue. See INBOX.md for the contract.
+
+It is committed empty so the queue survives a fresh clone — git does not track empty directories, and an INBOX.md whose INBOX/ is missing is a contract nobody can actually use.

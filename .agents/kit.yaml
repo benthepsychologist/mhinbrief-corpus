@@ -1,16 +1,17 @@
-library_version: 2026-08-15.3
+library_version: 2026-08-18.3
 kind: standing
-installed_at: '2026-08-15T09:50:21Z'
-engine_commit: 3c73c1f
+installed_at: '2026-08-18T12:23:06Z'
+engine_commit: 3a89435
 files:
-  .claude/skills/health/SKILL.md: 94a950ef70834e833376411a07b3a4439aeeb07e2c6d0688fc23eb12870ee6bf
-  .claude/skills/curate/SKILL.md: 28b5e8d81808f6f14c8f6c6c8451420a5d2e60aae056a3ff20ced440b6327991
-  .claude/skills/publish/SKILL.md: dde5613552a7d3f55004c630c7f505d60f2898df3d6aa759955760bb9e92e202
-  .claude/skills/start/SKILL.md: 1f4102b27b158b4374bd2a185d34578c52732c9591793c72f11fdb349acc6e87
-  .claude/skills/tend/SKILL.md: 95b2f2c3273ea3be143443a58c80bb4706dd90f51766b6781f957a5025e275e4
-  .claude/skills/verify/SKILL.md: 6dc8d31307bcccb47352b936947f145e5b3433728b5eac6b9bae3ba7b9579818
-  INBOX.md: 405d280c18d52ba3ac811b0a421ff501d3654fd22816bed259a6e28013ff3a80
-  OPERATING.md: b207389eb4bfc69669738108259e77ec9ee3dda9fcf6261d9e91a10de7e977da
-  AGENTS.md: b70eaaf730ac449db3e8594cce642ef7d8887970bde422567a5debb47f59878c
-  CLAUDE.md: eec5c255b9fe00c8a2e5f2513bcf181fd7da1bc44f78f45b0ec06d5ce77e6e82
-  .agents/run.sh: 9e55a37a351417f9ce501b002c7abeff19ce19866c77d9a9c0aa907fbb38d358
+  .claude/skills/health/SKILL.md: 64f252a0503bbe55228b5c5587e4f263758656e4d0b5e056725c314c6cd7a7f8
+  .claude/skills/curate/SKILL.md: c241b999e79080ac861c32813bc9fa4c1847ffd3f402b6fc6dc4bd5611af75b0
+  .claude/skills/publish/SKILL.md: 9ce19e633ed2bdcfa7a3502ee0ae14cb48476af35e766f24262122d677242b4b
+  .claude/skills/start/SKILL.md: 45671f842a285a873a2bb91fd37974875ed18685860b2a59145eab971a8af830
+  .claude/skills/tend/SKILL.md: 4e1f91c830e56c2d35782d146e89032c6f962a305887fbf3a9352cb12e3b4151
+  .claude/skills/verify/SKILL.md: d1c6b6c04e09017118d04ae6f719d34e44b973d52884ebb0227e172d3cd4054c
+  AGENTS.md: 499d030c39e999fe6a925fdfc8fed0e1fe5e9fe9d45ffea966cd21a94c582e0b
+  INBOX.md: 2027c8863f30cf1b63474f3dc132d614d9bb5a96855d5616bec27cd078b1a8a8
+  OPERATING.md: 148cc889dfb323f0c37ce247e3ff06a793c1c287ac5e5095375df79967a5aa4e
+  CLAUDE.md: 7baacbec04b67123c6de39a6750ddda8da0a70886de486847143fef1273d9d51
+  .agents/run.sh: e16cd2e5ae859293bd10d3cdd3b7f672d68a337c29bc1be60540f6560b86ccd3
+  INBOX/.gitkeep: 5e0fa609bf3d7f4fe2a96f991bd9bf7c040a0fce0e559956514b415ea1c7f96a

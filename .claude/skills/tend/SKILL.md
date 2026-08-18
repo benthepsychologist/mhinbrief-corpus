@@ -1,4 +1,4 @@
-<!-- kit: standing/tend@2026-08-15.3 — canonical: /workspace/kestrel/library/skills/standing/tend/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: standing/tend@2026-08-18.3 — canonical: /workspace/kestrel/library/skills/standing/tend/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # /tend — sweep declared sources, stage the candidates
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# kit: base/run@2026-08-15.3 — canonical: /workspace/kestrel/library/runners/run.sh.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit.
+# kit: base/run@2026-08-18.3 — canonical: /workspace/kestrel/library/runners/run.sh.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit.
 #
 # Unattended runner for mhinbrief. A cron line calls:
 #

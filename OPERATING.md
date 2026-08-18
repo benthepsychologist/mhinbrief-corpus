@@ -1,4 +1,4 @@
-<!-- kit: base/OPERATING@2026-08-15.3 — canonical: /workspace/kestrel/library/agentdocs/base/OPERATING.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: base/OPERATING@2026-08-18.3 — canonical: /workspace/kestrel/library/agentdocs/base/OPERATING.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # OPERATING.md — the shared contract for mhinbrief
 
@@ -58,7 +58,9 @@ section exists to prevent.
 - `AGENTS.md`
 - `CLAUDE.md`
 - `INBOX.md`
+- `INBOX/.gitkeep`
 - `OPERATING.md`
+- `STATUS.md`
 
 ⚠️ **That list is a snapshot taken when this file was rendered. The
 authority is `.agents/kit.yaml`** — read it if the two ever disagree,
