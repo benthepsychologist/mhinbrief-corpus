@@ -1,0 +1,11 @@
+observed: '2026-08-18'
+staged_by: tend
+status: staged
+source:
+  id: 3b424735cce68128
+  url: https://apns.ca/publications/
+  title: 'page changed: Association of Psychologists of Nova Scotia (APNS) (+1/-1
+    lines)'
+  ts: '2026-08-18T13:01:13Z'
+  source_id: page_diff:apns
+note: ''

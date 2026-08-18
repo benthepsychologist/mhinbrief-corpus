@@ -1,9 +1,9 @@
 {
   "container_matched": true,
-  "content_hash": "4e27aa35a56fdc86edb35e9d511ccb95fb3f2194",
+  "content_hash": "e855ecb2f2921c19d8c3c0043691de35b971299d",
   "detected_date": null,
   "endpoint": "https://apns.ca/publications/",
-  "fetched_at": "2026-08-17T13:01:13Z",
+  "fetched_at": "2026-08-18T13:01:13Z",
   "line_count": 301,
   "source_id": "apns"
 }

@@ -1,9 +1,9 @@
 {
   "container_matched": true,
-  "content_hash": "edc3513305faf4b483cad20c6c34558a6dbae786",
+  "content_hash": "a040aa4c69540a7e3fbb2a08faed71803bc8bead",
   "detected_date": null,
   "endpoint": "https://apqc.ca/notre-travail/actualites/",
-  "fetched_at": "2026-08-17T13:01:13Z",
+  "fetched_at": "2026-08-18T13:01:13Z",
   "line_count": 109,
   "source_id": "qc-apq"
 }

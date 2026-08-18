@@ -1,0 +1,10 @@
+observed: '2026-08-18'
+staged_by: tend
+status: staged
+source:
+  id: f927dac7abe31a66
+  url: https://apqc.ca/notre-travail/actualites/
+  title: 'page changed: Association des psychologues du Québec (APQ) (+5/-5 lines)'
+  ts: '2026-08-18T13:01:13Z'
+  source_id: page_diff:qc-apq
+note: ''

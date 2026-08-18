@@ -1,0 +1,10 @@
+observed: '2026-08-18'
+staged_by: tend
+status: staged
+source:
+  id: 597a6a555e421c63
+  url: https://www.ordrepsy.qc.ca/avis
+  title: 'page changed: Ordre des psychologues du Québec (OPQ) (+10/-10 lines)'
+  ts: '2026-08-18T13:01:13Z'
+  source_id: page_diff:qc-ordre-psychologues
+note: ''
