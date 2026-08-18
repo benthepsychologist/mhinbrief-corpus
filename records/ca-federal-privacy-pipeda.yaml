@@ -1,0 +1,132 @@
+jurisdiction:
+  country: ca
+  state_or_province: null
+  code: ca-federal
+profession_scope:
+- psychologist
+- psychotherapist
+- counselling_therapist
+- clinical_social_worker
+topic: privacy
+regulatory_model: disclosure
+statute_citation:
+  short_title: Personal Information Protection and Electronic Documents Act (PIPEDA)
+  bill_number: null
+  code_cite: S.C. 2000, c. 5, ss. 2 (definitions), 4 (application), 10.1-10.3 (breach of security
+    safeguards), 26(2)(b) (substantially similar exemption), 28 (offence)
+  regulation_cite: Breach of Security Safeguards Regulations, SOR/2018-64, s. 6; Personal Health
+    Information Custodians in Nova Scotia Exemption Order, SOR/2016-62
+status: in_force
+enactment_date: null
+effective_date: '2004-01-01'
+enforcement_body: Office of the Privacy Commissioner of Canada
+authority_basis: privacy
+penalties: 'Knowingly contravening s. 10.1 (breach reporting and notification) or s. 10.3(1) (keeping
+  a record of every breach), or obstructing the Commissioner in an investigation or audit, is an
+  offence: a fine up to $10,000 on summary conviction, or up to $100,000 on indictment (s. 28). Failing
+  to KEEP THE BREACH LOG is therefore prosecutable in its own right, independently of whether any
+  breach was reportable.'
+clinician_facing_obligations: 'PIPEDA applies to every organization in respect of personal information
+  it collects, uses or discloses IN THE COURSE OF COMMERCIAL ACTIVITY (s. 4(1)(a)) — ''commercial
+  activity'' meaning any transaction, act or conduct, or regular course of conduct, of a commercial
+  character (s. 2). A fee-charging private practice is such an organization. It does not apply to
+  government institutions covered by the Privacy Act, to purely personal or domestic collection,
+  or to journalistic, artistic or literary purposes (s. 4(2)). WHERE A PROVINCIAL LAW HAS BEEN DECLARED
+  SUBSTANTIALLY SIMILAR, the Governor in Council may exempt organizations or activities from PIPEDA
+  — BUT ONLY ''in respect of the collection, use or disclosure of personal information that occurs
+  within that province'' (s. 26(2)(b)). Four provincial HEALTH information laws are recognised for
+  personal health information (Ontario PHIPA, Nova Scotia PHIA, New Brunswick PHIPAA, Newfoundland
+  and Labrador PHIA), and Alberta, British Columbia and Quebec have general private-sector laws recognised.
+  Nova Scotia''s order is concrete: any PHIA custodian is exempt from PIPEDA Part 1 for personal
+  health information ''that occurs in Nova Scotia'' (SOR/2016-62). PIPEDA CONTINUES TO APPLY, even
+  to organizations in those provinces, to personal information transferred ACROSS BORDERS (interprovincial
+  or international), to federal works, undertakings and businesses, and to organizations in the NORTHWEST
+  TERRITORIES, YUKON AND NUNAVUT, which are treated as federally regulated. BREACH OBLIGATIONS. Report
+  to the Privacy Commissioner any breach of security safeguards involving personal information under
+  the organization''s control where it is reasonable in the circumstances to believe the breach creates
+  a REAL RISK OF SIGNIFICANT HARM to an individual, as soon as feasible after determining the breach
+  occurred (s. 10.1(1)-(2)); notify the affected individual on the same threshold unless otherwise
+  prohibited by law (s. 10.1(3)); and notify any other organization or government institution that
+  may be able to reduce or mitigate the risk of harm (s. 10.2(1)). Separately and regardless of threshold,
+  KEEP AND MAINTAIN A RECORD OF EVERY BREACH of security safeguards (s. 10.3(1)), for 24 months after
+  the day the organization determines the breach occurred, containing information sufficient to let
+  the Commissioner verify compliance with the reporting and notification duties (SOR/2018-64, s.
+  6). The Commissioner may demand access to or a copy of that record at any time (s. 10.3(2)).'
+vendor_facing_obligations: A vendor processing personal information on a clinician's behalf across
+  a provincial or national boundary brings that transfer within PIPEDA even where the practice is
+  otherwise covered by a substantially similar provincial law, because the s. 26(2)(b) exemption
+  reaches only what occurs within the province.
+consent_required: true
+documentation_required: true
+source_url: https://laws-lois.justice.gc.ca/eng/acts/P-8.6/FullText.html
+last_verified: '2026-08-18'
+source_quote: '"4 (1) This Part applies to every organization in respect of personal information
+  that (a) the organization collects, uses or discloses in the course of commercial activities" ...
+  "26 (2) The Governor in Council may, by order, ... (b) if satisfied that legislation of a province
+  that is substantially similar to this Part applies to an organization, a class of organizations,
+  an activity or a class of activities, exempt the organization, activity or class from the application
+  of this Part in respect of the collection, use or disclosure of personal information that occurs
+  within that province" ... "10.3 (1) An organization shall, in accordance with any prescribed requirements,
+  keep and maintain a record of every breach of security safeguards involving personal information
+  under its control." — Personal Information Protection and Electronic Documents Act, S.C. 2000,
+  c. 5. And: "6 (1) For the purposes of subsection 10.3(1) of the Act, an organization must maintain
+  a record of every breach of security safeguards for 24 months after the day on which the organization
+  determines that the breach has occurred." — Breach of Security Safeguards Regulations, SOR/2018-64,
+  s. 6(1). And: "1 Any personal health information custodian to which the Personal Health Information
+  Act, SNS 2010, c. 41, of Nova Scotia applies is exempt from the application of Part 1 of the Personal
+  Information Protection and Electronic Documents Act in respect of the collection, use and disclosure
+  of personal health information that occurs in Nova Scotia." — Personal Health Information Custodians
+  in Nova Scotia Exemption Order, SOR/2016-62'
+source_url_secondary:
+- https://laws-lois.justice.gc.ca/eng/regulations/SOR-2018-64/FullText.html
+- https://gazette.gc.ca/rp-pr/p2/2016/2016-04-20/html/sor-dors62-eng.html
+- https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/r_o_p/prov-pipeda/
+confidence: high
+notes: 'THE WHOLE POINT OF THIS RECORD, AND THE THING MOST OFTEN GOT WRONG: BEING IN A PROVINCE WITH
+  A ''SUBSTANTIALLY SIMILAR'' LAW DOES NOT PUT A CLINICIAN OUTSIDE PIPEDA. It puts them outside PIPEDA
+  for what happens INSIDE the province. The limiting words are in the enabling provision itself (s.
+  26(2)(b): ''that occurs within that province'') and are repeated in the operative order for Nova
+  Scotia (SOR/2016-62: ''that occurs in Nova Scotia''), whose regulatory impact statement says the
+  goal is to signal that custodians ''would no longer be subject to Part 1 of PIPEDA FOR INTRA-PROVINCIAL
+  TRANSACTIONS''. The practical consequence for this corpus''s audience is large: a clinician in
+  Ontario, Nova Scotia or Quebec who sees an out-of-province client, or whose records or video platform
+  cross a provincial or national boundary, is potentially under BOTH the provincial regime and PIPEDA
+  for that flow. A page that says ''PIPEDA doesn''t apply in Ontario'' is wrong in exactly the situations
+  telepractice creates. THE TERRITORIES ARE STRAIGHTFORWARDLY FEDERAL. The Northwest Territories,
+  Yukon and Nunavut are treated as federally regulated, so PIPEDA — not a territorial statute — is
+  the private-sector privacy law there. The corpus''s jurisdiction map covers all three; nothing
+  else in the corpus currently says this. s. 10.3(1) IS THE OBLIGATION MOST LIKELY TO BE UNKNOWINGLY
+  BREACHED, and it is the federal counterpart of Quebec''s incident register. It requires a record
+  of EVERY breach of security safeguards — not merely those meeting the reporting threshold — kept
+  24 months, and s. 28 makes knowingly failing to keep it an offence carrying up to $100,000 on indictment.
+  A practice that assessed a minor breach as non-reportable and wrote nothing down has satisfied
+  s. 10.1 and contravened s. 10.3(1). THREE DIFFERENT BREACH THRESHOLDS NOW SIT IN THIS CORPUS AND
+  MUST NOT BE HARMONISED ON A PAGE: PIPEDA''s ''real risk of significant harm'' (s. 10.1(1)); Nova
+  Scotia PHIA''s ''potential for harm or embarrassment'' (s. 69), which is lower and more subjective;
+  and Quebec Law 25''s ''risque qu''un préjudice sérieux soit causé'' (a. 3.5). Their downstream
+  designs differ too — PHIA alone requires telling the regulator when you decide NOT to notify (s.
+  70(2)), while PIPEDA and Law 25 instead require a standing register. THE NOVA SCOTIA EXEMPTION
+  IS TIED TO CUSTODIAN STATUS, WHICH RAISES AN UNRESOLVED INTERACTION worth flagging rather than
+  answering here. SOR/2016-62 exempts ''any personal health information custodian to which the PHIA
+  applies''. Under PHIA s. 6(2) an employed clinician acting as an AGENT of a custodian is expressly
+  NOT a custodian (see ca-ns-privacy-custodian-status). In practice the employer is the organization
+  engaged in commercial activity, so the question is likely academic — but a page should not assert
+  that every Nova Scotia clinician is inside the exemption. QUEBEC''S STATUS WAS THE OPEN QUESTION
+  ON THIS CELL AND IS NOW ANSWERED: the OPC''s current list still records Quebec''s private-sector
+  law as substantially similar, so the declaration survives the Law 25 amendments. Note the MECHANISM
+  differs from Ontario''s and Nova Scotia''s: Quebec (like Alberta and BC) is recognised through
+  a general PRIVATE-SECTOR statute, while Ontario, Nova Scotia, New Brunswick and Newfoundland and
+  Labrador are recognised through HEALTH-specific statutes tied to custodian status. Same effect,
+  different route, and the difference decides who is covered. NOT IN FORCE, TRACK IT: 2026, c. 3,
+  ss. 389-397 add a new DIVISION 1.2, MOBILITY OF PERSONAL INFORMATION, including s. 10.4 — on an
+  individual''s request an organization must disclose personal information it collected from them
+  to another organization the individual designates, where both are subject to a data mobility framework
+  — with the framework itself left to regulations (ss. 10.5-10.6). The consolidated Act carries these
+  under an express ''AMENDMENTS NOT IN FORCE'' heading. This is precisely the case schema/record.yaml''s
+  `not_proclaimed` status exists for: passed, but it does not bind anyone yet. No data mobility obligation
+  applies today, and none will until the framework regulations are made. Re-check on each verify
+  pass — this is the most likely federal privacy change to land next. SCOPE LIMIT OF THIS RECORD:
+  it covers PIPEDA as it reaches private practice. It does NOT cover the federal Privacy Act (which
+  governs federal government institutions), and it does not resolve whether a given publicly funded
+  service is ''commercial activity'' — s. 2''s definition turns on commercial character, and a salaried
+  clinician in a public system is generally not the organization in question.'

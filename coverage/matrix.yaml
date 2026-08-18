@@ -12,15 +12,17 @@
 
 generated: 2026-08-12
 scope_note: >
-  45 cells tracked, 44 covered as of 2026-08-17 — every in-play cell except
-  federal privacy. Nova Scotia (15/15), Quebec (10/10) and Ontario (15/15) were
-  all completed that day against primary sources; NS's privacy cell was split
-  into three subtopics matching Ontario, moving the total from 43 to 45. Every
-  covered cell has a record_id and every record has a cell. 0 marked
-  not_applicable — that determination itself requires research, so not_started
-  stays the honest default until someone has actually checked. Five covered
+  45 cells tracked, 45 covered as of 2026-08-18 — full coverage of the four
+  in-play lanes. Ontario 15/15, Nova Scotia 15/15, Quebec 10/10, federal 5/5.
+  Nova Scotia and Quebec were built 2026-08-17, and NS's privacy cell was split
+  into three subtopics matching Ontario, moving the total from 43 to 45; Ontario
+  licensure and federal privacy closed immediately after. Every covered cell has
+  a record_id and every record has a cell. 0 not_applicable — that determination
+  itself requires research, so it stays unused rather than assumed. Five covered
   cells carry confidence: medium with the specific open question named on each;
-  they are covered, not finished.
+  they are covered, not finished. Coverage is a floor, not an end state: this
+  scope note should not be read as saying the four lanes are finished subjects,
+  only that every tracked cell now has a sourced record behind it.
 
 cells:
 
@@ -69,17 +71,26 @@ cells:
     profession: null
     topic: privacy
     granularity: jurisdiction-wide
-    status: not_started
-    record_id: null
-    confidence: null
-    authoritative_sources: [opc-pipeda]
-    last_reviewed: null
+    status: covered
+    record_id: ca-federal-privacy-pipeda
+    confidence: high
+    authoritative_sources: [opc-pipeda, canada-gazette-p2]
+    last_reviewed: 2026-08-18
     notes: >
-      PIPEDA. Real complexity to research, not just "read the Act": PIPEDA
-      doesn't apply where a province's law is deemed "substantially
-      similar" (Ontario's PHIPA is; confirm QC's Law 25 and NS's PHIA
-      status before assuming PIPEDA applies or doesn't in either).
-
+      PIPEDA. THE KEY POINT: a 'substantially similar' provincial law does NOT
+      put a clinician outside PIPEDA — it exempts them only for what occurs
+      WITHIN the province (s. 26(2)(b), and SOR/2016-62 for NS custodians,
+      whose RIAS says 'for intra-provincial transactions'). Cross-border
+      flows, federal works/undertakings, and the three TERRITORIES stay
+      federal. s. 10.3(1) + SOR/2018-64 s. 6 require a record of EVERY breach
+      kept 24 months, and s. 28 makes failing to keep it an offence up to
+      $100k — the federal counterpart of Law 25's register, with no NS
+      analogue. The cell's old open question is ANSWERED: OPC still lists
+      Quebec as substantially similar, so the declaration survives Law 25 —
+      but via a general private-sector statute, where ON/NS go through
+      health-specific statutes tied to custodian status. NOT IN FORCE, track
+      it: 2026, c. 3 ss. 389-397 add Division 1.2 data mobility (s. 10.4); no
+      obligation until the framework regulations land.
   # ---- Ontario — psychologist (CPBAO), psychotherapist (CRPO),
   #      clinical_social_worker (OCSWSSW). Base statute: RHPA. ----
   - jurisdiction: ca-on
