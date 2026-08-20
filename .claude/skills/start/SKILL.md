@@ -1,4 +1,4 @@
-<!-- kit: standing/start@2026-08-18.3 — canonical: /workspace/kestrel/library/skills/standing/start/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: standing/start@2026-08-21.1 — canonical: /workspace/kestrel/library/skills/standing/start/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 ---
 name: start

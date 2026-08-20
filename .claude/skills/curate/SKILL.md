@@ -1,4 +1,4 @@
-<!-- kit: standing/curate@2026-08-18.3 — canonical: /workspace/kestrel/library/skills/standing/curate/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: standing/curate@2026-08-21.1 — canonical: /workspace/kestrel/library/skills/standing/curate/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # /curate — candidates → records, with the operator, never without
 
@@ -28,7 +28,7 @@ oldest first. For each:
 4. **On accept, the mechanics are mandatory, in order:**
    - the record edit MUST carry a source and a verified-as-of date — run
      the check, don't eyeball it:
-     `python3 -c "from kestrel.record_diff import governance_check; import yaml; print(governance_check(yaml.safe_load(open('<record>')), ['source_url','last_verified']))"`
+     `python3 -c "from cloud_researcher.record_diff import governance_check; import yaml; print(governance_check(yaml.safe_load(open('<record>')), ['source_url','last_verified']))"`
      — a non-empty result blocks the accept, full stop.
    - diff proposed vs committed with `record_diff.diff_records()` and
      write one changelog entry per change via `write_changelog_entry()`

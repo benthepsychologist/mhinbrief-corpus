@@ -1,9 +1,14 @@
-<!-- kit: base/AGENTS@2026-08-18.3 — canonical: /workspace/kestrel/library/agentdocs/base/AGENTS.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
-<!-- REGION MARKERS BELOW ARE NOT YET ENFORCED. The `>>> kestrel:` fences mark
-     which sections the engine owns, ahead of kit.py learning to hash per
-     region (ROADMAP/DECOMPOSITION.md §3.4). Until it does, drift is still
-     computed whole-file, so an edit anywhere in here reports the same way.
-     They are written now so the migration has stable anchors to move to. -->
+<!-- kit: base/AGENTS@2026-08-21.1 — canonical: /workspace/kestrel/library/agentdocs/base/AGENTS.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- THE `>>> kestrel:` FENCES BELOW ARE LOAD-BEARING (since 2026-08-18).
+     They mark the sections the engine owns. kit.py hashes each region
+     separately, so: everything OUTSIDE a fence is yours to write and is
+     never compared — filling in the prompts below is not drift and never
+     reports as one. Everything INSIDE a fence is the engine's; editing it
+     reports as a conflict, and on a library update the engine replaces
+     only those blocks and leaves every other byte of this file alone.
+     Do not delete or reorder a fence marker: a document whose regions are
+     undefined cannot be updated in place, and kestrel refuses to guess
+     rather than risk eating your writing. -->
 
 # AGENTS.md — operating manual for mhinbrief
 
@@ -43,7 +48,7 @@ whether or not it has said so.
 
 ---
 
-<!-- >>> kestrel: base/agents#what-a-kestrel-repo-is @2026-08-18.3 -->
+<!-- >>> kestrel: base/agents#what-a-kestrel-repo-is @2026-08-21.1 -->
 
 ## 3. What a kestrel-administered agent repo is
 
@@ -81,7 +86,7 @@ for everyone, not just here.
 
 <!-- <<< kestrel: base/agents#what-a-kestrel-repo-is -->
 
-<!-- >>> kestrel: base/agents#shared-disciplines @2026-08-18.3 -->
+<!-- >>> kestrel: base/agents#shared-disciplines @2026-08-21.1 -->
 
 ## 4. The disciplines every repo here shares
 
@@ -195,7 +200,7 @@ delete this section if the repo has none.
 
 ---
 
-<!-- >>> kestrel: base/agents#extending @2026-08-18.3 -->
+<!-- >>> kestrel: base/agents#extending @2026-08-21.1 -->
 
 ## 9. Extending this file — the rules
 
@@ -208,9 +213,12 @@ convention:
    sections are the questions every repo has to answer. Answer them in your
    own words. Renumbering or repurposing them makes the fleet's docs stop
    being comparable, which is the one thing a shared skeleton buys.
-2. **Do not edit inside an engine region.** The `>>> kestrel:` fences mark
-   content the engine maintains for the whole fleet. If one of those rules
-   is wrong, it is wrong everywhere — route it, do not patch it locally.
+2. **Do not edit inside an engine region — and everything outside one is
+   genuinely yours.** The `>>> kestrel:` fences mark content the engine
+   maintains for the whole fleet; it is hashed per region, so an edit
+   inside reports as a conflict while your own sections are never compared
+   at all. If one of those fleet-wide rules is wrong, it is wrong
+   everywhere — route it, do not patch it locally.
 3. **Say what a thing IS before you say how it is doing.** A name, an
    identifier, a status marker, a filename — each is a pointer. A pointer
    with no unpacking beside it has told the reader nothing. This applies to
@@ -234,7 +242,7 @@ a cookbook, a runbook, an architecture note.
 
 <!-- kit: composed from standing/AGENTS.md.part.tmpl -->
 
-<!-- kit: standing/AGENTS.part@2026-08-18.3 — canonical: /workspace/kestrel/library/agentdocs/standing/AGENTS.md.part.tmpl — provenance only. This is a PART: it appends to the base AGENTS.md rather than replacing it (kit.py PART_SUFFIX), so a reader gets the shared layer AND this kind's disciplines in one file. -->
+<!-- kit: standing/AGENTS.part@2026-08-21.1 — canonical: /workspace/kestrel/library/agentdocs/standing/AGENTS.md.part.tmpl — provenance only. This is a PART: it appends to the base AGENTS.md rather than replacing it (kit.py PART_SUFFIX), so a reader gets the shared layer AND this kind's disciplines in one file. -->
 
 ---
 

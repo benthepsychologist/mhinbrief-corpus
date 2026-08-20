@@ -1,4 +1,4 @@
-<!-- kit: standing/tend@2026-08-18.3 — canonical: /workspace/kestrel/library/skills/standing/tend/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: standing/tend@2026-08-21.1 — canonical: /workspace/kestrel/library/skills/standing/tend/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # /tend — sweep declared sources, stage the candidates
 
@@ -17,10 +17,30 @@ candidate into a record, regardless of how it arrived.
 
 ## Run
 
-    kestrel tend /workspace/mhinbrief-corpus
+    cloud-researcher tend --corpus /workspace/mhinbrief-corpus
 
 `--dry-run` first if you want the source-selection plan without fetches.
 `--source <id>` scopes to one source.
+
+⏱ **Give this an explicit long timeout (≥600s), and never background it
+and stop.** A full sweep of a 50-source manifest takes ~195 seconds — well
+past the Bash tool's 120s default — so the default is wrong for the normal
+case here, not the exceptional one.
+
+**The failure this prevents, from a real unattended run:** the sweep was
+backgrounded, the session announced *"I'll wait for it to complete rather
+than poll"* — and the turn ended on that message. It never reached its
+report step **or its commit step**, and the run recorded `exit=0`, because
+the CLI did exit cleanly after printing that line. Collected work sat
+uncommitted and the site went stale for days while every signal said
+success.
+
+So: **a backgrounded sweep must be polled to completion inside the same
+turn.** Announcing an intention to wait is not waiting. If the sweep
+genuinely cannot finish in this turn, say so and commit what exists —
+an honest partial beats a silent zero. This is the same defect the
+attention kind's `/wrap` §5 documents for `hugo` and `publish`; the rule
+is identical and it is here because this skill hit it independently.
 
 ## Then report, scannable
 

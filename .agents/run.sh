@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# kit: base/run@2026-08-18.3 — canonical: /workspace/kestrel/library/runners/run.sh.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit.
+# kit: base/run@2026-08-21.1 — canonical: /workspace/kestrel/library/runners/run.sh.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit.
 #
 # Unattended runner for mhinbrief. A cron line calls:
 #
@@ -149,9 +149,29 @@ end_epoch=$(date -u +%s)
 # The point of the receipt is that `kestrel fleet status` can read it and say
 # "this repo's 14:00 daily has failed two days running". Without it, an
 # unattended failure is invisible until someone notices the output missing.
-printf 'skill=%s\nstarted=%s\nseconds=%s\nexit=%s\noutcome=%s\nlog=%s\n' \
+#
+# `dirty` is the second thing it has to record, and it exists because exit
+# status alone LIED. A real unattended run announced it would wait for a
+# backgrounded sweep, ended the turn on that sentence, never reached its
+# commit step — and exited 0, because the CLI did shut down cleanly after
+# printing it. `exit=0 dirty=46` is distinguishable from success; `exit=0`
+# on its own is not. This runner's own logs and receipts do not inflate the
+# count: they live under a directory it .gitignores itself.
+# ⚠️ Guarded, not inlined, and this script has paid for the lesson once
+# already. `set -o pipefail` is on, so ANY failing command in a `$(...)`
+# assignment aborts the whole run — and it aborts it HERE, after the work
+# is done and before the receipt is written, which is the worst possible
+# place. The 2026-08-15 fix hit exactly this shape with the log-prune `ls`
+# on an empty glob; writing it inline reintroduced it for a target that is
+# not a git repo. `?` is a real answer: "not recorded" is not "clean".
+dirty="?"
+if git -C "$REPO" rev-parse --git-dir >/dev/null 2>&1; then
+    dirty=$(git -C "$REPO" status --porcelain 2>/dev/null | wc -l | tr -d ' ') \
+        || dirty="?"
+fi
+printf 'skill=%s\nstarted=%s\nseconds=%s\nexit=%s\noutcome=%s\ndirty=%s\nlog=%s\n' \
     "$SKILL" "$RUN_ID" "$((end_epoch - start_epoch))" "$status" \
-    "$([ "$status" -eq 0 ] && echo ok || echo FAILED)" "$LOG" > "$RECEIPT"
+    "$([ "$status" -eq 0 ] && echo ok || echo FAILED)" "$dirty" "$LOG" > "$RECEIPT"
 
 if [ "$status" -ne 0 ]; then
     echo "run.sh: '${SKILL}' FAILED (exit ${status}) — see $LOG" >&2
