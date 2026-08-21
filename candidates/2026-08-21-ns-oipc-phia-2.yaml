@@ -1,0 +1,11 @@
+observed: '2026-08-21'
+staged_by: tend
+status: staged
+source:
+  id: 343316e3a76631c1
+  url: https://oipc.novascotia.ca/news
+  title: 'page changed: Office of the Information and Privacy Commissioner for Nova
+    Scotia (PHIA oversight) (+2/-2 lines)'
+  ts: '2026-08-21T13:00:50Z'
+  source_id: page_diff:ns-oipc-phia
+note: ''

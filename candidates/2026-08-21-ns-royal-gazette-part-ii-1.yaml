@@ -1,0 +1,10 @@
+observed: '2026-08-21'
+staged_by: tend
+status: staged
+source:
+  id: a0c5a51fa1cbfbfa
+  url: https://novascotia.ca/just/regulations/rg2issues.htm
+  title: 'page changed: Nova Scotia Royal Gazette, Part II (Regulations) (+3/-0 lines)'
+  ts: '2026-08-21T13:00:50Z'
+  source_id: page_diff:ns-royal-gazette-part-ii
+note: ''

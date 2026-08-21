@@ -1,9 +1,9 @@
 {
   "container_matched": true,
-  "content_hash": "10a39fdbe4d2b9e720f7f57a3d815231fff45b20",
+  "content_hash": "0e5d3b49d9e235198de2df2d4910199e528d8707",
   "detected_date": null,
   "endpoint": "https://novascotia.ca/just/regulations/rg2issues.htm",
-  "fetched_at": "2026-08-21T00:30:11Z",
-  "line_count": 2408,
+  "fetched_at": "2026-08-21T13:00:50Z",
+  "line_count": 2411,
   "source_id": "ns-royal-gazette-part-ii"
 }
