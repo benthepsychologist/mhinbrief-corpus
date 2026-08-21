@@ -436,7 +436,7 @@ and moving these into it is the obvious next step and is yours to take.*
 > candidates is a smaller, unblocked task that can happen either before
 > or alongside it.
 
-<!-- >>> kestrel: base/status#keeping-it-honest @2026-08-21.3 -->
+<!-- >>> kestrel: base/status#keeping-it-honest @2026-08-21.4 -->
 <!-- ── How to keep this file honest ──────────────────────────────────────
 Rules the engine seeds; the content above is entirely this repo's.
 

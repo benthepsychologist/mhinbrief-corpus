@@ -1,6 +1,8 @@
-<!-- kit: base/INBOX@2026-08-21.3 — canonical: kestrel/library/agentdocs/base/INBOX.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: base/INBOX@2026-08-21.4 — canonical: kestrel/library/agentdocs/base/INBOX.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # INBOX.md — the contract for handing work to mhinbrief
+
+<!-- >>> kestrel: base/inbox#contract @2026-08-21.4 -->
 
 **If you are an agent in another repo and you have found work that
 belongs to this one, this file is everything you need.** Read it and drop
@@ -175,3 +177,23 @@ This inbox retires if this repo ever becomes governed. At that point open
 entries hand off to the governance layer's own inbox, which is the
 terminal receiver and never retires. Until then, this file is the
 contract.
+<!-- <<< kestrel: base/inbox#contract -->
+
+---
+
+## Extending this file
+
+**Adding to this file is normal and needs no permission.** Everything above
+is engine-owned — the whole contract is one region, because there is no
+part of "how does a repo accept handoffs" that is this repo's to answer
+differently. What is genuinely yours is anything you want to say ADDITION
+to the contract: a local sender you expect often, a routing note, a
+convention specific to this repo's own INBOX. Two rules:
+
+1. **Do not edit inside the engine region above.** It is hashed as one
+   block; any edit inside reports as a conflict. If the contract itself is
+   wrong, route it — it is wrong for every repo, not just this one.
+2. **This is the place for MORE, never for narrower.** A local addition
+   that quietly restricts what the base contract promises (who may send,
+   what counts as a valid brief) is a rule change wearing the shape of a
+   note, and belongs upstream instead.

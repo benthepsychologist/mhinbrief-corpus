@@ -1,6 +1,8 @@
-<!-- kit: base/OPERATING@2026-08-21.3 — canonical: kestrel/library/agentdocs/base/OPERATING.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: base/OPERATING@2026-08-21.4 — canonical: kestrel/library/agentdocs/base/OPERATING.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # OPERATING.md — the shared contract for mhinbrief
+
+<!-- >>> kestrel: base/operating#contract @2026-08-21.4 -->
 
 **This file is the same in every repo the engine tends.** It answers the
 questions that are not specific to what this repo is *for*: what you own,
@@ -66,7 +68,7 @@ section exists to prevent.
 - `INBOX.md`
 - `INBOX/.gitkeep`
 - `OPERATING.md`
-- `STATUS.md` — ⚠️ **NOT engine-owned: diverged by design.** Someone recorded that this file is permanently yours. Edit it freely; it will never be overwritten or reported as drift.
+- `STATUS.md`
 
 ⚠️ **That list is a snapshot taken when this file was rendered. The
 authority is `.agents/kit.yaml`** — read it if the two ever disagree,
@@ -226,3 +228,24 @@ closed without checking.
 4. **If you edited an engine-rendered file, do not back-port it
    yourself.** File the brief (§3) and stop. This repo showing `dirty`
    afterwards is the expected state until the engine's side acts.
+<!-- <<< kestrel: base/operating#contract -->
+
+---
+
+## Extending this file
+
+**Adding to this file is normal and needs no permission.** Everything above
+is engine-owned — the whole contract is one region, because "what does the
+engine own here and how do you ask for a change" is not a question this
+repo answers differently from any other. What is genuinely yours is a
+local operating note that ADDS to the contract: a runbook step specific to
+this repo, a convention this repo layers on top. Two rules:
+
+1. **Do not edit inside the engine region above.** It is hashed as one
+   block; any edit inside reports as a conflict. If the contract itself is
+   wrong, route it — it is wrong for every repo, not just this one.
+2. **A repo-specific OPERATING procedure belongs in `AGENTS.md`, not
+   here, if it is about what THIS repo does.** This file stays "the same
+   in every repo the engine tends" — that promise is the whole point of
+   it. Reserve additions here for things about the CONTRACT itself: how
+   this repo happens to invoke a shared tool, not what the repo is for.
