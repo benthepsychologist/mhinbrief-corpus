@@ -11,7 +11,6 @@
 
 ## Where things stand
 
-
 | | |
 | --- | --- |
 | **Sources** | 50, all `wired`, across all 13 provinces/territories + federal. 3 carry `verified: false` (see below). |
@@ -80,6 +79,14 @@ dated note goes at the top of the log below, newest first. This file is the
 registry's local truth; the human work-state view lives in the pm hub.
 
 ## Dated log — belongs in `log.md`
+
+*These sections carry dates, which makes them a chronological log rather
+than a snapshot. Per D11 a `STATUS.md` is a snapshot everywhere and the
+log lives in `log.md` beside it. They are kept here verbatim and in order
+— **this migration does not move them**, because splitting a file in two
+is a bigger decision than restructuring one. Moving them is the obvious
+next step and is yours to take.*
+
 
 *These notes carry dates, which makes them a chronological log rather than a
 snapshot. Per D11 a `STATUS.md` is a snapshot everywhere and the log lives in
@@ -428,3 +435,28 @@ and moving these into it is the obvious next step and is yours to take.*
 > this instance can claim broad coverage; curating the 9 staged
 > candidates is a smaller, unblocked task that can happen either before
 > or alongside it.
+
+<!-- >>> kestrel: base/status#keeping-it-honest @2026-08-21.3 -->
+<!-- ── How to keep this file honest ──────────────────────────────────────
+Rules the engine seeds; the content above is entirely this repo's.
+
+1. REWRITE THE TOP NOTE FROM SCRATCH. Never patch a line inside an
+   existing note. Read the git log since this file's own "As of" date,
+   then write the note fresh. A patched note accumulates half-true
+   sentences that each looked fine as an edit.
+
+2. ASSERT NOTHING A COMMAND COMPUTES. Counts, versions, branch state,
+   "N unpushed" — run the command now and paste the answer, or do not
+   claim it. A number typed from memory is wrong within a day, and it is
+   the kind of wrong that gets believed.
+
+3. UPDATE THE "As of" DATE WHENEVER YOU TOUCH THE FILE. `kestrel fleet
+   status` compares that date to the newest commit and reports the gap.
+   A stale date is not cosmetic — it is the signal that everything below
+   it is also stale, and it is the only automated check this file has.
+
+4. DELETING IS PART OF WRITING IT. An entry that is no longer true is
+   worse than a missing one, because it reads as current. This file is a
+   snapshot, not a log; the log is `git log`.
+─────────────────────────────────────────────────────────────────────── -->
+<!-- <<< kestrel: base/status#keeping-it-honest -->

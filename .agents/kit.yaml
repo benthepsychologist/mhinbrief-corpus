@@ -1,7 +1,7 @@
 library_version: 2026-08-21.3
 kind: standing
-installed_at: '2026-08-21T12:36:45Z'
-engine_commit: f150ccd
+installed_at: '2026-08-21T17:12:05Z'
+engine_commit: cd7476c
 files:
   .claude/skills/health/SKILL.md: 07e1631df9f75fc2cbfc70a868e03330718cb5033399dbc6f8d3f00f1b4999fa
   AGENTS.md:
@@ -10,7 +10,8 @@ files:
     base/agents#extending: 6bcff52ab60a7d1fcdfc6af1bb5cd3e8782a313c8586ea723579442d77b95ab9
   INBOX.md: d92e621e289fff84f155978c05c8401be6a76c26643da43f417cfebf94c37ce7
   OPERATING.md: f410b29651b8a37dd69ae02f69ecbd38f4847214ca372c42dc5a4519d0d4dcd1
-  STATUS.md: null
+  STATUS.md:
+    base/status#keeping-it-honest: 6373660accb6a9323a4d5ee239f19f520f4ef0b574f29b521bf8473b6e553301
   .claude/skills/curate/SKILL.md: 310d54e01c8e0904785b45c9349680b5777805c22b82864803bac284baa91fb3
   .claude/skills/publish/SKILL.md: cf618d57ec58746e26ec57038982701d0c4e450418d09fc2df9229ce1b1373a0
   .claude/skills/start/SKILL.md: 644f087c9993857978ac09da971c52b87b39b2286e4e9e79e0085b83d52cc79b
