@@ -1,8 +1,16 @@
-# STATUS — mhinbrief-corpus (registry instance)
+# STATUS — mhinbrief-corpus
 
-*Hand-maintained. **As of 2026-08-18** (newest note first.)*
+*As of 2026-08-18*
 
-**Where things actually stand right now:**
+<!-- The line above is deliberately alone on its own line, in exactly one
+     spelling, per the base STATUS schema kestrel introduced 2026-08-18:
+     it is the only automated freshness check this file has, and it
+     cannot fire when the date is embedded mid-sentence. -->
+
+*Hand-maintained; this is the registry instance. Newest note first.*
+
+## Where things stand
+
 
 | | |
 | --- | --- |
@@ -24,6 +32,61 @@
 regulation) · `nb-association-social-workers` and `yt-psychologists`
 (both behind a full Cloudflare interstitial that `tools/fetch-blocked.sh`
 deliberately does not defeat — an operator must look by hand).
+
+## Open
+
+Everything here is stated in the table above or in a dated note below; this
+section exists so the open items are readable without mining for them.
+
+1. **86 candidates staged, 0 curated** — the oldest open item, and the one
+   that gates any broad coverage claim. Note that **none** of the 45 records
+   came from this queue: coverage was built by directed research against the
+   rubric, which is the point the rubric exists to make.
+2. ⚠️ **The candidate queue is inflating from page churn, not news.**
+   `mb-mcsw` and `ns-oipc-phia` stage a candidate on **every** daily sweep
+   with a 1–2 line diff; the 2026-08-21 sweep added `ab-psychologists-association-of-alberta` to that pattern. The queue grows ~2–3/day from what
+   looks like a rotating page element. Triage or demote these before the
+   count stops meaning anything.
+3. ⚠️ **3 of 3 verified statements are unsigned.** Signoff is a person's act;
+   nothing here is signed until Ben signs it. One cell is verified
+   statement-by-statement (`ca-on-retention-psychology`, 3 statements,
+   6 gaps, STAMP v0.2).
+4. ⛔ **`/review/` forces every visitor down one login path.** The app has
+   `auto_redirect_to_identity: true` with **zero identity providers
+   configured**, so the only route is the Cloudflare-account prompt. Ben has
+   said that route is his preference *for himself*; it affects colleagues.
+   (The operator lockout itself was fixed 2026-08-18.)
+5. ⚠️ **The crontab was generated against the EDT offset.** America/Toronto
+   changes offset **2026-11-01** — regenerate then, or the daily `tend` fires
+   an hour off.
+6. **3 sources carry `verified: false`** — `mhcc-workplace-standard` is a
+   scope call for Ben (workplace standard, not clinical-practice regulation);
+   `nb-association-social-workers` and `yt-psychologists` sit behind a full
+   Cloudflare interstitial that `tools/fetch-blocked.sh` deliberately does
+   not defeat, so an operator must look by hand.
+7. **Coverage is a floor, not an end state.** All 45 tracked cells are
+   covered, but 5 are covered at `confidence: medium`, each naming its own
+   open question in the record's notes. `/tend` cannot close a cell;
+   directed research does.
+8. **Coverage is scoped to 4 of 14 jurisdictions.** ON, QC, NS and federal
+   are tracked and rendered; the other ten are wired and swept but out of
+   render scope by Ben's call ("we are not ready to be responsible outside
+   of those lanes").
+
+## Keeping this current
+
+Refresh **As of** and the affected section when the repo state moves. A
+dated note goes at the top of the log below, newest first. This file is the
+registry's local truth; the human work-state view lives in the pm hub.
+
+## Dated log — belongs in `log.md`
+
+*These notes carry dates, which makes them a chronological log rather than a
+snapshot. Per D11 a `STATUS.md` is a snapshot everywhere and the log lives in
+`log.md` beside it. They are kept here verbatim and in order — **this
+migration does not move them**, because splitting a file in two is a bigger
+decision than restructuring one. This repo has no `log.md` yet; creating one
+and moving these into it is the obvious next step and is yours to take.*
 
 > **2026-08-18 — the operator was locked out of his own review page, and the
 > login only offers one route.** Ben tried `/review/` and could not get in: the
