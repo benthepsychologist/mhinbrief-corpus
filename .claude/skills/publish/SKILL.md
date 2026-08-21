@@ -1,4 +1,4 @@
-<!-- kit: standing/publish@2026-08-21.2 — canonical: /workspace/kestrel/library/skills/standing/publish/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: standing/publish@2026-08-21.3 — canonical: kestrel/library/skills/standing/publish/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # /publish — send this corpus out through its adapter(s)
 
@@ -24,7 +24,7 @@ sibling site repo, an API call, whatever the real channel needs.
 
 ## Guarantees it preserves
 
-It imports `/workspace/kestrel/kestrel/publish/core.py` for `secret_scan()`
+It imports `kestrel/kestrel/publish/core.py` for `secret_scan()`
 (every emitted byte), `apply_allowlist()`, `write_provenance_manifest()`,
 and (for any git-backed channel) `push_site()`. This skill does not
 prescribe `core.run()` or `core.referenced_only()` — those assume

@@ -1,4 +1,4 @@
-<!-- kit: base/OPERATING@2026-08-21.2 — canonical: /workspace/kestrel/library/agentdocs/base/OPERATING.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: base/OPERATING@2026-08-21.3 — canonical: kestrel/library/agentdocs/base/OPERATING.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # OPERATING.md — the shared contract for mhinbrief
 
@@ -15,11 +15,17 @@ Read this one first. It is short on purpose.
 
 ## 0. Running engine tools
 
-The engine is an installed package with one command. From anywhere:
+The engine is an installed package with one command. Run it **from this
+repo's root**, where `.` is this instance:
 
 ```sh
-kestrel <verb> --instance /workspace/mhinbrief-corpus
+kestrel <verb> --instance .
 ```
+
+From elsewhere, give the path to this repo instead of `.`. Nothing in this
+document hardcodes where that is — the fleet is meant to be droppable onto
+a fresh machine at any root, so the only file that records real locations
+is the engine's own `instances.yaml`.
 
 `kestrel --help` lists the verbs. Fleet-wide operations live under
 `kestrel fleet <verb>` and are the engine's own business, not yours.
@@ -27,7 +33,7 @@ kestrel <verb> --instance /workspace/mhinbrief-corpus
 ⚠️ **Always name the instance.** Without it the tools have no idea which
 repo they are for; they fail loudly rather than guessing, which is the
 intended behaviour. The older form —
-`KESTREL_INSTANCE=/workspace/mhinbrief-corpus python3 /workspace/kestrel/tools/<tool>.py`
+`KESTREL_INSTANCE=<this repo> python3 <kestrel repo>/tools/<tool>.py`
 — still works and warns, because a great deal of installed documentation
 still says it. Prefer the flag; do not be alarmed by the warning.
 
@@ -36,7 +42,7 @@ still says it. Prefer the flag; do not be alarmed by the warning.
 ## 1. What you own, and what you don't
 
 Two repos are in play whenever this one runs: **this repo**
-(`/workspace/mhinbrief-corpus`) and **the engine** (`/workspace/kestrel`). The split
+(`mhinbrief`) and **the engine** (`kestrel`). The split
 is *not* "code vs. data" — that reading is what causes the mistake this
 section exists to prevent.
 
@@ -60,7 +66,7 @@ section exists to prevent.
 - `INBOX.md`
 - `INBOX/.gitkeep`
 - `OPERATING.md`
-- `STATUS.md`
+- `STATUS.md` — ⚠️ **NOT engine-owned: diverged by design.** Someone recorded that this file is permanently yours. Edit it freely; it will never be overwritten or reported as drift.
 
 ⚠️ **That list is a snapshot taken when this file was rendered. The
 authority is `.agents/kit.yaml`** — read it if the two ever disagree,
@@ -80,7 +86,7 @@ describing a world the install is about to change.
 >
 > Look the path up in `.agents/kit.yaml`'s `files:` map:
 >
-> - **not there at all**, and not under `/workspace/kestrel` → **yours.**
+> - **not there at all**, and not under `kestrel` → **yours.**
 > - **there with a hash** → engine-owned. Hot-fix if you must; back-port
 >   by brief.
 > - **there with `null`** → ⚠️ **yours**, permanently and on purpose.
@@ -149,7 +155,7 @@ is **"would another repo want this unchanged."**
 declared). Commit and push either without asking first, on request or on
 reasonable judgment.
 
-**`/workspace/kestrel` is outside that zone.** Being right about what a
+**`kestrel` is outside that zone.** Being right about what a
 template should say is not authority to write it there yourself. Any
 change the engine needs goes in as a brief — **and where it goes depends
 on what kind it is:**
@@ -157,7 +163,7 @@ on what kind it is:**
 | your brief | goes to |
 | --- | --- |
 | **dev** — a template bug, a missing feature, a design question. About the engine's *code* | a **GitHub issue** on the engine repo |
-| **ops** — an incident, a drift report, anything naming a live repo, a path, or a run | `/workspace/kestrel-ops/INBOX/<date>-mhinbrief-<slug>.md` |
+| **ops** — an incident, a drift report, anything naming a live repo, a path, or a run | `kestrel-ops/INBOX/<date>-mhinbrief-<slug>.md` |
 
 ⚠️ **If you are unsure which, file it as OPS.** Over-filing to the private
 side costs someone a redirect; under-filing to a public issue tracker

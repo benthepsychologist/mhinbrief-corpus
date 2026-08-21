@@ -1,4 +1,4 @@
-<!-- kit: base/AGENTS@2026-08-21.1 — canonical: /workspace/kestrel/library/agentdocs/base/AGENTS.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: base/AGENTS@2026-08-21.3 — canonical: kestrel/library/agentdocs/base/AGENTS.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 <!-- THE `>>> kestrel:` FENCES BELOW ARE LOAD-BEARING (since 2026-08-18).
      They mark the sections the engine owns. kit.py hashes each region
      separately, so: everything OUTSIDE a fence is yours to write and is
@@ -48,7 +48,7 @@ whether or not it has said so.
 
 ---
 
-<!-- >>> kestrel: base/agents#what-a-kestrel-repo-is @2026-08-21.2 -->
+<!-- >>> kestrel: base/agents#what-a-kestrel-repo-is @2026-08-21.3 -->
 
 ## 3. What a kestrel-administered agent repo is
 
@@ -86,7 +86,7 @@ for everyone, not just here.
 
 <!-- <<< kestrel: base/agents#what-a-kestrel-repo-is -->
 
-<!-- >>> kestrel: base/agents#shared-disciplines @2026-08-21.2 -->
+<!-- >>> kestrel: base/agents#shared-disciplines @2026-08-21.3 -->
 
 ## 4. The disciplines every repo here shares
 
@@ -200,7 +200,7 @@ delete this section if the repo has none.
 
 ---
 
-<!-- >>> kestrel: base/agents#extending @2026-08-21.2 -->
+<!-- >>> kestrel: base/agents#extending @2026-08-21.3 -->
 
 ## 9. Extending this file — the rules
 
@@ -242,7 +242,7 @@ a cookbook, a runbook, an architecture note.
 
 <!-- kit: composed from standing/AGENTS.md.part.tmpl -->
 
-<!-- kit: standing/AGENTS.part@2026-08-21.1 — canonical: /workspace/kestrel/library/agentdocs/standing/AGENTS.md.part.tmpl — provenance only. This is a PART: it appends to the base AGENTS.md rather than replacing it (kit.py PART_SUFFIX), so a reader gets the shared layer AND this kind's disciplines in one file. -->
+<!-- kit: standing/AGENTS.part@2026-08-21.3 — canonical: kestrel/library/agentdocs/standing/AGENTS.md.part.tmpl — provenance only. This is a PART: it appends to the base AGENTS.md rather than replacing it (kit.py PART_SUFFIX), so a reader gets the shared layer AND this kind's disciplines in one file. -->
 
 ---
 

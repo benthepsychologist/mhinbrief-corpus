@@ -1,4 +1,4 @@
-<!-- kit: standing/start@2026-08-21.2 — canonical: /workspace/kestrel/library/skills/standing/start/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: standing/start@2026-08-21.3 — canonical: kestrel/library/skills/standing/start/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 ---
 name: start
@@ -62,7 +62,7 @@ renders one card, in this order:
    last diffed-against baseline — note if it looks older than that
    source's declared `cadence`.
 6. **Push safety** — run `git log @{u}..` in this instance's repo, the
-   engine (`/workspace/kestrel` — mechanical only, never auto-pushed), and
+   engine (`kestrel` — mechanical only, never auto-pushed), and
    its site sibling if this instance has one declared (check
    `kestrel.yaml`'s `outputs.site` — not every standing instance has a
    site yet). **A clean `git status` is not evidence of this** — only

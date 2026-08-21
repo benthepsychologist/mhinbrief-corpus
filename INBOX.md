@@ -1,4 +1,4 @@
-<!-- kit: base/INBOX@2026-08-21.2 — canonical: /workspace/kestrel/library/agentdocs/base/INBOX.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: base/INBOX@2026-08-21.3 — canonical: kestrel/library/agentdocs/base/INBOX.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # INBOX.md — the contract for handing work to mhinbrief
 

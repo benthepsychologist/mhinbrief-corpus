@@ -1,20 +1,21 @@
-library_version: 2026-08-21.2
+library_version: 2026-08-21.3
 kind: standing
-installed_at: '2026-08-21T00:02:26Z'
-engine_commit: 8b3ca80
+installed_at: '2026-08-21T12:36:45Z'
+engine_commit: f150ccd
 files:
-  .claude/skills/health/SKILL.md: 25662be5fd690ad59261583d11786dd365d32a3a3aa44f8e60a9721e4609e8e9
+  .claude/skills/health/SKILL.md: 07e1631df9f75fc2cbfc70a868e03330718cb5033399dbc6f8d3f00f1b4999fa
   AGENTS.md:
-    base/agents#what-a-kestrel-repo-is: 96eb00eb45ada07c124c59ad317737081914d67b1aa0deac8387873ec557dcd5
-    base/agents#shared-disciplines: e681417c82db08e6d659024ae321fdff1ff1c8850e953cc9e8c5360a1f53e534
-    base/agents#extending: 8d67cfe4d8206df86458318044508c1cd31445d5e514491a8c46994c6917af5e
-  INBOX.md: 655e831b379cf3e1fa5a8434935e0d0b0a439883d88e15a538a3762ffbeb2769
-  OPERATING.md: 1983ceda213eb539679c0d36dd8a5f8c0e42fd4838f44757f6ffaa488b43dccf
-  .claude/skills/curate/SKILL.md: 17a94f42f2cf4a54968c619fa499c9e15c1e80b3c8a2e34e7c208d78528214d5
-  .claude/skills/publish/SKILL.md: d856b7baab52babdc27f83640ca713e5bdd1e6feb6b5341d8b0ed87141aee3cf
-  .claude/skills/start/SKILL.md: e34648f5afb5015b714178b02268e0a3c8a6c7fe2ead544965a7afe8030dd7ba
-  .claude/skills/tend/SKILL.md: 9535ee2c5c1df3372d9a002406da214de5d44305c630770d1dc9fa07cf661d09
-  .claude/skills/verify/SKILL.md: d351cb386dbde2e600424a5508a7621efb6ba5b16e202d65ba418ddb5bd49c3c
-  CLAUDE.md: 7b42bde46b900ad9a6b94405ad4f103a1a0c272f299cd9c0e8bb4ff4c22901cc
-  .agents/run.sh: b7bc370cf56d5d0553e3ad9c236421dc7a63da112c5c3b249f54906400064890
+    base/agents#what-a-kestrel-repo-is: 2af1e88f281fda71a60ab1f83d74fa24a6ededc6bc8c13127d6da25eb3f8a2da
+    base/agents#shared-disciplines: f79516d0943441a868be17e7a65137eebef0cb8187f58be6d0694c3bfc8a8d60
+    base/agents#extending: 6bcff52ab60a7d1fcdfc6af1bb5cd3e8782a313c8586ea723579442d77b95ab9
+  INBOX.md: d92e621e289fff84f155978c05c8401be6a76c26643da43f417cfebf94c37ce7
+  OPERATING.md: f410b29651b8a37dd69ae02f69ecbd38f4847214ca372c42dc5a4519d0d4dcd1
+  STATUS.md: null
+  .claude/skills/curate/SKILL.md: 310d54e01c8e0904785b45c9349680b5777805c22b82864803bac284baa91fb3
+  .claude/skills/publish/SKILL.md: cf618d57ec58746e26ec57038982701d0c4e450418d09fc2df9229ce1b1373a0
+  .claude/skills/start/SKILL.md: 644f087c9993857978ac09da971c52b87b39b2286e4e9e79e0085b83d52cc79b
+  .claude/skills/tend/SKILL.md: 3c8d623d838fbbf6ff4e00b66222ef4d7bc72eb35b0991176d663fb89dba9dc1
+  .claude/skills/verify/SKILL.md: 624690faeec333e1afccbbd383612a33ceb3c88968c77ec2c5393d4ed1730ea5
+  CLAUDE.md: 0f2e32cd61ff6389d74ac664a2ececfec1214c21150e362eaf9bbbb29f0f3cee
+  .agents/run.sh: da5e1ad025c8f10aa282822e345c7eb7c79a8fd221dbe4d091daea3bfa11e125
   INBOX/.gitkeep: 5e0fa609bf3d7f4fe2a96f991bd9bf7c040a0fce0e559956514b415ea1c7f96a

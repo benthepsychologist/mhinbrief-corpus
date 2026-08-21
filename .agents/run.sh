@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
-# kit: base/run@2026-08-21.2 — canonical: /workspace/kestrel/library/runners/run.sh.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit.
+# kit: base/run@2026-08-21.3 — canonical: kestrel/library/runners/run.sh.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit.
 #
 # Unattended runner for mhinbrief. A cron line calls:
 #
-#     /workspace/mhinbrief-corpus/.agents/run.sh <skill>
+#     <this repo>/.agents/run.sh <skill>
+#
+# The path is the caller's to supply and is NOT baked in here: this file
+# derives its own repo from its own location, so the fleet can be dropped on
+# a fresh machine at any root and every runner still works unchanged.
 #
 # THIS FILE IS YOURS. It is rendered from the engine's canonical template so
 # every repo starts identical, but it lives here, it is stamped here, and you
@@ -56,7 +60,35 @@ fi
 # holding restricted content names the harness cleared to read it, and the
 # engine renders THAT here — an unattended run must not be able to reach
 # an uncleared runtime just because nobody thought about it.
-REPO="/workspace/mhinbrief-corpus"
+# ⚠️ Derived, never rendered. An absolute path baked in at render time is
+# correct on exactly one machine and silently wrong everywhere else — the run
+# still starts, then reads and writes the wrong tree. `cd`+`pwd` gives the
+# physical path, which is what --add-dir needs.
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# The site sibling, as this repo's own manifest declares it. A relative
+# declaration resolves against THIS repo, so it travels; an absolute one is
+# honoured as given, for a target that genuinely lives elsewhere.
+SITE_DECL="../mhinbrief-site"
+SITE=""
+if [ -n "$SITE_DECL" ]; then
+  case "$SITE_DECL" in
+    /*) SITE="$SITE_DECL" ;;
+    *)  SITE="$(cd "$REPO/$SITE_DECL" 2>/dev/null && pwd)" || SITE="" ;;
+  esac
+  if [ -z "$SITE" ]; then
+    echo "[run.sh] WARNING: declared site '$SITE_DECL' does not resolve from $REPO — continuing without it" >&2
+  fi
+fi
+
+# An ARRAY, not a string. `--add-dir "$SITE"` with an unresolved SITE passes
+# an empty argument, and the scope guard is the thing least able to afford a
+# silently malformed flag — an empty --add-dir is not a smaller scope, it is
+# an unpredictable one. A site that did not resolve contributes nothing here.
+ADD_DIRS=(--add-dir "$REPO")
+if [ -n "$SITE" ]; then
+    ADD_DIRS+=(--add-dir "$SITE")
+fi
 RUN_ID="$(date -u +%Y-%m-%dT%H%M%SZ)"
 LOG_DIR="$REPO/.agents/runs"
 LOG="$LOG_DIR/${RUN_ID}-${SKILL}.log"
@@ -138,8 +170,7 @@ set +e
   cd "$REPO"
   claude -p "/${SKILL}" \
       --permission-mode auto \
-      --add-dir "/workspace/mhinbrief-corpus" \
-      --add-dir "/workspace/mhinbrief-site"
+      "${ADD_DIRS[@]}"
 ) >>"$LOG" 2>&1
 status=$?
 set -e

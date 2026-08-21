@@ -1,4 +1,4 @@
-<!-- kit: base/health@2026-08-21.2 — canonical: /workspace/kestrel/library/skills/base/health/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: base/health@2026-08-21.3 — canonical: kestrel/library/skills/base/health/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 ---
 name: health
@@ -10,7 +10,7 @@ description: Read-only health check of this repo — kit drift, whether STATUS.m
 One command, four signals, **read-only**:
 
 ```sh
-kestrel fleet status --target /workspace/mhinbrief-corpus --verbose
+kestrel fleet status --target . --verbose
 ```
 
 | signal | what it answers |
