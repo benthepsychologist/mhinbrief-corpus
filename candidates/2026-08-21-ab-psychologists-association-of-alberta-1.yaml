@@ -1,0 +1,10 @@
+observed: '2026-08-21'
+staged_by: tend
+status: staged
+source:
+  id: 510cd6540f423764
+  url: https://psychologistsassociation.ab.ca/news
+  title: 'page changed: Psychologists'' Association of Alberta (+0/-2 lines)'
+  ts: '2026-08-21T00:30:11Z'
+  source_id: page_diff:ab-psychologists-association-of-alberta
+note: ''
