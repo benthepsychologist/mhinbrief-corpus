@@ -1,4 +1,4 @@
-<!-- kit: standing/curate@2026-08-21.1 — canonical: /workspace/kestrel/library/skills/standing/curate/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: standing/curate@2026-08-21.2 — canonical: /workspace/kestrel/library/skills/standing/curate/SKILL.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # /curate — candidates → records, with the operator, never without
 

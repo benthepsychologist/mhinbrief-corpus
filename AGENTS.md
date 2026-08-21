@@ -48,7 +48,7 @@ whether or not it has said so.
 
 ---
 
-<!-- >>> kestrel: base/agents#what-a-kestrel-repo-is @2026-08-21.1 -->
+<!-- >>> kestrel: base/agents#what-a-kestrel-repo-is @2026-08-21.2 -->
 
 ## 3. What a kestrel-administered agent repo is
 
@@ -86,7 +86,7 @@ for everyone, not just here.
 
 <!-- <<< kestrel: base/agents#what-a-kestrel-repo-is -->
 
-<!-- >>> kestrel: base/agents#shared-disciplines @2026-08-21.1 -->
+<!-- >>> kestrel: base/agents#shared-disciplines @2026-08-21.2 -->
 
 ## 4. The disciplines every repo here shares
 
@@ -200,7 +200,7 @@ delete this section if the repo has none.
 
 ---
 
-<!-- >>> kestrel: base/agents#extending @2026-08-21.1 -->
+<!-- >>> kestrel: base/agents#extending @2026-08-21.2 -->
 
 ## 9. Extending this file — the rules
 

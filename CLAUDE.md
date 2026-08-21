@@ -1,4 +1,4 @@
-<!-- kit: standing/CLAUDE@2026-08-21.1 — canonical: /workspace/kestrel/library/agentdocs/standing/CLAUDE.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
+<!-- kit: standing/CLAUDE@2026-08-21.2 — canonical: /workspace/kestrel/library/agentdocs/standing/CLAUDE.md.tmpl — provenance only. A local edit is fine; kit.py sync will flag drift. Route a wanted template change to the engine's issue tracker (dev) or its ops inbox (anything naming a live repo), never a direct edit. -->
 
 # CLAUDE.md — mhinbrief
 
